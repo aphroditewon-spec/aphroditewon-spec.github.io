@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+
+# Claude / 작업 메타
+.claude/
+
+# 내부 산출물(공개 저장소 비게시)
+*.pptx
+ref/
+docs/
+tasks/
+SPEC.md
