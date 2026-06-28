@@ -303,7 +303,7 @@ window.I18N = {
     "biz.facility.text": "From storage-tank installation and gas-facility construction to our own high-pressure cylinder inspection center.",
 
     "feature.eyebrow": "Why KLCC",
-    "feature.title": "Why Choose Korea Tansan Chemical",
+    "feature.title": "Why Choose Korea Liquid Carbonic Chemical",
     "feature.f1.title": "High-Purity Manufacturing",
     "feature.f1.text": "An analysis lab and pre-treatment facilities refining nitrogen, argon and air up to 99.9999%.",
     "feature.f2.title": "Reliable Supply",
@@ -315,7 +315,7 @@ window.I18N = {
     "clients.title": "Key Clients",
     "clients.lead": "Trusted by partners across food & beverage, pharmaceutical and industrial sectors.",
 
-    "cta.title": "Talk to Korea Tansan Chemical About Your Gas Supply",
+    "cta.title": "Talk to Korea Liquid Carbonic Chemical About Your Gas Supply",
     "cta.text": "From industrial gases to dry ice, we'll quickly guide you to the right solution.",
     "cta.btn": "Contact Us",
 
@@ -445,16 +445,16 @@ window.I18N = {
     "products.market.p3": "Our 150 t/day line reliably meets regular and bulk supply needs.",
 
     "company.hero.title": "About Us",
-    "company.hero.lead": "Since our founding in 2001, Korea Tansan Chemical has been a dependable partner to industry.",
+    "company.hero.lead": "Since our founding in 2001, Korea Liquid Carbonic Chemical has been a dependable partner to industry.",
     "company.greeting.eyebrow": "CEO Message",
     "company.greeting.title": "Building the future of the gas industry with trust and technology",
-    "company.greeting.p1": "Since 2001, Korea Tansan Chemical has manufactured and supplied industrial gases — oxygen, nitrogen, argon, CO₂, hydrogen — and dry ice, growing together with our customers.",
+    "company.greeting.p1": "Since 2001, Korea Liquid Carbonic Chemical has manufactured and supplied industrial gases — oxygen, nitrogen, argon, CO₂, hydrogen — and dry ice, growing together with our customers.",
     "company.greeting.p2": "With high-purity manufacturing, a stable supply network and fast expert service, we strive to be a trusted partner across the food & beverage, pharmaceutical and industrial sectors.",
-    "company.greeting.sign": "All members of Korea Tansan Chemical",
+    "company.greeting.sign": "All members of Korea Liquid Carbonic Chemical",
     "company.overview.eyebrow": "Overview",
     "company.overview.title": "Company Overview",
     "company.overview.name": "Company",
-    "company.overview.nameVal": "Korea Tansan Chemical Co., Ltd. (KLCC)",
+    "company.overview.nameVal": "Korea Liquid Carbonic Chemical Co., Ltd. (KLCC)",
     "company.overview.founded": "Founded",
     "company.overview.foundedVal": "August 2001",
     "company.overview.staff": "Employees",
@@ -470,7 +470,7 @@ window.I18N = {
     "company.growth.lead": "Revenue has grown steadily over the past five years. (Unit: KRW 100M)",
     "company.history.eyebrow": "History",
     "company.history.title": "History",
-    "company.history.y2001": "Korea Tansan Chemical Co., Ltd. founded",
+    "company.history.y2001": "Korea Liquid Carbonic Chemical Co., Ltd. founded",
     "company.history.y2008": "Acquired Ansan Jonghap Gas → Sihwa Sales Office",
     "company.history.y2017": "Expanded Hwaseong plant charging station",
     "company.history.y2020": "Relocated HQ & plant to Jeongwang-dong, Siheung",
@@ -535,7 +535,7 @@ window.I18N = {
     "footer.contact": "HQ · Siheung Plant",
     "footer.addr": "140 Seohaean-ro, Siheung-si, Gyeonggi-do, Korea",
     "footer.tel": "T. +82-31-498-9231~6",
-    "footer.copy": "© 2026 Korea Tansan Chemical Co., Ltd. All rights reserved."
+    "footer.copy": "© 2026 Korea Liquid Carbonic Chemical Co., Ltd. All rights reserved."
   },
 
   /* ===================== 日本語 ===================== */
