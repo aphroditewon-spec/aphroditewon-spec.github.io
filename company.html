@@ -107,17 +107,22 @@
           <div class="bars__col"><div class="bars__bar" style="height:66%"><span>121</span></div><div class="bars__year">2022</div></div>
           <div class="bars__col"><div class="bars__bar" style="height:84%"><span>153</span></div><div class="bars__year">2023</div></div>
           <div class="bars__col"><div class="bars__bar bars__bar--peak" style="height:100%"><span>182</span></div><div class="bars__year">2024</div></div>
-          <!-- 매출 성장 상승 화살표 -->
+          <!-- 매출 성장 상승 화살표 (역동적 스윕) -->
           <svg class="bars__trend" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-            <polyline points="10,62 30,49 50,43 70,27 90,14"
-              fill="none" stroke-width="3" vector-effect="non-scaling-stroke"
-              stroke-linecap="round" stroke-linejoin="round" marker-end="url(#bars-arrow)"></polyline>
             <defs>
-              <marker id="bars-arrow" markerWidth="6" markerHeight="6" refX="3" refY="3"
+              <linearGradient id="bars-grad" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#f59e0b"></stop>
+                <stop offset="0.5" stop-color="#f97316"></stop>
+                <stop offset="1" stop-color="#ef4444"></stop>
+              </linearGradient>
+              <marker id="bars-arrow" markerWidth="5" markerHeight="5" refX="2.4" refY="2.5"
                 orient="auto" markerUnits="strokeWidth">
-                <path d="M0.5,0.5 L5.5,3 L0.5,5.5 Z"></path>
+                <path d="M0.2,0.2 L5,2.5 L0.2,4.8 L1.8,2.5 Z" fill="#ef4444"></path>
               </marker>
             </defs>
+            <path class="bars__trend-line" pathLength="100"
+              d="M10,64 C26,60 34,49 50,45 S72,22 90,11"
+              fill="none" marker-end="url(#bars-arrow)"></path>
           </svg>
         </div>
       </div>
