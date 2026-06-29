@@ -407,21 +407,19 @@ section { scroll-margin-top: 84px; }
   position: relative;
   display: flex; align-items: flex-end; gap: var(--space-6);
   height: 280px; padding-top: var(--space-8);
-  border-bottom: 2px solid var(--border);
+  border-bottom: 3px solid #2f6b4f;
 }
-/* 매출 성장 상승 화살표 오버레이 */
+/* 매출 성장 금색 리본 화살표 오버레이 */
 .bars__trend {
   position: absolute; inset: 0; width: 100%; height: 100%;
   pointer-events: none; z-index: 3; overflow: visible;
   transform-origin: left center;
   animation: barsTrendIn 1s .3s cubic-bezier(.22,1,.36,1) both;
 }
-.bars__trend-line {
-  stroke: url(#bars-grad);
-  stroke-width: 4.5;
-  vector-effect: non-scaling-stroke;
-  stroke-linecap: round; stroke-linejoin: round;
-  filter: drop-shadow(0 3px 7px rgba(239,68,68,.40));
+.bars__arrow {
+  fill: url(#bars-gold);
+  stroke: #c9b134; stroke-width: 1; vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 5px 6px rgba(70,65,30,.30));
 }
 @keyframes barsTrendIn {
   from { opacity: 0; transform: translateY(10px) scaleX(.82); }
@@ -433,12 +431,13 @@ section { scroll-margin-top: 84px; }
 .bars__col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
 .bars__bar {
   position: relative; width: 64%; max-width: 88px; min-height: 10px;
-  background: linear-gradient(180deg, var(--green-400), var(--green-700));
-  border-radius: 10px 10px 0 0; box-shadow: var(--shadow-sm);
+  background: linear-gradient(180deg, #6aa599, #c4d7cf);
+  border: 2px solid #2f6b4f; border-bottom: none;
+  border-radius: 3px 3px 0 0;
 }
-.bars__bar--peak { background: linear-gradient(180deg, var(--green-500), var(--green-800)); }
+.bars__bar--peak { background: linear-gradient(180deg, #6aa599, #c4d7cf); }
 .bars__bar span { display: none; }
-.bars__year { margin-top: var(--space-3); font-size: .92rem; font-weight: 600; color: var(--text-muted); }
+.bars__year { margin-top: var(--space-3); font-size: .92rem; font-weight: 700; color: #2f6b4f; }
 
 /* 제품: 4열 카드 + 분할 레이아웃 */
 .cards--4 { grid-template-columns: repeat(4, 1fr); }
