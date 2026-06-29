@@ -410,27 +410,29 @@ section { scroll-margin-top: 84px; }
 .bars {
   position: relative;
   display: flex; align-items: flex-end; gap: var(--space-6);
-  height: 280px; padding-top: var(--space-8);
+  height: 340px; padding-top: var(--space-8);
   border-bottom: 3px solid #2f6b4f;
 }
 /* 매출 성장 금색 리본 화살표 오버레이 */
 .bars__trend {
   position: absolute; inset: 0; width: 100%; height: 100%;
   pointer-events: none; z-index: 3; overflow: visible;
-  transform-origin: left center;
-  animation: barsTrendIn 1s .3s cubic-bezier(.22,1,.36,1) both;
+  animation: barsArrowSweep 3.4s cubic-bezier(.4,0,.2,1) infinite;
 }
 .bars__arrow {
   fill: url(#bars-gold);
   stroke: #c9b134; stroke-width: 1; vector-effect: non-scaling-stroke;
   filter: drop-shadow(0 5px 6px rgba(70,65,30,.30));
 }
-@keyframes barsTrendIn {
-  from { opacity: 0; transform: translateY(10px) scaleX(.82); }
-  to   { opacity: 1; transform: none; }
+/* 왼쪽 → 오른쪽 상향으로 그려지며 반복(GIF 효과) */
+@keyframes barsArrowSweep {
+  0%   { clip-path: inset(0 100% 0 0); opacity: 1; }
+  55%  { clip-path: inset(0 0 0 0);    opacity: 1; }
+  85%  { clip-path: inset(0 0 0 0);    opacity: 1; }
+  100% { clip-path: inset(0 0 0 0);    opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .bars__trend { animation: none; }
+  .bars__trend { animation: none; clip-path: none; }
 }
 .bars__col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
 .bars__bar {
