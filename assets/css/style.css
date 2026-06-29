@@ -65,9 +65,9 @@ section { scroll-margin-top: 84px; }
 }
 .brand { display: flex; align-items: center; gap: 12px; margin-right: var(--space-6); }
 .brand__logo { height: 42px; width: auto; }
-.brand__text { display: flex; flex-direction: column; line-height: 1.12; }
-.brand__name { font-size: 1.15rem; font-weight: 800; color: var(--slate-900); letter-spacing: -.01em; white-space: nowrap; }
-.brand__en { font-size: .6rem; letter-spacing: .16em; color: var(--text-muted); font-weight: 600; }
+.brand__text { display: flex; flex-direction: column; line-height: 1.12; gap: .2rem; }
+.brand__name { font-size: 1.0925rem; font-weight: 800; color: var(--slate-900); letter-spacing: -.01em; white-space: nowrap; }
+.brand__en { font-size: .57rem; letter-spacing: .16em; color: var(--text-muted); font-weight: 600; }
 
 .nav { display: flex; align-items: center; gap: var(--space-7); flex: 1; }
 /* 메인 메뉴: 헤더 중앙 정렬(여백 auto로 안전하게) */
