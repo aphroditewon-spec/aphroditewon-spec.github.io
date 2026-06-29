@@ -61,13 +61,13 @@ section { scroll-margin-top: 84px; }
 }
 .site-header__inner {
   position: relative;
-  display: flex; align-items: center; gap: var(--space-6); height: 74px;
+  display: flex; align-items: center; gap: var(--space-6); min-height: 74px; padding: 14px 0;
 }
 .brand { display: flex; align-items: center; gap: 12px; margin-right: var(--space-6); }
 .brand__logo { height: 42px; width: auto; }
-.brand__text { position: relative; display: flex; flex-direction: column; justify-content: center; line-height: 1; }
+.brand__text { display: flex; flex-direction: column; justify-content: center; line-height: 1; gap: 1cm; }
 .brand__name { font-size: 1.0925rem; line-height: 1; font-weight: 800; color: var(--slate-900); letter-spacing: -.01em; white-space: nowrap; }
-.brand__en { position: absolute; top: calc(100% + .3mm); left: 0; font-size: .57rem; line-height: 1; letter-spacing: .16em; color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+.brand__en { font-size: .57rem; line-height: 1; letter-spacing: .16em; color: var(--text-muted); font-weight: 600; white-space: nowrap; }
 
 .nav { display: flex; align-items: center; gap: var(--space-7); flex: 1; }
 /* 메인 메뉴: 헤더 중앙 정렬(여백 auto로 안전하게) */
@@ -230,7 +230,7 @@ section { scroll-margin-top: 84px; }
   text-align: center; transition: var(--transition);
 }
 .logo-grid__cell:hover { background: var(--surface-2); }
-.logo-grid__cell img { max-height: 54px; max-width: 80%; width: auto; object-fit: contain; }
+.logo-grid__cell img { max-height: 37.8px; max-width: 56%; width: auto; object-fit: contain; }
 
 /* 연락처 밴드 (푸터 위) — 실사진 배경 + 녹색 오버레이 */
 .contact-band {
