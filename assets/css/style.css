@@ -214,6 +214,10 @@ section { scroll-margin-top: 84px; }
   letter-spacing: .06em; margin-bottom: var(--space-5);
   padding-bottom: var(--space-2); border-bottom: 2px solid var(--green-200);
 }
+.feature--media { padding: 0; }
+.feature--media .feature__title { margin-left: var(--space-7); margin-right: var(--space-7); }
+.feature--media .feature__text { margin: 0 var(--space-7) var(--space-7); }
+.feature__img { display: block; width: 100%; height: 180px; object-fit: cover; margin-bottom: var(--space-6); }
 .feature__title { font-size: var(--fs-h3); font-weight: 700; color: var(--text); margin-bottom: var(--space-3); }
 .feature__text { font-size: var(--fs-sm); color: var(--text-muted); line-height: 1.7; }
 
