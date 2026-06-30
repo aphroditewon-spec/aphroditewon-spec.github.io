@@ -49,7 +49,21 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
   }
 
-  function start() { initNav(); initHeaderShadow(); initLangDropdown(); }
+  // 사진 토글 카드 — 클릭 시 텍스트 숨기고 사진을 가득 채움
+  function initPhotoToggle() {
+    document.querySelectorAll(".feature--toggle").forEach(function (card) {
+      function toggle() {
+        var on = card.classList.toggle("is-photo");
+        card.setAttribute("aria-pressed", on ? "true" : "false");
+      }
+      card.addEventListener("click", toggle);
+      card.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+      });
+    });
+  }
+
+  function start() { initNav(); initHeaderShadow(); initLangDropdown(); initPhotoToggle(); }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", start);

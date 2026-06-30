@@ -244,7 +244,7 @@ window.I18N = {
     "company.org.prod2": "고압가스",
     "company.org.prod3": "DRY ICE",
     "company.org.affiliate": "관계사",
-    "company.org.affsub": "대표이사 직속 관계사",
+    "company.org.affsub": "대표이사 직속, 관계사",
     "company.org.aff1": "부성테크니컬",
     "company.org.aff2": "신라특수가스",
     "company.org.sihwa": "시화영업소",
