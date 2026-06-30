@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- 대표이사 서명용 손글씨 폰트 (한글: Nanum Pen Script, 일어: Yomogi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yomogi&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,7 +22,7 @@
         <img class="brand__logo" src="assets/images/logo.svg" alt="한국탄산화학 KLCC 로고">
         <span class="brand__text">
           <span class="brand__name">한국탄산화학㈜</span>
-          <span class="brand__en">KOREA LIQUID CARBONIC CHEMICAL</span>
+          <span class="brand__en">Korea Liquid Carbonic Chemical Co., Ltd</span>
         </span>
       </a>
       <nav class="nav" aria-label="주 메뉴">
@@ -68,7 +72,7 @@
           <h2 class="section__title" data-i18n="company.greeting.title">신뢰와 기술로 가스 산업의 미래를 만듭니다</h2>
           <p class="greeting__p" data-i18n="company.greeting.p1">한국탄산화학㈜는 2001년 설립 이래 산소·질소·아르곤·탄산·수소 등 산업용가스와 드라이아이스를 제조·공급하며 고객과 함께 성장해 왔습니다.</p>
           <p class="greeting__p" data-i18n="company.greeting.p2">고순도 제조 역량과 안정적인 공급망, 신속한 전문 서비스를 바탕으로 식음료·제약·산업 전반의 신뢰받는 파트너가 되겠습니다.</p>
-          <p class="greeting__sign" data-i18n="company.greeting.sign">대표이사 유연채</p>
+          <p class="greeting__sign" data-i18n-html="company.greeting.sign">한국탄산화학㈜ 대표이사 <span class="sign-name">유연채</span></p>
         </div>
       </div>
     </section>
@@ -83,7 +87,7 @@
         <dl class="overview">
           <div class="overview__row"><dt data-i18n="company.overview.name">상호</dt><dd data-i18n="company.overview.nameVal">한국탄산화학㈜ (KLCC)</dd></div>
           <div class="overview__row"><dt data-i18n="company.overview.founded">설립</dt><dd data-i18n="company.overview.foundedVal">2001년 8월</dd></div>
-          <div class="overview__row"><dt data-i18n="company.overview.staff">임직원</dt><dd data-i18n="company.overview.staffVal">70여 명</dd></div>
+          <div class="overview__row"><dt data-i18n="company.overview.staff">임직원</dt><dd data-i18n="company.overview.staffVal">100여 명</dd></div>
           <!-- 매출 항목 숨김 처리 (요청에 의해 비공개)
           <div class="overview__row"><dt data-i18n="company.overview.revenue">매출 (2024년)</dt><dd data-i18n="company.overview.revenueVal">182억 원</dd></div>
           -->
@@ -116,8 +120,9 @@
                 <stop offset="1" stop-color="#d2bb39"></stop>
               </linearGradient>
             </defs>
+            <!-- 지수형(복리) 상승곡선 화살표 -->
             <path class="bars__arrow"
-              d="M150,240 C380,205 620,150 834,105 L825,72 L1062,67 L855,184 L846,151 C600,178 360,220 150,240 Z"></path>
+              d="M107,250 C600,252 860,165 990,57 L944,58 L1051,41 L1034,106 L1031,79 C880,175 600,256 107,250 Z"></path>
           </svg>
         </div>
       </div>
@@ -139,7 +144,7 @@
           <li class="timeline__item"><span class="timeline__year">2022</span><span class="timeline__text" data-i18n="company.history.y2022b">드라이아이스 제조공장(900㎡)·탱크(50톤) 건립</span></li>
           <li class="timeline__item"><span class="timeline__year">2023</span><span class="timeline__text" data-i18n="company.history.y2023">시흥공장 수소가스 저장능력 증설 (→4,592㎥)</span></li>
           <li class="timeline__item"><span class="timeline__year">2025</span><span class="timeline__text" data-i18n="company.history.y2025a">D/I 생산용 탄산 저장탱크 증설(100톤)</span></li>
-          <li class="timeline__item"><span class="timeline__year">2025</span><span class="timeline__text" data-i18n="company.history.y2025b">일산 150톤 D/I 생산설비 구축, CO₂ Recovery 설비 설치</span></li>
+          <li class="timeline__item"><span class="timeline__year">2025</span><span class="timeline__text" data-i18n="company.history.y2025b">日産 150톤 D/I 생산설비 구축, CO₂ Recovery 설비 설치</span></li>
         </ul>
       </div>
     </section>
@@ -160,40 +165,38 @@
             <span class="orgc__line"></span>
           </div>
           <div class="orgc__depts">
-            <!-- 영업부 (4 하위) -->
+            <!-- 영업팀 (4 하위) -->
             <div class="orgc__dept">
               <div class="orgc__group">
-                <span class="orgc__gtitle" data-i18n="company.org.sales">영업부</span>
-                <span class="orgc__pill" data-i18n="company.org.sales1">DRY ICE 영업</span>
-                <span class="orgc__pill" data-i18n="company.org.sales2">BULK 영업</span>
-                <span class="orgc__pill" data-i18n="company.org.sales3">CYL 영업</span>
-                <span class="orgc__pill" data-i18n="company.org.sales4">대리점영업</span>
+                <span class="orgc__gtitle" data-i18n="company.org.sales">영업팀</span>
+                <span class="orgc__pill" data-i18n="company.org.sales1">DRY ICE</span>
+                <span class="orgc__pill" data-i18n="company.org.sales2">BULK</span>
+                <span class="orgc__pill" data-i18n="company.org.sales3">CYL</span>
+                <span class="orgc__pill" data-i18n="company.org.sales4">대리점</span>
               </div>
             </div>
-            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.admin">관리부</div></div>
-            <!-- 생산부 + 분석실 -->
+            <!-- 생산팀 (2 하위) -->
             <div class="orgc__dept">
               <div class="orgc__group">
-                <span class="orgc__gtitle" data-i18n="company.org.prod">생산부</span>
-                <span class="orgc__pill" data-i18n="company.org.lab">분석실</span>
+                <span class="orgc__gtitle" data-i18n="company.org.prod">생산팀</span>
+                <span class="orgc__pill" data-i18n="company.org.prod2">고압가스</span>
+                <span class="orgc__pill" data-i18n="company.org.prod3">DRY ICE</span>
               </div>
             </div>
-            <!-- 설비팀 + 운송팀 -->
-            <div class="orgc__dept">
-              <div class="orgc__group">
-                <span class="orgc__gtitle" data-i18n="company.org.facility">설비팀</span>
-                <span class="orgc__pill" data-i18n="company.org.logistics">운송팀</span>
-              </div>
-            </div>
+            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.quality">품질관리팀</div></div>
+            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.facility">설비팀</div></div>
+            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.logistics">운송팀</div></div>
+            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.admin">경영지원팀</div></div>
+            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.support">고객지원팀</div></div>
           </div>
           <div class="orgc__divider"></div>
           <div class="orgc__aff">
             <p class="orgc__aff-label"><b>AFFILIATES</b> <span data-i18n="company.org.affsub">관계사 · 대표이사 직속</span></p>
             <div class="orgc__aff-grid">
-              <div class="orgc__aff-item"><i></i><b data-i18n="company.org.aff1">부성테크니컬</b></div>
-              <div class="orgc__aff-item"><i></i><b data-i18n="company.org.aff2">신라특수가스</b></div>
-              <div class="orgc__aff-item"><i></i><b data-i18n="company.org.sihwa">시화영업소</b></div>
               <div class="orgc__aff-item"><i></i><b data-i18n="company.org.hwaseong">화성공장</b></div>
+              <div class="orgc__aff-item"><i></i><b data-i18n="company.org.sihwa">시화영업소</b></div>
+              <div class="orgc__aff-item"><i></i><b data-i18n="company.org.aff2">신라특수가스</b></div>
+              <div class="orgc__aff-item"><i></i><b data-i18n="company.org.aff1">부성테크니컬</b></div>
             </div>
           </div>
         </div>

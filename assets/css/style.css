@@ -67,7 +67,7 @@ section { scroll-margin-top: 84px; }
 .brand__logo { height: 42px; width: auto; }
 .brand__text { position: relative; display: flex; flex-direction: column; justify-content: center; line-height: 1; }
 .brand__name { font-size: 1.0925rem; line-height: 1; font-weight: 800; color: var(--slate-900); letter-spacing: -.01em; white-space: nowrap; }
-.brand__en { position: absolute; top: calc(100% + .3mm); left: 0; font-size: .57rem; line-height: 1; letter-spacing: .16em; color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+.brand__en { position: absolute; top: calc(100% + 1.6mm); left: 0; font-size: .57rem; line-height: 1; letter-spacing: .16em; color: var(--text-muted); font-weight: 600; white-space: nowrap; }
 
 .nav { display: flex; align-items: center; gap: var(--space-7); flex: 1; }
 /* 메인 메뉴: 헤더 중앙 정렬(여백 auto로 안전하게) */
@@ -234,7 +234,7 @@ section { scroll-margin-top: 84px; }
   text-align: center; transition: var(--transition);
 }
 .logo-grid__cell:hover { background: var(--surface-2); }
-.logo-grid__cell img { max-height: 37.8px; max-width: 56%; width: auto; object-fit: contain; }
+.logo-grid__cell img { max-height: 26.5px; max-width: 39.2%; width: auto; object-fit: contain; }
 
 /* 연락처 밴드 (푸터 위) — 실사진 배경 + 녹색 오버레이 */
 .contact-band {
@@ -313,7 +313,12 @@ section { scroll-margin-top: 84px; }
 .greeting { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-12); align-items: center; }
 .greeting__media img { border-radius: var(--radius-lg); box-shadow: var(--shadow-md); width: 100%; }
 .greeting__p { color: var(--text-muted); margin-top: var(--space-4); line-height: 1.8; }
-.greeting__sign { margin-top: var(--space-5); font-weight: 700; color: var(--text); }
+.greeting__sign { margin-top: var(--space-5); font-size: 1.2em; font-weight: 700; color: var(--text); }
+/* 대표이사 이름: 손글씨 필체 + 앞 간격 */
+.greeting__sign .sign-name { margin-left: 1.1em; font-family: 'Nanum Pen Script', 'Yomogi', cursive; font-weight: 400; font-size: 1.7em; line-height: 1; color: var(--slate-900); }
+/* 영문: 회사명 줄 아래에 이름을 회사명 중앙 기준으로 배치 */
+html[lang="en"] .greeting__sign { display: inline-block; }
+html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; margin-top: .25em; text-align: center; }
 
 /* 회사 개요 (정의 목록) */
 .overview {
@@ -410,7 +415,7 @@ section { scroll-margin-top: 84px; }
 .bars {
   position: relative;
   display: flex; align-items: flex-end; gap: var(--space-6);
-  height: 400px; padding-top: var(--space-8);
+  height: 480px; padding-top: var(--space-8);
   border-bottom: 3px solid #2f6b4f;
 }
 /* 매출 성장 금색 리본 화살표 오버레이 */
@@ -447,6 +452,7 @@ section { scroll-margin-top: 84px; }
 
 /* 제품: 4열 카드 + 분할 레이아웃 */
 .cards--4 { grid-template-columns: repeat(4, 1fr); }
+.cards--2 { grid-template-columns: repeat(2, 1fr); }
 .split { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-12); align-items: center; }
 .split__media img { border-radius: var(--radius-lg); box-shadow: var(--shadow-md); width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 
