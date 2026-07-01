@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" preserveAspectRatio="xMidYMid slice" role="img" aria-label="가스 분자 네트워크">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12324a"/>
+      <stop offset="0.55" stop-color="#245e82"/>
+      <stop offset="1" stop-color="#3a83aa"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.28" r="0.75">
+      <stop offset="0" stop-color="#7dc3e6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#7dc3e6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="560" fill="url(#bg)"/>
+  <rect width="1600" height="560" fill="url(#glow)"/>
+
+  <!-- 연결선 -->
+  <g stroke="#cfe6f4" stroke-width="2" opacity="0.38">
+    <line x1="980" y1="140" x2="1180" y2="210"/>
+    <line x1="1180" y1="210" x2="1120" y2="400"/>
+    <line x1="1180" y1="210" x2="1380" y2="150"/>
+    <line x1="1380" y1="150" x2="1470" y2="330"/>
+    <line x1="1120" y1="400" x2="1300" y2="440"/>
+    <line x1="1300" y1="440" x2="1470" y2="330"/>
+    <line x1="980" y1="140" x2="900" y2="330"/>
+    <line x1="900" y1="330" x2="1120" y2="400"/>
+  </g>
+
+  <!-- 분자 노드 -->
+  <g font-family="Arial, sans-serif" font-weight="700" text-anchor="middle">
+    <g>
+      <circle cx="980" cy="140" r="34" fill="#eaf5fc" opacity="0.95"/>
+      <text x="980" y="148" font-size="26" fill="#1b4e6b">O₂</text>
+    </g>
+    <g>
+      <circle cx="1180" cy="210" r="42" fill="#ffffff" opacity="0.95"/>
+      <text x="1180" y="220" font-size="30" fill="#184a66">N₂</text>
+    </g>
+    <g>
+      <circle cx="1380" cy="150" r="32" fill="#dcecf6" opacity="0.92"/>
+      <text x="1380" y="158" font-size="24" fill="#1b4e6b">Ar</text>
+    </g>
+    <g>
+      <circle cx="1120" cy="400" r="38" fill="#eaf5fc" opacity="0.93"/>
+      <text x="1120" y="410" font-size="26" fill="#184a66">CO₂</text>
+    </g>
+    <g>
+      <circle cx="1300" cy="440" r="30" fill="#dcecf6" opacity="0.9"/>
+      <text x="1300" y="448" font-size="22" fill="#1b4e6b">H₂</text>
+    </g>
+    <g>
+      <circle cx="1470" cy="330" r="30" fill="#eaf5fc" opacity="0.9"/>
+      <text x="1470" y="338" font-size="22" fill="#184a66">He</text>
+    </g>
+    <g>
+      <circle cx="900" cy="330" r="26" fill="#cfe6f4" opacity="0.85"/>
+      <text x="900" y="338" font-size="20" fill="#1b4e6b">Ne</text>
+    </g>
+  </g>
+
+  <!-- 떠오르는 기포 -->
+  <g fill="#cfe6f4">
+    <circle cx="300" cy="470" r="7" opacity="0.30"/>
+    <circle cx="360" cy="360" r="5" opacity="0.25"/>
+    <circle cx="220" cy="300" r="9" opacity="0.22"/>
+    <circle cx="480" cy="250" r="5" opacity="0.20"/>
+    <circle cx="150" cy="420" r="6" opacity="0.24"/>
+  </g>
+</svg>

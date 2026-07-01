@@ -20,10 +20,10 @@ section { scroll-margin-top: 84px; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: .5em;
   font-size: var(--fs-eyebrow); font-weight: 700; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--accent);
+  text-transform: uppercase; color: var(--eyebrow);
 }
 .eyebrow::before {
-  content: ""; width: 22px; height: 2px; background: var(--accent);
+  content: ""; width: 22px; height: 2px; background: var(--eyebrow);
 }
 
 /* ===== 버튼 ===== */
@@ -129,20 +129,50 @@ section { scroll-margin-top: 84px; }
    히어로 — 실사진 배경 + 네이비 오버레이
    ===================================================================== */
 .hero {
-  position: relative; isolation: isolate; color: var(--hero-text);
-  background-image: var(--hero-overlay), url("../images/site/hero-factory.jpg");
-  background-size: cover; background-position: center;
+  position: relative; color: var(--hero-text); overflow: hidden;
   padding-block: var(--space-20) var(--space-24);
 }
+/* 히어로 배경 슬라이드(3장 자동 전환) */
+.hero__slides { position: absolute; inset: 0; z-index: 0; }
+.hero__slide {
+  position: absolute; inset: 0; background-size: cover; background-position: center;
+  opacity: 0; transition: opacity 1.4s ease; will-change: opacity;
+}
+.hero__slide.is-active { opacity: 1; }
+.hero__slides::after { content: ""; position: absolute; inset: 0; background: var(--hero-overlay); }
+.hero > .container, .hero__scroll { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: reduce) { .hero__slide { transition: none; } }
 .hero__kicker {
   display: inline-flex; align-items: center; gap: .55em;
-  font-size: var(--fs-eyebrow); font-weight: 700; letter-spacing: .1em;
-  color: var(--hero-kicker); margin-bottom: var(--space-5);
+  font-size: calc(var(--fs-eyebrow) * 1.2); font-weight: 700; letter-spacing: .1em;
+  color: #fff; margin-bottom: var(--space-5);
 }
-.hero__kicker::before { content: ""; width: 26px; height: 2px; background: var(--accent); }
+.hero__kicker::before { content: ""; width: 26px; height: 2px; background: #fff; }
+/* 스크롤 안내 인디케이터 (마우스 아이콘 + SCROLL) */
+.hero__scroll {
+  position: absolute; right: var(--space-10); bottom: var(--space-8);
+  display: inline-flex; flex-direction: column; align-items: center; gap: .55em;
+  color: #fff; text-decoration: none; z-index: 3;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.4));
+}
+.hero__scroll-mouse {
+  width: 24px; height: 38px; border: 2px solid #fff; border-radius: 14px; position: relative;
+}
+.hero__scroll-mouse::before {
+  content: ""; position: absolute; left: 50%; top: 7px; width: 4px; height: 8px;
+  background: #fff; border-radius: 2px; transform: translateX(-50%);
+  animation: heroScrollWheel 1.6s ease-in-out infinite;
+}
+.hero__scroll-text { font-size: .72rem; font-weight: 700; letter-spacing: .2em; }
+@keyframes heroScrollWheel {
+  0%   { opacity: 0; transform: translate(-50%, 0); }
+  35%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, 13px); }
+}
+@media (prefers-reduced-motion: reduce) { .hero__scroll-mouse::before { animation: none; } }
 .hero__title { font-size: var(--fs-display); font-weight: 800; letter-spacing: -.015em; margin-bottom: var(--space-5); }
 .hero__title .hl { box-shadow: inset 0 -.32em 0 rgba(205,31,38,.5); }
-.hero__lead { font-size: var(--fs-lead); max-width: 560px; color: #dce6fb; margin-bottom: var(--space-7); }
+.hero__lead { font-size: var(--fs-lead); max-width: 560px; color: #d5e8f4; margin-bottom: var(--space-7); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
 .hero__trust {
   display: flex; flex-wrap: wrap; gap: var(--space-6); margin-top: var(--space-10);
@@ -151,7 +181,7 @@ section { scroll-margin-top: 84px; }
 .hero__trust-item { display: flex; flex-direction: column; }
 .hero__trust-num { font-size: 1.5rem; font-weight: 800; color: #fff; }
 .hero__trust-num small { color: var(--blue-200); font-size: .9rem; margin-left: .15em; }
-.hero__trust-label { font-size: .82rem; color: #b9c9e8; }
+.hero__trust-label { font-size: .82rem; color: #aecbe0; }
 
 /* =====================================================================
    사업 하이라이트 — 히어로 하단에 겹치는 3컷 실사진
@@ -168,7 +198,7 @@ section { scroll-margin-top: 84px; }
 .photo-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .photo-card__img { aspect-ratio: 16 / 11; width: 100%; object-fit: cover; }
 .photo-card__body { padding: var(--space-5) var(--space-6) var(--space-6); }
-.photo-card__tag { font-size: var(--fs-eyebrow); font-weight: 700; color: var(--accent); letter-spacing: .04em; }
+.photo-card__tag { font-size: calc(var(--fs-eyebrow) * 1.1); font-weight: 700; color: var(--eyebrow); letter-spacing: .04em; }
 .photo-card__title { font-size: var(--fs-h3); font-weight: 700; color: var(--text); margin: .3rem 0 .4rem; }
 .photo-card__text { font-size: var(--fs-sm); color: var(--text-muted); }
 
@@ -246,7 +276,7 @@ section { scroll-margin-top: 84px; }
 .contact-band {
   color: #fff;
   background:
-    linear-gradient(115deg, rgba(4,120,87,.95) 0%, rgba(3,41,31,.90) 60%, rgba(13,148,136,.78) 100%),
+    linear-gradient(115deg, rgba(52,127,166,.95) 0%, rgba(21,42,56,.90) 60%, rgba(95,168,210,.78) 100%),
     url("../images/site/contact-bg.jpg");
   background-size: cover; background-position: center;
   padding-block: var(--space-12);
@@ -258,9 +288,9 @@ section { scroll-margin-top: 84px; }
 .eyebrow--light { color: var(--green-300); }
 .eyebrow--light::before { background: var(--green-300); }
 .contact-band__title { font-size: var(--fs-h2); font-weight: 800; margin: var(--space-3) 0; }
-.contact-band__lead { color: #cfeee2; max-width: 520px; }
+.contact-band__lead { color: #dcecf6; max-width: 520px; }
 .contact-band__action { text-align: right; flex-shrink: 0; }
-.contact-band__call-label { display: block; font-size: var(--fs-sm); color: #9fdcc8; letter-spacing: .06em; }
+.contact-band__call-label { display: block; font-size: var(--fs-sm); color: #a9cfe6; letter-spacing: .06em; }
 .contact-band__phone {
   display: block; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800;
   color: #fff; margin: .15rem 0 var(--space-4); letter-spacing: -.01em;
@@ -290,7 +320,7 @@ section { scroll-margin-top: 84px; }
 .footer__col h4 { color: var(--footer-heading); font-size: .95rem; margin-bottom: var(--space-4); font-weight: 700; }
 .footer__col li { font-size: var(--fs-sm); margin-bottom: var(--space-3); }
 .footer__sites li { margin-bottom: var(--space-4); }
-.footer__sites b { color: #ccd8ec; font-weight: 600; display: block; font-size: .9rem; }
+.footer__sites b { color: #c4dbe9; font-weight: 600; display: block; font-size: .9rem; }
 .footer__bottom {
   padding-top: var(--space-5); font-size: .82rem; opacity: .8;
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-3);
@@ -301,13 +331,13 @@ section { scroll-margin-top: 84px; }
    ===================================================================== */
 .page-hero {
   background:
-    linear-gradient(115deg, rgba(4,120,87,.96), rgba(3,41,31,.92)),
+    linear-gradient(115deg, rgba(52,127,166,.96), rgba(21,42,56,.92)),
     url("../images/site/hero-factory.jpg");
   background-size: cover; background-position: center;
   color: #fff; padding-block: var(--space-12);
 }
 .page-hero h1 { font-size: var(--fs-h1); font-weight: 800; }
-.page-hero p { color: #cfeee2; margin-top: var(--space-3); max-width: 620px; }
+.page-hero p { color: #dcecf6; margin-top: var(--space-3); max-width: 620px; }
 .breadcrumb { font-size: var(--fs-sm); color: var(--green-300); margin-bottom: var(--space-3); }
 .breadcrumb a:hover { color: #fff; }
 
@@ -360,7 +390,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .orgc__node small { font-size: .6rem; letter-spacing: .18em; font-weight: 700; }
 .orgc__node b { font-size: 1.05rem; }
 .orgc__node--ceo { background: var(--green-deep); color: #fff; }
-.orgc__node--ceo small { color: #8fb3a6; }
+.orgc__node--ceo small { color: #8fb0cc; }
 .orgc__node--evp { background: #fff; border: 2px solid var(--green-500); color: var(--text); }
 .orgc__node--evp small { color: var(--green-600); }
 .orgc__line { width: 2px; height: 24px; background: var(--green-300); }
@@ -422,7 +452,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   position: relative;
   display: flex; align-items: flex-end; gap: var(--space-6);
   height: 480px; padding-top: var(--space-8);
-  border-bottom: 3px solid #2f6b4f;
+  border-bottom: 3px solid #2c6788;
 }
 /* 매출 성장 금색 리본 화살표 오버레이 */
 .bars__trend {
@@ -448,13 +478,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .bars__col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
 .bars__bar {
   position: relative; width: 64%; max-width: 88px; min-height: 10px;
-  background: linear-gradient(180deg, #6aa599, #c4d7cf);
-  border: 2px solid #2f6b4f; border-bottom: none;
+  background: linear-gradient(180deg, #4190be, #bcdcee);
+  border: 2px solid #2c6788; border-bottom: none;
   border-radius: 3px 3px 0 0;
 }
-.bars__bar--peak { background: linear-gradient(180deg, #6aa599, #c4d7cf); }
+.bars__bar--peak { background: linear-gradient(180deg, #4190be, #bcdcee); }
 .bars__bar span { display: none; }
-.bars__year { margin-top: var(--space-3); font-size: .92rem; font-weight: 700; color: #2f6b4f; }
+.bars__year { margin-top: var(--space-3); font-size: .92rem; font-weight: 700; color: #2c6788; }
 
 /* 제품: 4열 카드 + 분할 레이아웃 */
 .cards--4 { grid-template-columns: repeat(4, 1fr); }

@@ -51,6 +51,11 @@
   <main>
     <!-- ===== 히어로 (실사진 배경) ===== -->
     <section class="hero">
+      <div class="hero__slides" aria-hidden="true">
+        <div class="hero__slide is-active" style="background-image:url('assets/images/site/hero-factory.jpg')"></div>
+        <div class="hero__slide" style="background-image:url('assets/images/site/hero-molecules.svg')"></div>
+        <div class="hero__slide" style="background-image:url('assets/images/site/hero-plant.jpg')"></div>
+      </div>
       <div class="container">
         <span class="hero__kicker" data-i18n="hero.kicker">SINCE 2001 · 산업용가스 전문기업</span>
         <h1 class="hero__title" data-i18n-html="hero.title">신뢰로 채우는<br>대한민국 가스 산업의 중심</h1>
@@ -60,10 +65,14 @@
           <a class="btn btn--ghost btn--lg" href="support.html" data-i18n="hero.cta2">문의하기</a>
         </div>
       </div>
+      <a class="hero__scroll" href="#highlight" aria-label="아래로 스크롤">
+        <span class="hero__scroll-mouse"></span>
+        <span class="hero__scroll-text">SCROLL</span>
+      </a>
     </section>
 
     <!-- ===== 사업 하이라이트 (3컷 실사진, 히어로에 겹침) ===== -->
-    <section class="highlight">
+    <section class="highlight" id="highlight">
       <div class="container">
         <div class="highlight__grid">
           <a class="photo-card" href="products.html">

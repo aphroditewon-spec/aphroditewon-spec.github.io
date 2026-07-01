@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" preserveAspectRatio="xMidYMid slice" role="img" aria-label="산업가스 저장탱크 단지">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#123650"/>
+      <stop offset="0.55" stop-color="#2a6488"/>
+      <stop offset="1" stop-color="#3f8bb2"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.84" cy="0.12" r="0.5">
+      <stop offset="0" stop-color="#dff0f9" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#dff0f9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c2233" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0c2233" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="tank" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f2f7fb"/>
+      <stop offset="0.42" stop-color="#e2ebf2"/>
+      <stop offset="0.72" stop-color="#c6d4de"/>
+      <stop offset="1" stop-color="#aab9c6"/>
+    </linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbfdff"/>
+      <stop offset="1" stop-color="#d7e2ea"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="560" fill="url(#sky)"/>
+  <rect width="1600" height="560" fill="url(#sun)"/>
+
+  <!-- 저장탱크 4기 (우측 정렬, 원근) -->
+  <g stroke="#9fb0bd" stroke-width="1.2" stroke-opacity="0.5">
+
+    <!-- 탱크 D (가장 작고 먼) -->
+    <g opacity="0.7">
+      <rect x="1020" y="360" width="104" height="140" fill="url(#tank)"/>
+      <ellipse cx="1072" cy="360" rx="52" ry="11" fill="url(#top)"/>
+      <path d="M1022,474 Q1085,458 1122,392" fill="none" stroke="#c3d2dd" stroke-width="5" stroke-opacity="0.9"/>
+    </g>
+
+    <!-- 탱크 C -->
+    <g opacity="0.82">
+      <rect x="1116" y="332" width="140" height="168" fill="url(#tank)"/>
+      <ellipse cx="1186" cy="332" rx="70" ry="14" fill="url(#top)"/>
+      <g stroke="#8ea1af" stroke-opacity="0.5"><line x1="1186" y1="318" x2="1186" y2="309"/><circle cx="1186" cy="306" r="2.5" fill="#8ea1af"/></g>
+      <path d="M1118,478 Q1205,456 1254,368" fill="none" stroke="#bccbd7" stroke-width="6" stroke-opacity="0.95"/>
+      <path d="M1118,478 Q1205,456 1254,368" fill="none" stroke="#7c8f9d" stroke-width="6" stroke-opacity="0.5" stroke-dasharray="2 6"/>
+    </g>
+
+    <!-- 탱크 B -->
+    <g opacity="0.9">
+      <rect x="1248" y="298" width="176" height="202" fill="url(#tank)"/>
+      <ellipse cx="1336" cy="298" rx="88" ry="17" fill="url(#top)"/>
+      <g stroke="#8ea1af" stroke-opacity="0.5"><line x1="1336" y1="281" x2="1336" y2="270"/><circle cx="1336" cy="266" r="3" fill="#8ea1af"/></g>
+      <path d="M1250,482 Q1360,454 1422,346" fill="none" stroke="#b7c6d3" stroke-width="7" stroke-opacity="0.95"/>
+      <path d="M1250,482 Q1360,454 1422,346" fill="none" stroke="#76899a" stroke-width="7" stroke-opacity="0.5" stroke-dasharray="2 7"/>
+    </g>
+
+    <!-- 탱크 A (가장 크고 가까운) -->
+    <g opacity="0.97">
+      <rect x="1420" y="258" width="230" height="242" fill="url(#tank)"/>
+      <ellipse cx="1535" cy="258" rx="115" ry="20" fill="url(#top)"/>
+      <g stroke="#8ea1af" stroke-opacity="0.55">
+        <line x1="1535" y1="238" x2="1535" y2="226"/><circle cx="1535" cy="222" r="3.5" fill="#8ea1af"/>
+        <line x1="1450" y1="250" x2="1450" y2="243"/>
+      </g>
+      <path d="M1424,486 Q1548,452 1636,318" fill="none" stroke="#c3d2dd" stroke-width="9" stroke-opacity="0.98"/>
+      <path d="M1424,486 Q1548,452 1636,318" fill="none" stroke="#6f8494" stroke-width="9" stroke-opacity="0.55" stroke-dasharray="2 8"/>
+      <path d="M1424,472 Q1544,440 1632,312" fill="none" stroke="#eef4f9" stroke-width="2" stroke-opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- 지면 -->
+  <rect x="0" y="486" width="1600" height="74" fill="url(#ground)"/>
+
+  <!-- 전경 배관 랙 (우측) -->
+  <g stroke="#cfe0ec" stroke-opacity="0.4" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M1000,516 H1600"/>
+    <path d="M1060,538 H1600"/>
+    <path d="M1180,516 v24 M1360,516 v24 M1500,516 v24"/>
+  </g>
+  <g fill="#e3c84a" fill-opacity="0.5">
+    <rect x="1290" y="512" width="9" height="8"/>
+    <rect x="1470" y="512" width="9" height="8"/>
+  </g>
+</svg>

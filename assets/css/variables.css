@@ -1,7 +1,8 @@
 /* =====================================================================
-   디자인 토큰 — 친환경(Eco) 그린 브랜드
-   에메랄드 그린(메인) + 틸(포인트) + 슬레이트(중립).
+   디자인 토큰 — 코퍼레이트 블루 브랜드
+   블루(메인) + 스카이(포인트) + 슬레이트(중립).
    색을 역할(surface/border/text/brand/accent/semantic)로 분리한다.
+   ※ 토큰 이름(--green-*, --teal-*)은 호환 위해 유지, 값은 블루 계열.
    ===================================================================== */
 :root {
   /* ===== 폰트 ===== */
@@ -29,45 +30,46 @@
   --radius-sm: 8px; --radius-md: 16px; --radius-lg: 24px; --radius-pill: 999px;
   --container: 1240px;
 
-  /* ===== 브랜드 그린(에메랄드) 스케일 ===== */
-  --green-50:#ecfdf5;  --green-100:#d1fae5; --green-200:#a7f3d0; --green-300:#6ee7b7;
-  --green-400:#34d399; --green-500:#10b981; --green-600:#059669; --green-700:#047857;
-  --green-800:#065f46; --green-900:#064e3b; --green-deep:#03291f;
+  /* ===== 브랜드 세룰리안 블루 스케일 (토큰명은 green 유지) ===== */
+  --green-50:#eef6fb;  --green-100:#d6ebf6; --green-200:#b3d9ec; --green-300:#87c1e0;
+  --green-400:#5fa8d2; --green-500:#4190be; --green-600:#357fa6; --green-700:#2c6788;
+  --green-800:#26526d; --green-900:#213f53; --green-deep:#152a38;
 
-  /* ===== 틸 포인트(보조) ===== */
-  --teal-50:#f0fdfa;  --teal-100:#ccfbf1; --teal-300:#5eead4;
-  --teal-500:#0d9488; --teal-600:#0f766e; --teal-700:#115e59;
+  /* ===== 스카이 포인트(보조, 토큰명은 teal 유지) ===== */
+  --teal-50:#eff7fc;  --teal-100:#daedf7; --teal-300:#8bc2e0;
+  --teal-500:#4190be; --teal-600:#357fa6; --teal-700:#2c6788;
 
-  /* ===== 중립(슬레이트, 그린 언더톤) ===== */
-  --slate-0:#ffffff;  --slate-50:#f5f9f7;  --slate-100:#eaf2ee; --slate-200:#dbe7e1;
-  --slate-300:#bccabf; --slate-400:#94a3a0; --slate-500:#64746e; --slate-600:#48564f;
-  --slate-700:#33403a; --slate-800:#1e2a25; --slate-900:#0f1c17; --navy-deep:#091812;
+  /* ===== 중립(슬레이트, 블루 언더톤) ===== */
+  --slate-0:#ffffff;  --slate-50:#f5f8fb;  --slate-100:#eaf1f7; --slate-200:#dae5ef;
+  --slate-300:#bfcedd; --slate-400:#8fa1b5; --slate-500:#617488; --slate-600:#45566a;
+  --slate-700:#313f51; --slate-800:#1d2836; --slate-900:#0f1a25; --navy-deep:#0b1a25;
 
   /* ===== 시맨틱(역할) 토큰 ===== */
-  --surface:#ffffff; --surface-2:#f5f9f7; --surface-3:#eaf2ee; --surface-brand:#ecfdf5;
-  --border:#dbe7e1; --border-strong:#bccabf;
-  --text:#1e2a25; --text-muted:#64746e; --text-on-brand:#ffffff;
+  --surface:#ffffff; --surface-2:#f5f8fb; --surface-3:#eaf1f7; --surface-brand:#eef6fb;
+  --border:#dae5ef; --border-strong:#bfcedd;
+  --text:#1d2836; --text-muted:#617488; --text-on-brand:#ffffff;
 
-  --brand:#059669;
-  --primary:#047857; --primary-hover:#065f46; --primary-tint:#ecfdf5;
-  --accent:#0d9488; --accent-hover:#0f766e; --accent-tint:#f0fdfa;
+  --brand:#4190be;
+  --primary:#2f7ba3; --primary-hover:#276688; --primary-tint:#eef6fb;
+  --accent:#5fa8d2; --accent-hover:#4190be; --accent-tint:#eff7fc;
+  --eyebrow:#1b4195;
 
   /* 상태 */
-  --success:#15803d; --warning:#b45309; --danger:#b91c1c; --info:#0d9488;
+  --success:#15803d; --warning:#b45309; --danger:#b91c1c; --info:#4190be;
 
-  /* 히어로 — 다층 그린 그라데이션(사진 위 오버레이용) */
-  --hero-text:#ffffff; --hero-kicker:#6ee7b7;
+  /* 히어로 — 다층 세룰리안 그라데이션(사진 위 오버레이용) */
+  --hero-text:#ffffff; --hero-kicker:#8bc2e0;
   --hero-overlay:
-    linear-gradient(100deg, rgba(3,41,31,.92) 0%, rgba(4,120,87,.74) 48%, rgba(13,148,136,.5) 100%);
+    linear-gradient(100deg, rgba(21,42,56,.90) 0%, rgba(44,103,136,.74) 48%, rgba(95,168,210,.5) 100%);
 
-  /* 다크 푸터(딥 그린) */
-  --footer-bg:#0f1c17; --footer-text:#a9c2b7;
+  /* 다크 푸터(딥 세룰리안) */
+  --footer-bg:#132b3a; --footer-text:#a7c1d3;
   --footer-heading:#ffffff; --footer-border:rgba(255,255,255,.10);
 
   /* 그림자(계층 3단) */
-  --shadow-sm: 0 1px 2px rgba(6,40,30,.06), 0 2px 8px rgba(6,40,30,.05);
-  --shadow-md: 0 6px 16px rgba(6,40,30,.08);
-  --shadow-lg: 0 16px 40px rgba(6,40,30,.14);
+  --shadow-sm: 0 1px 2px rgba(20,45,60,.06), 0 2px 8px rgba(20,45,60,.05);
+  --shadow-md: 0 6px 16px rgba(20,45,60,.08);
+  --shadow-lg: 0 16px 40px rgba(20,45,60,.14);
 
   --transition: .22s cubic-bezier(.4,0,.2,1);
 }

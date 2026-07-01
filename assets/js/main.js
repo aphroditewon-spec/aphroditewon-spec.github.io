@@ -63,7 +63,19 @@
     });
   }
 
-  function start() { initNav(); initHeaderShadow(); initLangDropdown(); initPhotoToggle(); }
+  // 히어로 배경 슬라이드 자동 전환(3장, 페이드)
+  function initHeroSlider() {
+    var slides = document.querySelectorAll(".hero__slide");
+    if (slides.length < 2) return;
+    var i = 0;
+    setInterval(function () {
+      slides[i].classList.remove("is-active");
+      i = (i + 1) % slides.length;
+      slides[i].classList.add("is-active");
+    }, 5000);
+  }
+
+  function start() { initNav(); initHeaderShadow(); initLangDropdown(); initPhotoToggle(); initHeroSlider(); }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", start);
