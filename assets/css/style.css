@@ -449,7 +449,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .orgc__line { width: 2px; height: 24px; background: var(--green-300); }
 /* 부서 행 + 버스 커넥터 */
 .orgc__depts { display: flex; justify-content: center; align-items: flex-start; }
-.orgc__dept { position: relative; padding: 24px var(--space-3) 0; flex: 0 1 auto; }
+.orgc__dept { position: relative; padding: 24px var(--space-3) 0; flex: 1 1 0; display: flex; flex-direction: column; align-items: center; }
 .orgc__dept::before { /* 세로 드롭 */
   content: ""; position: absolute; top: 0; left: 50%; width: 2px; height: 24px;
   background: var(--green-300); transform: translateX(-1px);
@@ -487,7 +487,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .orgc__aff-item b { font-size: 1rem; color: var(--text); }
 @media (max-width: 860px) {
   .orgc__depts { flex-wrap: wrap; gap: var(--space-4); }
-  .orgc__dept { padding-top: 0; }
+  .orgc__dept { padding-top: 0; flex: 1 1 140px; }
   .orgc__dept::before, .orgc__dept::after { display: none; }
   .orgc__aff-grid { grid-template-columns: 1fr; }
 }
