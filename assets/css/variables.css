@@ -60,7 +60,7 @@
   /* 히어로 — 다층 세룰리안 그라데이션(사진 위 오버레이용) */
   --hero-text:#ffffff; --hero-kicker:#8bc2e0;
   --hero-overlay:
-    linear-gradient(100deg, rgba(21,42,56,.90) 0%, rgba(44,103,136,.74) 48%, rgba(95,168,210,.5) 100%);
+    linear-gradient(100deg, rgba(14,45,70,.92) 0%, rgba(20,58,88,.86) 28%, rgba(48,110,152,.60) 60%, rgba(128,186,220,.36) 100%);
 
   /* 다크 푸터(딥 세룰리안) */
   --footer-bg:#132b3a; --footer-text:#a7c1d3;
