@@ -66,12 +66,12 @@ section { scroll-margin-top: 84px; }
 .brand { display: flex; align-items: center; gap: 12px; margin-right: var(--space-6); }
 .brand__logo { height: 42px; width: auto; }
 .brand__text { position: relative; display: flex; flex-direction: column; justify-content: center; line-height: 1; }
-.brand__name { font-size: 1.0925rem; line-height: 1; font-weight: 800; color: var(--slate-900); letter-spacing: -.01em; white-space: nowrap; }
+.brand__name { font-size: 1.370rem; line-height: 1; font-weight: 800; color: var(--slate-900); letter-spacing: .06em; white-space: nowrap; }
 .brand__en { position: absolute; top: calc(100% + 1.6mm); left: 0; font-size: .57rem; line-height: 1; letter-spacing: .16em; color: var(--text-muted); font-weight: 600; white-space: nowrap; }
 
 .nav { display: flex; align-items: center; gap: var(--space-7); flex: 1; }
 /* 메인 메뉴: 헤더 중앙 정렬(여백 auto로 안전하게) */
-.nav__menu { display: flex; gap: var(--space-7); margin-inline: auto; }
+.nav__menu { display: flex; gap: 7rem; margin-inline: auto; }
 .nav__link {
   position: relative; font-weight: 600; font-size: .98rem; color: var(--text);
   padding: .4rem 0; white-space: nowrap;
@@ -82,6 +82,33 @@ section { scroll-margin-top: 84px; }
 }
 .nav__link:hover { color: var(--primary); }
 .nav__link:hover::after { width: 100%; }
+
+/* ===== 상단 메뉴 드롭다운(하위 메뉴) ===== */
+.nav__item { position: relative; display: flex; align-items: center; }
+.nav__sub {
+  position: absolute; left: 50%; top: 100%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 124px; padding: var(--space-2);
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-lg);
+  opacity: 0; visibility: hidden; transition: var(--transition); z-index: 60;
+}
+/* hover 시 메뉴↔서브 사이 여백을 유지해 마우스가 빠지지 않도록 */
+.nav__sub::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
+.nav__item:hover .nav__sub,
+.nav__item:focus-within .nav__sub {
+  opacity: 1; visibility: visible; transform: translateX(-50%) translateY(6px);
+}
+.nav__sub li { list-style: none; }
+.nav__sub a {
+  display: block; white-space: nowrap; text-align: center;
+  font-size: .9rem; font-weight: 600; color: var(--text);
+  padding: .55rem .7rem; border-radius: var(--radius-sm); transition: var(--transition);
+}
+.nav__sub a:hover { background: var(--surface-2); color: var(--primary); }
+
+/* 앵커 이동 시 sticky 헤더에 가리지 않도록 여백 확보 */
+section[id] { scroll-margin-top: 88px; }
 
 .toolbar { display: flex; align-items: center; gap: var(--space-4); margin-left: auto; }
 
@@ -170,6 +197,30 @@ section { scroll-margin-top: 84px; }
   100% { opacity: 0; transform: translate(-50%, 13px); }
 }
 @media (prefers-reduced-motion: reduce) { .hero__scroll-mouse::before { animation: none; } }
+
+/* ===== 전역 고정 스크롤 인디케이터 (배경 밝기에 따라 색 자동 전환) ===== */
+.scroll-fab {
+  position: fixed; right: var(--space-8); bottom: var(--space-8);
+  display: inline-flex; flex-direction: column; align-items: center; gap: .5em;
+  color: #fff; text-decoration: none; z-index: 40;
+  transition: color .3s ease, opacity .3s ease, transform .3s ease, filter .3s ease;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.35));
+}
+/* 밝은(흰) 배경 위 — 브랜드 색으로 전환 */
+.scroll-fab.is-dark { color: var(--primary); filter: none; }
+/* 페이지 맨 아래(푸터 근처)에서는 숨김 */
+.scroll-fab.is-hidden { opacity: 0; visibility: hidden; transform: translateY(12px); pointer-events: none; }
+.scroll-fab__mouse {
+  width: 24px; height: 38px; border: 2px solid currentColor; border-radius: 14px; position: relative;
+}
+.scroll-fab__mouse::before {
+  content: ""; position: absolute; left: 50%; top: 7px; width: 4px; height: 8px;
+  background: currentColor; border-radius: 2px; transform: translateX(-50%);
+  animation: heroScrollWheel 1.6s ease-in-out infinite;
+}
+.scroll-fab__text { font-size: .68rem; font-weight: 700; letter-spacing: .2em; }
+@media (prefers-reduced-motion: reduce) { .scroll-fab__mouse::before { animation: none; } }
+@media (max-width: 680px) { .scroll-fab { right: var(--space-5); bottom: var(--space-5); } }
 .hero__title { font-size: var(--fs-display); font-weight: 800; letter-spacing: -.015em; margin-bottom: var(--space-5); }
 .hero__title .hl { box-shadow: inset 0 -.32em 0 rgba(205,31,38,.5); }
 .hero__lead { font-size: var(--fs-lead); max-width: 560px; color: #d5e8f4; margin-bottom: var(--space-7); }
@@ -285,8 +336,8 @@ section { scroll-margin-top: 84px; }
   display: flex; align-items: center; justify-content: space-between;
   gap: var(--space-10); flex-wrap: wrap;
 }
-.eyebrow--light { color: var(--green-300); }
-.eyebrow--light::before { background: var(--green-300); }
+.eyebrow--light { color: #fff; }
+.eyebrow--light::before { background: #fff; }
 .contact-band__title { font-size: var(--fs-h2); font-weight: 800; margin: var(--space-3) 0; }
 .contact-band__lead { color: #dcecf6; max-width: 520px; }
 .contact-band__action { text-align: right; flex-shrink: 0; }
@@ -351,7 +402,9 @@ section { scroll-margin-top: 84px; }
 .greeting__p { color: var(--text-muted); margin-top: var(--space-4); line-height: 1.8; }
 .greeting__sign { margin-top: var(--space-5); font-size: 1.2em; font-weight: 700; color: var(--text); }
 /* 대표이사 이름: 손글씨 필체 + 앞 간격 */
-.greeting__sign .sign-name { margin-left: 1.1em; font-family: 'Nanum Pen Script', 'Yomogi', cursive; font-weight: 400; font-size: 1.7em; line-height: 1; color: var(--slate-900); }
+.greeting__sign .sign-name { margin-left: 1.1em; font-family: 'Nanum Pen Script', 'Yomogi', cursive; font-weight: 400; font-size: 2.04em; letter-spacing: .3em; line-height: 1; color: var(--slate-900); }
+/* 대표이사 자필 서명 이미지(실제 필체) */
+.greeting__sign .sign-img { display: inline-block; height: 3.3em; width: auto; margin-left: 1em; vertical-align: middle; }
 /* 영문: 회사명 줄 아래에 이름을 회사명 중앙 기준으로 배치 */
 html[lang="en"] .greeting__sign { display: inline-block; }
 html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; margin-top: .25em; text-align: center; }
@@ -461,9 +514,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   animation: barsArrowSweep 3.4s cubic-bezier(.4,0,.2,1) infinite;
 }
 .bars__arrow {
-  fill: url(#bars-gold);
-  stroke: #c9b134; stroke-width: 1; vector-effect: non-scaling-stroke;
-  filter: drop-shadow(0 5px 6px rgba(70,65,30,.30));
+  fill: url(#bars-arrow-green);
+  stroke: #3ba526; stroke-width: 1; vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 5px 7px rgba(40,120,30,.32));
 }
 /* 왼쪽 → 오른쪽 상향으로 그려지며 반복(GIF 효과) */
 @keyframes barsArrowSweep {
@@ -478,11 +531,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .bars__col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
 .bars__bar {
   position: relative; width: 64%; max-width: 88px; min-height: 10px;
-  background: linear-gradient(180deg, #4190be, #bcdcee);
-  border: 2px solid #2c6788; border-bottom: none;
-  border-radius: 3px 3px 0 0;
+  /* 위 밝은 시안 → 아래 진한 파랑 세로 그라데이션 (참고 이미지) */
+  background: linear-gradient(180deg, #8fd4ea 0%, #4aa0cc 52%, #2a6d9c 100%);
+  border: none;
+  border-radius: 2px 2px 0 0;
 }
-.bars__bar--peak { background: linear-gradient(180deg, #4190be, #bcdcee); }
+.bars__bar--peak { background: linear-gradient(180deg, #8fd4ea 0%, #4aa0cc 52%, #2a6d9c 100%); }
 .bars__bar span { display: none; }
 .bars__year { margin-top: var(--space-3); font-size: .92rem; font-weight: 700; color: #2c6788; }
 
@@ -671,6 +725,17 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .nav__link { padding: .8rem .4rem; }
   .nav__link::after { display: none; }
   .nav-toggle { display: block; }
+  /* 모바일: 하위 메뉴를 접힌 상태로 두고 상위 메뉴 탭하면 펼침 */
+  .nav__item { display: block; width: 100%; }
+  .nav__sub {
+    position: static; transform: none; opacity: 1; visibility: visible;
+    min-width: 0; box-shadow: none; border: none; border-radius: 0;
+    padding: 0 0 var(--space-2) var(--space-5);
+    display: none;
+  }
+  .nav__sub::before { display: none; }
+  .nav__item.is-open .nav__sub { display: block; }
+  .nav__sub a { padding: .5rem .4rem; font-weight: 500; color: var(--text-muted); }
   /* 로고 + 회사명은 왼쪽, 언어·햄버거는 오른쪽 */
   .nav { gap: var(--space-2); flex: 0 0 auto; margin-left: auto; }
   .toolbar { gap: var(--space-2); }
