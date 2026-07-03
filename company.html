@@ -31,7 +31,6 @@
             <ul class="nav__sub">
               <li><a href="company.html#greeting" data-i18n="nav.sub.greeting">CEO 인사말</a></li>
               <li><a href="company.html#overview" data-i18n="nav.sub.overview">회사 개요</a></li>
-              <li><a href="company.html#growth" data-i18n="nav.sub.growth">성장 추이</a></li>
               <li><a href="company.html#history" data-i18n="nav.sub.history">연혁</a></li>
               <li><a href="company.html#org" data-i18n="nav.sub.org">조직도</a></li>
               <li><a href="company.html#location" data-i18n="nav.sub.location">오시는 길</a></li>
@@ -136,24 +135,46 @@
           <h2 class="section__title" data-i18n="company.growth.title">꾸준한 성장</h2>
           <p class="section__lead" data-i18n="company.growth.lead">최근 5년간 매출이 지속적으로 성장하고 있습니다. (단위: 억원)</p>
         </div>
-        <div class="bars">
-          <div class="bars__col"><div class="bars__bar" style="height:42%"><span>76</span></div><div class="bars__year">2020</div></div>
-          <div class="bars__col"><div class="bars__bar" style="height:59%"><span>108</span></div><div class="bars__year">2021</div></div>
-          <div class="bars__col"><div class="bars__bar" style="height:66%"><span>121</span></div><div class="bars__year">2022</div></div>
-          <div class="bars__col"><div class="bars__bar" style="height:84%"><span>153</span></div><div class="bars__year">2023</div></div>
-          <div class="bars__col"><div class="bars__bar bars__bar--peak" style="height:100%"><span>182</span></div><div class="bars__year">2024</div></div>
-          <!-- 매출 성장 금색 리본 화살표 -->
-          <svg class="bars__trend" viewBox="0 0 1160 280" preserveAspectRatio="none" aria-hidden="true">
+        <!-- 매출 성장 라인 차트 (마지막 연도 상승 화살표 강조) -->
+        <div class="growth-chart">
+          <svg viewBox="0 0 1000 460" role="img" aria-label="최근 5년 매출 성장 라인 차트 (2020년 76억 → 2024년 182억)">
             <defs>
-              <linearGradient id="bars-arrow-green" x1="0" y1="1" x2="1" y2="0">
-                <stop offset="0" stop-color="#5bc73a"></stop>
-                <stop offset="0.55" stop-color="#57cb3a"></stop>
-                <stop offset="1" stop-color="#6ee04a"></stop>
+              <linearGradient id="growth-arrow" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#93f0b5"></stop>
+                <stop offset="1" stop-color="#37d06a"></stop>
               </linearGradient>
             </defs>
-            <!-- 지수형(복리) 상승곡선 화살표 (파란 스우시) -->
-            <path class="bars__arrow"
-              d="M107,250 C600,252 860,165 990,57 L944,58 L1051,41 L1034,106 L1031,79 C880,175 600,256 107,250 Z"></path>
+            <!-- 2024 강조 화살표 -->
+            <path class="gc-arrow" d="M846,382 V108 H820 L878,22 L936,108 H910 V382 Z" fill="url(#growth-arrow)"></path>
+            <!-- 기준선 -->
+            <line x1="30" y1="382" x2="970" y2="382" stroke="#e2e8f0" stroke-width="2"></line>
+            <!-- 꺾은선 (왼쪽→오른쪽으로 그려지는 애니메이션) -->
+            <polyline class="gc-line" points="70,300 272,243 474,219 676,162 878,110"
+              fill="none" stroke="#16a34a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+            <!-- 데이터 포인트 -->
+            <g fill="#12a144">
+              <circle cx="70" cy="300" r="9"></circle>
+              <circle cx="272" cy="243" r="9"></circle>
+              <circle cx="474" cy="219" r="9"></circle>
+              <circle cx="676" cy="162" r="9"></circle>
+              <circle cx="878" cy="110" r="10"></circle>
+            </g>
+            <!-- 값 라벨 -->
+            <g class="gc-val" text-anchor="middle">
+              <text x="70" y="276">76억</text>
+              <text x="272" y="219">108억</text>
+              <text x="474" y="195">121억</text>
+              <text x="676" y="138">153억</text>
+              <text x="878" y="86" class="gc-val--peak">182억</text>
+            </g>
+            <!-- 연도 라벨 -->
+            <g class="gc-year" text-anchor="middle">
+              <text x="70" y="412">2020</text>
+              <text x="272" y="412">2021</text>
+              <text x="474" y="412">2022</text>
+              <text x="676" y="412">2023</text>
+              <text x="878" y="412">2024</text>
+            </g>
           </svg>
         </div>
       </div>

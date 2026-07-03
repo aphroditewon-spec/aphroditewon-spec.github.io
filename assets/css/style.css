@@ -449,7 +449,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .orgc__line { width: 2px; height: 24px; background: var(--green-300); }
 /* 부서 행 + 버스 커넥터 */
 .orgc__depts { display: flex; justify-content: center; align-items: flex-start; }
-.orgc__dept { position: relative; padding: 24px var(--space-3) 0; flex: 1 1 0; display: flex; flex-direction: column; align-items: center; }
+.orgc__dept { position: relative; padding: 24px var(--space-3) 0; flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; }
 .orgc__dept::before { /* 세로 드롭 */
   content: ""; position: absolute; top: 0; left: 50%; width: 2px; height: 24px;
   background: var(--green-300); transform: translateX(-1px);
@@ -500,45 +500,25 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .loc__map::after { content: "→"; }
 .loc__map:hover { color: var(--primary-hover); }
 
-/* 매출 성장 바 차트 */
-.bars {
-  position: relative;
-  display: flex; align-items: flex-end; gap: var(--space-6);
-  height: 480px; padding-top: var(--space-8);
-  border-bottom: 3px solid #2c6788;
+/* 매출 성장 라인 차트 (참고: 네이버웹툰 MAU 스타일) */
+.growth-chart { width: 100%; max-width: 960px; margin: 0 auto; }
+.growth-chart svg { width: 100%; height: auto; display: block; font-family: var(--font-sans); overflow: visible; }
+.gc-arrow { filter: drop-shadow(0 6px 10px rgba(30,150,70,.22)); }
+.gc-val text { font-size: 30px; font-weight: 800; fill: #1f2937; }
+.gc-val .gc-val--peak { font-size: 37px; fill: #12873a; }
+.gc-year text { font-size: 22px; font-weight: 700; fill: #64748b; }
+/* 선이 왼쪽→오른쪽으로 그려지며 반복 (그리기 → 유지 → 사라짐 → 다시 그리기) */
+@media (prefers-reduced-motion: no-preference) {
+  .gc-line { stroke-dasharray: 832; animation: gcDraw 4.2s ease-in-out infinite; }
+  @keyframes gcDraw {
+    0%   { stroke-dashoffset: 832; opacity: 1; }   /* 숨김(왼쪽부터 시작) */
+    45%  { stroke-dashoffset: 0;   opacity: 1; }   /* 왼→오 그리기 완료 */
+    82%  { stroke-dashoffset: 0;   opacity: 1; }   /* 잠시 유지 */
+    94%  { stroke-dashoffset: 0;   opacity: 0; }   /* 서서히 사라짐 */
+    95%  { stroke-dashoffset: 832; opacity: 0; }   /* 숨긴 채 초기화 */
+    100% { stroke-dashoffset: 832; opacity: 0; }
+  }
 }
-/* 매출 성장 금색 리본 화살표 오버레이 */
-.bars__trend {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  pointer-events: none; z-index: 3; overflow: visible;
-  animation: barsArrowSweep 3.4s cubic-bezier(.4,0,.2,1) infinite;
-}
-.bars__arrow {
-  fill: url(#bars-arrow-green);
-  stroke: #3ba526; stroke-width: 1; vector-effect: non-scaling-stroke;
-  filter: drop-shadow(0 5px 7px rgba(40,120,30,.32));
-}
-/* 왼쪽 → 오른쪽 상향으로 그려지며 반복(GIF 효과) */
-@keyframes barsArrowSweep {
-  0%   { clip-path: inset(0 100% 0 0); opacity: 1; }
-  55%  { clip-path: inset(0 0 0 0);    opacity: 1; }
-  85%  { clip-path: inset(0 0 0 0);    opacity: 1; }
-  100% { clip-path: inset(0 0 0 0);    opacity: 0; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .bars__trend { animation: none; clip-path: none; }
-}
-.bars__col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
-.bars__bar {
-  position: relative; width: 64%; max-width: 88px; min-height: 10px;
-  /* 위 밝은 시안 → 아래 진한 파랑 세로 그라데이션 (참고 이미지) */
-  background: linear-gradient(180deg, #8fd4ea 0%, #4aa0cc 52%, #2a6d9c 100%);
-  border: none;
-  border-radius: 2px 2px 0 0;
-}
-.bars__bar--peak { background: linear-gradient(180deg, #8fd4ea 0%, #4aa0cc 52%, #2a6d9c 100%); }
-.bars__bar span { display: none; }
-.bars__year { margin-top: var(--space-3); font-size: .92rem; font-weight: 700; color: #2c6788; }
 
 /* 제품: 4열 카드 + 분할 레이아웃 */
 .cards--4 { grid-template-columns: repeat(4, 1fr); }
