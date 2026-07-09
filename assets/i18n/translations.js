@@ -116,7 +116,7 @@ window.I18N = {
     "products.hero.title": "제품·사업영역",
     "products.hero.lead": "산업 전반에 필요한 가스를 한 곳에서 — 제조부터 공급, 시공까지.",
     "products.gas.eyebrow": "Products",
-    "products.gas.title": "산업용·의료용 가스",
+    "products.gas.title": "산업용·의료용·혼합·특수·액화석유가스",
     "products.gas.lead": "고순도 가스를 Bulk·실린더로 안정적으로 공급하고 직접 제조합니다.",
     "products.gas.o2": "산소 (O₂)",
     "products.gas.o2d": "의료용·산업용. 액체·기체 공급.",
