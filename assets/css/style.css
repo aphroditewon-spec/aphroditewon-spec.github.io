@@ -529,9 +529,16 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .split { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-12); align-items: center; }
 .split__media img { border-radius: var(--radius-lg); box-shadow: var(--shadow-md); width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 
-/* 산업용·의료용 가스 — 제목(좌측 정렬) 아래 실린더 사진 배치 */
-.gas-photo { margin-bottom: var(--space-8); }
-.gas-photo img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
+/* 산업용·의료용 가스 — 왼쪽 실린더 이미지 + 오른쪽 제목·카드 2열 */
+.gas-layout { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: var(--space-10); align-items: center; }
+.gas-layout__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
+.gas-layout__body .section__head { margin-bottom: var(--space-7); }
+.gas-cards { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 960px) {
+  .gas-layout { grid-template-columns: 1fr; gap: var(--space-8); }
+  .gas-layout__media { max-width: 560px; }
+}
+@media (max-width: 560px) { .gas-cards { grid-template-columns: 1fr; } }
 
 /* 공급 흐름 다이어그램 */
 .flow { display: flex; align-items: stretch; gap: var(--space-2); }
