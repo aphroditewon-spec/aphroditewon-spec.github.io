@@ -17,7 +17,7 @@ window.I18N = {
     "nav.sub.history": "연혁",
     "nav.sub.org": "조직도",
     "nav.sub.location": "오시는 길",
-    "nav.sub.gas": "산업용·의료용 가스",
+    "nav.sub.gas": "산업용가스",
     "nav.sub.ice": "드라이아이스",
     "nav.sub.market": "시장 전망",
     "nav.sub.const": "시설·시공",
