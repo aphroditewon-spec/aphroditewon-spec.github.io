@@ -529,6 +529,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .split { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-12); align-items: center; }
 .split__media img { border-radius: var(--radius-lg); box-shadow: var(--shadow-md); width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 
+/* 산업용·의료용 가스 — 제목(좌측 정렬) 아래 실린더 사진 배치 */
+.gas-photo { margin-bottom: var(--space-8); }
+.gas-photo img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
+
 /* 공급 흐름 다이어그램 */
 .flow { display: flex; align-items: stretch; gap: var(--space-2); }
 .flow__node {
