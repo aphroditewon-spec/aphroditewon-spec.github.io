@@ -526,6 +526,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 제품: 4열 카드 + 분할 레이아웃 */
 .cards--4 { grid-template-columns: repeat(4, 1fr); }
 .cards--2 { grid-template-columns: repeat(2, 1fr); }
+/* 단독 카드(드라이아이스 너겟·블록) — 중앙 정렬 */
+.cards--solo { grid-template-columns: minmax(0, 460px); justify-content: center; }
+.cards--solo + .cards { margin-top: var(--space-8); }
 .split { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-12); align-items: center; }
 .split__media img { border-radius: var(--radius-lg); box-shadow: var(--shadow-md); width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 
