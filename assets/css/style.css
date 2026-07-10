@@ -432,7 +432,7 @@ section[id] { scroll-margin-top: 88px; }
 .ice-point__label {
   display: block; margin-top: clamp(5px, 0.8vw, 10px);
   font-size: clamp(11px, 1.15vw, 16px); font-weight: 700; letter-spacing: 0.02em;
-  color: #2b6cb8;
+  color: #1c5fc0;
 }
 .ice-point__desc {
   display: block; margin-top: 2px;
@@ -442,6 +442,56 @@ section[id] { scroll-margin-top: 88px; }
   .ice-banner__rule { display: none; }
   .ice-banner__points { gap: 12px; }
   .ice-point__desc { display: none; }
+}
+
+/* 산업용가스 배너 — 배경 이미지 + 왼쪽 문구/아이콘 오버레이 */
+.gas-banner {
+  position: absolute; inset: 0; line-height: 1.35;
+  display: flex; align-items: center;
+}
+.gas-banner__wrap {
+  width: min(1200px, 92%); margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 40px);
+}
+.gas-banner__col { max-width: min(780px, 62%); }
+.gas-point__label, .gas-point__desc { white-space: nowrap; }
+.gas-banner__title {
+  font-size: clamp(28px, 4.4vw, 60px); font-weight: 800; line-height: 1.2;
+  color: #17457f; margin: 0; letter-spacing: 0.04em;
+}
+.gas-banner__title b { color: #1c5fc0; font-weight: 800; }
+.gas-banner__sub {
+  font-size: clamp(13px, 1.5vw, 21px); font-weight: 500; color: #3a4654;
+  margin: clamp(4px, 0.6vw, 9px) 0 0;
+}
+.gas-banner__rule {
+  display: block; width: clamp(44px, 5vw, 68px); height: 2px;
+  background: #2b6cb8; margin: clamp(10px, 1.4vw, 20px) 0 clamp(14px, 1.8vw, 26px);
+}
+.gas-banner__points {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; gap: clamp(18px, 3vw, 46px);
+}
+.gas-point { text-align: center; }
+.gas-point__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: clamp(34px, 4vw, 58px); height: clamp(34px, 4vw, 58px);
+  border-radius: 50%; background: #2b6cb8; color: #fff;
+}
+.gas-point__icon svg { width: 54%; height: 54%; }
+.gas-point__label {
+  display: block; margin-top: clamp(5px, 0.8vw, 10px);
+  font-size: clamp(11px, 1.15vw, 16px); font-weight: 700; color: #1c5fc0;
+}
+.gas-point__desc {
+  display: block; margin-top: 2px;
+  font-size: clamp(10px, 1vw, 14px); font-weight: 700; color: #45505c;
+}
+@media (max-width: 720px) {
+  .gas-banner__col { max-width: 92%; }
+  .gas-banner__rule { display: none; }
+  .gas-point__desc { display: none; }
+  .gas-banner__points { gap: 12px; }
 }
 .page-hero h1 { font-size: var(--fs-h1); font-weight: 800; }
 .page-hero p { color: #dcecf6; margin-top: var(--space-3); max-width: 620px; }
