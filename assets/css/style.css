@@ -536,11 +536,50 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .subhead:first-child { margin-top: 0; }
 .ice-intro { max-width: 860px; }
 .ice-intro p { color: var(--text-muted); line-height: 1.8; margin-bottom: var(--space-4); }
-/* 제품 특성 — 이미지 + 텍스트 2단 */
-.ice-feature { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-8); align-items: center; }
-.ice-feature__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
-.ice-feature .ice-intro { max-width: none; }
-@media (max-width: 760px) { .ice-feature { grid-template-columns: 1fr; } .ice-feature__media { max-width: 420px; } }
+/* 너겟 이미지 슬라이드쇼 (좌측 정렬 프레임 + 우측 캡션) */
+.ice-slideshow { display: grid; grid-template-columns: minmax(0, 560px) 1fr; gap: var(--space-8); align-items: center; }
+.ice-slideshow__frame { position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); background: var(--surface-2); }
+.ice-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease; }
+.ice-slide.is-active { opacity: 1; }
+.ice-slideshow__arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+  width: 40px; height: 40px; border: 0; border-radius: 50%;
+  background: rgba(15,26,37,.42); color: #fff; font-size: 1.5rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+  transition: var(--transition);
+}
+.ice-slideshow__arrow:hover { background: rgba(15,26,37,.72); }
+.ice-slideshow__arrow--prev { left: 12px; }
+.ice-slideshow__arrow--next { right: 12px; }
+.ice-slideshow__dots { position: absolute; left: 0; right: 0; bottom: 12px; display: flex; gap: 8px; justify-content: center; z-index: 2; }
+.ice-slideshow__dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.55); cursor: pointer; transition: var(--transition); }
+.ice-slideshow__dots button.is-active { width: 20px; border-radius: 5px; background: #fff; }
+.ice-slideshow__cap .feature__title { margin-bottom: var(--space-3); }
+.ice-slideshow__cap .feature__text { margin-bottom: var(--space-3); }
+@media (max-width: 860px) { .ice-slideshow { grid-template-columns: 1fr; gap: var(--space-6); } }
+
+/* 제품 규격 표 + 치수 도면 */
+.spec-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: start; }
+.spec-wrap { max-width: 720px; }
+.spec-note { margin-top: var(--space-4); font-size: .9rem; color: var(--text-muted); line-height: 1.6; }
+.spec-note b { color: var(--brand); }
+.spec-figure { margin: 0; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-5); box-shadow: var(--shadow-sm); }
+.spec-figure img { width: 100%; display: block; }
+.spec-figure figcaption { margin-top: var(--space-3); text-align: center; font-size: .85rem; color: var(--text-muted); }
+@media (max-width: 860px) { .spec-layout { grid-template-columns: 1fr; } }
+
+/* 제품 특성·주요 용도 — 왼쪽 이미지 + 오른쪽 콘텐츠 */
+.ice-overview { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-10); align-items: start; }
+.ice-overview__media { position: sticky; top: 100px; }
+.ice-overview__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
+.ice-overview__body .subhead:first-child { margin-top: 0; }
+.ice-overview .ice-intro { max-width: none; }
+.ice-use-cards { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 860px) {
+  .ice-overview { grid-template-columns: 1fr; gap: var(--space-8); }
+  .ice-overview__media { position: static; max-width: 480px; }
+}
+@media (max-width: 560px) { .ice-use-cards { grid-template-columns: 1fr; } }
 
 /* 시설시공 — 왼쪽 시공 현장 사진 + 오른쪽 카드 3개(세로) */
 .const-layout { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: var(--space-10); align-items: start; }

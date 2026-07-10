@@ -151,7 +151,52 @@
     update();
   }
 
-  function start() { initNav(); initHeaderShadow(); initLangDropdown(); initPhotoToggle(); initHeroSlider(); initScrollFab(); }
+  // 너겟 이미지 슬라이드쇼 — 여러 장을 순차 자동 전환(도트 클릭 지원)
+  function initIceSlideshow() {
+    document.querySelectorAll(".ice-slideshow").forEach(function (box) {
+      var slides = box.querySelectorAll(".ice-slide");
+      if (slides.length < 2) return;
+      var dotsWrap = box.querySelector(".ice-slideshow__dots");
+      var interval = parseInt(box.getAttribute("data-interval"), 10) || 3000;
+      var i = 0, timer = null, dots = [];
+
+      function show(n) {
+        slides[i].classList.remove("is-active");
+        if (dots[i]) dots[i].classList.remove("is-active");
+        i = (n + slides.length) % slides.length;
+        slides[i].classList.add("is-active");
+        if (dots[i]) dots[i].classList.add("is-active");
+      }
+      function next() { show(i + 1); }
+      function play() { stop(); timer = setInterval(next, interval); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      if (dotsWrap) {
+        slides.forEach(function (_, n) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.setAttribute("aria-label", (n + 1) + "번 사진");
+          if (n === 0) b.classList.add("is-active");
+          b.addEventListener("click", function () { show(n); play(); });
+          dotsWrap.appendChild(b);
+          dots.push(b);
+        });
+      }
+
+      // 이전/다음 화살표
+      var prev = box.querySelector(".ice-slideshow__arrow--prev");
+      var nextBtn = box.querySelector(".ice-slideshow__arrow--next");
+      if (prev) prev.addEventListener("click", function () { show(i - 1); play(); });
+      if (nextBtn) nextBtn.addEventListener("click", function () { show(i + 1); play(); });
+
+      // 마우스 올리면 일시정지
+      box.addEventListener("mouseenter", stop);
+      box.addEventListener("mouseleave", play);
+      play();
+    });
+  }
+
+  function start() { initNav(); initHeaderShadow(); initLangDropdown(); initPhotoToggle(); initHeroSlider(); initIceSlideshow(); initScrollFab(); }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", start);
