@@ -298,6 +298,7 @@ section[id] { scroll-margin-top: 88px; }
   letter-spacing: .06em; margin-bottom: var(--space-5);
   padding-bottom: var(--space-2); border-bottom: 2px solid var(--green-200);
 }
+.feature__icon { display: block; width: 64px; height: 64px; object-fit: contain; margin-bottom: var(--space-4); }
 .feature--media { padding: 0; }
 .feature--media .feature__title { margin-left: var(--space-7); margin-right: var(--space-7); }
 .feature--media .feature__text { margin: 0 var(--space-7) var(--space-7); }
