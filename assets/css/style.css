@@ -391,6 +391,9 @@ section[id] { scroll-margin-top: 88px; }
   background-size: cover; background-position: center;
   color: #fff; padding-block: var(--space-12);
 }
+/* 페이지 배너(자체 텍스트 포함 이미지) — 5.5:1, 잘림 없이 전체 표시 */
+.page-banner { line-height: 0; }
+.page-banner img { display: block; width: 100%; height: auto; }
 .page-hero h1 { font-size: var(--fs-h1); font-weight: 800; }
 .page-hero p { color: #dcecf6; margin-top: var(--space-3); max-width: 620px; }
 .breadcrumb { font-size: var(--fs-sm); color: var(--green-300); margin-bottom: var(--space-3); }
