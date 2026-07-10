@@ -394,6 +394,55 @@ section[id] { scroll-margin-top: 88px; }
 /* 페이지 배너(자체 텍스트 포함 이미지) — 5.5:1, 잘림 없이 전체 표시 */
 .page-banner { line-height: 0; }
 .page-banner img { display: block; width: 100%; height: auto; }
+
+/* 배경 이미지 + 왼쪽 텍스트/아이콘 오버레이 배너 */
+.page-banner--overlay { position: relative; }
+.page-banner--overlay .page-banner__bg { display: block; width: 100%; height: auto; }
+.ice-banner {
+  position: absolute; inset: 0; line-height: 1.4;
+  display: flex; align-items: center;
+}
+.ice-banner__inner {
+  width: min(1200px, 92%); margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 40px);
+}
+.ice-banner__title {
+  font-size: clamp(28px, 4.4vw, 60px); font-weight: 800; letter-spacing: 0.04em;
+  color: #17457f; margin: 0;
+}
+.ice-banner__sub {
+  font-size: clamp(13px, 1.5vw, 21px); font-weight: 500; color: #3a4654;
+  margin: clamp(6px, 0.8vw, 12px) 0 0;
+}
+.ice-banner__rule {
+  display: block; width: clamp(48px, 5vw, 72px); height: 2px;
+  background: #2b6cb8; margin: clamp(10px, 1.4vw, 20px) 0 clamp(14px, 1.8vw, 26px);
+}
+.ice-banner__points {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; gap: clamp(18px, 3vw, 46px);
+}
+.ice-point { text-align: center; }
+.ice-point__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: clamp(34px, 4vw, 58px); height: clamp(34px, 4vw, 58px);
+  border-radius: 50%; background: #2b6cb8; color: #fff;
+}
+.ice-point__icon svg { width: 54%; height: 54%; }
+.ice-point__label {
+  display: block; margin-top: clamp(5px, 0.8vw, 10px);
+  font-size: clamp(11px, 1.15vw, 16px); font-weight: 700; letter-spacing: 0.02em;
+  color: #2b6cb8;
+}
+.ice-point__desc {
+  display: block; margin-top: 2px;
+  font-size: clamp(10px, 1vw, 14px); font-weight: 700; color: #45505c;
+}
+@media (max-width: 640px) {
+  .ice-banner__rule { display: none; }
+  .ice-banner__points { gap: 12px; }
+  .ice-point__desc { display: none; }
+}
 .page-hero h1 { font-size: var(--fs-h1); font-weight: 800; }
 .page-hero p { color: #dcecf6; margin-top: var(--space-3); max-width: 620px; }
 .breadcrumb { font-size: var(--fs-sm); color: var(--green-300); margin-bottom: var(--space-3); }
