@@ -531,6 +531,17 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .cards--solo { grid-template-columns: minmax(0, 460px); justify-content: center; }
 .cards--solo + .cards { margin-top: var(--space-8); }
 
+/* 섹션 내 소제목(드라이아이스 상품 소개 등) */
+.subhead { font-size: 1.4rem; font-weight: 800; color: var(--slate-900); margin: var(--space-10) 0 var(--space-6); }
+.subhead:first-child { margin-top: 0; }
+.ice-intro { max-width: 860px; }
+.ice-intro p { color: var(--text-muted); line-height: 1.8; margin-bottom: var(--space-4); }
+/* 제품 특성 — 이미지 + 텍스트 2단 */
+.ice-feature { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-8); align-items: center; }
+.ice-feature__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
+.ice-feature .ice-intro { max-width: none; }
+@media (max-width: 760px) { .ice-feature { grid-template-columns: 1fr; } .ice-feature__media { max-width: 420px; } }
+
 /* 시설시공 — 왼쪽 시공 현장 사진 + 오른쪽 카드 3개(세로) */
 .const-layout { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: var(--space-10); align-items: start; }
 .const-layout__media img { width: 100%; height: 100%; max-height: 520px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
