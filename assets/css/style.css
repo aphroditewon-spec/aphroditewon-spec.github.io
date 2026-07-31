@@ -1072,3 +1072,63 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .hero__trust { gap: var(--space-5); }
   .hero__trust-num { font-size: 1.3rem; }
 }
+
+/* =====================================================================
+   홈 리뉴얼 섹션 (회사소개·팩토리·Why6·사업영역·제품슬라이드)
+   ===================================================================== */
+/* ② 회사소개 */
+.about-home { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--space-12); align-items: center; }
+.about-home__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
+.about-home__lead { color: var(--text-muted); line-height: 1.9; margin: var(--space-5) 0 var(--space-7); }
+@media (max-width: 900px) { .about-home { grid-template-columns: 1fr; gap: var(--space-8); } }
+
+/* ⑥ 팩토리 (풀블리드 드론) */
+.factory { position: relative; overflow: hidden; }
+.factory__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
+.factory::after { content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg, rgba(12,26,40,.82) 0%, rgba(12,26,40,.6) 45%, rgba(12,26,40,.15) 75%, rgba(12,26,40,0) 100%); }
+.factory__overlay { position: relative; z-index: 2; padding-block: clamp(64px, 12vw, 150px); }
+.factory__title { font-size: var(--fs-h1); font-weight: 800; color: #fff; margin: var(--space-3) 0 var(--space-4); line-height: 1.2; }
+.factory__lead { color: rgba(255,255,255,.86); font-size: var(--fs-lead); max-width: 460px; line-height: 1.7; }
+
+/* ④ Why 6카드 — 인라인 SVG 아이콘 */
+.feature__ic { display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border-radius: 14px; background: var(--surface-brand); color: var(--brand); margin-bottom: var(--space-4); }
+.feature__ic svg { width: 26px; height: 26px; }
+
+/* ③ 사업영역 6 아이콘 */
+.bizicon { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-5); }
+.bizicon__item { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); text-align: center;
+  padding: var(--space-6) var(--space-3); border: 1px solid var(--border); border-radius: var(--radius-md);
+  background: var(--surface); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.bizicon__item:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--green-200); }
+.bizicon__ic { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px;
+  border-radius: 50%; background: var(--surface-brand); color: var(--brand); transition: transform .25s ease; }
+.bizicon__item:hover .bizicon__ic { transform: scale(1.08); }
+.bizicon__ic svg { width: 27px; height: 27px; }
+.bizicon__item b { font-size: var(--fs-sm); font-weight: 700; color: var(--text); }
+@media (max-width: 900px) { .bizicon { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 460px) { .bizicon { grid-template-columns: repeat(2, 1fr); } }
+
+/* ⑤ 제품 가로 슬라이드 */
+.prodslide { position: relative; margin-top: var(--space-8); }
+.prodslide__track { display: flex; gap: var(--space-6); overflow-x: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory;
+  padding: var(--space-2) max(var(--space-6), calc((100% - var(--container)) / 2 + var(--space-6))) var(--space-6); -webkit-overflow-scrolling: touch; }
+.prodslide__track::-webkit-scrollbar { height: 6px; }
+.prodslide__track::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 999px; }
+.prodcard { flex: 0 0 clamp(280px, 34%, 400px); scroll-snap-align: start; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease; }
+.prodcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.prodcard__media { overflow: hidden; }
+.prodcard__media img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform .5s ease; }
+.prodcard:hover .prodcard__media img { transform: scale(1.06); }
+.prodcard__body { padding: var(--space-6); display: flex; flex-direction: column; flex: 1; }
+.prodcard__title { font-size: var(--fs-h3); font-weight: 700; color: var(--text); margin-bottom: var(--space-2); }
+.prodcard__text { font-size: var(--fs-sm); color: var(--text-muted); line-height: 1.7; flex: 1; }
+.prodcard__more { margin-top: var(--space-5); font-size: var(--fs-sm); font-weight: 700; color: var(--accent-hover); letter-spacing: .08em; }
+.prodcard__more::after { content: " →"; }
+.prodslide__nav { display: flex; justify-content: flex-end; gap: var(--space-3); max-width: var(--container); margin: 0 auto; padding: 0 var(--space-6); }
+.prodslide__btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--surface);
+  color: var(--text); font-size: 1.4rem; line-height: 1; cursor: pointer; transition: var(--transition); }
+.prodslide__btn:hover { background: var(--green-deep); color: #fff; border-color: var(--green-deep); }
