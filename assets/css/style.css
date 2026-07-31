@@ -535,8 +535,32 @@ section[id] { scroll-margin-top: 88px; }
 .nav__link.is-current::after { width: 100%; }
 
 /* 인사말 */
-.greeting { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-12); align-items: center; }
+.greeting { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-12); align-items: center; }
 .greeting__media img { border-radius: var(--radius-lg); box-shadow: var(--shadow-md); width: 100%; }
+/* 핵심 가치 아이콘(안전·품질·신뢰·기술혁신) */
+.greeting__values {
+  list-style: none; margin: var(--space-7) 0 0; padding: var(--space-6) 0 0;
+  border-top: 1px solid var(--border);
+  display: flex; flex-wrap: wrap; gap: clamp(14px, 2.4vw, 30px);
+}
+.gval { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; min-width: 62px; }
+.gval__icon {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--surface-brand); color: var(--brand);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.gval__icon svg { width: 23px; height: 23px; }
+.gval__ko { font-size: var(--fs-sm); font-weight: 700; color: var(--text); }
+.gval__en { font-size: 10px; font-weight: 600; letter-spacing: .12em; color: var(--text-muted); }
+/* 하단 인용 문구 바 */
+.greeting-quote {
+  display: flex; align-items: center; gap: var(--space-5);
+  margin-top: var(--space-10); padding: var(--space-7) var(--space-8);
+  background: var(--green-deep); color: #fff; border-radius: var(--radius-lg);
+}
+.greeting-quote__mark { font-family: Georgia, 'Times New Roman', serif; font-size: 3rem; line-height: .6; color: var(--accent); flex: 0 0 auto; }
+.greeting-quote__text { margin: 0; font-size: var(--fs-lead); font-weight: 600; line-height: 1.5; }
+@media (max-width: 720px) { .greeting-quote { flex-direction: column; text-align: center; gap: var(--space-3); } }
 .greeting__p { color: var(--text-muted); margin-top: var(--space-4); line-height: 1.8; }
 .greeting__sign { margin-top: var(--space-5); font-size: 1.2em; font-weight: 700; color: var(--text); }
 /* 대표이사 이름: 손글씨 필체 + 앞 간격 */
