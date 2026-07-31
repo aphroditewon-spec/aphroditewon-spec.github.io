@@ -735,6 +735,29 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 }
 @media (max-width: 560px) { .gas-cards { grid-template-columns: 1fr; } }
 
+/* 제품 카테고리 라인업 (산업용가스: 용도별 5분류) */
+.prodcat { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6); }
+.prodcat__card {
+  display: flex; flex-direction: column; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: var(--space-7);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.prodcat__card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--green-200); }
+.prodcat__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border-radius: 14px;
+  background: var(--surface-brand); color: var(--brand); margin-bottom: var(--space-5);
+}
+.prodcat__icon svg { width: 26px; height: 26px; }
+.prodcat__title { font-size: var(--fs-h3); font-weight: 700; color: var(--text); margin-bottom: var(--space-3); }
+.prodcat__text { font-size: var(--fs-sm); color: var(--text-muted); line-height: 1.7; flex: 1; }
+.prodcat__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: var(--space-5); }
+.prodcat__tag {
+  font-size: 12px; font-weight: 600; color: var(--green-700);
+  background: var(--surface-3); border-radius: var(--radius-pill); padding: 4px 11px;
+}
+
 /* 공급 흐름 다이어그램 */
 .flow { display: flex; align-items: stretch; gap: var(--space-2); }
 .flow__node {
