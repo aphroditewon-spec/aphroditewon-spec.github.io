@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회사소개 | 한국탄산화학㈜</title>
-  <meta name="description" content="한국탄산화학㈜ 회사소개 — 인사말, 회사 개요, 연혁, 조직도, 오시는 길.">
+  <meta name="description" content="한국탄산화학㈜ 회사소개 — CEO 인사말, 연혁, 꾸준한 성장.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/style.css?v=20260731-3">
@@ -29,11 +29,9 @@
           <li class="nav__item has-sub">
             <a class="nav__link is-current" href="company.html" data-i18n="nav.company">회사소개</a>
             <ul class="nav__sub">
-              <li><a href="company.html#greeting" data-i18n="nav.sub.greeting">CEO 인사말</a></li>
-              <li><a href="company.html#history" data-i18n="nav.sub.history">연혁</a></li>
-              <li><a href="company.html#overview" data-i18n="nav.sub.overview">회사 개요</a></li>
-              <li><a href="company.html#affiliates" data-i18n="nav.sub.affiliate">계열사</a></li>
-              <li><a href="company.html#location" data-i18n="nav.sub.location">오시는 길</a></li>
+              <li><a href="company.html" data-i18n="nav.sub.intro">인사말·연혁</a></li>
+              <li><a href="company-overview.html" data-i18n="nav.sub.overviewpage">회사개요·조직도</a></li>
+              <li><a href="company-network.html" data-i18n="nav.sub.network">계열사·오시는 길</a></li>
             </ul>
           </li>
           <li class="nav__item has-sub">
@@ -141,7 +139,6 @@
       </div>
     </section>
 
-    <!-- ===== 회사 개요 ===== -->
     <!-- ===== 연혁 ===== -->
     <section class="section section--soft" id="history">
       <div class="container">
@@ -207,110 +204,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ===== 회사 개요 ===== -->
-    <section class="section section--soft" id="overview">
-      <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="company.overview.eyebrow">Overview</span>
-          <h2 class="section__title" data-i18n="company.overview.title">회사 개요</h2>
-        </div>
-        <dl class="overview">
-          <div class="overview__row"><dt data-i18n="company.overview.name">상호</dt><dd data-i18n="company.overview.nameVal">한국탄산화학㈜ (KLCC)</dd></div>
-          <div class="overview__row"><dt data-i18n="company.overview.founded">설립</dt><dd data-i18n="company.overview.foundedVal">2001년 8월</dd></div>
-          <div class="overview__row"><dt data-i18n="company.overview.staff">임직원</dt><dd data-i18n="company.overview.staffVal">100여 명</dd></div>
-          <!-- 매출 항목 숨김 처리 (요청에 의해 비공개)
-          <div class="overview__row"><dt data-i18n="company.overview.revenue">매출 (2024년)</dt><dd data-i18n="company.overview.revenueVal">182억 원</dd></div>
-          -->
-          <div class="overview__row"><dt data-i18n="company.overview.biz">사업분야</dt><dd data-i18n="company.overview.bizVal">산업용·의료용 가스, 혼합·특수가스, LPG, 드라이아이스 제조·판매, 탱크설치·가스시설 시공</dd></div>
-          <div class="overview__row"><dt data-i18n="company.overview.products">생산제품</dt><dd data-i18n="company.overview.productsVal">산소·질소·아르곤·탄산·수소·헬륨·혼합가스·특수가스 등</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ===== 조직도 ===== -->
-    <section class="section" id="org">
-      <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="company.org.eyebrow">Organization</span>
-          <h2 class="section__title" data-i18n="company.org.title">조직도</h2>
-          <p class="section__lead" data-i18n="company.org.lead">영업·생산·품질·설비·운송이 유기적으로 협력합니다.</p>
-        </div>
-        <div class="orgc">
-          <div class="orgc__head">
-            <div class="orgc__node orgc__node--ceo"><small>CEO</small><b data-i18n="company.org.ceo">대표이사</b></div>
-            <span class="orgc__line"></span>
-            <div class="orgc__node orgc__node--evp"><small>EXECUTIVE</small><b data-i18n="company.org.evp">총괄전무</b></div>
-            <span class="orgc__line"></span>
-          </div>
-          <div class="orgc__depts">
-            <!-- 영업팀 (4 하위) -->
-            <div class="orgc__dept">
-              <div class="orgc__group">
-                <span class="orgc__gtitle" data-i18n="company.org.sales">영업팀</span>
-                <span class="orgc__pill" data-i18n="company.org.sales1">DRY ICE</span>
-                <span class="orgc__pill" data-i18n="company.org.sales2">BULK</span>
-                <span class="orgc__pill" data-i18n="company.org.sales3">CYL</span>
-                <span class="orgc__pill" data-i18n="company.org.sales4">대리점</span>
-              </div>
-            </div>
-            <!-- 생산팀 (2 하위) -->
-            <div class="orgc__dept">
-              <div class="orgc__group">
-                <span class="orgc__gtitle" data-i18n="company.org.prod">생산팀</span>
-                <span class="orgc__pill" data-i18n="company.org.prod2">고압가스</span>
-                <span class="orgc__pill" data-i18n="company.org.prod3">DRY ICE</span>
-              </div>
-            </div>
-            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.quality">품질관리팀</div></div>
-            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.facility">설비팀</div></div>
-            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.logistics">운송팀</div></div>
-            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.admin">경영지원팀</div></div>
-            <div class="orgc__dept"><div class="orgc__box" data-i18n="company.org.support">고객지원팀</div></div>
-          </div>
-          <div class="orgc__divider"></div>
-          <div class="orgc__aff" id="affiliates">
-            <p class="orgc__aff-label"><b>AFFILIATES</b> <span data-i18n="company.org.affsub">대표이사 직속, 관계사</span></p>
-            <div class="orgc__aff-grid">
-              <div class="orgc__aff-item"><i></i><b data-i18n="company.org.hwaseong">화성공장</b></div>
-              <div class="orgc__aff-item"><i></i><b data-i18n="company.org.sihwa">시화영업소</b></div>
-              <div class="orgc__aff-item"><i></i><b data-i18n="company.org.aff2">신라특수가스</b></div>
-              <div class="orgc__aff-item"><i></i><b data-i18n="company.org.aff1">부성테크니컬</b></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 오시는 길 ===== -->
-    <section class="section" id="location">
-      <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="company.loc.eyebrow">Location</span>
-          <h2 class="section__title" data-i18n="company.loc.title">오시는 길</h2>
-        </div>
-        <div class="cards">
-          <article class="feature">
-            <h3 class="feature__title" data-i18n="company.loc.hq">본사·시흥공장</h3>
-            <p class="feature__text" data-i18n="company.loc.hqAddr">경기도 시흥시 서해안로 140</p>
-            <p class="feature__text"><span data-i18n="company.loc.tel">전화</span> : 031-498-9231~6</p>
-            <a class="loc__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 서해안로 140" data-i18n="company.loc.map">지도에서 보기</a>
-          </article>
-          <article class="feature">
-            <h3 class="feature__title" data-i18n="company.loc.hwaseong">화성공장·용기검사장</h3>
-            <p class="feature__text" data-i18n="company.loc.hwaseongAddr">경기도 화성시 우정읍 포승향남로 1411-24</p>
-            <p class="feature__text"><span data-i18n="company.loc.tel">전화</span> : 031-351-6324~6</p>
-            <a class="loc__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 화성시 우정읍 포승향남로 1411-24" data-i18n="company.loc.map">지도에서 보기</a>
-          </article>
-          <article class="feature">
-            <h3 class="feature__title" data-i18n="company.loc.sihwa">시화영업소</h3>
-            <p class="feature__text" data-i18n="company.loc.sihwaAddr">경기도 시흥시 오이도로 22-29</p>
-            <p class="feature__text"><span data-i18n="company.loc.tel">전화</span> : 031-498-4989, 8989</p>
-            <a class="loc__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29" data-i18n="company.loc.map">지도에서 보기</a>
-          </article>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- ===== 푸터 ===== -->
@@ -355,7 +248,7 @@
     <span class="scroll-fab__text">SCROLL</span>
   </a>
 
-  <script src="assets/i18n/translations.js?v=20260731-4"></script>
+  <script src="assets/i18n/translations.js?v=20260731-5"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
