@@ -40,6 +40,10 @@ window.I18N = {
     "hero.lead": "산소·질소·아르곤·탄산·수소부터 드라이아이스까지. 고순도 99.9999% 품질과 안정적인 공급망으로 함께합니다.",
     "hero.cta1": "제품 둘러보기",
     "hero.cta2": "문의하기",
+    "hero.stat.since": "설립연도",
+    "hero.stat.purity": "고순도 품질",
+    "hero.stat.di": "드라이아이스 日産",
+    "hero.stat.service": "무중단 공급",
 
     "stats.year": "설립연도",
     "stats.revenue": "2024년 매출",
@@ -668,6 +672,10 @@ window.I18N = {
     "hero.lead": "酸素・窒素・アルゴン・炭酸・水素からドライアイスまで。99.9999%の高純度品質と安定した供給網でお応えします。",
     "hero.cta1": "製品を見る",
     "hero.cta2": "お問い合わせ",
+    "hero.stat.since": "設立年",
+    "hero.stat.purity": "高純度品質",
+    "hero.stat.di": "ドライアイス日産",
+    "hero.stat.service": "無停止供給",
 
     "stats.year": "設立年",
     "stats.revenue": "2024年売上",

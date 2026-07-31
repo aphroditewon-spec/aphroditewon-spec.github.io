@@ -231,13 +231,13 @@ section[id] { scroll-margin-top: 88px; }
 .hero .btn--ghost:hover { background: rgba(20,59,99,.08); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
 .hero__trust {
-  display: flex; flex-wrap: wrap; gap: var(--space-6); margin-top: var(--space-10);
-  padding-top: var(--space-6); border-top: 1px solid rgba(255,255,255,.18);
+  display: flex; flex-wrap: wrap; gap: clamp(22px, 4vw, 56px); margin-top: var(--space-8);
+  padding-top: var(--space-5); border-top: 1px solid rgba(20,59,99,.2); max-width: 660px;
 }
 .hero__trust-item { display: flex; flex-direction: column; }
-.hero__trust-num { font-size: 1.5rem; font-weight: 800; color: #fff; }
-.hero__trust-num small { color: var(--blue-200); font-size: .9rem; margin-left: .15em; }
-.hero__trust-label { font-size: .82rem; color: #aecbe0; }
+.hero__trust-num { font-size: clamp(1.5rem, 2.6vw, 2.3rem); font-weight: 800; color: #143b63; line-height: 1.05; letter-spacing: -.01em; }
+.hero__trust-num small { color: #2c6788; font-size: .58em; margin-left: .12em; font-weight: 800; }
+.hero__trust-label { font-size: .85rem; color: #46617a; font-weight: 600; margin-top: 5px; }
 
 /* =====================================================================
    사업 하이라이트 — 히어로 하단에 겹치는 3컷 실사진
