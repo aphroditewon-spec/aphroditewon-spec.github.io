@@ -218,7 +218,7 @@ window.I18N = {
     "company.greeting.p2": "고순도 제조 역량과 안정적인 공급망, 신속한 전문 서비스를 바탕으로<br>식음료·제약·산업 전반의 신뢰받는 파트너가 되겠습니다.",
     "company.greeting.p3": "앞으로도 안전(Safety), 품질(Quality), 신뢰(Trust)를 핵심 가치로 삼아<br>지속적인 기술혁신과 품질 향상을 실현하고, 고객의 성장과 산업 발전에<br>기여하는 기업이 되겠습니다.",
     "company.greeting.p4": "변함없는 관심과 성원에 깊이 감사드리며,<br>앞으로도 고객과 함께 더 큰 미래를 만들어 나가겠습니다.",
-    "company.greeting.sign": "한국탄산화학㈜ 대표이사 <img class=\"sign-img\" src=\"assets/images/site/ceo-sign.png?v=1\" alt=\"유연채\">",
+    "company.greeting.sign": "한국탄산화학㈜ 대표이사 <img class=\"sign-img\" src=\"assets/images/site/ceo-sign.png?v=2\" alt=\"유연채\">",
     "company.greeting.quote": "최고의 품질과 안전으로 고객의 가치를 높이는 한국탄산화학㈜가 되겠습니다.",
     "company.val.safety": "안전경영",
     "company.val.quality": "품질경영",
