@@ -597,7 +597,7 @@ section[id] { scroll-margin-top: 88px; }
 /* 대표이사 이름: 손글씨 필체 + 앞 간격 */
 .greeting__sign .sign-name { margin-left: 1.1em; font-family: 'Nanum Pen Script', 'Yomogi', cursive; font-weight: 400; font-size: 2.04em; letter-spacing: .3em; line-height: 1; color: var(--slate-900); }
 /* 대표이사 자필 서명 이미지(실제 필체) */
-.greeting__sign .sign-img { display: inline-block; height: 3.3em; width: auto; margin-left: 1em; vertical-align: middle; }
+.greeting__sign .sign-img { display: inline-block; height: 3.14em; width: auto; margin-left: 1em; vertical-align: middle; }
 /* 영문: 회사명 줄 아래에 이름을 회사명 중앙 기준으로 배치 */
 html[lang="en"] .greeting__sign { display: inline-block; }
 html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; margin-top: .25em; text-align: center; }
