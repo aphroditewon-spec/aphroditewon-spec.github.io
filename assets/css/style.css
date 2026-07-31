@@ -1132,3 +1132,20 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .prodslide__btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--surface);
   color: var(--text); font-size: 1.4rem; line-height: 1; cursor: pointer; transition: var(--transition); }
 .prodslide__btn:hover { background: var(--green-deep); color: #fff; border-color: var(--green-deep); }
+
+/* ⑤ 제품 풀와이드 지그재그 섹션 */
+.prodfull { display: flex; flex-direction: column; gap: clamp(48px, 8vw, 104px); margin-top: var(--space-10); }
+.prodfull__row { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.prodfull__row:nth-child(even) .prodfull__media { order: 2; }
+.prodfull__media { overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.prodfull__media img { display: block; width: 100%; aspect-ratio: 16/10; object-fit: cover; transition: transform .6s ease; }
+.prodfull__row:hover .prodfull__media img { transform: scale(1.04); }
+.prodfull__num { display: inline-block; font-size: var(--fs-sm); font-weight: 800; letter-spacing: .14em; color: var(--brand); margin-bottom: var(--space-3); }
+.prodfull__title { font-size: var(--fs-h1); font-weight: 800; color: var(--text); margin-bottom: var(--space-4); letter-spacing: -.01em; }
+.prodfull__text { font-size: var(--fs-lead); color: var(--text-muted); line-height: 1.8; margin-bottom: var(--space-6); }
+.prodfull__more { display: inline-flex; align-items: center; gap: .45em; font-weight: 700; font-size: var(--fs-sm); letter-spacing: .08em; color: var(--accent-hover); border-bottom: 2px solid currentColor; padding-bottom: 2px; }
+.prodfull__more::after { content: "→"; }
+@media (max-width: 860px) {
+  .prodfull__row { grid-template-columns: 1fr; gap: var(--space-6); }
+  .prodfull__row:nth-child(even) .prodfull__media { order: 0; }
+}
