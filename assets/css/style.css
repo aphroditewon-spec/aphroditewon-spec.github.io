@@ -592,7 +592,7 @@ section[id] { scroll-margin-top: 88px; }
 .greeting-quote__mark { font-family: Georgia, 'Times New Roman', serif; font-size: 3rem; line-height: .6; color: var(--accent); flex: 0 0 auto; }
 .greeting-quote__text { margin: 0; font-size: var(--fs-lead); font-weight: 600; line-height: 1.5; }
 @media (max-width: 720px) { .greeting-quote { flex-direction: column; text-align: center; gap: var(--space-3); } }
-.greeting__p { color: var(--text-muted); margin-top: var(--space-4); line-height: 1.8; }
+.greeting__p { color: var(--text-muted); margin-top: var(--space-6); line-height: 1.95; }
 .greeting__sign { margin-top: var(--space-5); font-size: 1.2em; font-weight: 700; color: var(--text); }
 /* 대표이사 이름: 손글씨 필체 + 앞 간격 */
 .greeting__sign .sign-name { margin-left: 1.1em; font-family: 'Nanum Pen Script', 'Yomogi', cursive; font-weight: 400; font-size: 2.04em; letter-spacing: .3em; line-height: 1; color: var(--slate-900); }
