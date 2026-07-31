@@ -30,8 +30,8 @@
             <a class="nav__link is-current" href="company.html" data-i18n="nav.company">회사소개</a>
             <ul class="nav__sub">
               <li><a href="company.html#greeting" data-i18n="nav.sub.greeting">CEO 인사말</a></li>
-              <li><a href="company.html#overview" data-i18n="nav.sub.overview">회사 개요</a></li>
               <li><a href="company.html#history" data-i18n="nav.sub.history">연혁</a></li>
+              <li><a href="company.html#overview" data-i18n="nav.sub.overview">회사 개요</a></li>
               <li><a href="company.html#org" data-i18n="nav.sub.org">조직도</a></li>
               <li><a href="company.html#location" data-i18n="nav.sub.location">오시는 길</a></li>
             </ul>
@@ -142,22 +142,24 @@
     </section>
 
     <!-- ===== 회사 개요 ===== -->
-    <section class="section section--soft" id="overview">
+    <!-- ===== 연혁 ===== -->
+    <section class="section section--soft" id="history">
       <div class="container">
         <div class="section__head">
-          <span class="eyebrow" data-i18n="company.overview.eyebrow">Overview</span>
-          <h2 class="section__title" data-i18n="company.overview.title">회사 개요</h2>
+          <span class="eyebrow" data-i18n="company.history.eyebrow">History</span>
+          <h2 class="section__title" data-i18n="company.history.title">연혁</h2>
         </div>
-        <dl class="overview">
-          <div class="overview__row"><dt data-i18n="company.overview.name">상호</dt><dd data-i18n="company.overview.nameVal">한국탄산화학㈜ (KLCC)</dd></div>
-          <div class="overview__row"><dt data-i18n="company.overview.founded">설립</dt><dd data-i18n="company.overview.foundedVal">2001년 8월</dd></div>
-          <div class="overview__row"><dt data-i18n="company.overview.staff">임직원</dt><dd data-i18n="company.overview.staffVal">100여 명</dd></div>
-          <!-- 매출 항목 숨김 처리 (요청에 의해 비공개)
-          <div class="overview__row"><dt data-i18n="company.overview.revenue">매출 (2024년)</dt><dd data-i18n="company.overview.revenueVal">182억 원</dd></div>
-          -->
-          <div class="overview__row"><dt data-i18n="company.overview.biz">사업분야</dt><dd data-i18n="company.overview.bizVal">산업용·의료용 가스, 혼합·특수가스, LPG, 드라이아이스 제조·판매, 탱크설치·가스시설 시공</dd></div>
-          <div class="overview__row"><dt data-i18n="company.overview.products">생산제품</dt><dd data-i18n="company.overview.productsVal">산소·질소·아르곤·탄산·수소·헬륨·혼합가스·특수가스 등</dd></div>
-        </dl>
+        <ul class="timeline">
+          <li class="timeline__item"><span class="timeline__year">2001</span><span class="timeline__text" data-i18n="company.history.y2001">한국탄산화학㈜ 법인 설립</span></li>
+          <li class="timeline__item"><span class="timeline__year">2008</span><span class="timeline__text" data-i18n="company.history.y2008">안산종합가스 인수 → 시화영업소</span></li>
+          <li class="timeline__item"><span class="timeline__year">2017</span><span class="timeline__text" data-i18n="company.history.y2017">화성공장 충전소 증설</span></li>
+          <li class="timeline__item"><span class="timeline__year">2020</span><span class="timeline__text" data-i18n="company.history.y2020">시흥시 정왕동으로 본사·공장 이전</span></li>
+          <li class="timeline__item"><span class="timeline__year">2022</span><span class="timeline__text" data-i18n="company.history.y2022a">고순도가스 제조설비·의료용 산소 제조 시작</span></li>
+          <li class="timeline__item"><span class="timeline__year">2022</span><span class="timeline__text" data-i18n="company.history.y2022b">드라이아이스 제조공장(900㎡)·탱크(50톤) 건립</span></li>
+          <li class="timeline__item"><span class="timeline__year">2023</span><span class="timeline__text" data-i18n="company.history.y2023">시흥공장 수소가스 저장능력 증설 (→4,592㎥)</span></li>
+          <li class="timeline__item"><span class="timeline__year">2025</span><span class="timeline__text" data-i18n="company.history.y2025a">D/I 생산용 탄산 저장탱크 증설(100톤)</span></li>
+          <li class="timeline__item"><span class="timeline__year">2025</span><span class="timeline__text" data-i18n="company.history.y2025b">日産 150톤 D/I 생산설비 구축, CO₂ Recovery 설비 설치</span></li>
+        </ul>
       </div>
     </section>
 
@@ -206,24 +208,23 @@
       </div>
     </section>
 
-    <!-- ===== 연혁 ===== -->
-    <section class="section section--soft" id="history">
+    <!-- ===== 회사 개요 ===== -->
+    <section class="section section--soft" id="overview">
       <div class="container">
         <div class="section__head">
-          <span class="eyebrow" data-i18n="company.history.eyebrow">History</span>
-          <h2 class="section__title" data-i18n="company.history.title">연혁</h2>
+          <span class="eyebrow" data-i18n="company.overview.eyebrow">Overview</span>
+          <h2 class="section__title" data-i18n="company.overview.title">회사 개요</h2>
         </div>
-        <ul class="timeline">
-          <li class="timeline__item"><span class="timeline__year">2001</span><span class="timeline__text" data-i18n="company.history.y2001">한국탄산화학㈜ 법인 설립</span></li>
-          <li class="timeline__item"><span class="timeline__year">2008</span><span class="timeline__text" data-i18n="company.history.y2008">안산종합가스 인수 → 시화영업소</span></li>
-          <li class="timeline__item"><span class="timeline__year">2017</span><span class="timeline__text" data-i18n="company.history.y2017">화성공장 충전소 증설</span></li>
-          <li class="timeline__item"><span class="timeline__year">2020</span><span class="timeline__text" data-i18n="company.history.y2020">시흥시 정왕동으로 본사·공장 이전</span></li>
-          <li class="timeline__item"><span class="timeline__year">2022</span><span class="timeline__text" data-i18n="company.history.y2022a">고순도가스 제조설비·의료용 산소 제조 시작</span></li>
-          <li class="timeline__item"><span class="timeline__year">2022</span><span class="timeline__text" data-i18n="company.history.y2022b">드라이아이스 제조공장(900㎡)·탱크(50톤) 건립</span></li>
-          <li class="timeline__item"><span class="timeline__year">2023</span><span class="timeline__text" data-i18n="company.history.y2023">시흥공장 수소가스 저장능력 증설 (→4,592㎥)</span></li>
-          <li class="timeline__item"><span class="timeline__year">2025</span><span class="timeline__text" data-i18n="company.history.y2025a">D/I 생산용 탄산 저장탱크 증설(100톤)</span></li>
-          <li class="timeline__item"><span class="timeline__year">2025</span><span class="timeline__text" data-i18n="company.history.y2025b">日産 150톤 D/I 생산설비 구축, CO₂ Recovery 설비 설치</span></li>
-        </ul>
+        <dl class="overview">
+          <div class="overview__row"><dt data-i18n="company.overview.name">상호</dt><dd data-i18n="company.overview.nameVal">한국탄산화학㈜ (KLCC)</dd></div>
+          <div class="overview__row"><dt data-i18n="company.overview.founded">설립</dt><dd data-i18n="company.overview.foundedVal">2001년 8월</dd></div>
+          <div class="overview__row"><dt data-i18n="company.overview.staff">임직원</dt><dd data-i18n="company.overview.staffVal">100여 명</dd></div>
+          <!-- 매출 항목 숨김 처리 (요청에 의해 비공개)
+          <div class="overview__row"><dt data-i18n="company.overview.revenue">매출 (2024년)</dt><dd data-i18n="company.overview.revenueVal">182억 원</dd></div>
+          -->
+          <div class="overview__row"><dt data-i18n="company.overview.biz">사업분야</dt><dd data-i18n="company.overview.bizVal">산업용·의료용 가스, 혼합·특수가스, LPG, 드라이아이스 제조·판매, 탱크설치·가스시설 시공</dd></div>
+          <div class="overview__row"><dt data-i18n="company.overview.products">생산제품</dt><dd data-i18n="company.overview.productsVal">산소·질소·아르곤·탄산·수소·헬륨·혼합가스·특수가스 등</dd></div>
+        </dl>
       </div>
     </section>
 
