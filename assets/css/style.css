@@ -722,6 +722,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .loc__map::after { content: "→"; }
 .loc__map:hover { color: var(--primary-hover); }
 
+/* 오시는 길 — 본사·시흥공장 전경 사진 + 정보 */
+.loc-hq__media img { display: block; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.loc-hq__info { margin-top: var(--space-7); }
+.loc-hq__info .feature__title { font-size: var(--fs-h3); margin-bottom: var(--space-3); }
+.loc-hq__info .feature__text { color: var(--text-muted); line-height: 1.7; }
+
 /* 매출 성장 라인 차트 (참고: 네이버웹툰 MAU 스타일) */
 .growth-chart { width: 100%; max-width: 960px; margin: 0 auto; }
 .growth-chart svg { width: 100%; height: auto; display: block; font-family: var(--font-sans); overflow: visible; }
