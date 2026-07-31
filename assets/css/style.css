@@ -712,6 +712,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .affpanel__list li b { flex: 0 0 68px; color: var(--text-muted); font-weight: 600; }
 .affpanel__muted { color: var(--text-muted); font-style: italic; }
 .affpanel__map { display: inline-block; margin-top: var(--space-6); font-weight: 600; color: var(--accent-hover); }
+/* 계열사 패널: 정보 + 사진 2단 배열 */
+.affpanel__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: center; }
+.affpanel__media img { display: block; width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
+@media (max-width: 700px) { .affpanel__grid { grid-template-columns: 1fr; gap: var(--space-6); } }
 @media (max-width: 560px) { .afftab { flex: 1 1 50%; } }
 
 /* 오시는 길 — 지도 링크 */
