@@ -758,6 +758,24 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   background: var(--surface-3); border-radius: var(--radius-pill); padding: 4px 11px;
 }
 
+/* 제품 라인업 — 카테고리별 행(왼쪽 이미지 / 오른쪽 내용) */
+.prodlist { display: flex; flex-direction: column; gap: var(--space-12); }
+.prodrow { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: var(--space-10); align-items: center; }
+.prodrow__media { overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.prodrow__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .5s ease; }
+.prodrow:hover .prodrow__media img { transform: scale(1.04); }
+.prodrow__num {
+  display: inline-block; font-size: var(--fs-sm); font-weight: 700;
+  color: var(--brand); letter-spacing: 0.12em; margin-bottom: var(--space-3);
+}
+.prodrow__title { font-size: var(--fs-h2); font-weight: 700; color: var(--text); margin-bottom: var(--space-4); }
+.prodrow__text { font-size: var(--fs-body); color: var(--text-muted); line-height: 1.8; }
+.prodrow__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--space-5); }
+@media (max-width: 860px) {
+  .prodrow { grid-template-columns: 1fr; gap: var(--space-6); }
+  .prodrow__media { max-width: 560px; }
+}
+
 /* 공급 흐름 다이어그램 */
 .flow { display: flex; align-items: stretch; gap: var(--space-2); }
 .flow__node {
