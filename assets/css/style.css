@@ -547,6 +547,9 @@ section[id] { scroll-margin-top: 88px; }
 }
 /* CEO MESSAGE 텍스트 좌측선을 다른 페이지 섹션(OVERVIEW·AFFILIATES) 아이브로우와 동일하게 = 컨테이너 기본 좌측(패딩 0) */
 .cmsg__body { position: relative; z-index: 2; max-width: 56%; padding: clamp(28px, 4vw, 60px); padding-left: 0; word-break: keep-all; }
+/* 위쪽 여백: 카드 내부 상단 패딩이 더해지는 만큼 섹션 상단 패딩을 줄여
+   CEO MESSAGE 아이브로우 세로 위치를 OVERVIEW 섹션과 동일하게 맞춤 */
+#greeting.section { padding-top: var(--space-8); }
 @media (max-width: 860px) {
   .cmsg__bg { object-position: 78% center; }
   .cmsg::after { background: linear-gradient(180deg, rgba(255,255,255,.93) 0%, rgba(255,255,255,.9) 55%, rgba(255,255,255,.85) 100%); }
