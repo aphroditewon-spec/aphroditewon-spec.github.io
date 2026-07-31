@@ -86,18 +86,20 @@ section { scroll-margin-top: 84px; }
 /* ===== 상단 메뉴 드롭다운(하위 메뉴) ===== */
 .nav__item { position: relative; display: flex; align-items: center; }
 .nav__sub {
-  position: absolute; left: 50%; top: 100%;
+  /* 드롭다운 상단을 헤더 하단(=메인 이미지 상단 라인)에 맞춤:
+     메뉴 항목 세로 중앙(=헤더 중앙)에서 헤더높이 절반(37px) 아래가 헤더 하단 */
+  position: absolute; left: 50%; top: calc(50% + 37px);
   transform: translateX(-50%) translateY(-6px);
   min-width: 124px; padding: var(--space-2);
   background: #fff; border: 1px solid var(--border);
   border-radius: var(--radius-md); box-shadow: var(--shadow-lg);
   opacity: 0; visibility: hidden; transition: var(--transition); z-index: 60;
 }
-/* hover 시 메뉴↔서브 사이 여백을 유지해 마우스가 빠지지 않도록 */
-.nav__sub::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
+/* hover 시 메뉴↔서브 사이 여백을 유지해 마우스가 빠지지 않도록(헤더 하단까지 연결) */
+.nav__sub::before { content: ""; position: absolute; left: 0; right: 0; top: -30px; height: 30px; }
 .nav__item:hover .nav__sub,
 .nav__item:focus-within .nav__sub {
-  opacity: 1; visibility: visible; transform: translateX(-50%) translateY(6px);
+  opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
 }
 .nav__sub li { list-style: none; }
 .nav__sub a {
