@@ -162,8 +162,8 @@ section[id] { scroll-margin-top: 88px; }
 .hero {
   position: relative; color: var(--hero-text); overflow: hidden;
   display: flex; align-items: center;
-  /* 배경 이미지(약 2.73:1)가 잘리지 않고 전부 보이도록 히어로 높이를 이미지 비율에 맞춤 */
-  aspect-ratio: 2073 / 759; min-height: 480px;
+  /* 배경 이미지(약 3.02:1, 하단 도로여백 크롭)가 잘리지 않고 전부 보이도록 히어로 높이를 이미지 비율에 맞춤 */
+  aspect-ratio: 2073 / 686; min-height: 460px;
   padding-block: clamp(24px, 4vw, 48px);
 }
 .hero > .container { width: 100%; }
