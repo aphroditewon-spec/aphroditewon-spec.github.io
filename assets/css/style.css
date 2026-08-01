@@ -1149,3 +1149,78 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .prodfull__row { grid-template-columns: 1fr; gap: var(--space-6); }
   .prodfull__row:nth-child(even) .prodfull__media { order: 0; }
 }
+
+/* =====================================================================
+   홈 시안 반영 — 헤더 전화, 통계카드, 사업분야 타일, 제품 5종, Why 6열
+   ===================================================================== */
+/* 헤더 전화 */
+.header-tel { display: inline-flex; align-items: center; gap: 8px; color: var(--text); }
+.header-tel__ic { width: 18px; height: 18px; color: var(--brand); flex: none; }
+.header-tel__txt { display: flex; flex-direction: column; line-height: 1.12; }
+.header-tel__txt b { font-size: .95rem; font-weight: 800; color: #143b63; }
+.header-tel__txt small { font-size: .68rem; color: var(--text-muted); }
+@media (max-width: 1180px) { .header-tel { display: none; } }
+
+/* 신뢰 지표 흰색 카드(히어로에 겹침) */
+.herostat-band { position: relative; z-index: 3; margin-top: calc(-1 * clamp(48px, 7vw, 88px)); }
+.herostat { list-style: none; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr);
+  background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: clamp(18px, 2.6vw, 34px); }
+.herostat__item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3px;
+  padding: var(--space-4) var(--space-3); border-right: 1px solid var(--border); }
+.herostat__item:last-child { border-right: 0; }
+.herostat__ic { color: var(--brand); margin-bottom: 6px; }
+.herostat__ic svg { width: 30px; height: 30px; }
+.herostat__num { font-size: clamp(1.7rem, 2.8vw, 2.5rem); font-weight: 800; color: #143b63; line-height: 1; }
+.herostat__num sup { font-size: .48em; color: var(--accent); vertical-align: super; }
+.herostat__label { font-size: .8rem; font-weight: 700; letter-spacing: .08em; color: var(--text); margin-top: 5px; }
+.herostat__sub { font-size: .76rem; color: var(--text-muted); }
+@media (max-width: 720px) { .herostat { grid-template-columns: repeat(2, 1fr); }
+  .herostat__item:nth-child(2n) { border-right: 0; } .herostat__item:nth-child(-n+2){ border-bottom: 1px solid var(--border);} }
+
+/* 섹션 헤드 변형 + 공통 */
+.section__head--row { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-6); }
+.section__more { font-weight: 700; font-size: var(--fs-sm); color: var(--accent-hover); white-space: nowrap; }
+.section__more::after { content: " →"; }
+.section__foot { text-align: center; margin-top: var(--space-9, 2.75rem); }
+.btn--outline { background: transparent; border: 1.5px solid var(--border-strong); color: var(--text); }
+.btn--outline:hover { border-color: var(--green-deep); background: var(--green-deep); color: #fff; }
+
+/* 사업분야 5 사진 타일 */
+.biztile { list-style: none; margin: var(--space-8) 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-4); }
+.biztile__item { position: relative; display: block; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 3/4; box-shadow: var(--shadow-sm); }
+.biztile__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; z-index: 0; }
+.biztile__item::after { content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, rgba(10,22,36,.9) 0%, rgba(10,22,36,.5) 42%, rgba(10,22,36,.28) 100%); }
+.biztile__item:hover .biztile__img { transform: scale(1.07); }
+.biztile__body { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: var(--space-2); padding: var(--space-5); color: #fff; text-align: center; }
+.biztile__ic { color: #fff; opacity: .92; } .biztile__ic svg { width: 34px; height: 34px; }
+.biztile__title { font-size: var(--fs-h3); font-weight: 700; }
+.biztile__desc { font-size: .8rem; color: rgba(255,255,255,.85); line-height: 1.5; max-width: 15em; }
+@media (max-width: 900px) { .biztile { grid-template-columns: repeat(2, 1fr); } .biztile__item { aspect-ratio: 4/3; } }
+
+/* Why 6열 */
+.whycards { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); }
+.whycards .feature { padding: var(--space-6) var(--space-4); text-align: center; }
+.whycards .feature__ic { margin: 0 auto var(--space-3); width: 46px; height: 46px; }
+.whycards .feature__ic svg { width: 23px; height: 23px; }
+.whycards .feature__title { font-size: 1rem; margin-bottom: var(--space-2); }
+.whycards .feature__text { font-size: .8rem; line-height: 1.6; }
+@media (max-width: 980px) { .whycards { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .whycards { grid-template-columns: repeat(2, 1fr); } }
+
+/* 주요 제품 5종 카드 */
+.prodgrid { list-style: none; margin: var(--space-8) 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-5); }
+.pgcard { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-md); overflow: hidden; height: 100%; transition: transform .25s ease, box-shadow .25s ease; }
+.pgcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.pgcard__media { display: block; overflow: hidden; }
+.pgcard__media img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform .5s ease; }
+.pgcard:hover .pgcard__media img { transform: scale(1.06); }
+.pgcard__title { display: block; font-size: var(--fs-h3); font-weight: 700; color: var(--text); margin: var(--space-5) var(--space-5) var(--space-2); }
+.pgcard__title em { font-style: normal; color: var(--accent-hover); }
+.pgcard__text { display: block; font-size: .82rem; color: var(--text-muted); line-height: 1.6; margin: 0 var(--space-5); flex: 1; }
+.pgcard__more { display: block; margin: var(--space-4) var(--space-5) var(--space-5); font-size: .82rem; font-weight: 700; color: var(--accent-hover); }
+.pgcard__more::after { content: " →"; }
+@media (max-width: 980px) { .prodgrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .prodgrid { grid-template-columns: repeat(2, 1fr); } }

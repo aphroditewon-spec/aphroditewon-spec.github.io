@@ -7,7 +7,7 @@
   <meta name="description" content="한국탄산화학㈜(KLCC)는 산소·질소·아르곤·탄산·수소 등 산업용·의료용 가스와 드라이아이스를 제조·공급하는 전문기업입니다.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-20">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-21">
 </head>
 <body>
 
@@ -57,6 +57,10 @@
           </li>
         </ul>
         <div class="toolbar">
+          <a class="header-tel" href="tel:+820314989231">
+            <svg class="header-tel__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg>
+            <span class="header-tel__txt"><b>031-498-9231</b><small data-i18n="home.tel.hours">평일 08:00~18:00</small></span>
+          </a>
           <div class="lang-dropdown">
             <button type="button" class="lang-dropdown__toggle" aria-haspopup="true" aria-expanded="false" aria-label="언어 선택">
               <span class="lang-current">한국어</span>
@@ -68,7 +72,7 @@
               <li><button type="button" data-lang="ja" role="menuitem">日本語</button></li>
             </ul>
           </div>
-          <a class="btn btn--primary btn--sm" href="support.html" data-i18n="nav.cta">문의하기</a>
+          <a class="btn btn--primary btn--sm" href="support.html" data-i18n="home.quote">견적문의</a>
         </div>
         <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false"><span></span></button>
       </nav>
@@ -85,18 +89,37 @@
       <div class="container">
         <span class="hero__kicker" data-i18n="hero.kicker">SINCE 2001 · 산업용가스 전문기업</span>
         <h1 class="hero__title" data-i18n-html="hero.title">신뢰로 채우는<br>대한민국 가스 산업의 중심</h1>
+        <p class="hero__lead" data-i18n="hero.lead">산소·질소·아르곤·탄산·수소부터 드라이아이스까지. 고순도 99.9999% 품질과 안정적인 공급망으로 함께합니다.</p>
         <div class="hero__actions">
           <a class="btn btn--light btn--lg" href="products-gas.html" data-i18n="hero.cta1">제품 둘러보기</a>
           <a class="btn btn--ghost btn--lg" href="support.html" data-i18n="hero.cta2">문의하기</a>
         </div>
-        <div class="hero__trust">
-          <div class="hero__trust-item"><span class="hero__trust-num">2001</span><span class="hero__trust-label" data-i18n="hero.stat.since">설립연도</span></div>
-          <div class="hero__trust-item"><span class="hero__trust-num">99.9999<small>%</small></span><span class="hero__trust-label" data-i18n="hero.stat.purity">고순도 품질</span></div>
-          <div class="hero__trust-item"><span class="hero__trust-num">150<small>톤</small></span><span class="hero__trust-label" data-i18n="hero.stat.di">드라이아이스 日産</span></div>
-          <div class="hero__trust-item"><span class="hero__trust-num">365<small>일</small></span><span class="hero__trust-label" data-i18n="hero.stat.service">무중단 공급</span></div>
-        </div>
       </div>
     </section>
+
+    <!-- ===== 신뢰 지표 카드 (히어로에 겹침) ===== -->
+    <div class="herostat-band">
+      <div class="container">
+        <ul class="herostat">
+          <li class="herostat__item">
+            <span class="herostat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/><path d="M8.5 14l2 2 4-4"/></svg></span>
+            <b class="herostat__num">24<sup>+</sup></b><span class="herostat__label">YEARS</span><small class="herostat__sub">SINCE 2001</small>
+          </li>
+          <li class="herostat__item">
+            <span class="herostat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.5 19a4.6 4.6 0 0 1 6.2-4.3"/></svg></span>
+            <b class="herostat__num">500<sup>+</sup></b><span class="herostat__label">BUSINESS PARTNERS</span><small class="herostat__sub" data-i18n="home.hs.partners">전국 고객사</small>
+          </li>
+          <li class="herostat__item">
+            <span class="herostat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+            <b class="herostat__num">365</b><span class="herostat__label">DAYS</span><small class="herostat__sub" data-i18n="home.hs.days">안정적 공급</small>
+          </li>
+          <li class="herostat__item">
+            <span class="herostat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V5l7-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></svg></span>
+            <b class="herostat__num">99.9999<sup>%</sup></b><span class="herostat__label">HIGH PURITY</span><small class="herostat__sub" data-i18n="home.hs.purity">고순도 품질</small>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- ===== ② 회사소개 (좌 사진 / 우 소개) ===== -->
     <section class="section" id="about-home">
@@ -113,18 +136,6 @@
       </div>
     </section>
 
-    <!-- ===== ⑥ 팩토리 (드론 파노라마 풀블리드) ===== -->
-    <section class="factory" id="factory">
-      <img class="factory__bg" src="assets/images/site/location-hq.jpg?v=2" alt="한국탄산화학 본사·시흥공장 전경" loading="lazy">
-      <div class="factory__overlay">
-        <div class="container">
-          <span class="eyebrow eyebrow--light" data-i18n="home.factory.eyebrow">Our Facility</span>
-          <h2 class="factory__title" data-i18n-html="home.factory.title">최신 생산설비와<br>안정적인 공급망</h2>
-          <p class="factory__lead" data-i18n="home.factory.lead">고순도 제조설비와 대용량 저장탱크, 전국 공급 네트워크를 기반으로 안정적인 가스 공급을 실현합니다.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== ④ 선택 이유 (WHY KLCC · 6카드) ===== -->
     <section class="section section--soft" id="why">
       <div class="container">
@@ -132,7 +143,7 @@
           <span class="eyebrow" data-i18n="feature.eyebrow">Why KLCC</span>
           <h2 class="section__title" data-i18n="feature.title">한국탄산화학을 선택하는 이유</h2>
         </div>
-        <div class="cards cards--3">
+        <div class="whycards">
           <article class="feature">
             <span class="feature__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg></span>
             <h3 class="feature__title" data-i18n="why.c1.t">24년 노하우</h3>
@@ -167,68 +178,112 @@
       </div>
     </section>
 
-    <!-- ===== ③ 사업영역 (6 아이콘, hover) ===== -->
+    <!-- ===== ③ 사업분야 (5 사진 타일) ===== -->
     <section class="section" id="business">
       <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="home.biz.eyebrow">Business</span>
-          <h2 class="section__title" data-i18n="home.biz.title">사업영역</h2>
+        <div class="section__head section__head--center">
+          <span class="eyebrow" data-i18n="home.biz.eyebrow">Business Area</span>
+          <h2 class="section__title" data-i18n="home.biz.title">사업분야</h2>
         </div>
-        <ul class="bizicon">
-          <li><a class="bizicon__item" href="products-gas.html"><span class="bizicon__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="6" height="15" rx="3"/><path d="M10.5 6V4.5a1.5 1.5 0 0 1 3 0V6"/><line x1="9" y1="10.5" x2="15" y2="10.5"/></svg></span><b data-i18n="home.biz.ind">산업용가스</b></a></li>
-          <li><a class="bizicon__item" href="products-gas.html"><span class="bizicon__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><line x1="12" y1="8.5" x2="12" y2="15.5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/></svg></span><b data-i18n="home.biz.med">의료용가스</b></a></li>
-          <li><a class="bizicon__item" href="products-gas.html"><span class="bizicon__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3l1.6 4.4L17 9l-4.4 1.6L11 15l-1.6-4.4L5 9l4.4-1.6z"/><path d="M18 13l.8 2.2 2.2.8-2.2.8L18 19l-.8-2.2L15 16l2.2-.8z"/></svg></span><b data-i18n="home.biz.spec">특수가스</b></a></li>
-          <li><a class="bizicon__item" href="products-ice.html"><span class="bizicon__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 7l16 10M20 7L4 17"/><path d="M12 2l2.5 2M12 2L9.5 4M12 22l2.5-2M12 22l-2.5-2"/></svg></span><b data-i18n="home.biz.ice">드라이아이스</b></a></li>
-          <li><a class="bizicon__item" href="products-construction.html"><span class="bizicon__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V8a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v13"/><path d="M6 5.5C6 4 7 3 9 3M18 5.5C18 4 17 3 15 3"/><line x1="4" y1="21" x2="20" y2="21"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/></svg></span><b data-i18n="home.biz.fac">가스설비</b></a></li>
-          <li><a class="bizicon__item" href="products-gas.html#supply"><span class="bizicon__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1.8 12h12v6H1.8z"/><path d="M13.8 14h4l3.4 2.6V18h-7.4z"/><circle cx="6" cy="19.5" r="1.6"/><circle cx="17.4" cy="19.5" r="1.6"/></svg></span><b data-i18n="home.biz.bulk">Bulk 공급</b></a></li>
+        <ul class="biztile">
+          <li><a class="biztile__item" href="products-gas.html">
+            <img class="biztile__img" src="assets/images/site/gas-cylinders.jpg?v=20260731" alt="산업용가스" loading="lazy">
+            <span class="biztile__body">
+              <span class="biztile__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="6" height="15" rx="3"/><path d="M10.5 6V4.5a1.5 1.5 0 0 1 3 0V6"/><line x1="9" y1="10.5" x2="15" y2="10.5"/></svg></span>
+              <b class="biztile__title" data-i18n="home.biz.ind">산업용가스</b>
+              <span class="biztile__desc" data-i18n="home.biz.indd">산소·질소·아르곤·탄산·수소 등 산업용 가스 공급</span>
+            </span>
+          </a></li>
+          <li><a class="biztile__item" href="products-gas.html">
+            <img class="biztile__img" src="assets/images/site/biz-gas.jpg?v=20260703" alt="의료용가스" loading="lazy">
+            <span class="biztile__body">
+              <span class="biztile__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><line x1="12" y1="8.5" x2="12" y2="15.5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/></svg></span>
+              <b class="biztile__title" data-i18n="home.biz.med">의료용가스</b>
+              <span class="biztile__desc" data-i18n="home.biz.medd">의료기관 및 연구기관 의료용 가스 공급</span>
+            </span>
+          </a></li>
+          <li><a class="biztile__item" href="products-gas.html">
+            <img class="biztile__img" src="assets/images/site/supply-make.jpg" alt="특수가스" loading="lazy">
+            <span class="biztile__body">
+              <span class="biztile__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3l1.6 4.4L17 9l-4.4 1.6L11 15l-1.6-4.4L5 9l4.4-1.6z"/><path d="M18 13l.8 2.2 2.2.8-2.2.8L18 19l-.8-2.2L15 16l2.2-.8z"/></svg></span>
+              <b class="biztile__title" data-i18n="home.biz.spec">특수가스</b>
+              <span class="biztile__desc" data-i18n="home.biz.specd">반도체·디스플레이 등 초고순도 특수 가스 공급</span>
+            </span>
+          </a></li>
+          <li><a class="biztile__item" href="products-ice.html">
+            <img class="biztile__img" src="assets/images/site/biz-dryice.jpg?v=20260703" alt="드라이아이스" loading="lazy">
+            <span class="biztile__body">
+              <span class="biztile__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 7l16 10M20 7L4 17"/></svg></span>
+              <b class="biztile__title" data-i18n="home.biz.ice">드라이아이스</b>
+              <span class="biztile__desc" data-i18n="home.biz.iced">식품·물류·산업용 드라이아이스 생산 및 공급</span>
+            </span>
+          </a></li>
+          <li><a class="biztile__item" href="products-construction.html">
+            <img class="biztile__img" src="assets/images/site/biz-facility.jpg?v=20260703" alt="설비·시공" loading="lazy">
+            <span class="biztile__body">
+              <span class="biztile__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V8a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v13"/><line x1="4" y1="21" x2="20" y2="21"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/></svg></span>
+              <b class="biztile__title" data-i18n="home.biz.fac">설비·시공</b>
+              <span class="biztile__desc" data-i18n="home.biz.facd">저장탱크·배관설비 등 가스 설비 설계·시공</span>
+            </span>
+          </a></li>
+        </ul>
+        <div class="section__foot"><a class="btn btn--outline" href="products-gas.html" data-i18n="home.biz.more">사업분야 더보기</a></div>
+      </div>
+    </section>
+
+    <!-- ===== ⑤ 주요 제품 (5종 가스 카드) ===== -->
+    <section class="section section--soft" id="product-showcase">
+      <div class="container">
+        <div class="section__head section__head--row">
+          <div>
+            <span class="eyebrow" data-i18n="home.prod.eyebrow">Products</span>
+            <h2 class="section__title" data-i18n="home.prod.title">주요 제품</h2>
+          </div>
+          <a class="section__more" href="products-gas.html" data-i18n="home.prod.all">전체 제품보기</a>
+        </div>
+        <ul class="prodgrid">
+          <li><a class="pgcard" href="products-gas.html">
+            <span class="pgcard__media"><img src="assets/images/site/gas-cylinders.jpg?v=20260731" alt="산소" loading="lazy"></span>
+            <span class="pgcard__title">산소 <em>(O₂)</em></span>
+            <span class="pgcard__text" data-i18n="home.pr.o2">용접·철강·의료 등 다양한 산업용 산소</span>
+            <span class="pgcard__more" data-i18n="home.pr.detail">제품 상세보기</span>
+          </a></li>
+          <li><a class="pgcard" href="products-gas.html">
+            <span class="pgcard__media"><img src="assets/images/site/supply-o2-station.jpg" alt="질소" loading="lazy"></span>
+            <span class="pgcard__title">질소 <em>(N₂)</em></span>
+            <span class="pgcard__text" data-i18n="home.pr.n2">식품포장·반도체·화학 등 다양한 산업용 질소</span>
+            <span class="pgcard__more" data-i18n="home.pr.detail">제품 상세보기</span>
+          </a></li>
+          <li><a class="pgcard" href="products-gas.html">
+            <span class="pgcard__media"><img src="assets/images/site/quality-inspect-cyl.jpg" alt="아르곤" loading="lazy"></span>
+            <span class="pgcard__title">아르곤 <em>(Ar)</em></span>
+            <span class="pgcard__text" data-i18n="home.pr.ar">용접·보호가스·분석용 등 고순도 아르곤</span>
+            <span class="pgcard__more" data-i18n="home.pr.detail">제품 상세보기</span>
+          </a></li>
+          <li><a class="pgcard" href="products-gas.html">
+            <span class="pgcard__media"><img src="assets/images/site/construction-tank.jpg" alt="탄산" loading="lazy"></span>
+            <span class="pgcard__title">탄산 <em>(CO₂)</em></span>
+            <span class="pgcard__text" data-i18n="home.pr.co2">식품·음료·용접·소화설비 등 다양한 용도</span>
+            <span class="pgcard__more" data-i18n="home.pr.detail">제품 상세보기</span>
+          </a></li>
+          <li><a class="pgcard" href="products-ice.html">
+            <span class="pgcard__media"><img src="assets/images/site/ice-nugget.jpg" alt="드라이아이스" loading="lazy"></span>
+            <span class="pgcard__title" data-i18n="nav.sub.ice">드라이아이스</span>
+            <span class="pgcard__text" data-i18n="home.pr.di">식품 신선도 유지·특수효과 등 다양한 용도</span>
+            <span class="pgcard__more" data-i18n="home.pr.detail">제품 상세보기</span>
+          </a></li>
         </ul>
       </div>
     </section>
 
-    <!-- ===== ⑤ 제품 (풀와이드 지그재그 섹션) ===== -->
-    <section class="section section--soft" id="product-showcase">
-      <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="home.prod.eyebrow">Product</span>
-          <h2 class="section__title" data-i18n="home.prod.title">대표 제품</h2>
-        </div>
-        <div class="prodfull">
-          <article class="prodfull__row">
-            <div class="prodfull__media"><img src="assets/images/site/gas-cylinders.jpg?v=20260731" alt="산업용가스 실린더 라인업" loading="lazy"></div>
-            <div class="prodfull__body">
-              <span class="prodfull__num">01</span>
-              <h3 class="prodfull__title" data-i18n="products.cat.ind">산업용가스</h3>
-              <p class="prodfull__text" data-i18n="home.prod.ind">O₂·N₂·Ar·CO₂·H₂·He 등을 Cylinder·Bulk로 안전하게 공급합니다.</p>
-              <a class="prodfull__more" href="products-gas.html" data-i18n="home.prod.more">MORE</a>
-            </div>
-          </article>
-          <article class="prodfull__row">
-            <div class="prodfull__media"><img src="assets/images/site/supply-make.jpg" alt="특수가스 정제·제조 설비" loading="lazy"></div>
-            <div class="prodfull__body">
-              <span class="prodfull__num">02</span>
-              <h3 class="prodfull__title" data-i18n="products.cat.spec">특수가스</h3>
-              <p class="prodfull__text" data-i18n="home.prod.spec">정제설비로 초고순도(99.999% 이상) 가스를 제조·공급합니다.</p>
-              <a class="prodfull__more" href="products-gas.html" data-i18n="home.prod.more">MORE</a>
-            </div>
-          </article>
-          <article class="prodfull__row">
-            <div class="prodfull__media"><img src="assets/images/site/biz-gas.jpg?v=20260703" alt="의료용가스 공급 설비" loading="lazy"></div>
-            <div class="prodfull__body">
-              <span class="prodfull__num">03</span>
-              <h3 class="prodfull__title" data-i18n="products.cat.med">의료용가스</h3>
-              <p class="prodfull__text" data-i18n="home.prod.med">O₂·N₂O·Ar·CO₂ 등 의료용 및 의료기기용 가스를 제조·공급합니다.</p>
-              <a class="prodfull__more" href="products-gas.html" data-i18n="home.prod.more">MORE</a>
-            </div>
-          </article>
-          <article class="prodfull__row">
-            <div class="prodfull__media"><img src="assets/images/site/ice-nugget.jpg" alt="드라이아이스 너겟" loading="lazy"></div>
-            <div class="prodfull__body">
-              <span class="prodfull__num">04</span>
-              <h3 class="prodfull__title" data-i18n="nav.sub.ice">드라이아이스</h3>
-              <p class="prodfull__text" data-i18n="home.prod.ice">너겟·블록 생산설비, 日産 150톤. 신선식품 보냉용 필수재입니다.</p>
-              <a class="prodfull__more" href="products-ice.html" data-i18n="home.prod.more">MORE</a>
-            </div>
-          </article>
+    <!-- ===== ⑥ 팩토리 (드론 파노라마 풀블리드) ===== -->
+    <section class="factory" id="factory">
+      <img class="factory__bg" src="assets/images/site/location-hq.jpg?v=2" alt="한국탄산화학 본사·시흥공장 전경" loading="lazy">
+      <div class="factory__overlay">
+        <div class="container">
+          <span class="eyebrow eyebrow--light" data-i18n="home.factory.eyebrow">Our Facility</span>
+          <h2 class="factory__title" data-i18n-html="home.factory.title">최신 생산설비와<br>안정적인 공급망</h2>
+          <p class="factory__lead" data-i18n="home.factory.lead">고순도 제조설비와 대용량 저장탱크, 전국 공급 네트워크를 기반으로 안정적인 가스 공급을 실현합니다.</p>
         </div>
       </div>
     </section>
@@ -314,7 +369,7 @@
     <span class="scroll-fab__text">SCROLL</span>
   </a>
 
-  <script src="assets/i18n/translations.js?v=20260731-15"></script>
+  <script src="assets/i18n/translations.js?v=20260731-16"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 
