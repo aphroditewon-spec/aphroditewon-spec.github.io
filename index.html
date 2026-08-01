@@ -493,7 +493,8 @@
     if (!reduce && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (es) {
         es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        // 트리거 지점을 화면 하단에서 위로 30% 올려, 폴드 근처 섹션(ABOUT US 등)도 로드 시가 아닌 스크롤로 진입할 때 애니메이션되도록 함
+      }, { threshold: 0.15, rootMargin: '0px 0px -30% 0px' });
       targets.forEach(function (el) { io.observe(el); });
     } else { targets.forEach(function (el) { el.classList.add('in'); }); }
 
