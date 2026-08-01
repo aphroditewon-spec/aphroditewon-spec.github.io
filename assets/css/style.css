@@ -161,8 +161,12 @@ section[id] { scroll-margin-top: 88px; }
    ===================================================================== */
 .hero {
   position: relative; color: var(--hero-text); overflow: hidden;
-  padding-block: var(--space-20) var(--space-24);
+  display: flex; align-items: center;
+  /* 배경 이미지(약 2.5:1)가 잘리지 않고 전부 보이도록 히어로 높이를 이미지 비율에 맞춤 */
+  aspect-ratio: 1983 / 793; min-height: 480px;
+  padding-block: clamp(24px, 4vw, 48px);
 }
+.hero > .container { width: 100%; }
 /* 히어로 배경 슬라이드(3장 자동 전환) */
 .hero__slides { position: absolute; inset: 0; z-index: 0; }
 .hero__slide {
@@ -1287,7 +1291,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .reveal.in { opacity: 1; transform: none; }
 /* 배경 패럴랙스 대상 — 이동 여유를 위해 살짝 오버사이즈 */
 .hero__slides, .factory__bg { will-change: transform; }
-.hero__slides { top: -14%; bottom: -14%; }
+.hero__slides { top: -20%; bottom: -20%; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none; }
   .hero__slides, .factory__bg { transform: none !important; }
