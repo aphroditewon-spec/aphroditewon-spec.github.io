@@ -50,21 +50,15 @@ section { scroll-margin-top: 84px; }
    ===================================================================== */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: transparent;
-  border-bottom: 1px solid transparent;
-  transition: background .3s ease, box-shadow .3s ease, border-color .3s ease, backdrop-filter .3s ease;
-}
-/* 스크롤 시 흰색 배경으로 전환 */
-.site-header.is-scrolled {
-  background: #fff;
+  background: rgba(255,255,255,.92);
   backdrop-filter: saturate(160%) blur(10px);
-  border-bottom-color: var(--border);
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
 }
-/* 헤더가 히어로/페이지 배너 위에 겹치도록(상단 투명 효과) — 헤더 높이 90px */
-.hero { margin-top: -90px; padding-top: calc(var(--space-20) + 90px); }
-.page-banner { margin-top: -90px; }
-.page-banner .gas-banner, .page-banner .ice-banner { padding-top: 90px; }
+.site-header.is-scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: var(--shadow-sm);
+}
 .site-header__inner {
   position: relative;
   display: flex; align-items: center; gap: var(--space-6); height: 90px;
