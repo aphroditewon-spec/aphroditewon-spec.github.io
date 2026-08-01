@@ -1291,7 +1291,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .reveal.in { opacity: 1; transform: none; }
 /* 배경 패럴랙스 대상 — 이동 여유를 위해 살짝 오버사이즈 */
 .hero__slides, .factory__bg { will-change: transform; }
-.hero__slides { top: -20%; bottom: -20%; }
+/* 배경을 히어로와 정확히 동일 크기로 채워 이미지(약 2.5:1) 전체가 잘림 없이 보이게 함(레퍼런스와 동일 비율) */
+.hero__slides { inset: 0; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none; }
   .hero__slides, .factory__bg { transform: none !important; }
