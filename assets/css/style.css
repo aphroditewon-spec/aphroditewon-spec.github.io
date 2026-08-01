@@ -162,9 +162,10 @@ section[id] { scroll-margin-top: 88px; }
 .hero {
   position: relative; color: var(--hero-text); overflow: hidden;
   display: flex; align-items: center;
-  /* 배경 이미지(약 3.02:1, 하단 도로여백 크롭)가 잘리지 않고 전부 보이도록 히어로 높이를 이미지 비율에 맞춤 */
-  aspect-ratio: 2073 / 686; min-height: 460px;
-  padding-block: clamp(24px, 4vw, 48px);
+  /* 배경 이미지(약 2.49:1, 하단 바닥면만 크롭)가 전부 보이도록 히어로 높이를 이미지 비율에 맞춤 */
+  aspect-ratio: 1876 / 754; min-height: 500px;
+  /* 하단 패딩으로 통계 카드 겹침 영역을 비워, 콘텐츠(제목·버튼)가 카드 바로 위에 정렬되도록 함(레퍼런스) */
+  padding-block: clamp(24px, 3.5vw, 44px) clamp(64px, 8.5vw, 92px);
 }
 .hero > .container { width: 100%; }
 /* 히어로 배경 슬라이드(3장 자동 전환) */
@@ -178,7 +179,8 @@ section[id] { scroll-margin-top: 88px; }
 .hero > .container, .hero__scroll { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) { .hero__slide { transition: none; } }
 .hero__kicker {
-  display: inline-flex; align-items: center; gap: .55em;
+  /* 레퍼런스: 아이브로우("SINCE 2001…") 숨김 — 필요 시 inline-flex로 복원 */
+  display: none; align-items: center; gap: .55em;
   font-size: calc(var(--fs-eyebrow) * 1.2); font-weight: 700; letter-spacing: .1em;
   color: #2c6788; margin-bottom: var(--space-5);
 }
@@ -1168,12 +1170,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 1180px) { .header-tel { display: none; } }
 
 /* 신뢰 지표 흰색 카드(히어로에 겹침) */
-/* 통계 카드를 히어로 이미지 위로 더 겹치게(레퍼런스: 카드 절반 정도가 이미지에 겹침) */
-.herostat-band { position: relative; z-index: 3; margin-top: calc(-1 * clamp(80px, 11vw, 150px)); }
+/* 통계 카드를 히어로 이미지 위로 겹치게(레퍼런스 비율) */
+.herostat-band { position: relative; z-index: 3; margin-top: calc(-1 * clamp(80px, 11vw, 128px)); }
+/* 레퍼런스: 카드를 가로로 더 넓게(≈92%) */
+.herostat-band > .container { max-width: 1320px; }
 .herostat { list-style: none; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr);
-  background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: clamp(18px, 2.6vw, 34px); }
+  background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: clamp(12px, 1.7vw, 22px) clamp(16px, 2.2vw, 30px); }
 .herostat__item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3px;
-  padding: var(--space-4) var(--space-3); border-right: 1px solid var(--border); }
+  padding: clamp(6px, 0.9vw, 12px) var(--space-4); border-right: 1px solid var(--border); }
 .herostat__item:last-child { border-right: 0; }
 .herostat__ic { color: var(--brand); margin-bottom: 6px; }
 .herostat__ic svg { width: 30px; height: 30px; }
