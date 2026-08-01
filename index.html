@@ -7,7 +7,7 @@
   <meta name="description" content="한국탄산화학㈜(KLCC)는 산소·질소·아르곤·탄산·수소 등 산업용·의료용 가스와 드라이아이스를 제조·공급하는 전문기업입니다.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-22">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-23">
 </head>
 <body>
 
@@ -373,5 +373,28 @@
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 
+  <!-- Scroll Spy: 현재 섹션에 따라 상단 메뉴 자동 활성화 -->
+  <script>
+  (function () {
+    var groups = [
+      { href: 'company.html', ids: ['about-home', 'why', 'factory'] },
+      { href: 'products-gas.html', ids: ['business', 'product-showcase'] }
+    ];
+    var links = {}, sections = [];
+    groups.forEach(function (g) {
+      links[g.href] = document.querySelector('.nav__menu a.nav__link[href="' + g.href + '"]');
+      g.ids.forEach(function (id) { var el = document.getElementById(id); if (el) sections.push({ el: el, href: g.href }); });
+    });
+    if (!sections.length) return;
+    function onScroll() {
+      var line = window.scrollY + 160, active = null;
+      sections.forEach(function (s) { if (s.el.offsetTop <= line) active = s.href; });
+      Object.keys(links).forEach(function (h) { if (links[h]) links[h].classList.toggle('is-current', h === active); });
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+  })();
+  </script>
 </body>
 </html>
