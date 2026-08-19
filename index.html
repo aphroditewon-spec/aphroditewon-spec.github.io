@@ -346,46 +346,6 @@
       </div>
     </section>
 
-    <!-- ===== 주요 인증 및 수상 ===== -->
-    <section class="section" id="cert-home">
-      <div class="container">
-        <div class="section__head section__head--center">
-          <span class="eyebrow" data-i18n="home.cert.eyebrow">Certification</span>
-          <h2 class="section__title" data-i18n="home.cert.title">주요 인증 및 수상</h2>
-        </div>
-        <ul class="certlist">
-          <li class="cert"><span class="cert__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><b>ISO 9001</b></li>
-          <li class="cert"><span class="cert__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><b>ISO 14001</b></li>
-          <li class="cert"><span class="cert__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-3-6 3z"/><path d="M9 8h6M9 11h6"/></svg></span><b data-i18n="home.cert.rnd">기업부설연구소</b></li>
-          <li class="cert"><span class="cert__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 21l-5 2.6 1-5.5-4-3.9 5.5-.8z"/></svg></span><b data-i18n="home.cert.venture">벤처기업</b></li>
-          <li class="cert"><span class="cert__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 15h4"/></svg></span><b data-i18n="home.cert.patent">특허증</b></li>
-          <li class="cert"><span class="cert__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="13" rx="2"/><path d="M8 20l4-2 4 2"/><circle cx="12" cy="10.5" r="2.5"/></svg></span><b data-i18n="home.cert.award">표창장</b></li>
-        </ul>
-        <p class="certlist__note" data-i18n="home.cert.note">※ 인증 로고 이미지는 추후 실제 배지로 교체됩니다.</p>
-      </div>
-    </section>
-
-    <!-- ===== 주요 거래처 ===== -->
-    <section class="section">
-      <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="clients.eyebrow">Partners</span>
-          <h2 class="section__title" data-i18n="clients.title">주요 거래처</h2>
-          <p class="section__lead" data-i18n="clients.lead">식음료·제약·산업 전반의 신뢰받는 파트너와 함께합니다.</p>
-        </div>
-        <div class="logo-grid">
-          <div class="logo-grid__cell"><img src="assets/images/clients/ilhwa.svg" alt="㈜일화"></div>
-          <div class="logo-grid__cell"><img src="assets/images/clients/cocacola.svg" alt="코카콜라음료㈜"></div>
-          <div class="logo-grid__cell"><img src="assets/images/clients/donga-otsuka.svg" alt="동아오츠카㈜"></div>
-          <div class="logo-grid__cell"><img src="assets/images/clients/dongwha.svg" alt="동화약품㈜"></div>
-          <div class="logo-grid__cell"><img src="assets/images/clients/hd-infracore.svg" alt="HD현대인프라코어"></div>
-          <div class="logo-grid__cell"><img src="assets/images/clients/kumho.svg" alt="금호석유화학㈜"></div>
-          <div class="logo-grid__cell"></div>
-          <div class="logo-grid__cell"></div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- ===== 연락처 밴드 (푸터 위) ===== -->
@@ -488,7 +448,7 @@
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // 1) 콘텐츠 리빌(자연스럽게 상승)
-    var targets = document.querySelectorAll('.about-home, .whycards, .biztile, .gastabs, .ceohome, .histlist, .certlist, .logo-grid, .factory__overlay .container');
+    var targets = document.querySelectorAll('.about-home, .whycards, .biztile, .gastabs, .ceohome, .histlist, .factory__overlay .container');
     targets.forEach(function (el) { el.classList.add('reveal'); });
     if (!reduce && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (es) {
