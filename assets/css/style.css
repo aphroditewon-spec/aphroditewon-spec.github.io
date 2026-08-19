@@ -1241,9 +1241,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
    홈 시안 — CEO 메시지, 연혁, 인증/수상
    ===================================================================== */
 /* CEO 메시지 + 방침 */
-.ceohome { display: grid; grid-template-columns: .82fr 1.15fr .9fr; gap: var(--space-8); align-items: stretch; }
-.ceohome__photo { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
-.ceohome__photo img { width: 100%; height: 100%; min-height: 340px; object-fit: cover; object-position: 56% center; display: block; }
+.ceohome { display: grid; grid-template-columns: .95fr 1.15fr .9fr; gap: var(--space-8); align-items: center; }
+.ceohome__photo { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); align-self: center; }
+/* 레퍼런스: 가로형 사진 비율(16:10), 인물 중앙 프레이밍 */
+.ceohome__photo img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: 48% 30%; display: block; }
 .ceohome__msg { display: flex; flex-direction: column; justify-content: center; }
 .ceohome__quote { font-size: var(--fs-h2); font-weight: 800; color: var(--text); line-height: 1.35; margin: var(--space-3) 0 var(--space-5); }
 .ceohome__desc { color: var(--text-muted); line-height: 1.85; }
@@ -1261,7 +1262,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .policycard__more { margin-top: var(--space-3); font-size: .8rem; font-weight: 700; color: var(--accent-hover); }
 .policycard__more::after { content: " →"; }
 @media (max-width: 980px) { .ceohome { grid-template-columns: 1fr; } .ceohome__policy { flex-direction: row; } }
-@media (max-width: 560px) { .ceohome__policy { flex-direction: column; } .ceohome__photo img { min-height: 260px; } }
+@media (max-width: 560px) { .ceohome__policy { flex-direction: column; } .ceohome__photo img { aspect-ratio: 3 / 2; } }
 
 /* 연혁 */
 .histlist { list-style: none; margin: var(--space-8) 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-12); }
