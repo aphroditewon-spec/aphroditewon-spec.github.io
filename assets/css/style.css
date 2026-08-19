@@ -635,6 +635,48 @@ section[id] { scroll-margin-top: 88px; }
 .facstat small { display: block; font-size: .74rem; color: var(--text-muted); margin-top: 4px; }
 @media (max-width: 980px) { .fac2 { grid-template-columns: 1fr; gap: var(--space-8); } }
 @media (max-width: 560px) { .facstats { grid-template-columns: repeat(2, 1fr); } }
+
+/* =====================================================================
+   회사개요 카드 그리드 + 조직도(신규)
+   ===================================================================== */
+.ovcards { list-style: none; margin: var(--space-8) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
+.ovcard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-6); display: flex; flex-direction: column; gap: 5px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.ovcard:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--green-200); }
+.ovcard__ic { width: 46px; height: 46px; border-radius: 12px; background: var(--surface-brand); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--space-2); }
+.ovcard__ic svg { width: 24px; height: 24px; }
+.ovcard__label { font-size: .95rem; font-weight: 700; color: var(--text); }
+.ovcard__val { font-size: .84rem; color: var(--text-muted); line-height: 1.6; word-break: keep-all; }
+@media (max-width: 900px) { .ovcards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .ovcards { grid-template-columns: 1fr; } }
+
+/* 조직도 */
+.orgchart { margin-top: var(--space-9); }
+.orgchart__top { display: flex; flex-direction: column; align-items: center; }
+.orgceo { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-5) var(--space-9); box-shadow: var(--shadow-sm); }
+.orgceo__photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: center 25%; border: 2px solid var(--green-100); }
+.orgceo__txt { text-align: center; line-height: 1.35; }
+.orgceo__txt b { display: block; color: var(--brand); font-size: 1rem; }
+.orgceo__txt span { font-size: .85rem; color: var(--text-muted); }
+.orgchart__vline { width: 2px; height: var(--space-6); background: var(--border-strong); }
+.orgevp { background: var(--green-deep); color: #fff; font-weight: 700; border-radius: var(--radius-pill); padding: var(--space-3) var(--space-8); font-size: .95rem; }
+.orgchart__teams { margin-top: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-3); position: relative; padding-top: var(--space-8); }
+/* 상단 가로 버스 라인(첫~마지막 팀 중심 연결) + 전무에서 내려오는 세로선 */
+.orgchart__teams::before { content: ""; position: absolute; top: 0; left: calc(100% / 14); right: calc(100% / 14); height: 2px; background: var(--border-strong); }
+.orgchart__teams::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--border-strong); }
+.orgteam { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-4) var(--space-3) var(--space-5); }
+.orgteam::before { content: ""; position: absolute; top: calc(-1 * var(--space-8)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-8); background: var(--border-strong); }
+.orgteam__head { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; padding-bottom: var(--space-3); border-bottom: 1px solid var(--border); }
+.orgteam__ic { width: 40px; height: 40px; border-radius: 50%; background: var(--surface-brand); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; }
+.orgteam__ic svg { width: 20px; height: 20px; }
+.orgteam__head b { font-size: .9rem; color: var(--text); }
+.orgteam__list { list-style: none; margin: var(--space-3) 0 0; padding: 0; }
+.orgteam__list li { font-size: .78rem; color: var(--text-muted); padding: 3px 0 3px 12px; position: relative; }
+.orgteam__list li::before { content: ""; position: absolute; left: 0; top: 8px; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+@media (max-width: 900px) {
+  .orgchart__teams { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); padding-top: var(--space-6); }
+  .orgchart__teams::before, .orgchart__teams::after, .orgteam::before { display: none; }
+}
+@media (max-width: 480px) { .orgchart__teams { grid-template-columns: 1fr; } }
 /* 핵심 가치 아이콘(안전·품질·신뢰·기술혁신) */
 .greeting__values {
   list-style: none; margin: var(--space-7) 0 0; padding: var(--space-6) 0 0;
