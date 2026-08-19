@@ -576,6 +576,65 @@ section[id] { scroll-margin-top: 88px; }
   .cmsg__body { max-width: 100%; padding: clamp(20px, 5vw, 32px); padding-left: 0; }
   .cmsg__body .section__title { font-size: 1.4rem; }
 }
+
+/* =====================================================================
+   회사소개 페이지 리디자인 — 인트로 / 경영이념 / 가로 연혁 / 생산시설
+   ===================================================================== */
+/* 회사소개 인트로(좌 텍스트 + 우 사진) */
+.about2 { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--space-12); align-items: center; }
+.about2__lead { color: var(--text-muted); line-height: 1.9; margin: var(--space-5) 0 var(--space-6); }
+.about2__dl { display: inline-flex; align-items: center; gap: .5em; margin-bottom: var(--space-8); }
+.about2__dl svg { width: 18px; height: 18px; }
+.about2__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; aspect-ratio: 16 / 11; object-fit: cover; }
+.introfeats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
+.introfeat { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.introfeat__ic { width: 46px; height: 46px; border-radius: 12px; background: var(--surface-brand); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--space-2); }
+.introfeat__ic svg { width: 22px; height: 22px; }
+.introfeat b { font-size: .8rem; letter-spacing: .05em; color: var(--text); }
+.introfeat small { font-size: .82rem; color: var(--text-muted); }
+@media (max-width: 900px) { .about2 { grid-template-columns: 1fr; gap: var(--space-8); } .introfeats { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); } }
+
+/* 경영이념 3카드 */
+.phil3 { list-style: none; margin: var(--space-9) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.phil { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-8); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.phil:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green-200); }
+.phil__ic { width: 54px; height: 54px; border-radius: 50%; background: var(--surface-brand); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--space-5); }
+.phil__ic svg { width: 26px; height: 26px; }
+.phil__cat { display: block; font-size: .76rem; font-weight: 700; letter-spacing: .12em; color: var(--accent-hover); }
+.phil__title { display: block; font-size: var(--fs-h3); color: var(--text); margin: var(--space-2) 0 var(--space-3); line-height: 1.4; }
+.phil__desc { color: var(--text-muted); line-height: 1.7; font-size: .9rem; }
+@media (max-width: 860px) { .phil3 { grid-template-columns: 1fr; } }
+
+/* 가로 연혁 타임라인 */
+.htimeline { list-style: none; margin: var(--space-10) 0 0; padding: 0; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; position: relative; }
+.htimeline::before { content: ""; position: absolute; left: 0; right: 0; top: 8px; height: 2px; background: var(--border); }
+.htl { position: relative; padding-right: var(--space-5); }
+.htl__dot { display: block; position: relative; z-index: 1; width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 3px solid var(--brand); margin-bottom: var(--space-5); }
+.htl:last-child .htl__dot { background: var(--brand); box-shadow: 0 0 0 5px var(--surface-brand); }
+.htl__year { display: block; font-size: var(--fs-h3); font-weight: 800; color: var(--brand); margin-bottom: var(--space-2); }
+.htl__text { display: block; font-size: .82rem; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
+@media (max-width: 860px) {
+  .htimeline { grid-auto-flow: row; grid-auto-columns: auto; gap: var(--space-6); }
+  .htimeline::before { left: 8px; right: auto; top: 0; bottom: 0; width: 2px; height: auto; }
+  .htl { padding: 0 0 0 var(--space-8); }
+  .htl__dot { position: absolute; left: 0; top: 2px; margin: 0; }
+}
+
+/* 생산시설 및 강점(좌 사진 + 우 통계/설명) */
+.fac2 { display: grid; grid-template-columns: 1.05fr 1fr; gap: var(--space-12); align-items: center; }
+.fac2__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; aspect-ratio: 16 / 10; object-fit: cover; }
+.fac2__body .section__head { margin-bottom: var(--space-6); }
+.fac2__desc { color: var(--text-muted); line-height: 1.8; margin: var(--space-6) 0; }
+.facstats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+.facstat { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-5) var(--space-2); text-align: center; }
+.facstat__ic { color: var(--brand); display: block; margin: 0 auto var(--space-2); }
+.facstat__ic svg { width: 26px; height: 26px; }
+.facstat b { display: block; font-size: 1.22rem; font-weight: 800; color: #143b63; line-height: 1.1; }
+.facstat b .facstat__u { font-size: .62em; font-weight: 700; }
+.facstat b sup { color: var(--accent); font-size: .55em; }
+.facstat small { display: block; font-size: .74rem; color: var(--text-muted); margin-top: 4px; }
+@media (max-width: 980px) { .fac2 { grid-template-columns: 1fr; gap: var(--space-8); } }
+@media (max-width: 560px) { .facstats { grid-template-columns: repeat(2, 1fr); } }
 /* 핵심 가치 아이콘(안전·품질·신뢰·기술혁신) */
 .greeting__values {
   list-style: none; margin: var(--space-7) 0 0; padding: var(--space-6) 0 0;
