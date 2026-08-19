@@ -1243,7 +1243,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* CEO 메시지 + 방침 */
 .ceohome { display: grid; grid-template-columns: .82fr 1.15fr .9fr; gap: var(--space-8); align-items: stretch; }
 .ceohome__photo { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
-.ceohome__photo img { width: 100%; height: 100%; min-height: 340px; object-fit: cover; object-position: center 28%; display: block; }
+.ceohome__photo img { width: 100%; height: 100%; min-height: 340px; object-fit: cover; object-position: 72% center; display: block; }
 .ceohome__msg { display: flex; flex-direction: column; justify-content: center; }
 .ceohome__quote { font-size: var(--fs-h2); font-weight: 800; color: var(--text); line-height: 1.35; margin: var(--space-3) 0 var(--space-5); }
 .ceohome__desc { color: var(--text-muted); line-height: 1.85; }
