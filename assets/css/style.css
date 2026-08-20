@@ -1278,7 +1278,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 /* 신뢰 지표 흰색 카드(히어로에 겹침) */
 /* 통계 카드를 히어로 이미지 위로 크게 겹치게(레퍼런스: 카드 하단≈이미지 하단) */
-.herostat-band { position: relative; z-index: 3; margin-top: calc(-1 * clamp(96px, 13vw, 160px)); }
+.herostat-band { position: relative; z-index: 3; margin-top: calc(-1 * clamp(56px, 7.5vw, 96px)); }
 /* 레퍼런스: 카드 폭 ≈85% */
 .herostat-band > .container { max-width: 1260px; }
 /* 레퍼런스: 카드를 더 납작하게(≈7.5:1) — 세로 패딩 축소 */
