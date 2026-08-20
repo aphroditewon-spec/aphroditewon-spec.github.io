@@ -661,12 +661,16 @@ section[id] { scroll-margin-top: 88px; }
 .orgchart__vline { width: 2px; height: var(--space-6); background: var(--brand); }
 /* 총괄전무: 흰색 박스 */
 .orgevp { background: var(--surface); color: var(--brand); border: 1px solid var(--border); box-shadow: var(--shadow-sm); font-weight: 800; border-radius: var(--radius-md); padding: var(--space-4) clamp(36px, 5vw, 64px); font-size: 1.05rem; }
-.orgchart__teams { margin-top: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-3); position: relative; padding-top: var(--space-8); }
-/* 상단 가로 버스 라인(첫~마지막 팀 중심 연결) + 전무에서 내려오는 세로선 (브랜드 블루) */
-.orgchart__teams::before { content: ""; position: absolute; top: 0; left: calc(100% / 14); right: calc(100% / 14); height: 2px; background: var(--brand); }
-.orgchart__teams::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--brand); }
+.orgchart__teams { margin-top: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-3); position: relative; padding-top: calc(2 * var(--space-6)); }
+/* 총괄전무 → 버스 중앙 세로선 (브랜드 블루) */
+.orgchart__teams::before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--brand); }
 .orgteam { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-6) var(--space-4) var(--space-6); box-shadow: var(--shadow-sm); }
-.orgteam::before { content: ""; position: absolute; top: calc(-1 * var(--space-8)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-8); background: var(--brand); }
+/* 각 팀 위 가로 버스: 카드폭 + 갭 절반씩 그려 이어붙임(양 끝은 카드 중심에서 끝나 밖으로 안 삐져나감) */
+.orgteam::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: calc(-0.5 * var(--space-3)); right: calc(-0.5 * var(--space-3)); height: 2px; background: var(--brand); }
+.orgteam:first-child::after { left: 50%; }
+.orgteam:last-child::after { right: 50%; }
+/* 각 팀 세로 스텁: 버스 → 카드 (버스와 동일 높이라 정확히 정렬) */
+.orgteam::before { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--brand); }
 .orgteam__head { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); text-align: center; }
 .orgteam__ic { width: 62px; height: 62px; border-radius: 50%; background: var(--surface-brand); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; }
 .orgteam__ic svg { width: 30px; height: 30px; }
@@ -676,7 +680,7 @@ section[id] { scroll-margin-top: 88px; }
 .orgteam__list li::before { content: ""; position: absolute; left: 0; top: 12px; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
 @media (max-width: 900px) {
   .orgchart__teams { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); padding-top: var(--space-6); }
-  .orgchart__teams::before, .orgchart__teams::after, .orgteam::before { display: none; }
+  .orgchart__teams::before, .orgteam::before, .orgteam::after { display: none; }
 }
 @media (max-width: 480px) { .orgchart__teams { grid-template-columns: 1fr; } }
 /* 핵심 가치 아이콘(안전·품질·신뢰·기술혁신) */
