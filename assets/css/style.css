@@ -948,7 +948,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 /* 제품 카테고리 라인업 (산업용가스: 용도별 5분류) */
 /* 제품 라인업 — 좌 카테고리 사이드바 + 우 제품 카드 */
-.prodlineup { display: grid; grid-template-columns: 210px 1fr; gap: var(--space-8); align-items: start; }
+.prodlineup { display: grid; grid-template-columns: 210px 1fr; gap: var(--space-8); align-items: start; margin-top: var(--space-8); }
 .prodlineup__nav { display: flex; flex-direction: column; gap: var(--space-2); position: sticky; top: 108px; }
 .prodlineup__btn { text-align: left; padding: var(--space-4) var(--space-5); border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); color: var(--text); font-weight: 600; font-size: .95rem; cursor: pointer; transition: background .2s ease, color .2s ease, border-color .2s ease; }
 .prodlineup__btn:hover { border-color: var(--green-200); color: var(--brand); }
