@@ -1217,6 +1217,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .about-home__feats { margin: var(--space-6) 0 var(--space-7); }
 .about-home__more { display: inline-flex; align-items: center; gap: .5em; }
 
+/* 브레드크럼 */
+.breadcrumb { border-bottom: 1px solid var(--border); background: var(--surface); }
+.breadcrumb__inner { display: flex; justify-content: center; align-items: center; gap: .5em; padding: var(--space-4) 0; font-size: .84rem; color: var(--text-muted); }
+.breadcrumb__inner a { color: var(--text-muted); display: inline-flex; }
+.breadcrumb__inner svg { width: 15px; height: 15px; }
+.breadcrumb__inner .sep { opacity: .5; }
+.breadcrumb__inner .cur { color: var(--text); font-weight: 600; }
+
 /* =====================================================================
    회사소개 종합 페이지 — 번호형 섹션, 회사개요 그리드, 핵심 경쟁력
    ===================================================================== */
