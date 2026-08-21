@@ -162,8 +162,8 @@ section[id] { scroll-margin-top: 88px; }
 .hero {
   position: relative; color: var(--hero-text); overflow: hidden;
   display: flex; align-items: flex-start;
-  /* 배경 이미지(약 2.49:1, 하단 바닥면만 크롭)가 전부 보이도록 히어로 높이를 이미지 비율에 맞춤 */
-  aspect-ratio: 1876 / 754; min-height: 500px;
+  /* 배경 이미지(약 2.49:1, 탱크 확대 크롭)가 전부 보이도록 히어로 높이를 이미지 비율에 맞춤 */
+  aspect-ratio: 1134 / 456; min-height: 500px;
   /* 레퍼런스: 콘텐츠(제목·버튼)를 상단에서 시작(상단 정렬), 카드는 아래에서 크게 겹침 */
   padding-block: clamp(48px, 7vw, 84px) clamp(24px, 3.5vw, 44px);
 }
