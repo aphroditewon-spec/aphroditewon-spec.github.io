@@ -7,7 +7,7 @@
   <meta name="description" content="산업용·의료용·혼합·특수·액화석유가스 — 고순도 산소·질소·아르곤·수소·헬륨·탄산·LPG를 Bulk·실린더로 공급·제조합니다.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-50">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-51">
 </head>
 <body>
 
@@ -125,62 +125,133 @@
           <h2 class="section__title" data-i18n="products.gas.title">제품 라인업</h2>
           <p class="section__lead" data-i18n="products.gas.lead">용도별로 최적화된 고순도 가스를 직접 제조하여 안정적으로 공급합니다.</p>
         </div>
-        <div class="prodcat">
-          <!-- 산업용가스 -->
-          <article class="prodcat__card">
-            <span class="prodcat__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="7" width="6" height="14" rx="3"/><path d="M10.5 7V5.5a1.5 1.5 0 0 1 3 0V7"/><line x1="9" y1="11.5" x2="15" y2="11.5"/></svg>
-            </span>
-            <h3 class="prodcat__title" data-i18n="products.cat.ind">산업용가스</h3>
-            <p class="prodcat__text" data-i18n="products.cat.indd">O₂·N₂·Ar·CO₂·H₂·He 등의 가스를 제조하며, 고객의 여건에 적합한 Cylinder·Bulk·Licon 등 다양한 방법으로 안전하게 공급합니다.</p>
-            <div class="prodcat__tags" aria-hidden="true">
-              <span class="prodcat__tag">O₂</span><span class="prodcat__tag">N₂</span><span class="prodcat__tag">Ar</span><span class="prodcat__tag">CO₂</span><span class="prodcat__tag">H₂</span><span class="prodcat__tag">He</span>
+        <div class="prodlineup">
+          <div class="prodlineup__nav" role="tablist" aria-label="가스 카테고리">
+            <button class="prodlineup__btn is-active" role="tab" aria-selected="true" data-cat="ind" data-i18n="products.cat.ind">산업용가스</button>
+            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="med" data-i18n="products.cat.med">의료용가스</button>
+            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="spec" data-i18n="products.cat.spec">특수가스</button>
+            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="ice" data-i18n="nav.sub.ice">드라이아이스</button>
+          </div>
+          <div class="prodlineup__panels">
+            <!-- 산업용가스 -->
+            <div class="prodlineup__panel is-active" role="tabpanel" data-cat="ind">
+              <h3 class="prodlineup__title" data-i18n="products.cat.ind">산업용가스</h3>
+              <p class="prodlineup__desc">다양한 산업현장에서 요구하는 고순도 가스를 안정적으로 공급합니다.</p>
+              <ul class="prodgrid">
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/gas-cylinders.jpg?v=20260731" alt="산소 (O₂)" loading="lazy"></a>
+                  <b class="pgcard__title">산소 <em>(O₂)</em></b>
+                  <p class="pgcard__text" data-i18n="home.pr.o2">용접, 절단, 의료 등 다양한 산업용 산소</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/quality-inspect-cyl.jpg" alt="질소 (N₂)" loading="lazy"></a>
+                  <b class="pgcard__title">질소 <em>(N₂)</em></b>
+                  <p class="pgcard__text" data-i18n="home.pr.n2">식품포장, 반도체, 화학 등 다양한 산업용 질소</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/supply-o2-station.jpg" alt="아르곤 (Ar)" loading="lazy"></a>
+                  <b class="pgcard__title">아르곤 <em>(Ar)</em></b>
+                  <p class="pgcard__text" data-i18n="home.pr.ar">용접 보호가스, 분석용 등 고순도 아르곤</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/page-hero-gas.jpg?v=20260715-6" alt="탄산 (CO₂)" loading="lazy"></a>
+                  <b class="pgcard__title">탄산 <em>(CO₂)</em></b>
+                  <p class="pgcard__text" data-i18n="home.pr.co2">식품, 음료, 용접, 소화설비 등 다양한 용도</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+              </ul>
             </div>
-          </article>
-          <!-- 특수가스 -->
-          <article class="prodcat__card">
-            <span class="prodcat__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3l1.6 4.4L17 9l-4.4 1.6L11 15l-1.6-4.4L5 9l4.4-1.6z"/><path d="M18 13l.8 2.2 2.2.8-2.2.8L18 19l-.8-2.2L15 16l2.2-.8z"/></svg>
-            </span>
-            <h3 class="prodcat__title" data-i18n="products.cat.spec">특수가스</h3>
-            <p class="prodcat__text" data-i18n="products.cat.specd">정제설비 시스템을 이용하여 초고순도 가스(99.999% 이상)를 제조하여 고순도 제품으로 공급합니다.</p>
-            <div class="prodcat__tags" aria-hidden="true">
-              <span class="prodcat__tag">99.999% 이상</span><span class="prodcat__tag">초고순도</span>
+            <!-- 의료용가스 -->
+            <div class="prodlineup__panel" role="tabpanel" data-cat="med" hidden>
+              <h3 class="prodlineup__title" data-i18n="products.cat.med">의료용가스</h3>
+              <p class="prodlineup__desc">의료기관 및 연구기관에 안전하고 검증된 의료용 가스를 공급합니다.</p>
+              <ul class="prodgrid">
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/biz-gas.jpg?v=20260703" alt="의료용 산소 (O₂)" loading="lazy"></a>
+                  <b class="pgcard__title">의료용 산소 <em>(O₂)</em></b>
+                  <p class="pgcard__text">병원·의료기관용 고순도 의료용 산소</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/gas-cylinders.jpg?v=20260731" alt="아산화질소 (N₂O)" loading="lazy"></a>
+                  <b class="pgcard__title">아산화질소 <em>(N₂O)</em></b>
+                  <p class="pgcard__text">마취 등 의료용으로 쓰이는 아산화질소</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/quality-inspect-cyl.jpg" alt="의료용 이산화탄소 (CO₂)" loading="lazy"></a>
+                  <b class="pgcard__title">의료용 이산화탄소 <em>(CO₂)</em></b>
+                  <p class="pgcard__text">복강경 등 의료기기용 이산화탄소</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/supply-o2-station.jpg" alt="의료용 아르곤 (Ar)" loading="lazy"></a>
+                  <b class="pgcard__title">의료용 아르곤 <em>(Ar)</em></b>
+                  <p class="pgcard__text">의료 시술·기기용 고순도 아르곤</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+              </ul>
             </div>
-          </article>
-          <!-- 의료용가스 -->
-          <article class="prodcat__card">
-            <span class="prodcat__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><line x1="12" y1="8.5" x2="12" y2="15.5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/></svg>
-            </span>
-            <h3 class="prodcat__title" data-i18n="products.cat.med">의료용가스</h3>
-            <p class="prodcat__text" data-i18n="products.cat.medd">O₂·N₂O·Ar·CO₂ 등 의료용 및 의료기기에 필요한 가스를 제조·공급합니다.</p>
-            <div class="prodcat__tags" aria-hidden="true">
-              <span class="prodcat__tag">O₂</span><span class="prodcat__tag">N₂O</span><span class="prodcat__tag">Ar</span><span class="prodcat__tag">CO₂</span>
+            <!-- 특수가스 -->
+            <div class="prodlineup__panel" role="tabpanel" data-cat="spec" hidden>
+              <h3 class="prodlineup__title" data-i18n="products.cat.spec">특수가스</h3>
+              <p class="prodlineup__desc">정제설비로 초고순도(99.999% 이상) 가스를 제조·공급합니다.</p>
+              <ul class="prodgrid">
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/quality-inspect-cyl.jpg" alt="고순도 질소 (N₂)" loading="lazy"></a>
+                  <b class="pgcard__title">고순도 질소 <em>(N₂)</em></b>
+                  <p class="pgcard__text">반도체·디스플레이용 초고순도 질소</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/supply-o2-station.jpg" alt="고순도 아르곤 (Ar)" loading="lazy"></a>
+                  <b class="pgcard__title">고순도 아르곤 <em>(Ar)</em></b>
+                  <p class="pgcard__text">분석·공정용 초고순도 아르곤</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/gas-cylinders.jpg?v=20260731" alt="혼합가스" loading="lazy"></a>
+                  <b class="pgcard__title">혼합가스 <em>(Mix)</em></b>
+                  <p class="pgcard__text">용도별로 정밀 배합한 혼합가스</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="support.html"><img src="assets/images/site/page-hero-gas.jpg?v=20260715-6" alt="초고순도 가스" loading="lazy"></a>
+                  <b class="pgcard__title">초고순도 가스</b>
+                  <p class="pgcard__text">99.999% 이상 정제한 특수 산업용 가스</p>
+                  <a class="pgcard__more" href="support.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+              </ul>
             </div>
-          </article>
-          <!-- 식품첨가물 탄산가스 -->
-          <article class="prodcat__card">
-            <span class="prodcat__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="8.5 12.5 11 15 15.5 9.5"/></svg>
-            </span>
-            <h3 class="prodcat__title" data-i18n="products.cat.food">식품첨가물 탄산가스</h3>
-            <p class="prodcat__text" data-i18n="products.cat.foodd">식품에 첨가되는 이산화탄소로, 외부 공인기관을 통해 품질검사에 적합한 가스만을 공급합니다.</p>
-            <div class="prodcat__tags" aria-hidden="true">
-              <span class="prodcat__tag">CO₂</span><span class="prodcat__tag">식품등급</span><span class="prodcat__tag">공인 품질검사</span>
+            <!-- 드라이아이스 -->
+            <div class="prodlineup__panel" role="tabpanel" data-cat="ice" hidden>
+              <h3 class="prodlineup__title" data-i18n="nav.sub.ice">드라이아이스</h3>
+              <p class="prodlineup__desc">日産 150톤 생산설비로 펠릿·블록 등 다양한 형태의 드라이아이스를 공급합니다.</p>
+              <ul class="prodgrid">
+                <li class="pgcard">
+                  <a class="pgcard__media" href="products-ice.html"><img src="assets/images/site/ice-nugget.jpg" alt="드라이아이스 펠릿" loading="lazy"></a>
+                  <b class="pgcard__title">드라이아이스 펠릿</b>
+                  <p class="pgcard__text">신선식품 보냉·세척용 펠릿(너겟)형</p>
+                  <a class="pgcard__more" href="products-ice.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="products-ice.html"><img src="assets/images/site/ice-block.jpg" alt="드라이아이스 블록" loading="lazy"></a>
+                  <b class="pgcard__title">드라이아이스 블록</b>
+                  <p class="pgcard__text">장시간 보냉·특수효과용 블록형</p>
+                  <a class="pgcard__more" href="products-ice.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="products-ice.html"><img src="assets/images/site/ice-block-2.jpg" alt="드라이아이스 슬라이스" loading="lazy"></a>
+                  <b class="pgcard__title">드라이아이스 슬라이스</b>
+                  <p class="pgcard__text">산업·물류용 슬라이스형</p>
+                  <a class="pgcard__more" href="products-ice.html" data-i18n="home.ceo.view">자세히 보기</a>
+                </li>
+              </ul>
             </div>
-          </article>
-          <!-- 액화석유가스(LPG) -->
-          <article class="prodcat__card">
-            <span class="prodcat__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s5 4 5 9.5A5 5 0 0 1 7 11.5C7 9.5 8 8 9 7c0 1.2.6 2.2 1.7 2.2C12 9.2 11 5.5 12 2z"/></svg>
-            </span>
-            <h3 class="prodcat__title" data-i18n="products.cat.lpg">액화석유가스 (LPG)</h3>
-            <p class="prodcat__text" data-i18n="products.cat.lpgd">가정용·산업용 연료로 널리 쓰이는 액화석유가스(LPG)를 안전하고 안정적으로 공급합니다.</p>
-            <div class="prodcat__tags" aria-hidden="true">
-              <span class="prodcat__tag">LPG</span><span class="prodcat__tag">가정용·산업용</span>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -354,5 +425,20 @@
   <script src="assets/i18n/translations.js?v=20260821c"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+  <!-- 제품 라인업 카테고리 사이드바 전환 -->
+  <script>
+    (function () {
+      var btns = Array.prototype.slice.call(document.querySelectorAll('.prodlineup__btn'));
+      var panels = Array.prototype.slice.call(document.querySelectorAll('.prodlineup__panel'));
+      if (!btns.length) return;
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          var cat = b.getAttribute('data-cat');
+          btns.forEach(function (x) { var on = x === b; x.classList.toggle('is-active', on); x.setAttribute('aria-selected', on ? 'true' : 'false'); });
+          panels.forEach(function (p) { var on = p.getAttribute('data-cat') === cat; p.classList.toggle('is-active', on); p.hidden = !on; });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
