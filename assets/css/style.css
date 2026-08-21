@@ -1216,6 +1216,35 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .about-home__lead { color: var(--text-muted); line-height: 1.9; margin: var(--space-5) 0 var(--space-6); }
 .about-home__feats { margin: var(--space-6) 0 var(--space-7); }
 .about-home__more { display: inline-flex; align-items: center; gap: .5em; }
+
+/* =====================================================================
+   회사소개 종합 페이지 — 번호형 섹션, 회사개요 그리드, 핵심 경쟁력
+   ===================================================================== */
+.secnum { margin-bottom: var(--space-6); }
+.secnum__no { display: block; font-size: .95rem; font-weight: 800; color: var(--brand); letter-spacing: .06em; }
+.secnum__title { display: block; font-size: 1.4rem; font-weight: 800; color: var(--text); margin-top: 2px; line-height: 1.25; }
+/* 02 회사개요: 좌 헤더 + 우 정보 그리드 */
+.ovsec { display: grid; grid-template-columns: .82fr 2.05fr; gap: var(--space-10); align-items: start; }
+.ovsec__title { font-size: var(--fs-h2); font-weight: 800; color: var(--text); line-height: 1.3; }
+.ovsec__lead { color: var(--text-muted); line-height: 1.8; margin-top: var(--space-3); }
+.ovgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8) var(--space-7); }
+.ovitem { display: flex; gap: var(--space-4); align-items: flex-start; }
+.ovitem__ic { flex: none; width: 42px; height: 42px; color: var(--brand); display: inline-flex; align-items: center; justify-content: center; }
+.ovitem__ic svg { width: 30px; height: 30px; }
+.ovitem__k { display: block; font-size: .9rem; font-weight: 700; color: var(--brand); }
+.ovitem__v { display: block; font-size: .86rem; color: var(--text); line-height: 1.55; margin-top: 3px; word-break: keep-all; }
+@media (max-width: 900px) { .ovsec { grid-template-columns: 1fr; gap: var(--space-6); } .ovgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .ovgrid { grid-template-columns: 1fr; } }
+/* 04 핵심 경쟁력 */
+.strhead { text-align: center; font-size: var(--fs-h2); font-weight: 800; color: var(--text); margin: 0 0 var(--space-8); }
+.strengths { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
+.strcard { text-align: center; padding: var(--space-6) var(--space-4); }
+.strcard__ic { width: 56px; height: 56px; margin: 0 auto var(--space-4); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; }
+.strcard__ic svg { width: 32px; height: 32px; }
+.strcard b { display: block; font-size: 1.05rem; color: var(--text); margin-bottom: var(--space-2); }
+.strcard p { font-size: .86rem; color: var(--text-muted); line-height: 1.65; word-break: keep-all; }
+@media (max-width: 860px) { .strengths { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px) { .strengths { grid-template-columns: 1fr; } }
 @media (max-width: 900px) { .about-home { grid-template-columns: 1fr; gap: var(--space-8); } }
 
 /* ⑥ 팩토리 (풀블리드 드론) */

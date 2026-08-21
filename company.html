@@ -7,7 +7,7 @@
   <meta name="description" content="한국탄산화학㈜ 회사소개 — 회사 개요, 경영이념, 연혁, 생산시설 및 강점.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-57">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-58">
   <!-- 대표이사 서명용 손글씨 폰트 (한글: Nanum Pen Script, 일어: Yomogi) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,9 +29,8 @@
           <li class="nav__item has-sub">
             <a class="nav__link is-current" href="company.html" data-i18n="nav.company">회사소개</a>
             <ul class="nav__sub">
-              <li><a href="company.html" data-i18n="nav.sub.intro">인사말·연혁</a></li>
-              <li><a href="company-overview.html" data-i18n="nav.sub.overviewpage">회사개요·조직도</a></li>
-              <li><a href="company-network.html" data-i18n="nav.sub.network">계열사·오시는 길</a></li>
+              <li><a href="company.html" data-i18n="nav.sub.intro">회사소개</a></li>
+              <li><a href="company-network.html" data-i18n="nav.sub.network">계열사</a></li>
             </ul>
           </li>
           <li class="nav__item has-sub">
@@ -127,31 +126,9 @@
     <section class="section" id="intro">
       <div class="container about2">
         <div class="about2__text">
-          <span class="eyebrow" data-i18n="company.intro.eyebrow">회사소개</span>
+          <div class="secnum"><span class="secnum__no">01</span><span class="secnum__title" data-i18n="company.intro.eyebrow">회사소개</span></div>
           <h2 class="section__title" data-i18n-html="company.intro.title">산업용가스 전문기업<br>한국탄산화학㈜</h2>
           <p class="about2__lead" data-i18n="company.intro.lead">2001년 설립 이후 고순도 산업용가스 제조와 안정적인 공급을 통해 고객 산업의 성장과 발전을 함께해 왔습니다. 끊임없는 기술혁신과 품질관리를 바탕으로 최고의 제품과 서비스를 제공하겠습니다.</p>
-          <a class="btn btn--outline about2__dl" href="company-overview.html">
-            <span data-i18n="company.intro.download">회사소개서 다운로드</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 4 5-4"/><path d="M5 20h14"/></svg>
-          </a>
-          <ul class="introfeats">
-            <li class="introfeat">
-              <span class="introfeat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V5l7-3z"/></svg></span>
-              <b>SINCE 2001</b><small data-i18n="company.intro.f1">24년 업력</small>
-            </li>
-            <li class="introfeat">
-              <span class="introfeat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span>
-              <b>QUALITY</b><small data-i18n="company.intro.f2">고순도 품질</small>
-            </li>
-            <li class="introfeat">
-              <span class="introfeat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V5l7-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></svg></span>
-              <b>SAFETY</b><small data-i18n="company.intro.f3">안전 최우선</small>
-            </li>
-            <li class="introfeat">
-              <span class="introfeat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3"/><circle cx="12" cy="12" r="4"/></svg></span>
-              <b>INNOVATION</b><small data-i18n="company.intro.f4">기술 혁신</small>
-            </li>
-          </ul>
         </div>
         <div class="about2__media">
           <img src="assets/images/site/company-hq.jpg?v=20260819" alt="한국탄산화학㈜ 사옥 전경" loading="lazy">
@@ -159,13 +136,32 @@
       </div>
     </section>
 
-    <!-- ===== 경영이념 ===== -->
-    <section class="section section--soft" id="philosophy">
-      <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="company.phil.eyebrow">Philosophy</span>
-          <h2 class="section__title" data-i18n="company.phil.title">경영이념</h2>
+    <!-- ===== 02 회사개요 ===== -->
+    <section class="section section--soft" id="overview">
+      <div class="container ovsec">
+        <div class="ovsec__head">
+          <div class="secnum"><span class="secnum__no">02</span><span class="secnum__title">회사개요</span></div>
+          <h3 class="ovsec__title">한눈에 보는<br>한국탄산화학㈜</h3>
+          <p class="ovsec__lead">고객에게 신뢰받는<br>가스 전문기업이 되겠습니다.</p>
         </div>
+        <ul class="ovgrid">
+          <li class="ovitem"><span class="ovitem__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/><path d="M3 21h18"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 15h4"/></svg></span><span><b class="ovitem__k">회사명</b><span class="ovitem__v">한국탄산화학㈜</span></span></li>
+          <li class="ovitem"><span class="ovitem__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"/></svg></span><span><b class="ovitem__k">영문명</b><span class="ovitem__v">KOREA LIQUID CARBONIC CHEMICAL CO., LTD.</span></span></li>
+          <li class="ovitem"><span class="ovitem__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg></span><span><b class="ovitem__k">설립</b><span class="ovitem__v">2001년</span></span></li>
+          <li class="ovitem"><span class="ovitem__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></span><span><b class="ovitem__k">대표이사</b><span class="ovitem__v">유연채</span></span></li>
+          <li class="ovitem"><span class="ovitem__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 3.5V10l6 3.5V6l6 3.5V21z"/><path d="M3 21h18"/></svg></span><span><b class="ovitem__k">주요사업</b><span class="ovitem__v">산업용가스 제조·공급, 의료용가스, 특수가스, 드라이아이스, 가스설비</span></span></li>
+          <li class="ovitem"><span class="ovitem__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="6" height="15" rx="3"/><path d="M10.5 6V4.5a1.5 1.5 0 0 1 3 0V6"/><path d="M9 10.5h6"/></svg></span><span><b class="ovitem__k">주요제품</b><span class="ovitem__v">산소·질소·아르곤·탄산·수소·드라이아이스</span></span></li>
+          <li class="ovitem"><span class="ovitem__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><b class="ovitem__k">본사</b><span class="ovitem__v">경기도 시흥시</span></span></li>
+          <li class="ovitem"><span class="ovitem__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><b class="ovitem__k">화성공장</b><span class="ovitem__v">경기도 화성시 우정읍</span></span></li>
+          <li class="ovitem"><span class="ovitem__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg></span><span><b class="ovitem__k">연락처</b><span class="ovitem__v">031-498-9231</span></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 03 경영이념 ===== -->
+    <section class="section" id="philosophy">
+      <div class="container">
+        <div class="secnum"><span class="secnum__no">03</span><span class="secnum__title" data-i18n="company.phil.title">경영이념</span></div>
         <ul class="phil3">
           <li class="phil">
             <span class="phil__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.5 19a4.6 4.6 0 0 1 6.2-4.3"/></svg></span>
@@ -189,13 +185,40 @@
       </div>
     </section>
 
-    <!-- ===== 연혁 ===== -->
-    <section class="section section--soft" id="history">
+    <!-- ===== 04 핵심 경쟁력 ===== -->
+    <section class="section section--soft" id="strengths">
       <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="company.history.eyebrow">History</span>
-          <h2 class="section__title" data-i18n="company.history.title">연혁</h2>
-        </div>
+        <div class="secnum"><span class="secnum__no">04</span><span class="secnum__title">핵심 경쟁력</span></div>
+        <p class="strhead">한국탄산화학이 신뢰받는 이유</p>
+        <ul class="strengths">
+          <li class="strcard">
+            <span class="strcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V5l7-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></svg></span>
+            <b>고순도 품질관리</b>
+            <p>체계적인 품질관리 시스템으로 고순도 가스를 생산합니다.</p>
+          </li>
+          <li class="strcard">
+            <span class="strcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="7" width="12" height="9" rx="1.5"/><path d="M13.5 10h3.7l2.8 3.2V16h-6.5z"/><circle cx="5.5" cy="18" r="1.8"/><circle cx="16.5" cy="18" r="1.8"/></svg></span>
+            <b>안정적인 공급망</b>
+            <p>고객 생산현장을 고려한 안정적인 공급체계를 갖추고 있습니다.</p>
+          </li>
+          <li class="strcard">
+            <span class="strcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.5L5.2 17a2 2 0 0 0 1.8 3h10a2 2 0 0 0 1.8-3L14 8.5V3"/><path d="M7.5 15h9"/></svg></span>
+            <b>전문 기술력</b>
+            <p>축적된 가스 제조·설비 노하우와 전문 인력을 보유하고 있습니다.</p>
+          </li>
+          <li class="strcard">
+            <span class="strcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13v-1a7 7 0 0 1 14 0v1"/><rect x="2.6" y="12.5" width="3.6" height="6.4" rx="1.8"/><rect x="17.8" y="12.5" width="3.6" height="6.4" rx="1.8"/><path d="M19.6 18.9v.3a3 3 0 0 1-3 3H13.5"/></svg></span>
+            <b>신속한 고객 대응</b>
+            <p>고객 요구에 신속·정확하게 대응하는 전문 서비스를 제공합니다.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 05 연혁 ===== -->
+    <section class="section" id="history">
+      <div class="container">
+        <div class="secnum"><span class="secnum__no">05</span><span class="secnum__title" data-i18n="company.history.title">연혁</span></div>
         <ol class="htimeline">
           <li class="htl"><span class="htl__dot" aria-hidden="true"></span><b class="htl__year">2001</b><span class="htl__text" data-i18n="company.history.y2001">한국탄산화학㈜ 법인 설립</span></li>
           <li class="htl"><span class="htl__dot" aria-hidden="true"></span><b class="htl__year">2008</b><span class="htl__text" data-i18n="company.history.y2008">안산종합가스 인수 → 시화영업소</span></li>
@@ -208,14 +231,62 @@
       </div>
     </section>
 
-    <!-- ===== 생산시설 및 강점 ===== -->
+    <!-- ===== 06 조직도 ===== -->
+    <section class="section section--soft" id="org">
+      <div class="container">
+        <div class="secnum"><span class="secnum__no">06</span><span class="secnum__title" data-i18n="company.org.title">조직도</span></div>
+        <div class="orgchart">
+          <div class="orgchart__top">
+            <div class="orgceo">
+              <img class="orgceo__photo" src="assets/images/site/ceo-portrait.jpg?v=20260820" alt="대표이사 유연채" loading="lazy">
+              <div class="orgceo__txt"><b data-i18n="company.org.ceo">대표이사</b><span data-i18n="company.org.ceoName">유연채</span></div>
+            </div>
+            <span class="orgchart__vline"></span>
+            <div class="orgevp" data-i18n="company.org.evp">총괄전무</div>
+          </div>
+          <div class="orgchart__teams">
+            <div class="orgteam">
+              <div class="orgteam__head"><span class="orgteam__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><b data-i18n="company.org.sales">영업팀</b></div>
+              <ul class="orgteam__list"><li>Bulk</li><li>Cylinder</li><li>Dry Ice</li><li>대리점</li></ul>
+            </div>
+            <div class="orgteam">
+              <div class="orgteam__head"><span class="orgteam__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span><b data-i18n="company.org.prod">생산팀</b></div>
+              <ul class="orgteam__list"><li>산업용가스</li><li>특수가스</li><li>드라이아이스</li></ul>
+            </div>
+            <div class="orgteam">
+              <div class="orgteam__head"><span class="orgteam__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V5l7-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></svg></span><b data-i18n="company.org.quality">품질관리팀</b></div>
+              <ul class="orgteam__list"><li>품질관리</li><li>시험분석</li><li>품질보증</li></ul>
+            </div>
+            <div class="orgteam">
+              <div class="orgteam__head"><span class="orgteam__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-2.1z"/></svg></span><b data-i18n="company.org.facility">설비팀</b></div>
+              <ul class="orgteam__list"><li>저장탱크</li><li>가스설비</li><li>시설관리</li></ul>
+            </div>
+            <div class="orgteam">
+              <div class="orgteam__head"><span class="orgteam__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.8" y="7" width="11.4" height="9" rx="1"/><path d="M13.2 10h3.6l3.4 3.3V16h-7z"/><circle cx="6" cy="18.3" r="1.8"/><circle cx="16.8" cy="18.3" r="1.8"/></svg></span><b data-i18n="company.org.logistics">운송팀</b></div>
+              <ul class="orgteam__list"><li>배송관리</li><li>운송관리</li><li>차량관리</li></ul>
+            </div>
+            <div class="orgteam">
+              <div class="orgteam__head"><span class="orgteam__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3.5h6V6H9zM8 11h8M8 15h5"/></svg></span><b data-i18n="company.org.admin">경영지원팀</b></div>
+              <ul class="orgteam__list"><li>관리</li><li>인사</li><li>회계</li></ul>
+            </div>
+            <div class="orgteam">
+              <div class="orgteam__head"><span class="orgteam__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="4" height="6" rx="1.5"/><rect x="17.5" y="13" width="4" height="6" rx="1.5"/><path d="M20 19a4 4 0 0 1-4 3h-2"/></svg></span><b data-i18n="company.org.support">고객지원팀</b></div>
+              <ul class="orgteam__list"><li>고객문의</li><li>기술지원</li><li>A/S관리</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 07 생산시설 및 강점 ===== -->
     <section class="section" id="facility">
       <div class="container fac2">
         <div class="fac2__media">
           <img src="assets/images/site/location-hq.jpg?v=2" alt="한국탄산화학㈜ 시흥공장 전경" loading="lazy">
         </div>
         <div class="fac2__body">
-          <div class="section__head">
+          <div class="secnum"><span class="secnum__no">07</span><span class="secnum__title" data-i18n="company.fac.title">생산시설 및 강점</span></div>
+          <div class="section__head" hidden>
             <span class="eyebrow" data-i18n="company.fac.eyebrow">Facility</span>
             <h2 class="section__title" data-i18n="company.fac.title">생산시설 및 강점</h2>
           </div>
@@ -286,7 +357,7 @@
     <span class="scroll-fab__text">SCROLL</span>
   </a>
 
-  <script src="assets/i18n/translations.js?v=20260821d"></script>
+  <script src="assets/i18n/translations.js?v=20260821e"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
