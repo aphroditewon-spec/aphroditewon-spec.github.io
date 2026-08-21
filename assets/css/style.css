@@ -1370,18 +1370,18 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
    홈 시안 — CEO 메시지, 연혁, 인증/수상
    ===================================================================== */
 /* CEO 메시지 + 방침 */
-.ceohome { display: grid; grid-template-columns: .95fr 1.15fr .9fr; gap: var(--space-8); align-items: center; }
+.ceohome { display: grid; grid-template-columns: 1.1fr 1.1fr .95fr; gap: var(--space-7); align-items: center; }
 .ceohome__photo { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); align-self: center; }
 /* 레퍼런스: 가로형 사진 비율(16:10), 인물 중앙 프레이밍 */
-.ceohome__photo img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: 48% 30%; display: block; }
+.ceohome__photo img { width: 100%; height: auto; aspect-ratio: 5 / 3; object-fit: cover; object-position: 48% 26%; display: block; }
 .ceohome__msg { display: flex; flex-direction: column; justify-content: center; }
-.ceohome__quote { font-size: var(--fs-h2); font-weight: 800; color: var(--text); line-height: 1.35; margin: var(--space-3) 0 var(--space-5); }
-.ceohome__desc { color: var(--text-muted); line-height: 1.85; }
-.ceohome__sign { margin-top: var(--space-6); font-weight: 700; color: var(--text); display: flex; align-items: center; gap: .5em; }
+.ceohome__quote { font-size: var(--fs-h2); font-weight: 800; color: var(--text); line-height: 1.32; margin: var(--space-2) 0 var(--space-4); }
+.ceohome__desc { color: var(--text-muted); line-height: 1.75; }
+.ceohome__sign { margin-top: var(--space-5); font-weight: 700; color: var(--text); display: flex; align-items: center; gap: .5em; }
 .ceohome__sign .sign-img { height: 2.3em; width: auto; }
 .ceohome__policy { display: flex; flex-direction: column; gap: var(--space-4); }
 /* 레퍼런스: 아이콘 좌측 + 텍스트 우측(가로형) */
-.policycard { flex: 1; display: flex; flex-direction: row; align-items: center; gap: var(--space-5); padding: var(--space-5) var(--space-6);
+.policycard { flex: 1; display: flex; flex-direction: row; align-items: center; gap: var(--space-5); padding: var(--space-4) var(--space-6);
   border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .policycard:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--green-200); }
