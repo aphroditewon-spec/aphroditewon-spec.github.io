@@ -237,48 +237,38 @@
           </div>
           <a class="section__more" href="products-gas.html" data-i18n="home.prod.all">전체 제품보기</a>
         </div>
-        <div class="gastabs">
-          <div class="gastabs__nav" role="tablist" aria-label="가스 종류">
-            <button class="gastab is-active" role="tab" aria-selected="true" data-g="ind" data-i18n="products.cat.ind">산업용가스</button>
-            <button class="gastab" role="tab" aria-selected="false" data-g="med" data-i18n="products.cat.med">의료용가스</button>
-            <button class="gastab" role="tab" aria-selected="false" data-g="spec" data-i18n="products.cat.spec">특수가스</button>
-            <button class="gastab" role="tab" aria-selected="false" data-g="ice" data-i18n="nav.sub.ice">드라이아이스</button>
-          </div>
-          <div class="gastabs__stage">
-            <article class="gaspanel is-active" data-g="ind">
-              <div class="gaspanel__media"><img src="assets/images/site/gas-cylinders.jpg?v=20260731" alt="산업용가스" loading="lazy"></div>
-              <div class="gaspanel__body">
-                <h3 class="gaspanel__title" data-i18n="products.cat.ind">산업용가스</h3>
-                <p class="gaspanel__text" data-i18n="home.prod.ind">O₂·N₂·Ar·CO₂·H₂·He 등을 Cylinder·Bulk로 안전하게 공급합니다.</p>
-                <a class="btn btn--primary" href="products-gas.html" data-i18n="home.ceo.view">자세히 보기</a>
-              </div>
-            </article>
-            <article class="gaspanel" data-g="med" hidden>
-              <div class="gaspanel__media"><img src="assets/images/site/biz-gas.jpg?v=20260703" alt="의료용가스" loading="lazy"></div>
-              <div class="gaspanel__body">
-                <h3 class="gaspanel__title" data-i18n="products.cat.med">의료용가스</h3>
-                <p class="gaspanel__text" data-i18n="home.prod.med">O₂·N₂O·Ar·CO₂ 등 의료용 및 의료기기용 가스를 제조·공급합니다.</p>
-                <a class="btn btn--primary" href="products-gas.html" data-i18n="home.ceo.view">자세히 보기</a>
-              </div>
-            </article>
-            <article class="gaspanel" data-g="spec" hidden>
-              <div class="gaspanel__media"><img src="assets/images/site/supply-make.jpg" alt="특수가스" loading="lazy"></div>
-              <div class="gaspanel__body">
-                <h3 class="gaspanel__title" data-i18n="products.cat.spec">특수가스</h3>
-                <p class="gaspanel__text" data-i18n="home.prod.spec">정제설비로 초고순도(99.999% 이상) 가스를 제조·공급합니다.</p>
-                <a class="btn btn--primary" href="products-gas.html" data-i18n="home.ceo.view">자세히 보기</a>
-              </div>
-            </article>
-            <article class="gaspanel" data-g="ice" hidden>
-              <div class="gaspanel__media"><img src="assets/images/site/ice-nugget.jpg" alt="드라이아이스" loading="lazy"></div>
-              <div class="gaspanel__body">
-                <h3 class="gaspanel__title" data-i18n="nav.sub.ice">드라이아이스</h3>
-                <p class="gaspanel__text" data-i18n="home.prod.ice">너겟·블록 생산설비, 日産 150톤. 신선식품 보냉용 필수재입니다.</p>
-                <a class="btn btn--primary" href="products-ice.html" data-i18n="home.ceo.view">자세히 보기</a>
-              </div>
-            </article>
-          </div>
-        </div>
+        <ul class="prodgrid">
+          <li class="pgcard">
+            <a class="pgcard__media" href="products-gas.html"><img src="assets/images/site/gas-cylinders.jpg?v=20260731" alt="산소 (O₂)" loading="lazy"></a>
+            <b class="pgcard__title">산소 <em>(O₂)</em></b>
+            <p class="pgcard__text" data-i18n="home.pr.o2">용접, 절단, 의료 등 다양한 산업용 산소</p>
+            <a class="pgcard__more" href="products-gas.html" data-i18n="home.pr.detail">제품 상세보기</a>
+          </li>
+          <li class="pgcard">
+            <a class="pgcard__media" href="products-gas.html"><img src="assets/images/site/quality-inspect-cyl.jpg" alt="질소 (N₂)" loading="lazy"></a>
+            <b class="pgcard__title">질소 <em>(N₂)</em></b>
+            <p class="pgcard__text" data-i18n="home.pr.n2">식품포장, 반도체, 화학 등 다양한 산업용 질소</p>
+            <a class="pgcard__more" href="products-gas.html" data-i18n="home.pr.detail">제품 상세보기</a>
+          </li>
+          <li class="pgcard">
+            <a class="pgcard__media" href="products-gas.html"><img src="assets/images/site/supply-o2-station.jpg" alt="아르곤 (Ar)" loading="lazy"></a>
+            <b class="pgcard__title">아르곤 <em>(Ar)</em></b>
+            <p class="pgcard__text" data-i18n="home.pr.ar">용접 보호가스, 분석용 등 고순도 아르곤</p>
+            <a class="pgcard__more" href="products-gas.html" data-i18n="home.pr.detail">제품 상세보기</a>
+          </li>
+          <li class="pgcard">
+            <a class="pgcard__media" href="products-gas.html"><img src="assets/images/site/page-hero-gas.jpg?v=20260715-6" alt="탄산 (CO₂)" loading="lazy"></a>
+            <b class="pgcard__title">탄산 <em>(CO₂)</em></b>
+            <p class="pgcard__text" data-i18n="home.pr.co2">식품, 음료, 용접, 소화설비 등 다양한 용도</p>
+            <a class="pgcard__more" href="products-gas.html" data-i18n="home.pr.detail">제품 상세보기</a>
+          </li>
+          <li class="pgcard">
+            <a class="pgcard__media" href="products-ice.html"><img src="assets/images/site/ice-block.jpg" alt="드라이아이스" loading="lazy"></a>
+            <b class="pgcard__title">드라이아이스</b>
+            <p class="pgcard__text" data-i18n="home.pr.di">식품 신선도 유지, 특수효과 등 다양한 용도</p>
+            <a class="pgcard__more" href="products-ice.html" data-i18n="home.pr.detail">제품 상세보기</a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -410,7 +400,7 @@
     <span class="scroll-fab__text">SCROLL</span>
   </a>
 
-  <script src="assets/i18n/translations.js?v=20260821b"></script>
+  <script src="assets/i18n/translations.js?v=20260821c"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 
@@ -444,7 +434,7 @@
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // 1) 콘텐츠 리빌(자연스럽게 상승)
-    var targets = document.querySelectorAll('.about-home, .whycards, .biztile, .gastabs, .ceohome, .histlist, .factory__overlay .container');
+    var targets = document.querySelectorAll('.about-home, .whycards, .biztile, .prodgrid, .ceohome, .histlist, .factory__overlay .container');
     targets.forEach(function (el) { el.classList.add('reveal'); });
     if (!reduce && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (es) {
