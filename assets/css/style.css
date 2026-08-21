@@ -1218,8 +1218,32 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .about-home__more { display: inline-flex; align-items: center; gap: .5em; }
 
 /* =====================================================================
-   회사소개 종합 페이지 — 번호형 섹션, 회사개요 그리드, 핵심 경쟁력
+   회사소개 종합 페이지 — ABOUT US 히어로, 브레드크럼, 번호형 섹션
    ===================================================================== */
+/* 파란 ABOUT US 히어로 */
+.abouthero { position: relative; overflow: hidden; }
+.abouthero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; z-index: 0; }
+.abouthero::after { content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(100deg, rgba(16,40,82,.96) 0%, rgba(18,46,96,.88) 38%, rgba(24,60,120,.45) 72%, rgba(24,64,128,.12) 100%); }
+.abouthero__inner { position: relative; z-index: 2; color: #fff; padding-block: clamp(48px, 6.5vw, 92px); }
+.abouthero__eyebrow { font-size: .82rem; font-weight: 800; letter-spacing: .2em; color: rgba(255,255,255,.82); }
+.abouthero__title { font-size: clamp(1.85rem, 3.4vw, 2.55rem); font-weight: 800; line-height: 1.25; margin: var(--space-3) 0 var(--space-5); }
+.abouthero__desc { max-width: 560px; line-height: 1.85; color: rgba(255,255,255,.9); font-size: .98rem; word-break: keep-all; }
+.abouthero__feats { list-style: none; display: flex; flex-wrap: wrap; gap: clamp(18px, 2.6vw, 40px); margin: var(--space-8) 0 0; padding: 0; }
+.abouthero__feat { display: flex; align-items: center; gap: .7em; }
+.abouthero__feat .ic { width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.55); display: inline-flex; align-items: center; justify-content: center; color: #fff; flex: none; }
+.abouthero__feat .ic svg { width: 22px; height: 22px; }
+.abouthero__feat b { display: block; font-size: .8rem; font-weight: 800; letter-spacing: .04em; }
+.abouthero__feat small { display: block; font-size: .78rem; color: rgba(255,255,255,.82); }
+@media (max-width: 560px) { .abouthero__feats { gap: var(--space-5); } .abouthero__feat b { font-size: .74rem; } }
+/* 브레드크럼 */
+.breadcrumb { border-bottom: 1px solid var(--border); background: var(--surface); }
+.breadcrumb__inner { display: flex; justify-content: center; align-items: center; gap: .5em; padding: var(--space-4) 0; font-size: .84rem; color: var(--text-muted); }
+.breadcrumb__inner svg { width: 15px; height: 15px; }
+.breadcrumb__inner .sep { opacity: .5; }
+.breadcrumb__inner .cur { color: var(--text); font-weight: 600; }
+
+
 .secnum { margin-bottom: var(--space-6); }
 .secnum__no { display: block; font-size: .95rem; font-weight: 800; color: var(--brand); letter-spacing: .06em; }
 .secnum__title { display: block; font-size: 1.4rem; font-weight: 800; color: var(--text); margin-top: 2px; line-height: 1.25; }
