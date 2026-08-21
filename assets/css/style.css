@@ -1413,6 +1413,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #why .eyebrow::before { display: none; }
 #why .whycards .feature__ic { background: none; border-radius: 0; width: auto; height: auto; margin: 0 auto var(--space-3); }
 #why .whycards .feature__ic svg { width: 40px; height: 40px; }
+/* 홈 3개 섹션(WHY·BUSINESS·PRODUCTS) 높이를 레퍼런스처럼 컴팩트하게 축소 */
+#why, #business, #product-showcase { padding-block: 3.4rem; }
+#why .section__head, #business .section__head, #product-showcase .section__head { margin-bottom: var(--space-6); }
+#business .biztile, #product-showcase .prodgrid { margin-top: var(--space-6); }
+#business .section__foot { margin-top: var(--space-6); }
+/* PRODUCTS 제품카드 이미지: 레퍼런스처럼 와이드 크롭으로 세로 축소 */
+#product-showcase .pgcard__media img { aspect-ratio: 5 / 2; }
 .whycards .feature__title { font-size: 1rem; margin-bottom: var(--space-2); }
 .whycards .feature__text { font-size: .8rem; line-height: 1.6; }
 @media (max-width: 980px) { .whycards { grid-template-columns: repeat(3, 1fr); } }
