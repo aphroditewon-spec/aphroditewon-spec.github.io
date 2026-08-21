@@ -1198,11 +1198,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 900px) { .about-home { grid-template-columns: 1fr; gap: var(--space-8); } }
 
 /* ⑥ 팩토리 (풀블리드 드론) */
-.factory { position: relative; overflow: hidden; }
+/* 레퍼런스: 가로로 긴 파노라마 비율(약 4.22:1), 텍스트는 세로 중앙 */
+.factory { position: relative; overflow: hidden; aspect-ratio: 2382 / 564; min-height: 340px; display: flex; align-items: center; }
 .factory__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
 .factory::after { content: ""; position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(90deg, rgba(12,26,40,.82) 0%, rgba(12,26,40,.6) 45%, rgba(12,26,40,.15) 75%, rgba(12,26,40,0) 100%); }
-.factory__overlay { position: relative; z-index: 2; padding-block: clamp(64px, 12vw, 150px); }
+.factory__overlay { position: relative; z-index: 2; width: 100%; padding-block: clamp(20px, 3vw, 40px); }
+@media (max-width: 768px) { .factory { aspect-ratio: auto; min-height: 380px; } .factory__overlay { padding-block: clamp(48px, 10vw, 72px); } }
 .factory__title { font-size: var(--fs-h1); font-weight: 800; color: #fff; margin: var(--space-3) 0 var(--space-4); line-height: 1.2; }
 .factory__lead { color: rgba(255,255,255,.86); font-size: var(--fs-lead); max-width: 460px; line-height: 1.7; }
 
