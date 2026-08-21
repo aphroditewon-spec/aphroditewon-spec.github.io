@@ -7,7 +7,7 @@
   <meta name="description" content="한국탄산화학 고객지원 — 사업장 연락처, 자주 묻는 질문.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-61">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-62">
 </head>
 <body>
 
@@ -87,13 +87,48 @@
     </div>
   </section>
 
+  <!-- 브레드크럼 -->
+  <nav class="breadcrumb" aria-label="위치">
+    <div class="container breadcrumb__inner">
+      <a href="index.html" aria-label="홈"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></a>
+      <span class="sep">›</span>
+      <span class="cur" data-i18n="nav.support">고객지원</span>
+    </div>
+  </nav>
+
   <main>
-    <!-- 문의 안내 (사업장별) -->
+    <!-- CONTACT: 회사정보 + 오시는 길 -->
     <section class="section" id="contact">
+      <div class="container contact2">
+        <div class="cinfo">
+          <h2 class="cinfo__title">회사정보</h2>
+          <ul class="cinfo__list">
+            <li class="cinfo__row"><span class="cinfo__k">회사명</span><span class="cinfo__v">한국탄산화학㈜</span></li>
+            <li class="cinfo__row"><span class="cinfo__k">대표이사</span><span class="cinfo__v">유연채</span></li>
+            <li class="cinfo__row"><span class="cinfo__k">주소</span><span class="cinfo__v" data-i18n="company.loc.hqAddr">경기도 시흥시 서해안로 140</span></li>
+            <li class="cinfo__row"><span class="cinfo__k">전화</span><span class="cinfo__v"><a href="tel:+820314989231">031-498-9231~6</a></span></li>
+            <li class="cinfo__row"><span class="cinfo__k">팩스</span><span class="cinfo__v cinfo__tbd">정보 준비 중</span></li>
+            <li class="cinfo__row"><span class="cinfo__k">이메일</span><span class="cinfo__v cinfo__tbd">정보 준비 중</span></li>
+            <li class="cinfo__row"><span class="cinfo__k">사업자등록번호</span><span class="cinfo__v cinfo__tbd">정보 준비 중</span></li>
+          </ul>
+        </div>
+        <div class="cmap">
+          <h2 class="cmap__title" data-i18n="company.loc.title">오시는 길</h2>
+          <a class="cmap__box" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 서해안로 140" aria-label="네이버 지도에서 한국탄산화학 위치 보기">
+            <img src="assets/images/site/map-hq.jpg?v=20260821" alt="한국탄산화학㈜ 위치 지도 (경기도 시흥시 서해안로 140)" loading="lazy">
+            <span class="cmap__cta" data-i18n="company.loc.map">지도에서 보기</span>
+          </a>
+          <p class="cmap__addr" data-i18n="company.loc.hqAddr">경기도 시흥시 서해안로 140</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 사업장 안내 (사업장별 연락처) -->
+    <section class="section section--soft" id="offices">
       <div class="container">
         <div class="section__head">
           <span class="eyebrow" data-i18n="support.contact.eyebrow">Contact</span>
-          <h2 class="section__title" data-i18n="support.contact.title">문의 안내</h2>
+          <h2 class="section__title" data-i18n="support.contact.title">사업장 안내</h2>
           <p class="section__lead" data-i18n="support.contact.lead">사업장별 연락처입니다. 가까운 곳으로 문의하세요.</p>
         </div>
         <div class="cards">
@@ -119,27 +154,6 @@
       </div>
     </section>
 
-
-    <!-- ===== 오시는 길 ===== -->
-    <section class="section section--soft" id="location">
-      <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="company.loc.eyebrow">Location</span>
-          <h2 class="section__title" data-i18n="company.loc.title">오시는 길</h2>
-        </div>
-        <div class="loc-hq">
-          <div class="loc-hq__media">
-            <img src="assets/images/site/company-hq.jpg?v=20260819" alt="한국탄산화학㈜ 본사 전경" loading="lazy">
-          </div>
-          <div class="loc-hq__info">
-            <h3 class="feature__title">한국탄산화학㈜</h3>
-            <p class="feature__text">주소 : <span data-i18n="company.loc.hqAddr">경기도 시흥시 서해안로 140</span></p>
-            <p class="feature__text"><span data-i18n="company.loc.tel">전화</span> : 031-498-9231~6</p>
-            <a class="loc__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 서해안로 140" data-i18n="company.loc.map">지도에서 보기</a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- FAQ -->
     <section class="section" id="faq">
