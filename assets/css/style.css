@@ -1429,6 +1429,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #const-process .supply-usebox svg, #ice-process .supply-usebox svg { width: 46px; height: 46px; color: var(--brand); }
 /* 드라이아이스 생산 지표 밴드 하단 여백 */
 #ice-product .facstats { margin-bottom: var(--space-12); }
+/* 드라이아이스 너겟·블록 특성/용도 리스트 */
+.ice-facts { list-style: none; margin: var(--space-1) 0 0; padding: 0; display: grid; gap: var(--space-3); }
+.ice-facts li { position: relative; padding-left: var(--space-4); font-size: .9rem; color: var(--text); line-height: 1.65; word-break: keep-all; }
+.ice-facts li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
+.ice-facts b { color: var(--brand); margin-right: .35em; }
 /* 시설·시공 개요: split 본문 내 highlights는 2열 */
 #intro .introfeats { grid-template-columns: repeat(2, 1fr); gap: var(--space-6) var(--space-5); margin-top: var(--space-6); }
 .whycards .feature__title { font-size: 1rem; margin-bottom: var(--space-2); }
