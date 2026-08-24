@@ -629,7 +629,7 @@ section[id] { scroll-margin-top: 88px; }
 }
 
 /* 생산시설 및 강점(좌 사진 + 우 통계/설명) */
-.fac2 { display: grid; grid-template-columns: 1.05fr 1fr; gap: var(--space-12); align-items: center; }
+.fac2 { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--space-12); align-items: center; }
 .fac2__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; aspect-ratio: 16 / 10; object-fit: cover; }
 .fac2__body .section__head { margin-bottom: var(--space-6); }
 .fac2__desc { color: var(--text-muted); line-height: 1.8; margin: var(--space-6) 0; }
