@@ -115,11 +115,40 @@
   </section>
 
   <main>
-    <!-- 제품 라인업 (용도별 5분류) -->
-    <section class="section" id="gas">
+    <!-- 01 개요 + 취급 지표 -->
+    <section class="section" id="gas-intro">
       <div class="container">
         <div class="section__head">
-          <span class="eyebrow" data-i18n="products.gas.eyebrow">Products</span>
+          <span class="eyebrow">Gas Products</span>
+          <h2 class="section__title">산업 전반에 공급하는 고순도 가스</h2>
+          <p class="section__lead">산소·질소·아르곤·탄산·수소 등 산업용가스부터 의료용·특수·혼합가스까지, 고순도 품질과 안정적인 공급망으로 다양한 산업 현장에 가스를 공급합니다.</p>
+        </div>
+        <ul class="facstats">
+          <li class="facstat">
+            <span class="facstat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="6" height="15" rx="3"/><path d="M10.5 6V4.5a1.5 1.5 0 0 1 3 0V6"/><line x1="9" y1="10.5" x2="15" y2="10.5"/></svg></span>
+            <b>5<span class="facstat__u">종</span><sup>+</sup></b><small>취급 가스(산소·질소·아르곤·탄산·수소 등)</small>
+          </li>
+          <li class="facstat">
+            <span class="facstat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V5l7-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></svg></span>
+            <b>99.9999<span class="facstat__u">%</span></b><small>고순도 품질</small>
+          </li>
+          <li class="facstat">
+            <span class="facstat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="6.5" width="11.5" height="9.5" rx="1.5"/><path d="M13 10h4.2l2.8 3.2V16H13z"/><circle cx="5.5" cy="18.3" r="1.9"/><circle cx="16.5" cy="18.3" r="1.9"/></svg></span>
+            <b>2<span class="facstat__u">방식</span></b><small>Bulk · 실린더 공급</small>
+          </li>
+          <li class="facstat">
+            <span class="facstat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+            <b>365<span class="facstat__u">일</span></b><small>안정적 공급</small>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 제품 라인업 (용도별 분류) -->
+    <section class="section section--soft" id="gas">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Lineup</span>
         </div>
         <div class="prodlineup">
           <div class="prodlineup__nav" role="tablist" aria-label="가스 카테고리">
@@ -258,7 +287,40 @@
       </div>
     </section>
 
-    <!-- 가스 공급 방식 (공급 흐름 다이어그램) -->
+    <!-- 03 가스별 규격·용도 -->
+    <section class="section" id="gas-spec">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Specification</span>
+          <h2 class="section__title">가스별 특성 및 용도</h2>
+          <p class="section__lead">주요 취급 가스의 특성과 대표 용도, 공급 형태입니다.</p>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>가스</th>
+                <th>화학식</th>
+                <th>주요 특성</th>
+                <th>주요 용도</th>
+                <th>공급 형태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>산소</td><td>O₂</td><td>조연성 · 무색무취</td><td>용접·절단, 의료, 폐수처리</td><td>Bulk · 실린더</td></tr>
+              <tr><td>질소</td><td>N₂</td><td>불활성 · 무색무취</td><td>식품포장, 반도체, 산화방지·퍼지</td><td>Bulk · 실린더</td></tr>
+              <tr><td>아르곤</td><td>Ar</td><td>불활성 · 무색무취</td><td>용접 보호가스, 열처리, 분석</td><td>Bulk · 실린더</td></tr>
+              <tr><td>탄산(이산화탄소)</td><td>CO₂</td><td>불연성 · 무색</td><td>식음료, 용접, 소화설비, 드라이아이스 원료</td><td>Bulk · 실린더</td></tr>
+              <tr><td>수소</td><td>H₂</td><td>가연성 · 최경량</td><td>환원·열처리, 반도체, 연료</td><td>실린더</td></tr>
+              <tr><td>헬륨</td><td>He</td><td>불활성 · 최경량</td><td>분석, 냉각, 누설검사</td><td>실린더</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="spec-note">위 용도는 대표 예시이며, 순도·규격은 용도에 맞춰 공급합니다. 의료용·특수·혼합가스는 상단 <b>제품 라인업</b>을 참고하세요.</p>
+      </div>
+    </section>
+
+    <!-- 04 가스 공급 방식 (공급 흐름 다이어그램) -->
     <section class="section section--soft" id="supply">
       <div class="container">
         <div class="section__head">
@@ -316,6 +378,36 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 05 품질·안전 -->
+    <section class="section" id="gas-quality">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Quality &amp; Safety</span>
+          <h2 class="section__title">품질과 안전</h2>
+          <p class="section__lead">정밀 분석과 안전관리 체계로 신뢰할 수 있는 가스를 안정적으로 공급합니다.</p>
+        </div>
+        <div class="cards">
+          <article class="feature">
+            <span class="feature__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V5l7-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></svg></span>
+            <h3 class="feature__title">고순도 품질관리</h3>
+            <p class="feature__text">가스 분석실의 정밀 장비로 출하 전 순도를 검증해 일관된 고순도 품질을 보장합니다.</p>
+            <a class="pgcard__more" href="quality.html">품질·인증 보기</a>
+          </article>
+          <article class="feature">
+            <span class="feature__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 15.5h6"/></svg></span>
+            <h3 class="feature__title">안전 취급 안내</h3>
+            <p class="feature__text">고압가스 안전관리 기준에 따라 취급하며, 제품별 물질안전보건자료(MSDS)와 취급 정보를 안내합니다.</p>
+          </article>
+          <article class="feature">
+            <span class="feature__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="6.5" width="11.5" height="9.5" rx="1.5"/><path d="M13 10h4.2l2.8 3.2V16H13z"/><circle cx="5.5" cy="18.3" r="1.9"/><circle cx="16.5" cy="18.3" r="1.9"/></svg></span>
+            <h3 class="feature__title">안정적 공급망</h3>
+            <p class="feature__text">Bulk·실린더 공급 체계와 전문 운송으로 365일 끊김 없는 가스 공급에 대응합니다.</p>
+          </article>
+        </div>
+        <div class="section__foot"><a class="btn btn--primary" href="support.html#contact">가스 공급 문의하기 →</a></div>
       </div>
     </section>
 
