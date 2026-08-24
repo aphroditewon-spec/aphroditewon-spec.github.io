@@ -1424,9 +1424,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #capability .strengths { grid-template-columns: repeat(2, 1fr); gap: var(--space-5) var(--space-6); }
 #capability .strcard { text-align: left; padding: 0; }
 #capability .strcard__ic { margin: 0 0 var(--space-2); }
-/* 시설·시공 프로세스: 사진 대신 아이콘 박스 */
-#const-process .supply-usebox { gap: var(--space-2); }
-#const-process .supply-usebox svg { width: 46px; height: 46px; color: var(--brand); }
+/* 프로세스: 사진 대신 아이콘 박스 (시설·시공 / 드라이아이스 제조공정) */
+#const-process .supply-usebox, #ice-process .supply-usebox { gap: var(--space-2); }
+#const-process .supply-usebox svg, #ice-process .supply-usebox svg { width: 46px; height: 46px; color: var(--brand); }
+/* 드라이아이스 생산 지표 밴드 하단 여백 */
+#ice-product .facstats { margin-bottom: var(--space-12); }
 /* 시설·시공 개요: split 본문 내 highlights는 2열 */
 #intro .introfeats { grid-template-columns: repeat(2, 1fr); gap: var(--space-6) var(--space-5); margin-top: var(--space-6); }
 .whycards .feature__title { font-size: 1rem; margin-bottom: var(--space-2); }
