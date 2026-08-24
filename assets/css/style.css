@@ -1429,6 +1429,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #const-process .supply-usebox svg, #ice-process .supply-usebox svg, #qc-process .supply-usebox svg { width: 46px; height: 46px; color: var(--brand); }
 /* 품질 개요 지표 밴드 하단 여백 */
 #quality-intro .facstats { margin-bottom: 0; }
+/* 고순도 제조 역량: 설비별 좌우 교차(split) 개별 행 */
+#purity .split + .split { margin-top: var(--space-12); }
+#purity .split__body .subhead { margin: var(--space-2) 0 var(--space-3); }
+.split--reverse { grid-template-columns: 1.2fr 0.8fr; }
+@media (max-width: 900px) { .split--reverse { grid-template-columns: 1fr; } }
 /* 드라이아이스 생산 지표 밴드 하단 여백 */
 #ice-product .facstats { margin-bottom: var(--space-12); }
 /* 드라이아이스 너겟·블록 특성/용도 리스트 */
