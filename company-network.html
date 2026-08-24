@@ -7,7 +7,7 @@
   <meta name="description" content="한국탄산화학㈜ 계열사 — 관계사 네트워크.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-78">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-79">
   <!-- 대표이사 서명용 손글씨 폰트 (한글: Nanum Pen Script, 일어: Yomogi) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,80 +121,69 @@
           <h2 class="section__title" data-i18n="company.aff.title">계열사</h2>
           <p class="section__lead" data-i18n="company.aff.lead">대표이사 직속 관계사와 함께 안정적인 공급 네트워크를 구축합니다.</p>
         </div>
-        <!-- 탭: 계열사 선택 -->
-        <div class="afftabs" role="tablist" aria-label="계열사 선택">
-          <button class="afftab is-active" role="tab" aria-selected="true" aria-controls="aff-hwaseong" id="tab-hwaseong" data-aff="hwaseong">한국탄산화학(주)화성공장</button>
-          <button class="afftab" role="tab" aria-selected="false" aria-controls="aff-sihwa" id="tab-sihwa" data-aff="sihwa">시화영업소</button>
-          <button class="afftab" role="tab" aria-selected="false" aria-controls="aff-busung" id="tab-busung" data-aff="busung">부성테크니컬(주)</button>
-          <button class="afftab" role="tab" aria-selected="false" aria-controls="aff-sinla" id="tab-sinla" data-aff="sinla">신라특수가스(주)</button>
-        </div>
-        <!-- 패널: 선택된 계열사 상세 -->
-        <div class="affpanels">
-          <div class="affpanel is-active" role="tabpanel" id="aff-hwaseong" aria-labelledby="tab-hwaseong">
-            <div class="affpanel__grid">
-              <div class="affpanel__info">
-                <h3 class="affpanel__name">한국탄산화학(주)화성공장</h3>
-                <p class="affpanel__sector">가스공급·영업 부문</p>
-                <ul class="affpanel__list">
-                  <li><b>주소</b><span>경기도 화성시 우정읍 포승향남로 1411-24</span></li>
-                  <li><b>연락처</b><span>Tel. 031-351-6324~6</span></li>
-                </ul>
-                <a class="affpanel__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 화성시 우정읍 포승향남로 1411-24">지도에서 보기 →</a>
-              </div>
-              <div class="affpanel__media">
-                <img src="assets/images/site/hwaseong-site.jpg?v=20260819" alt="한국탄산화학(주)화성공장 전경" loading="lazy">
-              </div>
+        <!-- 직영 사업장 -->
+        <h3 class="subhead">직영 사업장</h3>
+        <ul class="affgrid">
+          <li class="affcard">
+            <div class="affcard__media"><img src="assets/images/site/hwaseong-site.jpg?v=20260819" alt="한국탄산화학(주) 화성공장 전경" loading="lazy"></div>
+            <div class="affcard__body">
+              <span class="affcard__sector">가스 충전·공급 / 용기검사장</span>
+              <h4 class="affcard__name">한국탄산화학(주) 화성공장</h4>
+              <p class="affcard__desc">고압가스 충전·공급과 용기검사장을 운영하는 화성 생산 거점입니다.</p>
+              <ul class="affcard__list">
+                <li><b>주소</b><span>경기도 화성시 우정읍 포승향남로 1411-24</span></li>
+                <li><b>연락처</b><span><a href="tel:+82313516324">031-351-6324~6</a></span></li>
+              </ul>
+              <a class="affcard__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 화성시 우정읍 포승향남로 1411-24">지도에서 보기 →</a>
             </div>
-          </div>
-          <div class="affpanel" role="tabpanel" id="aff-sihwa" aria-labelledby="tab-sihwa" hidden>
-            <div class="affpanel__grid">
-              <div class="affpanel__info">
-                <h3 class="affpanel__name">시화영업소</h3>
-                <p class="affpanel__sector">가스 공급·영업 부문</p>
-                <ul class="affpanel__list">
-                  <li><b>주소</b><span>경기도 시흥시 오이도로 22-29</span></li>
-                  <li><b>연락처</b><span>Tel. 031-498-4989, 8989</span></li>
-                </ul>
-                <a class="affpanel__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29">지도에서 보기 →</a>
-              </div>
-              <div class="affpanel__media">
-                <img src="assets/images/site/sihwa-site.jpg?v=1" alt="시화영업소 전경" loading="lazy">
-              </div>
+          </li>
+          <li class="affcard">
+            <div class="affcard__media"><img src="assets/images/site/sihwa-site.jpg?v=1" alt="시화영업소 전경" loading="lazy"></div>
+            <div class="affcard__body">
+              <span class="affcard__sector">가스 공급·영업</span>
+              <h4 class="affcard__name">시화영업소</h4>
+              <p class="affcard__desc">시화·시흥권 고객을 위한 가스 공급·영업 거점입니다.</p>
+              <ul class="affcard__list">
+                <li><b>주소</b><span>경기도 시흥시 오이도로 22-29</span></li>
+                <li><b>연락처</b><span><a href="tel:+82314984989">031-498-4989, 8989</a></span></li>
+              </ul>
+              <a class="affcard__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29">지도에서 보기 →</a>
             </div>
-          </div>
-          <div class="affpanel" role="tabpanel" id="aff-busung" aria-labelledby="tab-busung" hidden>
-            <div class="affpanel__grid">
-              <div class="affpanel__info">
-                <h3 class="affpanel__name">부성테크니컬(주)</h3>
-                <p class="affpanel__sector">용기검사 부문</p>
-                <ul class="affpanel__list">
-                  <li><b>주소</b><span>경기도 화성시 우정읍 포승향남로 1411-24</span></li>
-                  <li><b>연락처</b><span>Tel. 031-351-6324~6</span></li>
-                </ul>
-                <a class="affpanel__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 화성시 우정읍 포승향남로 1411-24">지도에서 보기 →</a>
-              </div>
-              <div class="affpanel__media">
-                <img src="assets/images/site/busung-site.jpg?v=20260821" alt="부성테크니컬 용기검사 공장" loading="lazy">
-              </div>
+          </li>
+        </ul>
+
+        <!-- 계열사 -->
+        <h3 class="subhead">계열사</h3>
+        <ul class="affgrid">
+          <li class="affcard">
+            <div class="affcard__media"><img src="assets/images/site/busung-site.jpg?v=20260821" alt="부성테크니컬(주) 용기검사 공장" loading="lazy"></div>
+            <div class="affcard__body">
+              <span class="affcard__sector">용기검사 전문기관</span>
+              <h4 class="affcard__name">부성테크니컬(주)</h4>
+              <p class="affcard__desc">한국가스안전공사 지정 고압가스 용기 전문검사기관입니다.</p>
+              <ul class="affcard__list">
+                <li><b>주소</b><span>경기도 화성시 우정읍 포승향남로 1411-24</span></li>
+                <li><b>연락처</b><span><a href="tel:+82313516324">031-351-6324</a></span></li>
+              </ul>
+              <a class="affcard__map" href="products-supply.html">용기검사 상세 보기 →</a>
             </div>
-          </div>
-          <div class="affpanel" role="tabpanel" id="aff-sinla" aria-labelledby="tab-sinla" hidden>
-            <div class="affpanel__grid">
-              <div class="affpanel__info">
-                <h3 class="affpanel__name">신라특수가스(주)</h3>
-                <p class="affpanel__sector">가스공급·영업 부문</p>
-                <ul class="affpanel__list">
-                  <li><b>주소</b><span>경기도 시흥시 오이도로 22-29</span></li>
-                  <li><b>연락처</b><span>Tel. 031-498-4989, 8989</span></li>
-                </ul>
-                <a class="affpanel__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29">지도에서 보기 →</a>
-              </div>
-              <div class="affpanel__media">
-                <img src="assets/images/site/sinla-site.jpg?v=1" alt="신라특수가스 사업장 전경" loading="lazy">
-              </div>
+          </li>
+          <li class="affcard">
+            <div class="affcard__media"><img src="assets/images/site/sinla-site.jpg?v=1" alt="신라특수가스(주) 사업장 전경" loading="lazy"></div>
+            <div class="affcard__body">
+              <span class="affcard__sector">가스 공급·영업</span>
+              <h4 class="affcard__name">신라특수가스(주)</h4>
+              <p class="affcard__desc">가스 공급·영업을 담당하는 계열 관계사입니다.</p>
+              <ul class="affcard__list">
+                <li><b>주소</b><span>경기도 시흥시 오이도로 22-29</span></li>
+                <li><b>연락처</b><span><a href="tel:+82314984989">031-498-4989, 8989</a></span></li>
+              </ul>
+              <a class="affcard__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29">지도에서 보기 →</a>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
+
+        <div class="section__foot"><a class="btn btn--primary" href="support.html#contact">문의하기 →</a></div>
       </div>
     </section>
 

@@ -633,6 +633,21 @@ section[id] { scroll-margin-top: 88px; }
 /* 07 생산시설: 대표사진 영역을 크로스페이드 슬라이드쇼로 */
 #facility .fac2__media .ice-slideshow { display: block; }
 #facility .fac2__media .ice-slideshow__frame { aspect-ratio: 16 / 10; }
+/* 계열사·사업장 카드 그리드 */
+.affgrid { list-style: none; margin: var(--space-6) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+.affcard { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); }
+.affcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.affcard__media img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform .5s ease; }
+.affcard:hover .affcard__media img { transform: scale(1.05); }
+.affcard__body { padding: var(--space-6); display: flex; flex-direction: column; flex: 1; }
+.affcard__sector { font-size: .78rem; font-weight: 700; letter-spacing: .04em; color: var(--brand); text-transform: uppercase; }
+.affcard__name { font-size: 1.2rem; font-weight: 800; color: var(--text); margin: var(--space-2) 0 var(--space-3); }
+.affcard__desc { color: var(--text-muted); font-size: .9rem; line-height: 1.65; margin-bottom: var(--space-4); word-break: keep-all; }
+.affcard__list { list-style: none; margin: 0 0 var(--space-4); padding: 0; display: grid; gap: var(--space-2); }
+.affcard__list li { display: flex; gap: var(--space-3); font-size: .9rem; color: var(--text); line-height: 1.5; }
+.affcard__list b { flex: none; width: 3.4em; color: var(--text-muted); font-weight: 700; }
+.affcard__map { margin-top: auto; font-size: .88rem; font-weight: 700; color: var(--accent-hover); }
+@media (max-width: 780px) { .affgrid { grid-template-columns: 1fr; } }
 .fac2__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; aspect-ratio: 16 / 10; object-fit: cover; }
 .fac2__body .section__head { margin-bottom: var(--space-6); }
 .fac2__desc { color: var(--text-muted); line-height: 1.8; margin: var(--space-6) 0; }
