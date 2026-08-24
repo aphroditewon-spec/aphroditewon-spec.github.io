@@ -1496,6 +1496,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .pgcard__text { display: block; font-size: .82rem; color: var(--text-muted); line-height: 1.6; margin: 0 var(--space-5); flex: 1; }
 .pgcard__more { display: block; margin: var(--space-4) var(--space-5) var(--space-5); font-size: .82rem; font-weight: 700; color: var(--accent-hover); }
 .pgcard__more::after { content: " →"; }
+/* 가스제품 라인업: '자세히 보기' 링크 제거로 인한 카드 하단 여백 보완 */
+#gas .pgcard__text { margin-bottom: var(--space-6); }
 @media (max-width: 980px) { .prodgrid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 560px) { .prodgrid { grid-template-columns: repeat(2, 1fr); } }
 
