@@ -1500,6 +1500,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #gas .pgcard__text { margin-bottom: var(--space-6); }
 /* 회사소개 01: 참고이미지형 — 제목 강조색 + 인용 박스 + 우측(사진+원형 하이라이트 6) */
 .tx-brand { color: var(--brand); }
+.about2__rule { display: block; width: 60px; height: 2px; background: var(--border-strong); border-radius: 2px; margin: var(--space-5) 0 var(--space-7); }
 #intro .about2 { align-items: start; grid-template-columns: 1fr 1.12fr; }
 #intro .secnum { display: flex; align-items: baseline; gap: .55em; margin-bottom: var(--space-6); }
 #intro .secnum__no { font-size: 1.5rem; }
