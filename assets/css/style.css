@@ -1516,6 +1516,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .introhl__t { display: block; font-size: .8rem; font-weight: 700; color: var(--text); line-height: 1.45; word-break: keep-all; }
 @media (max-width: 900px) { #intro .about2 { grid-template-columns: 1fr; } }
 @media (max-width: 620px) { .introhl { grid-template-columns: repeat(3, 1fr); gap: var(--space-5); } }
+/* 홈 ABOUT US 하단 하이라이트 스트립 */
+.about-home__hl { margin-top: var(--space-10); padding-top: var(--space-9); border-top: 1px solid var(--border); }
 @media (max-width: 980px) { .prodgrid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 560px) { .prodgrid { grid-template-columns: repeat(2, 1fr); } }
 
