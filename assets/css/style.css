@@ -277,7 +277,7 @@ section[id] { scroll-margin-top: 88px; }
 /* =====================================================================
    섹션 공통
    ===================================================================== */
-.section { padding-block: var(--space-20); }
+.section { padding-block: var(--space-10); }
 .section--soft { background: var(--surface-2); border-block: 1px solid var(--border); }
 .section--brand { background: linear-gradient(180deg, var(--surface-brand), var(--surface-2)); }
 .section__head { max-width: 680px; margin-bottom: var(--space-10); }
