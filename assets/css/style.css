@@ -638,23 +638,23 @@ section[id] { scroll-margin-top: 88px; }
 .facshow__media .ice-slideshow { display: block; height: 100%; }
 .facshow__media .ice-slideshow__frame { aspect-ratio: auto; height: 100%; border-radius: 0; box-shadow: none; }
 .facshow::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,26,58,0) 55%, rgba(9,26,58,.22) 100%); pointer-events: none; z-index: 2; }
-.facshow__stats { position: absolute; z-index: 3; top: 50%; right: var(--space-8); transform: translateY(-50%); list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: var(--space-3); width: min(19%, 178px); }
-.facshow__stats .facstat { aspect-ratio: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: var(--space-4) var(--space-3); }
-.facshow__stats .facstat__ic { width: 34px; height: 34px; margin-bottom: 2px; }
-.facshow__stats .facstat__ic svg { width: 26px; height: 26px; }
-.facshow__stats .facstat b { font-size: 1.02rem; }
-.facshow__stats .facstat small { font-size: .7rem; }
-.facstat.facstat--glass { background: rgba(255, 255, 255, .28); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.6); box-shadow: 0 10px 28px rgba(9,26,58,.18); color: var(--eyebrow); }
-.facshow__stats .facstat__ic { color: var(--eyebrow); }
-.facshow__stats .facstat b { color: var(--eyebrow); }
-.facshow__stats .facstat b sup { color: var(--brand); }
-.facshow__stats .facstat small { color: var(--text); }
+.facshow__stats { position: absolute; z-index: 3; top: 50%; right: var(--space-8); transform: translateY(-50%); list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: var(--space-3); width: min(32%, 300px); }
+/* 아이콘 좌측 + 라벨/숫자/설명 우측(시안형) */
+.facstat.facstat--row { aspect-ratio: auto; display: flex; flex-direction: row; align-items: center; gap: var(--space-4); text-align: left; padding: var(--space-4) var(--space-5); background: rgba(255,255,255,.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.7); box-shadow: 0 10px 26px rgba(9,26,58,.16); }
+.facstat--row .facstat__ic { flex: none; width: 52px; height: 52px; margin: 0; border-radius: 50%; background: var(--surface-brand); color: var(--eyebrow); display: inline-flex; align-items: center; justify-content: center; }
+.facstat--row .facstat__ic svg { width: 28px; height: 28px; }
+.facstat--row .facstat__txt { display: flex; flex-direction: column; padding-left: var(--space-4); border-left: 1px solid var(--border); min-width: 0; }
+.facstat--row .facstat__top { font-size: .72rem; font-weight: 700; color: var(--text-muted); }
+.facstat--row b { font-size: 1.32rem; font-weight: 800; color: var(--eyebrow); line-height: 1.15; margin: 1px 0; white-space: nowrap; }
+.facstat--row b .facstat__u { font-size: .62em; }
+.facstat--row b sup { color: var(--brand); font-size: .58em; }
+.facstat--row small { font-size: .72rem; color: var(--text-muted); }
 @media (max-width: 768px) {
   .facshow { aspect-ratio: auto; display: flex; flex-direction: column; }
   .facshow__media { position: relative; aspect-ratio: 16 / 10; }
   .facshow::after { display: none; }
-  .facshow__stats { position: static; transform: none; width: auto; grid-template-columns: repeat(2, 1fr); padding: var(--space-4); background: var(--surface-2); }
-  .facstat.facstat--glass { background: var(--surface); border-color: var(--border); }
+  .facshow__stats { position: static; transform: none; width: auto; grid-template-columns: 1fr; padding: var(--space-4); background: var(--surface-2); }
+  .facstat.facstat--row { background: var(--surface); border-color: var(--border); }
 }
 /* 계열사·사업장 카드 그리드 */
 .affgrid { list-style: none; margin: var(--space-6) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
