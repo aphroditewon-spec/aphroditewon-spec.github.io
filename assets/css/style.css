@@ -603,14 +603,15 @@ section[id] { scroll-margin-top: 88px; }
 @media (max-width: 900px) { .about2 { grid-template-columns: 1fr; gap: var(--space-8); } .introfeats { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); } }
 
 /* 경영이념 3카드 */
-.phil3 { list-style: none; margin: var(--space-9) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
-.phil { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-8); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.phil3 { list-style: none; margin: var(--space-9) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); align-items: stretch; }
+.phil { display: flex; align-items: center; gap: var(--space-6); background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-7) var(--space-8); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .phil:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green-200); }
-.phil__ic { width: 54px; height: 54px; border-radius: 50%; background: var(--surface-brand); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--space-5); }
-.phil__ic svg { width: 26px; height: 26px; }
-.phil__cat { display: block; font-size: .76rem; font-weight: 700; letter-spacing: .12em; color: var(--accent-hover); }
-.phil__title { display: block; font-size: var(--fs-h3); color: var(--text); margin: var(--space-2) 0 var(--space-3); line-height: 1.4; }
-.phil__desc { color: var(--text-muted); line-height: 1.7; font-size: .9rem; }
+.phil__ic { flex: none; width: 58px; height: 58px; color: var(--eyebrow); display: inline-flex; align-items: center; justify-content: center; }
+.phil__ic svg { width: 54px; height: 54px; }
+.phil__body { min-width: 0; }
+.phil__cat { display: block; font-size: .74rem; font-weight: 800; letter-spacing: .1em; color: var(--eyebrow); }
+.phil__title { display: block; font-size: 1.12rem; font-weight: 800; color: var(--text); margin: var(--space-1) 0 var(--space-2); line-height: 1.35; word-break: keep-all; }
+.phil__desc { color: var(--text-muted); line-height: 1.6; font-size: .88rem; word-break: keep-all; }
 @media (max-width: 860px) { .phil3 { grid-template-columns: 1fr; } }
 
 /* 가로 연혁 타임라인 */
