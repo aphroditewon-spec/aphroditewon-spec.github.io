@@ -1570,12 +1570,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .org2__evp-ic svg { width: 20px; height: 20px; }
 .org2__teams { list-style: none; margin: 0; padding: var(--space-7) 0 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--space-3); position: relative; }
 .org2__teams::before { content: ""; position: absolute; top: 0; left: 6.25%; right: 6.25%; height: 2px; background: var(--border-strong); }
-.org2team { position: relative; text-align: center; }
+.org2team { position: relative; text-align: center; display: flex; flex-direction: column; align-items: center; }
 .org2team::before { content: ""; position: absolute; top: calc(-1 * var(--space-7)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-7); background: var(--border-strong); }
 .org2team__ic { width: 62px; height: 62px; border-radius: 50%; border: 1.5px solid var(--border-strong); background: var(--surface); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; }
 .org2team__ic svg { width: 28px; height: 28px; }
 .org2team__name { display: block; margin: var(--space-3) 0 var(--space-4); font-size: 1rem; font-weight: 800; color: var(--text); }
-.org2team__list { list-style: none; margin: 0; padding: var(--space-4) var(--space-3); text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.org2team__list { list-style: none; margin: 0; padding: var(--space-4) var(--space-3); text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); flex: 1; width: 100%; box-sizing: border-box; }
 .org2team__list li { position: relative; padding-left: 12px; font-size: .8rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
 .org2team__list li + li { margin-top: 7px; }
 .org2team__list li::before { content: ""; position: absolute; left: 0; top: .52em; width: 4px; height: 4px; border-radius: 50%; background: var(--brand); }
