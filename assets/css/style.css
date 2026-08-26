@@ -1556,8 +1556,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 주요 사업 영역 — 02 회사개요 하위 블록(동일 배경), 6개 사진 카드 */
 .bizarea__wrap { margin-top: var(--space-12); }
 .bizarea__head { display: flex; align-items: center; justify-content: center; gap: var(--space-5); margin-bottom: var(--space-9); }
-.bizarea__rule { width: 48px; height: 2px; background: var(--border-strong); }
-.bizarea__title { font-size: clamp(1.4rem, 2.4vw, 1.8rem); font-weight: 800; color: var(--text); }
+.bizarea__rule { flex: 1; height: 1px; background: var(--border); }
+.bizarea__title { font-size: clamp(0.9rem, 1.92vw, 1.35rem); font-weight: 800; color: var(--text); }
 .bizarea { list-style: none; margin: 0 0 var(--space-9); padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-5); }
 .bizcard { text-align: center; }
 .bizcard__media { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4 / 3; }
