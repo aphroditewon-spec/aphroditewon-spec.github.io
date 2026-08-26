@@ -1514,7 +1514,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .about2__lead { margin: 0 0 var(--space-4); }
 #intro .about2__lead:last-child { margin-bottom: 0; }
 /* 03 연혁: 공장 전경 배경 이미지(오파시티 50%) */
-#history { position: relative; overflow: hidden; padding-block: 6rem; }
+#history { position: relative; overflow: hidden; padding-block: 3rem 6rem; }
 #history::before { content: ""; position: absolute; inset: 0; background: url("../images/site/history-bg.jpg?v=20260826") center/cover no-repeat; opacity: .2; z-index: 0; pointer-events: none;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 18%, #000 82%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, #000 18%, #000 82%, transparent 100%); }
