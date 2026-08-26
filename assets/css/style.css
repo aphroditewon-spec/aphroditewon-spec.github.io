@@ -1549,13 +1549,19 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #why, #business, #product-showcase { padding-block: 1.7rem; }
 #why .section__head, #business .section__head, #product-showcase .section__head { margin-bottom: var(--space-6); }
 #business .biztile, #product-showcase .prodgrid, #product-showcase .prodstrip { margin-top: var(--space-6); }
-/* PRODUCTS 제품 타일: 레퍼런스 카드 이미지(형식·이름·설명 포함) 3열×2행 */
-.prodstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); list-style: none; padding: 0; margin: 0; }
-.prodstrip .prodtile a { display: block; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+/* PRODUCTS 제품 타일: 용기 상단부가 아래에서 올라오는 다크 타일 6열 가로 배열 */
+.prodstrip { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-3); list-style: none; padding: 0; margin: 0; }
+.prodstrip .prodtile a { position: relative; display: flex; flex-direction: column; align-items: center; min-height: 230px; padding: var(--space-5) var(--space-2) 0; background: linear-gradient(180deg, #232a32 0%, #10141a 100%); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius-lg); overflow: hidden; text-align: center; transition: transform .25s ease, box-shadow .25s ease; }
 .prodstrip .prodtile a:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.prodstrip .prodtile img { width: 100%; height: auto; display: block; aspect-ratio: 471 / 417; object-fit: cover; }
-@media (max-width: 860px) { .prodstrip { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 520px) { .prodstrip { grid-template-columns: 1fr; } }
+.prodtile__tx { position: relative; z-index: 2; }
+.prodtile__formula { display: block; font-size: 1.9rem; font-weight: 800; color: #fff; line-height: 1; letter-spacing: -.01em; }
+.prodtile__formula--sm { font-size: 1.2rem; letter-spacing: .01em; }
+.prodtile__formula sub { font-size: .55em; font-weight: 700; }
+.prodtile__name { display: block; margin-top: .3rem; font-size: .82rem; color: rgba(255,255,255,.72); }
+.prodtile__cyl { margin-top: auto; width: 100%; display: flex; justify-content: center; align-items: flex-end; }
+.prodtile__cyl img { width: auto; height: 148px; object-fit: cover; object-position: top center; display: block; }
+@media (max-width: 900px) { .prodstrip { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 520px) { .prodstrip { grid-template-columns: repeat(2, 1fr); } }
 #business .section__foot { margin-top: var(--space-6); }
 #business .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
 #why .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
