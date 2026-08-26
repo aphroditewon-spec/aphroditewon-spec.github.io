@@ -668,6 +668,7 @@ section[id] { scroll-margin-top: 88px; }
 @media (max-width: 620px) { .netchart__branches { grid-template-columns: 1fr; gap: var(--space-6); } .netchart__branches::before, .netchart__group::before, .netchart__group::after { display: none; } }
 .fac2__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; aspect-ratio: 16 / 10; object-fit: cover; }
 .fac2__body .section__head { margin-bottom: var(--space-6); }
+.fac2__eyebrow { display: inline-flex; margin-bottom: var(--space-6); }
 .fac2__desc { color: var(--text-muted); line-height: 1.8; margin: var(--space-6) 0; }
 .facstats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
 .facstat { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-5) var(--space-2); text-align: center; }
@@ -1600,7 +1601,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .bizcard { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
 .bizcard__media { aspect-ratio: 4 / 3; overflow: hidden; }
 .bizcard__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.bizcard__title { display: block; margin: var(--space-5) var(--space-3); font-size: .98rem; font-weight: 800; color: var(--eyebrow); word-break: keep-all; }
+.bizcard__title { display: block; margin: var(--space-5) var(--space-3); font-size: .98rem; font-weight: 500; color: var(--eyebrow); word-break: keep-all; }
 .bizcard__desc { margin: 0; padding: 0 var(--space-4) var(--space-10); font-size: .82rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
 .bizarea__banner { display: flex; align-items: center; justify-content: center; gap: var(--space-5); padding: var(--space-6) var(--space-8); background: var(--eyebrow); border-radius: var(--radius-lg); color: #fff; }
 .bizarea__banner-ic { flex: none; display: inline-flex; }
