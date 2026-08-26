@@ -638,7 +638,7 @@ section[id] { scroll-margin-top: 88px; }
 .facshow__media .ice-slideshow { display: block; height: 100%; }
 .facshow__media .ice-slideshow__frame { aspect-ratio: auto; height: 100%; border-radius: 0; box-shadow: none; }
 .facshow::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,26,58,0) 30%, rgba(9,26,58,.68) 75%); pointer-events: none; z-index: 2; }
-.facshow__stats { position: absolute; z-index: 3; top: 50%; right: var(--space-8); transform: translateY(-50%); list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: var(--space-3); width: min(24%, 210px); }
+.facshow__stats { position: absolute; z-index: 3; top: 50%; right: var(--space-8); transform: translateY(-50%); list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: var(--space-3); width: min(19%, 178px); }
 .facshow__stats .facstat { aspect-ratio: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: var(--space-4) var(--space-3); }
 .facshow__stats .facstat__ic { width: 34px; height: 34px; margin-bottom: 2px; }
 .facshow__stats .facstat__ic svg { width: 26px; height: 26px; }
