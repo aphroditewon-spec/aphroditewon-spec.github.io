@@ -1561,7 +1561,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
    홈 시안 — CEO 메시지, 연혁, 인증/수상
    ===================================================================== */
 /* CEO 메시지 + 방침 */
-.ceohome { display: grid; grid-template-columns: 1.21fr 1.1fr 1fr; gap: var(--space-7); align-items: center; }
+.ceohome { display: grid; grid-template-columns: 1.12fr 1fr 1.06fr; gap: var(--space-7); align-items: center; }
 .ceohome__photo { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); align-self: center; }
 /* 레퍼런스: 가로형 사진 비율(16:10), 인물 중앙 프레이밍 */
 .ceohome__photo img { width: 100%; height: auto; aspect-ratio: 5 / 3; object-fit: cover; object-position: 48% 26%; display: block; }
@@ -1571,6 +1571,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ceohome__sign { margin-top: var(--space-4); font-weight: 700; color: var(--text); display: flex; align-items: center; gap: .5em; }
 .ceohome__sign .sign-img { height: 2.3em; width: auto; }
 .ceohome__policy { display: flex; flex-direction: column; gap: var(--space-4); }
+/* CEO 섹션 우측 경영이념 카드(세로 스택, 컴팩트) */
+.ceohome__phil { display: flex; flex-direction: column; gap: var(--space-4); }
+.ceohome__phil .phil { padding: var(--space-5) var(--space-6); gap: var(--space-5); background: var(--surface); }
+.ceohome__phil .phil__ic { width: 44px; height: 44px; }
+.ceohome__phil .phil__ic svg { width: 40px; height: 40px; }
+.ceohome__phil .phil__title { font-size: 1rem; }
+.ceohome__phil .phil__desc { font-size: .84rem; }
 /* 레퍼런스: 아이콘 좌측 + 텍스트 우측(가로형) */
 .policycard { flex: 1; display: flex; flex-direction: row; align-items: center; gap: var(--space-5); padding: var(--space-4) var(--space-6);
   border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface);
@@ -1583,8 +1590,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .policycard__txt b { display: block; font-size: var(--fs-h3); color: var(--text); margin: 3px 0 var(--space-2); }
 .policycard__more { font-size: .8rem; font-weight: 700; color: var(--accent-hover); }
 .policycard__more::after { content: " →"; }
-@media (max-width: 980px) { .ceohome { grid-template-columns: 1fr; } .ceohome__policy { flex-direction: row; } }
-@media (max-width: 560px) { .ceohome__policy { flex-direction: column; } .ceohome__photo img { aspect-ratio: 3 / 2; } }
+@media (max-width: 980px) { .ceohome { grid-template-columns: 1fr; } .ceohome__policy, .ceohome__phil { flex-direction: row; } }
+@media (max-width: 560px) { .ceohome__policy, .ceohome__phil { flex-direction: column; } .ceohome__photo img { aspect-ratio: 3 / 2; } }
 
 /* 연혁 */
 .histlist { list-style: none; margin: var(--space-8) 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-12); }
