@@ -675,31 +675,47 @@ section[id] { scroll-margin-top: 88px; }
 .affcard__map { margin-top: auto; font-size: .88rem; font-weight: 700; color: var(--accent-hover); }
 @media (max-width: 780px) { .affgrid { grid-template-columns: 1fr; } }
 /* 그룹 관계도(조직도형) — 직영=남색(--eyebrow) / 계열사=청록(#1a9e91) 색상 구분 */
-.netchart { --net-teal: #1a9e91; --net-teal-tint: rgba(26,158,145,.12); margin-top: var(--space-8); display: flex; flex-direction: column; align-items: center; }
-.netchart__root { text-align: center; background: var(--eyebrow); color: #fff; border-radius: var(--radius-lg); padding: var(--space-4) var(--space-8); box-shadow: var(--shadow-md); }
-.netchart__root b { display: block; font-size: 1.25rem; font-weight: 800; letter-spacing: .03em; }
-.netchart__root span { font-size: .85rem; opacity: .85; }
-.netchart__branches { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-8); position: relative; padding-top: calc(2 * var(--space-6)); width: 100%; max-width: 760px; }
-.netchart__branches::before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--border-strong); }
-.netchart__group { position: relative; }
-.netchart__group::before { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--border-strong); }
-.netchart__group::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); height: 2px; background: var(--border-strong); }
-.netchart__group:first-child::after { left: 50%; right: calc(-0.5 * var(--space-8)); }
-.netchart__group:last-child::after { right: 50%; left: calc(-0.5 * var(--space-8)); }
-.netchart__group--direct::before, .netchart__group--direct::after { background: var(--eyebrow); }
-.netchart__group--aff::before, .netchart__group--aff::after { background: var(--net-teal); }
-.netchart__grouphead { display: flex; align-items: center; justify-content: center; gap: .4em; text-align: center; background: var(--surface-brand); color: var(--eyebrow); font-weight: 800; padding: var(--space-3); border-radius: var(--radius-md); border: 1px solid var(--green-200); }
-.netchart__grouphead svg { width: 18px; height: 18px; }
-.netchart__group--aff .netchart__grouphead { background: var(--net-teal-tint); color: var(--net-teal); border-color: rgba(26,158,145,.3); }
-.netchart__nodes { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: var(--space-3); }
-.netchart__nodes li { display: flex; align-items: center; gap: var(--space-3); background: #fff; border: 1px solid var(--border); border-left: 3px solid var(--eyebrow); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4); text-align: left; box-shadow: var(--shadow-sm); }
-.netchart__group--aff .netchart__nodes li { border-left-color: var(--net-teal); }
-.netnode__ic { flex: none; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--surface-brand); color: var(--eyebrow); }
-.netnode__ic svg { width: 22px; height: 22px; }
-.netchart__group--aff .netnode__ic { background: var(--net-teal-tint); color: var(--net-teal); }
-.netnode__tx b { display: block; font-weight: 700; color: var(--text); font-size: .95rem; }
-.netnode__tx small { display: block; font-weight: 600; color: var(--text-muted); font-size: .78rem; margin-top: 2px; }
-@media (max-width: 620px) { .netchart__branches { grid-template-columns: 1fr; gap: var(--space-6); } .netchart__branches::before, .netchart__group::before, .netchart__group::after { display: none; } }
+.netchart { --net-teal: #1a9e91; --net-teal-tint: rgba(26,158,145,.1); --net-navy-tint: rgba(27,65,149,.07); --net-line: #cdd8ea; margin-top: var(--space-8); display: flex; flex-direction: column; align-items: center; }
+/* 루트 박스(로고 배지 + 이름) */
+.netchart__root { display: flex; flex-direction: column; align-items: center; gap: 3px; text-align: center; background: var(--eyebrow); color: #fff; border-radius: var(--radius-lg); padding: var(--space-5) var(--space-9); box-shadow: var(--shadow-md); }
+.netchart__root-top { display: inline-flex; align-items: center; gap: .55em; }
+.netchart__logo { height: 24px; width: auto; background: #fff; border-radius: 6px; padding: 3px 6px; }
+.netchart__root b { font-size: 1.24rem; font-weight: 800; letter-spacing: .02em; }
+.netchart__root-sub { font-size: .85rem; opacity: .85; }
+.netchart__branches { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-12); position: relative; padding-top: calc(2 * var(--space-6)); width: 100%; max-width: 900px; }
+.netchart__branches::before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--net-line); }
+.netchart__group { position: relative; display: flex; flex-direction: column; align-items: center; }
+.netchart__group::before { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--net-line); }
+.netchart__group::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); height: 2px; background: var(--net-line); }
+.netchart__group:first-child::after { left: 50%; right: calc(-0.5 * var(--space-12)); }
+.netchart__group:last-child::after { right: 50%; left: calc(-0.5 * var(--space-12)); }
+/* 그룹 헤드: 왼쪽 원형 배지 + 밝은 pill */
+.netchart__grouphead { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: var(--space-3); background: var(--net-navy-tint); color: var(--eyebrow); font-weight: 800; padding: 5px var(--space-6) 5px 5px; border-radius: 999px; margin-bottom: var(--space-6); }
+.netchart__gh-ic { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--eyebrow); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
+.netchart__gh-ic svg { width: 20px; height: 20px; }
+.netchart__group--aff .netchart__grouphead { background: var(--net-teal-tint); color: var(--net-teal); }
+.netchart__group--aff .netchart__gh-ic { background: var(--net-teal); }
+/* 노드: 그룹당 카드 2개 가로 배열 */
+.netchart__nodes { list-style: none; margin: 0; padding: var(--space-7) 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); width: 100%; position: relative; }
+.netchart__nodes::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 2px; background: var(--net-line); }
+.netchart__nodes::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--net-line); }
+.netchart__nodes li { position: relative; display: flex; align-items: center; gap: var(--space-3); background: #fff; border: 1.5px solid rgba(27,65,149,.35); border-radius: var(--radius-md); padding: var(--space-4) var(--space-4); text-align: left; box-shadow: var(--shadow-sm); }
+.netchart__nodes li::before { content: ""; position: absolute; top: calc(-1 * var(--space-7)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-7); background: var(--net-line); }
+.netchart__group--aff .netchart__nodes li { border-color: rgba(26,158,145,.4); }
+.netnode__ic { flex: none; color: var(--eyebrow); display: inline-flex; }
+.netnode__ic svg { width: 30px; height: 30px; }
+.netchart__group--aff .netnode__ic { color: var(--net-teal); }
+.netnode__tx b { display: block; font-weight: 800; color: var(--text); font-size: .98rem; }
+.netnode__tx small { display: block; font-weight: 600; color: var(--text-muted); font-size: .8rem; margin-top: 2px; }
+@media (max-width: 700px) { .netchart__branches { grid-template-columns: 1fr; gap: var(--space-8); } .netchart__branches::before, .netchart__group::before, .netchart__group::after { display: none; } }
+@media (max-width: 460px) { .netchart__nodes { grid-template-columns: 1fr; } .netchart__nodes::before, .netchart__nodes::after, .netchart__nodes li::before { display: none; } }
+/* 계열사 페이지 중앙 헤더: 대시 없는 eyebrow + 제목 밑줄 */
+#affiliates .section__head--center .eyebrow::before,
+#aff-network .section__head--center .eyebrow::before { display: none; }
+#affiliates .section__head--center .section__title,
+#aff-network .section__head--center .section__title { position: relative; padding-bottom: var(--space-4); }
+#affiliates .section__head--center .section__title::after,
+#aff-network .section__head--center .section__title::after { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 46px; height: 3px; border-radius: 2px; background: var(--brand); }
 .fac2__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; aspect-ratio: 16 / 10; object-fit: cover; }
 .fac2__body .section__head { margin-bottom: var(--space-6); }
 .fac2__eyebrow { display: inline-flex; margin-bottom: var(--space-3); }
