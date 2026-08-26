@@ -677,7 +677,7 @@ section[id] { scroll-margin-top: 88px; }
 /* 그룹 관계도(조직도형) — 직영=남색(--eyebrow) / 계열사=청록(#1a9e91) 색상 구분 */
 .netchart { --net-teal: #1a9e91; --net-teal-tint: rgba(26,158,145,.1); --net-navy-tint: rgba(27,65,149,.07); --net-line: #cdd8ea; margin-top: var(--space-8); display: flex; flex-direction: column; align-items: center; }
 /* 루트 박스(로고 배지 + 이름) */
-.netchart__root { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; background: var(--slate-900); color: #fff; border-radius: var(--radius-lg); padding: var(--space-7) var(--space-12); box-shadow: var(--shadow-md); }
+.netchart__root { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; background: #17457f; color: #fff; border-radius: var(--radius-lg); padding: var(--space-7) var(--space-12); box-shadow: var(--shadow-md); }
 .netchart__root-top { display: inline-flex; align-items: center; gap: .55em; }
 .netchart__logo { height: 24px; width: auto; background: #fff; border-radius: 6px; padding: 3px 6px; }
 .netchart__root b { font-size: 1.45rem; font-weight: 800; letter-spacing: .02em; }
@@ -690,8 +690,8 @@ section[id] { scroll-margin-top: 88px; }
 .netchart__group:first-child::after { left: 50%; right: calc(-0.5 * var(--space-12)); }
 .netchart__group:last-child::after { right: 50%; left: calc(-0.5 * var(--space-12)); }
 /* 그룹 헤드: 왼쪽 원형 배지 + 밝은 pill */
-.netchart__grouphead { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: var(--space-3); background: var(--slate-900); color: #fff; font-weight: 800; font-size: 1.02rem; padding: 5px var(--space-8) 5px 5px; border-radius: 999px; margin-bottom: var(--space-6); }
-.netchart__gh-ic { flex: none; width: 44px; height: 44px; border-radius: 50%; background: #fff; color: var(--slate-900); border: 2px solid var(--slate-900); display: inline-flex; align-items: center; justify-content: center; margin: -6px 0; }
+.netchart__grouphead { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: var(--space-3); background: #17457f; color: #fff; font-weight: 800; font-size: 1.02rem; padding: 5px var(--space-8) 5px 5px; border-radius: 999px; margin-bottom: var(--space-6); }
+.netchart__gh-ic { flex: none; width: 44px; height: 44px; border-radius: 50%; background: #fff; color: #17457f; border: 2px solid #17457f; display: inline-flex; align-items: center; justify-content: center; margin: -6px 0; }
 .netchart__gh-ic svg { width: 24px; height: 24px; }
 .netchart__group--aff .netchart__grouphead { background: var(--net-teal); color: #fff; }
 .netchart__group--aff .netchart__gh-ic { background: #fff; color: var(--net-teal); border-color: var(--net-teal); }
@@ -699,10 +699,10 @@ section[id] { scroll-margin-top: 88px; }
 .netchart__nodes { list-style: none; margin: 0; padding: var(--space-7) 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); width: 100%; position: relative; }
 .netchart__nodes::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 2px; background: var(--net-line); }
 .netchart__nodes::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--net-line); }
-.netchart__nodes li { position: relative; display: flex; align-items: center; gap: var(--space-4); background: #fff; border: 1px solid rgba(15,26,37,.2); border-radius: var(--radius-lg); padding: var(--space-5); text-align: left; box-shadow: var(--shadow-sm); }
+.netchart__nodes li { position: relative; display: flex; align-items: center; gap: var(--space-4); background: #fff; border: 1px solid rgba(23,69,127,.22); border-radius: var(--radius-lg); padding: var(--space-5); text-align: left; box-shadow: var(--shadow-sm); }
 .netchart__nodes li::before { content: ""; position: absolute; top: calc(-1 * var(--space-7)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-7); background: var(--net-line); }
 .netchart__group--aff .netchart__nodes li { border-color: rgba(26,158,145,.28); }
-.netnode__ic { flex: none; color: var(--slate-900); display: inline-flex; }
+.netnode__ic { flex: none; color: #17457f; display: inline-flex; }
 .netnode__ic svg { width: 38px; height: 38px; }
 .netchart__group--aff .netnode__ic { color: var(--net-teal); }
 .netnode__tx b { display: block; font-weight: 800; color: var(--text); font-size: .98rem; }
