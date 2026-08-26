@@ -632,15 +632,26 @@ section[id] { scroll-margin-top: 88px; }
 /* 생산시설 및 강점(좌 사진 + 우 통계/설명) */
 .fac2 { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--space-12); align-items: center; }
 /* 생산시설: 사진 좌측(넓게), 카드(지표) 우측 정사각 2×2 */
-#facility .fac2 { grid-template-columns: 2fr 1fr; align-items: center; }
-#facility .fac2__media { order: -1; }
-#facility .facstats { grid-template-columns: repeat(2, 1fr); max-width: 240px; margin: 0 0 0 auto; }
-#facility .facstat { aspect-ratio: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: var(--space-3); }
-#facility .facstat b { font-size: 1rem; }
-#facility .facstat small { font-size: .66rem; }
-/* 07 생산시설: 대표사진 영역을 크로스페이드 슬라이드쇼로 */
-#facility .fac2__media .ice-slideshow { display: block; }
-#facility .fac2__media .ice-slideshow__frame { aspect-ratio: 16 / 10; }
+/* 생산시설: 풀와이드 사진 배경 + 지표 글래스 카드 오버레이 */
+.facshow { position: relative; aspect-ratio: 16 / 7; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+.facshow__media { position: absolute; inset: 0; }
+.facshow__media .ice-slideshow { display: block; height: 100%; }
+.facshow__media .ice-slideshow__frame { aspect-ratio: auto; height: 100%; border-radius: 0; box-shadow: none; }
+.facshow::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,26,58,0) 30%, rgba(9,26,58,.68) 75%); pointer-events: none; z-index: 2; }
+.facshow__stats { position: absolute; z-index: 3; top: 50%; right: var(--space-8); transform: translateY(-50%); list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); width: min(48%, 420px); }
+.facshow__stats .facstat { aspect-ratio: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: var(--space-3); }
+.facstat.facstat--glass { background: rgba(13, 35, 75, .5); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.3); box-shadow: 0 10px 28px rgba(0,0,0,.28); color: #fff; }
+.facshow__stats .facstat__ic { color: #fff; }
+.facshow__stats .facstat b { color: #fff; }
+.facshow__stats .facstat b sup { color: #fff; }
+.facshow__stats .facstat small { color: rgba(255,255,255,.9); }
+@media (max-width: 768px) {
+  .facshow { aspect-ratio: auto; display: flex; flex-direction: column; }
+  .facshow__media { position: relative; aspect-ratio: 16 / 10; }
+  .facshow::after { display: none; }
+  .facshow__stats { position: static; transform: none; width: auto; padding: var(--space-4); background: var(--eyebrow); }
+  .facstat--glass { background: rgba(255,255,255,.12); }
+}
 /* 계열사·사업장 카드 그리드 */
 .affgrid { list-style: none; margin: var(--space-6) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
 .affcard { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); }
