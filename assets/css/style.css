@@ -1500,7 +1500,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 가스제품 라인업: '자세히 보기' 링크 제거로 인한 카드 하단 여백 보완 */
 #gas .pgcard__text { margin-bottom: var(--space-6); }
 /* 회사소개 01: 참고이미지형 — 제목 강조색 + 인용 박스 + 우측(사진+원형 하이라이트 6) */
-.tx-brand { color: var(--eyebrow); }
+.tx-brand { color: var(--eyebrow); letter-spacing: 0.075em; }
 .about2__rule { display: block; width: 60px; height: 2px; background: var(--eyebrow); border-radius: 2px; margin: var(--space-5) 0 var(--space-7); }
 #intro .about2 { align-items: end; grid-template-columns: 1fr 1.12fr; }
 #intro .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
