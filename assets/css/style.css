@@ -1503,7 +1503,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .tx-brand { color: var(--eyebrow); }
 .about2__rule { display: block; width: 60px; height: 2px; background: var(--eyebrow); border-radius: 2px; margin: var(--space-5) 0 var(--space-7); }
 #intro .about2 { align-items: end; grid-template-columns: 1fr 1.12fr; }
-#intro .section__title { font-size: clamp(1.75rem, 3vw, 2.1875rem); }
+#intro .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
 #intro .secnum, #overview .secnum { display: flex; align-items: baseline; gap: .55em; margin-bottom: var(--space-6); }
 #intro .secnum__no, #overview .secnum__no { font-size: 1.5rem; }
 #intro .secnum__title, #overview .secnum__title { font-size: 1.05rem; margin-top: 0; }
