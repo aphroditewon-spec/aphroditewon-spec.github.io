@@ -1503,14 +1503,16 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .tx-brand { color: var(--eyebrow); letter-spacing: 0.075em; }
 .about2__rule { display: block; width: 60px; height: 2px; background: var(--eyebrow); border-radius: 2px; margin: var(--space-5) 0 var(--space-7); }
 #intro .about2 { align-items: stretch; grid-template-columns: 1fr 1.12fr; }
-#intro .about2__right { margin-top: var(--space-12); }
-#intro .about2__media { height: 100%; }
+/* 우측 사진: 상단은 제목 라인, 하단은 왼쪽 텍스트 마지막 줄에 일직선 정렬. 초과 바닥면은 object-fit으로 크롭 */
+#intro .about2__right { position: relative; margin-top: 0; }
+#intro .about2__media { position: absolute; top: var(--space-12); left: 0; right: 0; bottom: 0; }
 #intro .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
 #intro .secnum, #overview .secnum { display: flex; align-items: baseline; gap: .55em; margin-bottom: var(--space-6); }
 #intro .secnum__no, #overview .secnum__no { font-size: 1.5rem; }
 #intro .secnum__title, #overview .secnum__title { font-size: 1.05rem; margin-top: 0; }
 #intro .about2__media img { height: 100%; aspect-ratio: auto; object-fit: cover; }
 #intro .about2__lead { margin: 0 0 var(--space-4); }
+#intro .about2__lead:last-child { margin-bottom: 0; }
 /* 비전 문구 — 대형 타이포 인용(박스 제거, 중앙 정렬 에디토리얼) */
 .about2__quote { position: relative; margin: var(--space-10) 0 0; padding: var(--space-8) 0 var(--space-6); border-top: 1px solid var(--border); text-align: center; }
 .about2__quote-mark { position: absolute; top: 0; left: 50%; transform: translate(-50%, -28%); background: transparent; padding: 0 var(--space-4); font-family: Georgia, "Times New Roman", serif; font-size: 4.5rem; line-height: 1; color: var(--eyebrow); opacity: .85; pointer-events: none; }
