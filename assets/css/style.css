@@ -632,9 +632,9 @@ section[id] { scroll-margin-top: 88px; }
 /* 생산시설 및 강점(좌 사진 + 우 통계/설명) */
 .fac2 { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--space-12); align-items: center; }
 /* 생산시설: 사진 좌측(넓게), 카드(지표) 우측 정사각 2×2 */
-#facility .fac2 { grid-template-columns: 1.5fr 1fr; align-items: center; }
+#facility .fac2 { grid-template-columns: 2fr 1fr; align-items: center; }
 #facility .fac2__media { order: -1; }
-#facility .facstats { grid-template-columns: repeat(2, 1fr); max-width: 240px; margin: 0 auto; }
+#facility .facstats { grid-template-columns: repeat(2, 1fr); max-width: 240px; margin: 0 0 0 auto; }
 #facility .facstat { aspect-ratio: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: var(--space-3); }
 #facility .facstat b { font-size: 1rem; }
 #facility .facstat small { font-size: .66rem; }
