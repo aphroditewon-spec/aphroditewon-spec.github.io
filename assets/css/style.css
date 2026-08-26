@@ -1554,8 +1554,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .hist2__banner { border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); }
 }
 /* 조직도 재구성(시안형): 중앙 헤더 + 대표이사·총괄전무 + 8팀 카드 + 하단 배너 */
-.org2__head { text-align: center; margin-bottom: var(--space-10); }
-.org2__head .eyebrow { justify-content: center; }
+.org2__head { margin-bottom: var(--space-10); }
 .org2__sub { color: var(--text-muted); margin-top: var(--space-3); }
 .org2__top { display: flex; flex-direction: column; align-items: center; }
 .org2__ceo { width: 128px; height: 128px; border-radius: 50%; border: 3px solid var(--eyebrow); background: var(--surface); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; box-shadow: var(--shadow-sm); }
