@@ -1334,6 +1334,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
    ===================================================================== */
 /* ② 회사소개 */
 .about-home { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--space-12); align-items: stretch; }
+.about-home__body .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
 .about-home__media { display: flex; }
 .about-home__media img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
 .about-home__lead { color: var(--text-muted); line-height: 1.9; margin: var(--space-5) 0 var(--space-6); }
