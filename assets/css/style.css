@@ -915,7 +915,15 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 }
 /* 첫 줄 상단선·좌측 첫 칸 정리 */
 .afftab:hover { background: var(--surface-2); color: var(--text); }
-.afftab.is-active { background: var(--green-deep); color: #fff; }
+.afftab.is-active { background: var(--green-800); color: #fff; }
+/* 탭 활성색: 직영(화성·시화)=남색, 계열사(부성·신라)=청록 */
+.afftab.is-active[data-aff="hwaseong"], .afftab.is-active[data-aff="sihwa"] { background: #2b6cb8; }
+.afftab.is-active[data-aff="busung"], .afftab.is-active[data-aff="sinla"] { background: #1a9e91; }
+/* 지도 버튼도 각 그룹색으로 통일 */
+#aff-hwaseong .affpanel__map, #aff-sihwa .affpanel__map { background: #2b6cb8; }
+#aff-hwaseong .affpanel__map:hover, #aff-sihwa .affpanel__map:hover { background: #245a99; }
+#aff-busung .affpanel__map, #aff-sinla .affpanel__map { background: #1a9e91; }
+#aff-busung .affpanel__map:hover, #aff-sinla .affpanel__map:hover { background: #15837a; }
 .affpanels { position: relative; }
 .affpanel { display: none; }
 .affpanel.is-active { display: block; animation: affFade .3s ease; }
