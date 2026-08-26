@@ -674,22 +674,31 @@ section[id] { scroll-margin-top: 88px; }
 .affcard__list b { flex: none; width: 3.4em; color: var(--text-muted); font-weight: 700; }
 .affcard__map { margin-top: auto; font-size: .88rem; font-weight: 700; color: var(--accent-hover); }
 @media (max-width: 780px) { .affgrid { grid-template-columns: 1fr; } }
-/* 그룹 관계도(조직도형) */
-.netchart { margin-top: var(--space-6); display: flex; flex-direction: column; align-items: center; }
-.netchart__root { text-align: center; background: var(--green-800); color: #fff; border-radius: var(--radius-lg); padding: var(--space-4) var(--space-8); box-shadow: var(--shadow-md); }
+/* 그룹 관계도(조직도형) — 직영=남색(--eyebrow) / 계열사=청록(#1a9e91) 색상 구분 */
+.netchart { --net-teal: #1a9e91; --net-teal-tint: rgba(26,158,145,.12); margin-top: var(--space-8); display: flex; flex-direction: column; align-items: center; }
+.netchart__root { text-align: center; background: var(--eyebrow); color: #fff; border-radius: var(--radius-lg); padding: var(--space-4) var(--space-8); box-shadow: var(--shadow-md); }
 .netchart__root b { display: block; font-size: 1.25rem; font-weight: 800; letter-spacing: .03em; }
 .netchart__root span { font-size: .85rem; opacity: .85; }
 .netchart__branches { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-8); position: relative; padding-top: calc(2 * var(--space-6)); width: 100%; max-width: 760px; }
-.netchart__branches::before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--brand); }
+.netchart__branches::before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--border-strong); }
 .netchart__group { position: relative; }
-.netchart__group::before { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--brand); }
-.netchart__group::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); height: 2px; background: var(--brand); }
+.netchart__group::before { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--border-strong); }
+.netchart__group::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); height: 2px; background: var(--border-strong); }
 .netchart__group:first-child::after { left: 50%; right: calc(-0.5 * var(--space-8)); }
 .netchart__group:last-child::after { right: 50%; left: calc(-0.5 * var(--space-8)); }
-.netchart__grouphead { text-align: center; background: var(--surface-brand); color: var(--brand); font-weight: 800; padding: var(--space-3); border-radius: var(--radius-md); border: 1px solid var(--green-200); }
+.netchart__group--direct::before, .netchart__group--direct::after { background: var(--eyebrow); }
+.netchart__group--aff::before, .netchart__group--aff::after { background: var(--net-teal); }
+.netchart__grouphead { display: flex; align-items: center; justify-content: center; gap: .4em; text-align: center; background: var(--surface-brand); color: var(--eyebrow); font-weight: 800; padding: var(--space-3); border-radius: var(--radius-md); border: 1px solid var(--green-200); }
+.netchart__grouphead svg { width: 18px; height: 18px; }
+.netchart__group--aff .netchart__grouphead { background: var(--net-teal-tint); color: var(--net-teal); border-color: rgba(26,158,145,.3); }
 .netchart__nodes { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: var(--space-3); }
-.netchart__nodes li { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4); text-align: center; font-weight: 700; color: var(--text); font-size: .95rem; box-shadow: var(--shadow-sm); }
-.netchart__nodes small { display: block; font-weight: 600; color: var(--text-muted); font-size: .78rem; margin-top: 2px; }
+.netchart__nodes li { display: flex; align-items: center; gap: var(--space-3); background: #fff; border: 1px solid var(--border); border-left: 3px solid var(--eyebrow); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4); text-align: left; box-shadow: var(--shadow-sm); }
+.netchart__group--aff .netchart__nodes li { border-left-color: var(--net-teal); }
+.netnode__ic { flex: none; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--surface-brand); color: var(--eyebrow); }
+.netnode__ic svg { width: 22px; height: 22px; }
+.netchart__group--aff .netnode__ic { background: var(--net-teal-tint); color: var(--net-teal); }
+.netnode__tx b { display: block; font-weight: 700; color: var(--text); font-size: .95rem; }
+.netnode__tx small { display: block; font-weight: 600; color: var(--text-muted); font-size: .78rem; margin-top: 2px; }
 @media (max-width: 620px) { .netchart__branches { grid-template-columns: 1fr; gap: var(--space-6); } .netchart__branches::before, .netchart__group::before, .netchart__group::after { display: none; } }
 .fac2__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; aspect-ratio: 16 / 10; object-fit: cover; }
 .fac2__body .section__head { margin-bottom: var(--space-6); }
@@ -891,13 +900,19 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .affpanel { display: none; }
 .affpanel.is-active { display: block; animation: affFade .3s ease; }
 @keyframes affFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-.affpanel__name { font-size: var(--fs-h2); font-weight: 700; color: var(--text); margin: 0; }
-.affpanel__sector { margin: var(--space-3) 0 0; font-size: var(--fs-lead); font-weight: 600; color: var(--accent-hover); }
-.affpanel__list { list-style: none; margin: var(--space-6) 0 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
-.affpanel__list li { display: flex; align-items: baseline; font-size: var(--fs-body); color: var(--text); }
-.affpanel__list li b { flex: 0 0 68px; color: var(--text-muted); font-weight: 600; }
+.affpanel__name { font-size: var(--fs-h2); font-weight: 700; color: var(--text); margin: 0; word-break: keep-all; }
+.affpanel__eyebrow { display: inline-block; margin-top: var(--space-2); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand); }
+.affpanel__cat { margin: var(--space-2) 0 0; font-size: var(--fs-lead); font-weight: 700; color: var(--eyebrow); }
+.affpanel__desc { margin: var(--space-3) 0 0; font-size: var(--fs-body); line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+.affpanel__list { list-style: none; margin: var(--space-6) 0 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-4); }
+.affpanel__list li { display: flex; align-items: flex-start; gap: var(--space-3); font-size: var(--fs-body); color: var(--text); }
+.affpanel__ic { flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--surface-brand); color: var(--eyebrow); display: inline-flex; align-items: center; justify-content: center; }
+.affpanel__ic svg { width: 18px; height: 18px; }
+.affpanel__list li > div { display: flex; flex-direction: column; }
+.affpanel__list li b { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px; }
 .affpanel__muted { color: var(--text-muted); font-style: italic; }
-.affpanel__map { display: inline-block; margin-top: var(--space-6); font-weight: 600; color: var(--accent-hover); }
+.affpanel__map { margin-top: var(--space-7); }
+.affpanel__map svg { width: 18px; height: 18px; }
 /* 계열사 패널: 정보 + 사진 2단 배열 */
 .affpanel__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: center; }
 .affpanel__media img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }

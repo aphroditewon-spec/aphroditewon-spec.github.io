@@ -7,7 +7,7 @@
   <meta name="description" content="한국탄산화학㈜ 계열사 — 관계사 네트워크.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-184">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-185">
   <!-- 대표이사 서명용 손글씨 폰트 (한글: Nanum Pen Script, 일어: Yomogi) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,32 +116,51 @@
     <!-- ===== 계열사: 그룹 관계도 ===== -->
     <section class="section section--soft" id="affiliates">
       <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="company.aff.eyebrow">Affiliates</span>
-          <h2 class="section__title" data-i18n="company.aff.title">계열사</h2>
-          <p class="section__lead" data-i18n="company.aff.lead">대표이사 직속 관계사와 함께 안정적인 공급 네트워크를 구축합니다.</p>
+        <div class="section__head section__head--center">
+          <span class="eyebrow" data-i18n="company.aff.eyebrow">Our Network</span>
+          <h2 class="section__title" data-i18n="company.aff.title">사업장 · 계열사 네트워크</h2>
+          <p class="section__lead" data-i18n="company.aff.lead">한국탄산화학㈜는 직영 사업장과 계열사가 유기적으로 협력하여 고객에게 안정적이고 전문적인 서비스를 제공합니다.</p>
         </div>
 
-        <!-- 그룹 관계도 -->
-        <h3 class="subhead">그룹 구성</h3>
+        <!-- 그룹 관계도 (직영=남색 / 계열사=청록 색상 구분) -->
         <div class="netchart">
           <div class="netchart__root">
             <b>한국탄산화학㈜</b>
             <span>본사 · 시흥공장</span>
           </div>
           <div class="netchart__branches">
-            <div class="netchart__group">
-              <div class="netchart__grouphead">직영 사업장</div>
+            <!-- 직영 사업장 (남색) -->
+            <div class="netchart__group netchart__group--direct">
+              <div class="netchart__grouphead">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V6l7-3v18"/><path d="M10 8h8v13"/><path d="M21 21H2"/><path d="M13.5 12h1M13.5 15.5h1M17 12h.5M17 15.5h.5M6 8v.5M6 12v.5M6 15.5v.5"/></svg>
+                직영 사업장
+              </div>
               <ul class="netchart__nodes">
-                <li>화성공장<small>가스 공급·영업</small></li>
-                <li>시화영업소<small>가스 공급·영업</small></li>
+                <li>
+                  <span class="netnode__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10.5l5 3v-3l5 3V8l6 3.2V21z"/><line x1="2.5" y1="21" x2="21.5" y2="21"/></svg></span>
+                  <span class="netnode__tx"><b>화성공장</b><small>가스 공급·영업</small></span>
+                </li>
+                <li>
+                  <span class="netnode__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V4h10v17"/><path d="M14 9h6v12"/><path d="M4 21h18"/><path d="M7.5 8h3M7.5 12h3M7.5 16h3M17 13h.5M17 17h.5"/></svg></span>
+                  <span class="netnode__tx"><b>시화영업소</b><small>가스 공급·영업</small></span>
+                </li>
               </ul>
             </div>
-            <div class="netchart__group">
-              <div class="netchart__grouphead">계열사</div>
+            <!-- 계열사 (청록) -->
+            <div class="netchart__group netchart__group--aff">
+              <div class="netchart__grouphead">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M16 6.2a3 3 0 0 1 0 5.6"/><path d="M18 14.5a5.5 5.5 0 0 1 2.5 4.5"/></svg>
+                계열사
+              </div>
               <ul class="netchart__nodes">
-                <li>부성테크니컬(주)<small>용기검사 전문기관</small></li>
-                <li>신라특수<small>가스 공급·영업</small></li>
+                <li>
+                  <span class="netnode__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V5l7-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></svg></span>
+                  <span class="netnode__tx"><b>부성테크니컬㈜</b><small>용기검사 전문</small></span>
+                </li>
+                <li>
+                  <span class="netnode__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 11l-2.2-2.2a2 2 0 0 0-2.8 0L3 8.8V14l4 4 3-1 3 3 8-8-3-3-4 1z"/><path d="M13 13l2 2"/></svg></span>
+                  <span class="netnode__tx"><b>신라특수</b><small>가스 공급·영업</small></span>
+                </li>
               </ul>
             </div>
           </div>
@@ -153,77 +172,127 @@
     <!-- ===== 사업장·계열사 상세 (탭) ===== -->
     <section class="section" id="aff-network">
       <div class="container">
-        <div class="section__head">
-          <span class="eyebrow">Network</span>
-          <h2 class="section__title">사업장·계열사</h2>
-          <p class="section__lead">각 사업장과 계열사의 위치·연락처를 확인하실 수 있습니다.</p>
+        <div class="section__head section__head--center">
+          <span class="eyebrow">Business Network</span>
+          <h2 class="section__title">사업장 · 계열사 안내</h2>
         </div>
         <div class="afftabs" role="tablist" aria-label="사업장·계열사 선택">
-          <button class="afftab is-active" role="tab" aria-selected="true" aria-controls="aff-hwaseong" id="tab-hwaseong" data-aff="hwaseong">한국탄산화학(주) 화성공장</button>
-          <button class="afftab" role="tab" aria-selected="false" aria-controls="aff-sihwa" id="tab-sihwa" data-aff="sihwa" tabindex="-1">시화영업소</button>
-          <button class="afftab" role="tab" aria-selected="false" aria-controls="aff-busung" id="tab-busung" data-aff="busung" tabindex="-1">부성테크니컬(주)</button>
+          <button class="afftab is-active" role="tab" aria-selected="true" aria-controls="aff-hwaseong" id="tab-hwaseong" data-aff="hwaseong">한국탄산화학㈜ 화성공장</button>
+          <button class="afftab" role="tab" aria-selected="false" aria-controls="aff-sihwa" id="tab-sihwa" data-aff="sihwa" tabindex="-1">한국탄산화학㈜ 시화영업소</button>
+          <button class="afftab" role="tab" aria-selected="false" aria-controls="aff-busung" id="tab-busung" data-aff="busung" tabindex="-1">부성테크니컬㈜</button>
           <button class="afftab" role="tab" aria-selected="false" aria-controls="aff-sinla" id="tab-sinla" data-aff="sinla" tabindex="-1">신라특수</button>
         </div>
         <div class="affpanels">
+          <!-- 화성공장 -->
           <div class="affpanel is-active" role="tabpanel" id="aff-hwaseong" aria-labelledby="tab-hwaseong">
             <div class="affpanel__grid">
               <div class="affpanel__info">
-                <h3 class="affpanel__name">한국탄산화학(주) 화성공장</h3>
-                <p class="affpanel__sector">직영 사업장 · 가스 공급·영업</p>
+                <h3 class="affpanel__name">한국탄산화학㈜ 화성공장</h3>
+                <span class="affpanel__eyebrow">Gas Supply &amp; Sales</span>
+                <p class="affpanel__cat">가스 공급·영업</p>
+                <p class="affpanel__desc">산업용 가스의 안정적인 공급과 고객 맞춤형 서비스를 제공합니다. 안전하고 신뢰할 수 있는 품질로 고객의 경쟁력을 함께 높여갑니다.</p>
                 <ul class="affpanel__list">
-                  <li><b>주소</b><span>경기도 화성시 우정읍 포승향남로 1411-24</span></li>
-                  <li><b>연락처</b><span>Tel. 031-351-6324~6</span></li>
+                  <li>
+                    <span class="affpanel__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+                    <div><b>Address</b><span>경기도 화성시 우정읍 포승향남로 1411-24</span></div>
+                  </li>
+                  <li>
+                    <span class="affpanel__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .56 3.5 1 1 0 0 1-.24 1z"/></svg></span>
+                    <div><b>Tel</b><span>031-351-6324~6</span></div>
+                  </li>
                 </ul>
-                <a class="affpanel__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 화성시 우정읍 포승향남로 1411-24">지도에서 보기 →</a>
+                <a class="btn btn--primary affpanel__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 화성시 우정읍 포승향남로 1411-24">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                  지도에서 보기 →
+                </a>
               </div>
               <div class="affpanel__media">
-                <img src="assets/images/site/hwaseong-site.jpg?v=20260819" alt="한국탄산화학(주) 화성공장 전경" loading="lazy">
+                <img src="assets/images/site/hwaseong-site.jpg?v=20260819" alt="한국탄산화학㈜ 화성공장 전경" loading="lazy">
               </div>
             </div>
           </div>
+          <!-- 시화영업소 -->
           <div class="affpanel" role="tabpanel" id="aff-sihwa" aria-labelledby="tab-sihwa" hidden>
             <div class="affpanel__grid">
               <div class="affpanel__info">
-                <h3 class="affpanel__name">시화영업소</h3>
-                <p class="affpanel__sector">직영 사업장 · 가스 공급·영업</p>
+                <h3 class="affpanel__name">한국탄산화학㈜ 시화영업소</h3>
+                <span class="affpanel__eyebrow">Gas Supply &amp; Sales</span>
+                <p class="affpanel__cat">가스 공급·영업</p>
+                <p class="affpanel__desc">수도권 서부 지역의 가스 공급 거점으로, 신속하고 안정적인 공급 서비스를 제공합니다.</p>
                 <ul class="affpanel__list">
-                  <li><b>주소</b><span>경기도 시흥시 오이도로 22-29</span></li>
-                  <li><b>연락처</b><span>Tel. 031-498-4989, 8989</span></li>
+                  <li>
+                    <span class="affpanel__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+                    <div><b>Address</b><span>경기도 시흥시 오이도로 22-29</span></div>
+                  </li>
+                  <li>
+                    <span class="affpanel__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .56 3.5 1 1 0 0 1-.24 1z"/></svg></span>
+                    <div><b>Tel</b><span>031-498-4989, 8989</span></div>
+                  </li>
                 </ul>
-                <a class="affpanel__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29">지도에서 보기 →</a>
+                <a class="btn btn--primary affpanel__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                  지도에서 보기 →
+                </a>
               </div>
               <div class="affpanel__media">
                 <img src="assets/images/site/sihwa-site.jpg?v=1" alt="시화영업소 전경" loading="lazy">
               </div>
             </div>
           </div>
+          <!-- 부성테크니컬㈜ -->
           <div class="affpanel" role="tabpanel" id="aff-busung" aria-labelledby="tab-busung" hidden>
             <div class="affpanel__grid">
               <div class="affpanel__info">
-                <h3 class="affpanel__name">부성테크니컬(주)</h3>
-                <p class="affpanel__sector">계열사 · 용기검사 전문기관</p>
+                <h3 class="affpanel__name">부성테크니컬㈜</h3>
+                <span class="affpanel__eyebrow">Vessel Inspection</span>
+                <p class="affpanel__cat">용기검사 전문</p>
+                <p class="affpanel__desc">한국가스안전공사 지정 전문검사기관으로, 고압가스 용기의 정밀 검사와 유지관리를 수행합니다.</p>
                 <ul class="affpanel__list">
-                  <li><b>주소</b><span>경기도 화성시 우정읍 포승향남로 1411-24</span></li>
-                  <li><b>연락처</b><span>Tel. 031-351-6324</span></li>
-                  <li><b>인증</b><span>한국가스안전공사 지정 전문검사기관</span></li>
+                  <li>
+                    <span class="affpanel__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+                    <div><b>Address</b><span>경기도 화성시 우정읍 포승향남로 1411-24</span></div>
+                  </li>
+                  <li>
+                    <span class="affpanel__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .56 3.5 1 1 0 0 1-.24 1z"/></svg></span>
+                    <div><b>Tel</b><span>031-351-6324</span></div>
+                  </li>
+                  <li>
+                    <span class="affpanel__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V5l7-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></svg></span>
+                    <div><b>인증</b><span>한국가스안전공사 지정 전문검사기관</span></div>
+                  </li>
                 </ul>
-                <a class="affpanel__map" href="products-supply.html">용기검사 상세 보기 →</a>
+                <a class="btn btn--primary affpanel__map" href="products-supply.html">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                  용기검사 상세 보기 →
+                </a>
               </div>
               <div class="affpanel__media">
-                <img src="assets/images/site/busung-site.jpg?v=20260821" alt="부성테크니컬(주) 용기검사 공장" loading="lazy">
+                <img src="assets/images/site/busung-site.jpg?v=20260821" alt="부성테크니컬㈜ 용기검사 공장" loading="lazy">
               </div>
             </div>
           </div>
+          <!-- 신라특수 -->
           <div class="affpanel" role="tabpanel" id="aff-sinla" aria-labelledby="tab-sinla" hidden>
             <div class="affpanel__grid">
               <div class="affpanel__info">
                 <h3 class="affpanel__name">신라특수</h3>
-                <p class="affpanel__sector">계열사 · 가스 공급·영업</p>
+                <span class="affpanel__eyebrow">Gas Supply &amp; Sales</span>
+                <p class="affpanel__cat">가스 공급·영업</p>
+                <p class="affpanel__desc">특수·산업용 가스의 공급과 영업을 담당하며, 고객 요구에 최적화된 솔루션을 제공합니다.</p>
                 <ul class="affpanel__list">
-                  <li><b>주소</b><span>경기도 시흥시 오이도로 22-29</span></li>
-                  <li><b>연락처</b><span>Tel. 031-498-4989, 8989</span></li>
+                  <li>
+                    <span class="affpanel__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+                    <div><b>Address</b><span>경기도 시흥시 오이도로 22-29</span></div>
+                  </li>
+                  <li>
+                    <span class="affpanel__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .56 3.5 1 1 0 0 1-.24 1z"/></svg></span>
+                    <div><b>Tel</b><span>031-498-4989, 8989</span></div>
+                  </li>
                 </ul>
-                <a class="affpanel__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29">지도에서 보기 →</a>
+                <a class="btn btn--primary affpanel__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                  지도에서 보기 →
+                </a>
               </div>
               <div class="affpanel__media">
                 <img src="assets/images/site/sinla-site.jpg?v=1" alt="신라특수 사업장 전경" loading="lazy">
@@ -232,7 +301,15 @@
           </div>
         </div>
 
-        <div class="section__foot"><a class="btn btn--primary" href="support.html#contact">문의하기 →</a></div>
+        <!-- 하단 배너 (orgbnr 컴포넌트 재사용: 악수 아이콘·네트워크 협력 메시지) -->
+        <div class="orgbnr">
+          <span class="orgbnr__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12l2.2-2.2a1.5 1.5 0 0 1 2.1 0l1.4 1.4a1 1 0 0 0 1.4 0l3-3"/><path d="M3 8l3.5-3.5a2 2 0 0 1 2.8 0L12 7"/><path d="M12 7l2.5-2.5a2 2 0 0 1 2.8 0L21 8"/><path d="M14 13l2.5 2.5a1.4 1.4 0 0 1 0 2 1.4 1.4 0 0 1-2 0"/><path d="M11.5 15.5l1.6 1.6a1.4 1.4 0 0 1 0 2 1.4 1.4 0 0 1-2 0l-.3-.3"/><path d="M9 17l.8.8a1.4 1.4 0 0 1 0 2 1.4 1.4 0 0 1-2 0L7 19"/></svg></span>
+          <div class="orgbnr__tx">
+            <b class="orgbnr__title">하나의 네트워크, 더 <span class="tx-brand">안정적인 공급</span></b>
+            <span class="orgbnr__sub">각 사업장과 계열사의 전문성과 협력을 바탕으로 고객에게 안정적인 가스 공급과 전문 서비스를 제공합니다.</span>
+          </div>
+          <span class="orgbnr__deco" aria-hidden="true"><svg viewBox="0 0 150 90" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M60 8l16 9v18l-16 9-16-9V17z"/><path d="M92 26l16 9v18l-16 9-16-9V35z"/><path d="M124 8l16 9v18l-16 9-16-9V17z"/><path d="M76 17l16 9M108 35l16-9M92 44l-16 9M108 53l16 9"/><circle cx="60" cy="8" r="1.6" fill="currentColor" stroke="none"/><circle cx="124" cy="8" r="1.6" fill="currentColor" stroke="none"/><circle cx="140" cy="53" r="1.6" fill="currentColor" stroke="none"/></svg></span>
+        </div>
       </div>
     </section>
 
@@ -280,7 +357,7 @@
     <span class="scroll-fab__text">SCROLL</span>
   </a>
 
-  <script src="assets/i18n/translations.js?v=20260821n"></script>
+  <script src="assets/i18n/translations.js?v=20260821o"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 
