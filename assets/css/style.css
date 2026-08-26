@@ -677,6 +677,7 @@ section[id] { scroll-margin-top: 88px; }
 .fac2__body .section__head { margin-bottom: var(--space-6); }
 .fac2__eyebrow { display: inline-flex; margin-bottom: var(--space-6); }
 .fac2__desc { color: var(--text-muted); line-height: 1.8; margin: var(--space-6) 0; }
+.fac2__desc--top { margin: 0 0 var(--space-8); max-width: 80ch; }
 .facstats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
 .facstat { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-5) var(--space-2); text-align: center; }
 .facstat__ic { color: var(--brand); display: block; margin: 0 auto var(--space-2); }
