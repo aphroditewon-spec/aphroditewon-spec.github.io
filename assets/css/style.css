@@ -1503,9 +1503,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .tx-brand { color: var(--eyebrow); }
 .about2__rule { display: block; width: 60px; height: 2px; background: var(--eyebrow); border-radius: 2px; margin: var(--space-5) 0 var(--space-7); }
 #intro .about2 { align-items: end; grid-template-columns: 1fr 1.12fr; }
-#intro .secnum { display: flex; align-items: baseline; gap: .55em; margin-bottom: var(--space-6); }
-#intro .secnum__no { font-size: 1.5rem; }
-#intro .secnum__title { font-size: 1.05rem; margin-top: 0; }
+#intro .secnum, #overview .secnum { display: flex; align-items: baseline; gap: .55em; margin-bottom: var(--space-6); }
+#intro .secnum__no, #overview .secnum__no { font-size: 1.5rem; }
+#intro .secnum__title, #overview .secnum__title { font-size: 1.05rem; margin-top: 0; }
 #intro .about2__media img { aspect-ratio: 4 / 3; height: auto; object-fit: cover; }
 #intro .about2__lead { margin: 0 0 var(--space-4); }
 .about2__quote { display: flex; gap: var(--space-4); align-items: center; margin: var(--space-8) 0 0; padding: var(--space-5) var(--space-6); background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--eyebrow); font-weight: 700; line-height: 1.7; font-size: .92rem; }
