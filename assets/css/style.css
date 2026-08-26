@@ -603,10 +603,10 @@ section[id] { scroll-margin-top: 88px; }
 @media (max-width: 900px) { .about2 { grid-template-columns: 1fr; gap: var(--space-8); } .introfeats { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); } }
 /* 홈 ABOUT US: 아이콘 상단 세로 카드형 */
 .about-home__feats { gap: var(--space-4); }
-.about-home__feats .introfeat { align-items: center; text-align: center; gap: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-3); box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.about-home__feats .introfeat { align-items: center; justify-content: center; text-align: center; gap: 0; aspect-ratio: 1 / 1; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-3); box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .about-home__feats .introfeat:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green-200); }
-.about-home__feats .introfeat__ic { width: 52px; height: 52px; border-radius: 50%; background: var(--surface-brand); color: var(--brand); margin-bottom: var(--space-3); }
-.about-home__feats .introfeat__ic svg { width: 26px; height: 26px; }
+.about-home__feats .introfeat__ic { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--surface-brand); color: var(--brand); margin-bottom: var(--space-2); }
+.about-home__feats .introfeat__ic svg { width: 24px; height: 24px; }
 .about-home__feats .introfeat b { font-size: .96rem; letter-spacing: 0; color: var(--text); margin-bottom: 4px; word-break: keep-all; }
 .about-home__feats .introfeat small { font-size: .82rem; color: var(--text-muted); line-height: 1.45; word-break: keep-all; }
 
