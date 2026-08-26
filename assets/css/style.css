@@ -1522,7 +1522,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 연혁 가로 타임라인(시안형): 중앙 헤더 + 7개 마일스톤 + 2022·2025 강조카드 + 하단 배너 */
 .hist2__head { text-align: center; margin-bottom: var(--space-10); }
 .hist2__head .eyebrow { justify-content: center; }
-.hist2__sub { max-width: 60ch; margin: var(--space-3) auto 0; color: var(--text-muted); line-height: 1.6; font-weight: 700; }
+.hist2__sub { max-width: 70ch; margin: var(--space-3) auto 0; color: var(--text); line-height: 1.6; font-weight: 700; font-size: 1.35rem; }
 .hist2 { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-3); align-items: start; }
 .hist2__item { position: relative; text-align: center; }
 .hist2__item--card::before { content: ""; position: absolute; inset: calc(-1 * var(--space-4)) 0 calc(-1 * var(--space-5)); background: var(--surface-brand); border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px var(--border); z-index: 0; }
