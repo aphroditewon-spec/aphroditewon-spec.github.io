@@ -1614,11 +1614,21 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .org2team__list li { position: relative; padding-left: 12px; font-size: .8rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
 .org2team__list li + li { margin-top: 7px; }
 .org2team__list li::before { content: ""; position: absolute; left: 0; top: .52em; width: 4px; height: 4px; border-radius: 50%; background: var(--brand); }
-.org2__banner { display: flex; align-items: center; gap: var(--space-5); margin-top: var(--space-12); padding: var(--space-6) var(--space-8); background: var(--surface-brand); border-radius: var(--radius-lg); }
-.org2__banner-ic { flex: none; color: var(--eyebrow); display: inline-flex; }
-.org2__banner-ic svg { width: 44px; height: 44px; }
-.org2__banner-tx b { display: block; font-size: 1.1rem; color: var(--text); }
-.org2__banner-tx span { display: block; margin-top: 4px; font-size: .9rem; color: var(--text-muted); }
+/* 조직도 하단 배너(시안형: 아이콘 원형 + 구분선 + 헥사곤 데코) */
+.orgbnr { position: relative; overflow: hidden; display: flex; align-items: center; gap: var(--space-6); margin-top: var(--space-12); padding: var(--space-7) var(--space-8); background: linear-gradient(110deg, var(--surface-brand) 0%, var(--surface) 55%); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+.orgbnr__ic { flex: none; width: 76px; height: 76px; border-radius: 50%; border: 2px solid var(--brand); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; background: var(--surface); }
+.orgbnr__ic svg { width: 40px; height: 40px; }
+.orgbnr__tx { position: relative; z-index: 1; padding-left: var(--space-6); border-left: 1px solid var(--border-strong); }
+.orgbnr__title { display: block; font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 800; color: var(--text); line-height: 1.4; word-break: keep-all; }
+.orgbnr__title .tx-brand { color: var(--brand); letter-spacing: normal; }
+.orgbnr__sub { display: block; margin-top: var(--space-2); font-size: .92rem; color: var(--text-muted); line-height: 1.6; word-break: keep-all; }
+.orgbnr__deco { position: absolute; right: var(--space-6); top: 50%; transform: translateY(-50%); color: var(--brand); opacity: .14; pointer-events: none; }
+.orgbnr__deco svg { width: 150px; height: 90px; }
+@media (max-width: 640px) {
+  .orgbnr { flex-direction: column; text-align: center; gap: var(--space-4); }
+  .orgbnr__tx { padding-left: 0; border-left: 0; }
+  .orgbnr__deco { display: none; }
+}
 @media (max-width: 992px) {
   .org2__teams { grid-template-columns: repeat(4, 1fr); gap: var(--space-7) var(--space-3); }
   .org2__teams::before, .org2team::before { display: none; }
