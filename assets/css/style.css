@@ -1548,7 +1548,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 홈 3개 섹션(WHY·BUSINESS·PRODUCTS) 높이를 레퍼런스처럼 컴팩트하게 축소 */
 #why, #business, #product-showcase { padding-block: 1.7rem; }
 #why .section__head, #business .section__head, #product-showcase .section__head { margin-bottom: var(--space-6); }
-#business .biztile, #product-showcase .prodgrid { margin-top: var(--space-6); }
+#business .biztile, #product-showcase .prodgrid, #product-showcase .prodstrip { margin-top: var(--space-6); }
+/* PRODUCTS 제품 타일: 레퍼런스 카드 이미지(형식·이름·설명 포함) 3열×2행 */
+.prodstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); list-style: none; padding: 0; margin: 0; }
+.prodstrip .prodtile a { display: block; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+.prodstrip .prodtile a:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.prodstrip .prodtile img { width: 100%; height: auto; display: block; aspect-ratio: 471 / 417; object-fit: cover; }
+@media (max-width: 860px) { .prodstrip { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .prodstrip { grid-template-columns: 1fr; } }
 #business .section__foot { margin-top: var(--space-6); }
 #business .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
 #why .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }

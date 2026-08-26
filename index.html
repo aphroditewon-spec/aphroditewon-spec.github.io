@@ -7,7 +7,7 @@
   <meta name="description" content="한국탄산화학㈜(KLCC)는 산소·질소·아르곤·탄산·수소 등 산업용·의료용 가스와 드라이아이스를 제조·공급하는 전문기업입니다.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-212">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-213">
 </head>
 <body>
 
@@ -238,37 +238,13 @@
           </div>
           <a class="section__more" href="products-gas.html" data-i18n="home.prod.all">전체 제품보기</a>
         </div>
-        <ul class="prodgrid">
-          <li class="pgcard">
-            <a class="pgcard__media" href="products-gas.html"><img src="assets/images/site/gas-cylinders.jpg?v=20260731" alt="산소 (O₂)" loading="lazy"></a>
-            <b class="pgcard__title">산소 <em>(O₂)</em></b>
-            <p class="pgcard__text" data-i18n="home.pr.o2">용접, 절단, 의료 등 다양한 산업용 산소</p>
-            <a class="pgcard__more" href="products-gas.html" data-i18n="home.pr.detail">제품 상세보기</a>
-          </li>
-          <li class="pgcard">
-            <a class="pgcard__media" href="products-gas.html"><img src="assets/images/site/quality-inspect-cyl.jpg" alt="질소 (N₂)" loading="lazy"></a>
-            <b class="pgcard__title">질소 <em>(N₂)</em></b>
-            <p class="pgcard__text" data-i18n="home.pr.n2">식품포장, 반도체, 화학 등 다양한 산업용 질소</p>
-            <a class="pgcard__more" href="products-gas.html" data-i18n="home.pr.detail">제품 상세보기</a>
-          </li>
-          <li class="pgcard">
-            <a class="pgcard__media" href="products-gas.html"><img src="assets/images/site/supply-o2-station.jpg" alt="아르곤 (Ar)" loading="lazy"></a>
-            <b class="pgcard__title">아르곤 <em>(Ar)</em></b>
-            <p class="pgcard__text" data-i18n="home.pr.ar">용접 보호가스, 분석용 등 고순도 아르곤</p>
-            <a class="pgcard__more" href="products-gas.html" data-i18n="home.pr.detail">제품 상세보기</a>
-          </li>
-          <li class="pgcard">
-            <a class="pgcard__media" href="products-gas.html"><img src="assets/images/site/page-hero-gas.jpg?v=20260715-6" alt="탄산 (CO₂)" loading="lazy"></a>
-            <b class="pgcard__title">탄산 <em>(CO₂)</em></b>
-            <p class="pgcard__text" data-i18n="home.pr.co2">식품, 음료, 용접, 소화설비 등 다양한 용도</p>
-            <a class="pgcard__more" href="products-gas.html" data-i18n="home.pr.detail">제품 상세보기</a>
-          </li>
-          <li class="pgcard">
-            <a class="pgcard__media" href="products-ice.html"><img src="assets/images/site/ice-block.jpg" alt="드라이아이스" loading="lazy"></a>
-            <b class="pgcard__title">드라이아이스</b>
-            <p class="pgcard__text" data-i18n="home.pr.di">식품 신선도 유지, 특수효과 등 다양한 용도</p>
-            <a class="pgcard__more" href="products-ice.html" data-i18n="home.pr.detail">제품 상세보기</a>
-          </li>
+        <ul class="prodstrip">
+          <li class="prodtile"><a href="products-gas.html"><img src="assets/images/site/prod-o2.jpg?v=20260826" alt="산소 O₂ · 고순도 산업용·의료용" loading="lazy"></a></li>
+          <li class="prodtile"><a href="products-gas.html"><img src="assets/images/site/prod-n2.jpg?v=20260826" alt="질소 N₂ · 고순도 산업용·식품용" loading="lazy"></a></li>
+          <li class="prodtile"><a href="products-gas.html"><img src="assets/images/site/prod-ar.jpg?v=20260826" alt="아르곤 Ar · 고순도 용접용·산업용" loading="lazy"></a></li>
+          <li class="prodtile"><a href="products-gas.html"><img src="assets/images/site/prod-co2.jpg?v=20260826" alt="탄산 CO₂ · 고순도 식품용·산업용" loading="lazy"></a></li>
+          <li class="prodtile"><a href="products-gas.html"><img src="assets/images/site/prod-h2.jpg?v=20260826" alt="수소 H₂ · 고순도 산업용" loading="lazy"></a></li>
+          <li class="prodtile"><a href="products-ice.html"><img src="assets/images/site/prod-dryice.jpg?v=20260826" alt="드라이아이스 · 고품질 산업용·식품용" loading="lazy"></a></li>
         </ul>
       </div>
     </section>
@@ -449,7 +425,7 @@
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // 1) 콘텐츠 리빌(자연스럽게 상승)
-    var targets = document.querySelectorAll('.about-home, .whycards, .biztile, .bizfeat, .prodgrid, .ceohome, .histlist, .factory__overlay .container');
+    var targets = document.querySelectorAll('.about-home, .whycards, .biztile, .bizfeat, .prodgrid, .prodstrip, .ceohome, .histlist, .factory__overlay .container');
     targets.forEach(function (el) { el.classList.add('reveal'); });
     if (!reduce && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (es) {
