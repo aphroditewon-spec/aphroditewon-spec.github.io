@@ -690,11 +690,11 @@ section[id] { scroll-margin-top: 88px; }
 .netchart__group:first-child::after { left: 50%; right: calc(-0.5 * var(--space-12)); }
 .netchart__group:last-child::after { right: 50%; left: calc(-0.5 * var(--space-12)); }
 /* 그룹 헤드: 왼쪽 원형 배지 + 밝은 pill */
-.netchart__grouphead { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: var(--space-3); background: var(--net-navy-tint); color: var(--eyebrow); font-weight: 800; font-size: 1.02rem; padding: 5px var(--space-7) 5px 5px; border-radius: 999px; margin-bottom: var(--space-6); }
-.netchart__gh-ic { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--eyebrow); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
-.netchart__gh-ic svg { width: 22px; height: 22px; }
-.netchart__group--aff .netchart__grouphead { background: var(--net-teal-tint); color: var(--net-teal); }
-.netchart__group--aff .netchart__gh-ic { background: var(--net-teal); }
+.netchart__grouphead { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: var(--space-3); background: var(--eyebrow); color: #fff; font-weight: 800; font-size: 1.02rem; padding: 5px var(--space-8) 5px 5px; border-radius: 999px; margin-bottom: var(--space-6); }
+.netchart__gh-ic { flex: none; width: 44px; height: 44px; border-radius: 50%; background: #fff; color: var(--eyebrow); border: 2px solid var(--eyebrow); display: inline-flex; align-items: center; justify-content: center; margin: -6px 0; }
+.netchart__gh-ic svg { width: 24px; height: 24px; }
+.netchart__group--aff .netchart__grouphead { background: var(--net-teal); color: #fff; }
+.netchart__group--aff .netchart__gh-ic { background: #fff; color: var(--net-teal); border-color: var(--net-teal); }
 /* 노드: 그룹당 카드 2개 가로 배열 */
 .netchart__nodes { list-style: none; margin: 0; padding: var(--space-7) 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); width: 100%; position: relative; }
 .netchart__nodes::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 2px; background: var(--net-line); }
