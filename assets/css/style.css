@@ -631,13 +631,14 @@ section[id] { scroll-margin-top: 88px; }
 
 /* 생산시설 및 강점(좌 사진 + 우 통계/설명) */
 .fac2 { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--space-12); align-items: center; }
-/* 생산시설: 사진 좌측 정렬, 카드(지표) 우측 2×2 */
-#facility .fac2 { grid-template-columns: 1.05fr 1fr; }
+/* 생산시설: 사진 좌측(넓게), 카드(지표) 우측 정사각 2×2 */
+#facility .fac2 { grid-template-columns: 1.5fr 1fr; align-items: stretch; }
 #facility .fac2__media { order: -1; }
-#facility .facstats { grid-template-columns: repeat(2, 1fr); }
-/* 07 생산시설: 대표사진 영역을 크로스페이드 슬라이드쇼로 */
-#facility .fac2__media .ice-slideshow { display: block; }
-#facility .fac2__media .ice-slideshow__frame { aspect-ratio: 16 / 10; }
+#facility .facstats { grid-template-columns: repeat(2, 1fr); align-content: center; }
+#facility .facstat { aspect-ratio: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+/* 07 생산시설: 대표사진 영역을 크로스페이드 슬라이드쇼로(세로 꽉 채움) */
+#facility .fac2__media .ice-slideshow { display: block; height: 100%; }
+#facility .fac2__media .ice-slideshow__frame { aspect-ratio: auto; height: 100%; }
 /* 계열사·사업장 카드 그리드 */
 .affgrid { list-style: none; margin: var(--space-6) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
 .affcard { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); }
