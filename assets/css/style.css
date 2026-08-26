@@ -1616,13 +1616,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .org2team__list li::before { content: ""; position: absolute; left: 0; top: .52em; width: 4px; height: 4px; border-radius: 50%; background: var(--brand); }
 /* 조직도 하단 배너(시안형: 아이콘 원형 + 구분선 + 헥사곤 데코) */
 .orgbnr { position: relative; overflow: hidden; display: flex; align-items: center; gap: var(--space-6); margin-top: var(--space-12); padding: var(--space-7) var(--space-8); background: linear-gradient(110deg, var(--surface-brand) 0%, var(--surface) 55%); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
-.orgbnr__ic { flex: none; width: 76px; height: 76px; border-radius: 50%; border: 2px solid var(--brand); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; background: var(--surface); }
+.orgbnr__ic { flex: none; width: 76px; height: 76px; border-radius: 50%; border: 2px solid var(--eyebrow); color: var(--eyebrow); display: inline-flex; align-items: center; justify-content: center; background: var(--surface); }
 .orgbnr__ic svg { width: 40px; height: 40px; }
 .orgbnr__tx { position: relative; z-index: 1; padding-left: var(--space-6); border-left: 1px solid var(--border-strong); }
 .orgbnr__title { display: block; font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 800; color: var(--text); line-height: 1.4; word-break: keep-all; }
-.orgbnr .tx-brand { color: var(--brand); letter-spacing: normal; font-weight: 700; }
+.orgbnr .tx-brand { color: var(--eyebrow); letter-spacing: normal; font-weight: 700; }
 .orgbnr__sub { display: block; margin-top: var(--space-2); font-size: .92rem; color: var(--text-muted); line-height: 1.6; word-break: keep-all; }
-.orgbnr__deco { position: absolute; right: var(--space-6); top: 50%; transform: translateY(-50%); color: var(--brand); opacity: .14; pointer-events: none; }
+.orgbnr__deco { position: absolute; right: var(--space-6); top: 50%; transform: translateY(-50%); color: var(--eyebrow); opacity: .14; pointer-events: none; }
 .orgbnr__deco svg { width: 150px; height: 90px; }
 @media (max-width: 640px) {
   .orgbnr { flex-direction: column; text-align: center; gap: var(--space-4); }
