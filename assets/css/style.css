@@ -1546,6 +1546,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ovrow__k { font-size: .9rem; font-weight: 700; color: var(--brand); }
 .ovrow__v { font-size: .9rem; color: var(--text); line-height: 1.55; word-break: keep-all; }
 .ovrow__v a { color: inherit; }
+.ovrow__v--tight { letter-spacing: -0.03em; }
 .ovrow__v ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
 .ovrow__v li { position: relative; padding-left: 12px; }
 .ovrow__v li::before { content: ""; position: absolute; left: 0; top: .55em; width: 4px; height: 4px; border-radius: 50%; background: var(--brand); }
