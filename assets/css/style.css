@@ -1553,7 +1553,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .hist2 { grid-template-columns: 1fr; }
   .hist2__banner { border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); }
 }
-/* 주요 사업 영역 — 6개 사진 카드 + 하단 남색 배너 */
+/* 주요 사업 영역 — 02 회사개요 하위 블록(동일 배경), 6개 사진 카드 */
+.bizarea__wrap { margin-top: var(--space-12); }
 .bizarea__head { display: flex; align-items: center; justify-content: center; gap: var(--space-5); margin-bottom: var(--space-9); }
 .bizarea__rule { width: 48px; height: 2px; background: var(--border-strong); }
 .bizarea__title { font-size: clamp(1.4rem, 2.4vw, 1.8rem); font-weight: 800; color: var(--text); }
