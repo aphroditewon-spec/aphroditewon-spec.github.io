@@ -690,20 +690,20 @@ section[id] { scroll-margin-top: 88px; }
 .netchart__group:first-child::after { left: 50%; right: calc(-0.5 * var(--space-12)); }
 .netchart__group:last-child::after { right: 50%; left: calc(-0.5 * var(--space-12)); }
 /* 그룹 헤드: 왼쪽 원형 배지 + 밝은 pill */
-.netchart__grouphead { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: var(--space-3); background: var(--net-navy-tint); color: var(--eyebrow); font-weight: 800; padding: 5px var(--space-6) 5px 5px; border-radius: 999px; margin-bottom: var(--space-6); }
-.netchart__gh-ic { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--eyebrow); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
-.netchart__gh-ic svg { width: 20px; height: 20px; }
+.netchart__grouphead { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: var(--space-3); background: var(--net-navy-tint); color: var(--eyebrow); font-weight: 800; font-size: 1.02rem; padding: 5px var(--space-7) 5px 5px; border-radius: 999px; margin-bottom: var(--space-6); }
+.netchart__gh-ic { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--eyebrow); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
+.netchart__gh-ic svg { width: 22px; height: 22px; }
 .netchart__group--aff .netchart__grouphead { background: var(--net-teal-tint); color: var(--net-teal); }
 .netchart__group--aff .netchart__gh-ic { background: var(--net-teal); }
 /* 노드: 그룹당 카드 2개 가로 배열 */
 .netchart__nodes { list-style: none; margin: 0; padding: var(--space-7) 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); width: 100%; position: relative; }
 .netchart__nodes::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 2px; background: var(--net-line); }
 .netchart__nodes::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--net-line); }
-.netchart__nodes li { position: relative; display: flex; align-items: center; gap: var(--space-3); background: #fff; border: 1.5px solid rgba(27,65,149,.35); border-radius: var(--radius-md); padding: var(--space-4) var(--space-4); text-align: left; box-shadow: var(--shadow-sm); }
+.netchart__nodes li { position: relative; display: flex; align-items: center; gap: var(--space-4); background: #fff; border: 1px solid rgba(27,65,149,.22); border-radius: var(--radius-lg); padding: var(--space-5); text-align: left; box-shadow: var(--shadow-sm); }
 .netchart__nodes li::before { content: ""; position: absolute; top: calc(-1 * var(--space-7)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-7); background: var(--net-line); }
-.netchart__group--aff .netchart__nodes li { border-color: rgba(26,158,145,.4); }
+.netchart__group--aff .netchart__nodes li { border-color: rgba(26,158,145,.28); }
 .netnode__ic { flex: none; color: var(--eyebrow); display: inline-flex; }
-.netnode__ic svg { width: 30px; height: 30px; }
+.netnode__ic svg { width: 38px; height: 38px; }
 .netchart__group--aff .netnode__ic { color: var(--net-teal); }
 .netnode__tx b { display: block; font-weight: 800; color: var(--text); font-size: .98rem; }
 .netnode__tx small { display: block; font-weight: 600; color: var(--text-muted); font-size: .8rem; margin-top: 2px; }
