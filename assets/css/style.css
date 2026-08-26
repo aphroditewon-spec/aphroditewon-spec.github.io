@@ -1550,6 +1550,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #why .section__head, #business .section__head, #product-showcase .section__head { margin-bottom: var(--space-6); }
 #business .biztile, #product-showcase .prodgrid { margin-top: var(--space-6); }
 #business .section__foot { margin-top: var(--space-6); }
+#business .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
 /* PRODUCTS 제품카드 이미지: 레퍼런스처럼 와이드 크롭으로 세로 축소 */
 #product-showcase .pgcard__media img { aspect-ratio: 5 / 2; }
 /* 용기검사 05 검사 장비 및 기술력: split 내부 경쟁력 카드 2열·좌측 정렬 */
