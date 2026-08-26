@@ -1512,8 +1512,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .about2__media img { height: 100%; aspect-ratio: auto; object-fit: cover; }
 #intro .about2__lead { margin: 0 0 var(--space-4); }
 /* 비전 문구 — 대형 타이포 인용(박스 제거, 중앙 정렬 에디토리얼) */
-.about2__quote { margin: var(--space-10) 0 0; padding: var(--space-9) 0 var(--space-2); border-top: 1px solid var(--border); text-align: center; }
-.about2__quote-mark { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 4.5rem; line-height: .6; color: var(--eyebrow); opacity: .85; margin-bottom: var(--space-4); }
+.about2__quote { margin: var(--space-10) 0 0; padding: var(--space-6) 0; border-top: 1px solid var(--border); text-align: center; }
+.about2__quote-mark { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 3.4rem; line-height: .5; color: var(--eyebrow); opacity: .85; margin-bottom: var(--space-3); }
 .about2__quote-text { margin: 0 auto; color: var(--text); font-weight: 600; font-size: clamp(0.9rem, 1.92vw, 1.35rem); line-height: 1.5; letter-spacing: -0.02em; white-space: nowrap; }
 @media (max-width: 720px) { .about2__quote-text { white-space: normal; word-break: keep-all; font-size: 1.05rem; line-height: 1.55; } }
 .about2__quote-text strong { color: var(--eyebrow); font-weight: 800; }
