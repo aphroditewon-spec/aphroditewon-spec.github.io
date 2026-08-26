@@ -716,6 +716,10 @@ section[id] { scroll-margin-top: 88px; }
 #aff-network .section__head--center .section__title { position: relative; padding-bottom: var(--space-4); }
 #affiliates .section__head--center .section__title::after,
 #aff-network .section__head--center .section__title::after { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 46px; height: 3px; border-radius: 2px; background: var(--brand); }
+/* 소개문 한 줄 표현 */
+#affiliates .section__head { max-width: none; }
+#affiliates .section__lead { white-space: nowrap; }
+@media (max-width: 1000px) { #affiliates .section__lead { white-space: normal; } }
 .fac2__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; aspect-ratio: 16 / 10; object-fit: cover; }
 .fac2__body .section__head { margin-bottom: var(--space-6); }
 .fac2__eyebrow { display: inline-flex; margin-bottom: var(--space-3); }
