@@ -105,7 +105,7 @@ window.I18N = {
     "biz.facility.text": "저장탱크 설치·가스시설 시공부터 고압용기 검사장까지 보유한 종합 서비스.",
 
     "feature.eyebrow": "Why KLCC",
-    "feature.title": "한국탄산화학이 다른 이유",
+    "feature.title": "한국탄산화학을 선택해야 하는 이유",
     "feature.f1.title": "고순도 제조 역량",
     "feature.f1.text": "질소·아르곤·공기 등을 99.9999%까지 정제하는 분석실과 전처리 시설 보유.",
     "feature.f2.title": "안정적 공급 능력",
