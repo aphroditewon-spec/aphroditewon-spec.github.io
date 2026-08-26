@@ -1519,6 +1519,37 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 18%, #000 82%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, #000 18%, #000 82%, transparent 100%); }
 #history > .container { position: relative; z-index: 1; }
+/* 연혁 가로 타임라인(시안형): 중앙 헤더 + 7개 마일스톤 + 2022·2025 강조카드 + 하단 배너 */
+.hist2__head { text-align: center; margin-bottom: var(--space-10); }
+.hist2__head .eyebrow { justify-content: center; }
+.hist2__sub { max-width: 60ch; margin: var(--space-3) auto 0; color: var(--text-muted); line-height: 1.6; }
+.hist2 { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-3); align-items: start; }
+.hist2__item { position: relative; text-align: center; }
+.hist2__item--card::before { content: ""; position: absolute; inset: calc(-1 * var(--space-4)) 0 calc(-1 * var(--space-5)); background: var(--surface-brand); border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px var(--border); z-index: 0; }
+.hist2__year { position: relative; z-index: 2; display: block; color: var(--eyebrow); font-size: 1.3rem; font-weight: 800; margin-bottom: var(--space-4); letter-spacing: .02em; }
+.hist2__rail { position: relative; display: flex; align-items: center; justify-content: center; height: 56px; margin-bottom: var(--space-5); }
+.hist2__rail::before { content: ""; position: absolute; top: 50%; left: calc(var(--space-3) / -2); right: calc(var(--space-3) / -2); height: 2px; background: var(--border-strong); transform: translateY(-50%); z-index: 1; }
+.hist2__item:first-child .hist2__rail::before { left: 50%; }
+.hist2__item:last-child .hist2__rail::before { right: 50%; }
+.hist2__ic { position: relative; z-index: 2; width: 56px; height: 56px; border-radius: 50%; background: var(--eyebrow); color: #fff; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 5px 14px rgba(27, 65, 149, .28); }
+.hist2__ic svg { width: 26px; height: 26px; }
+.hist2__body { position: relative; z-index: 2; display: flex; flex-direction: column; gap: var(--space-5); padding: 0 var(--space-2); }
+.hist2__entry + .hist2__entry { padding-top: var(--space-4); border-top: 1px dashed var(--border-strong); }
+.hist2__title { display: block; font-size: .98rem; font-weight: 800; color: var(--text); line-height: 1.35; word-break: keep-all; }
+.hist2__desc { margin: var(--space-2) 0 0; font-size: .82rem; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
+.hist2__banner { display: flex; align-items: center; gap: var(--space-4); width: max-content; max-width: 100%; margin: var(--space-10) auto 0; padding: var(--space-4) var(--space-8); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; box-shadow: var(--shadow-sm); }
+.hist2__banner-ic { flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--eyebrow); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
+.hist2__banner-ic svg { width: 20px; height: 20px; }
+.hist2__banner-tx { color: var(--eyebrow); font-weight: 700; line-height: 1.5; }
+@media (max-width: 992px) {
+  .hist2 { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+  .hist2__rail::before { display: none; }
+  .hist2__item--card::before { inset: calc(-1 * var(--space-4)); }
+}
+@media (max-width: 560px) {
+  .hist2 { grid-template-columns: 1fr; }
+  .hist2__banner { border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); }
+}
 /* 비전 문구 — 대형 타이포 인용(박스 제거, 중앙 정렬 에디토리얼) */
 .about2__quote { position: relative; margin: var(--space-10) 0 0; padding: var(--space-8) 0 var(--space-6); border-top: 1px solid var(--border); text-align: center; }
 .about2__quote-mark { position: absolute; top: 0; left: 50%; transform: translate(-50%, -28%); background: transparent; padding: 0 var(--space-4); font-family: Georgia, "Times New Roman", serif; font-size: 4.5rem; line-height: 1; color: var(--eyebrow); opacity: .85; pointer-events: none; }
