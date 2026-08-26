@@ -677,7 +677,7 @@ section[id] { scroll-margin-top: 88px; }
 /* 그룹 관계도(조직도형) — 직영=남색(--eyebrow) / 계열사=청록(#1a9e91) 색상 구분 */
 .netchart { --net-teal: #1a9e91; --net-teal-tint: rgba(26,158,145,.1); --net-navy-tint: rgba(27,65,149,.07); --net-line: #cdd8ea; margin-top: var(--space-8); display: flex; flex-direction: column; align-items: center; }
 /* 루트 박스(로고 배지 + 이름) */
-.netchart__root { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; background: #2b6cb8; color: #fff; border-radius: var(--radius-lg); padding: var(--space-7) var(--space-12); box-shadow: var(--shadow-md); }
+.netchart__root { display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; background: #2b6cb8; color: #fff; border-radius: var(--radius-lg); padding: var(--space-4) var(--space-12); box-shadow: var(--shadow-md); }
 .netchart__root-top { display: inline-flex; align-items: center; gap: .55em; }
 .netchart__logo { height: 24px; width: auto; background: #fff; border-radius: 6px; padding: 3px 6px; }
 .netchart__root b { font-size: 1.45rem; font-weight: 800; letter-spacing: .02em; }
