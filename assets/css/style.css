@@ -1508,6 +1508,22 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .biztile__title { font-size: var(--fs-h3); font-weight: 700; }
 .biztile__desc { font-size: .8rem; color: rgba(255,255,255,.85); line-height: 1.5; max-width: 15em; }
 @media (max-width: 900px) { .biztile { grid-template-columns: repeat(2, 1fr); } .biztile__item { aspect-ratio: 4/3; } }
+/* 사업영역: 사진 카드 + 아이콘 배지 오버레이 + 자세히 보기 */
+.bizfeat { list-style: none; margin: var(--space-9) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
+.bizfeat__card > a { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); text-align: center; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.bizfeat__card > a:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--green-200); }
+.bizfeat__media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
+.bizfeat__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.bizfeat__card > a:hover .bizfeat__media img { transform: scale(1.06); }
+.bizfeat__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9,26,58,0) 45%, rgba(9,26,58,.45) 100%); }
+.bizfeat__ic { position: absolute; left: 50%; bottom: -27px; transform: translateX(-50%); z-index: 2; width: 56px; height: 56px; border-radius: 50%; background: #fff; color: var(--eyebrow); border: 1px solid var(--border); box-shadow: var(--shadow-md); display: inline-flex; align-items: center; justify-content: center; }
+.bizfeat__ic svg { width: 27px; height: 27px; }
+.bizfeat__body { padding: calc(27px + var(--space-5)) var(--space-4) var(--space-6); }
+.bizfeat__title { display: block; font-size: 1.12rem; font-weight: 800; color: var(--text); word-break: keep-all; }
+.bizfeat__desc { display: block; margin-top: var(--space-2); font-size: .86rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
+.bizfeat__more { display: inline-block; margin-top: var(--space-4); font-size: .84rem; font-weight: 700; color: var(--brand); }
+@media (max-width: 900px) { .bizfeat { grid-template-columns: repeat(2, 1fr); gap: var(--space-8) var(--space-5); } }
+@media (max-width: 480px) { .bizfeat { grid-template-columns: 1fr; } }
 
 /* Why 6열 */
 .whycards { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); }
