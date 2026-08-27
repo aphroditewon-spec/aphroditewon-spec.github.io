@@ -1756,8 +1756,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .hist2__ic:hover { transform: scale(1.18); }
 .hist2__item:has(.hist2__ic:hover) .hist2__year { transform: scale(1.18); }
 /* 아이콘 hover 시 하단 제목·설명 텍스트 검정으로 */
-.hist2__title, .hist2__desc { transition: color .25s ease; }
-.hist2__item:has(.hist2__ic:hover) .hist2__title,
+.hist2__body { transition: transform .3s cubic-bezier(.34, 1.56, .64, 1); }
+.hist2__title { position: relative; transition: color .25s ease; }
+.hist2__title::after { content: ""; position: absolute; left: 50%; bottom: -6px; width: 0; height: 2px; background: var(--brand); border-radius: 2px; transform: translateX(-50%); transition: width .3s ease; }
+.hist2__desc { transition: color .25s ease; }
+.hist2__item:has(.hist2__ic:hover) .hist2__body { transform: translateY(-5px); }
+.hist2__item:has(.hist2__ic:hover) .hist2__title { color: var(--eyebrow); }
+.hist2__item:has(.hist2__ic:hover) .hist2__title::after { width: 30px; }
 .hist2__item:has(.hist2__ic:hover) .hist2__desc { color: var(--text); }
 .hist2__body { position: relative; z-index: 2; display: flex; flex-direction: column; gap: var(--space-5); padding: 0 var(--space-2); }
 .hist2__entry + .hist2__entry { padding-top: var(--space-4); border-top: 1px dashed var(--border-strong); }
