@@ -733,6 +733,7 @@ section[id] { scroll-margin-top: 88px; }
 .fac2__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; aspect-ratio: 16 / 10; object-fit: cover; }
 .fac2__body .section__head { margin-bottom: var(--space-6); }
 .fac2__eyebrow { display: inline-flex; margin-bottom: var(--space-3); }
+.fac2__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin: 0 0 var(--space-3); }
 .fac2__desc { color: var(--text-muted); line-height: 1.8; margin: var(--space-6) 0; }
 .fac2__desc--top { margin: 0 0 var(--space-8); max-width: 80ch; font-size: var(--fs-lead); }
 .facstats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
