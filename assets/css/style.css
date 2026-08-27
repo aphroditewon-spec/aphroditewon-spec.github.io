@@ -1740,6 +1740,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #history > .container { position: relative; z-index: 1; }
 /* 연혁 가로 타임라인(시안형): 중앙 헤더 + 7개 마일스톤 + 2022·2025 강조카드 + 하단 배너 */
 .hist2__head { margin-bottom: var(--space-14, 5rem); }
+.hist2__head--center { text-align: center; }
+.hist2__head--center .eyebrow { justify-content: center; }
+.hist2__head--center .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin-top: var(--space-2); }
+.hist2__head--center .hist2__sub { margin-inline: auto; }
 .hist2__sub { max-width: 70ch; margin: var(--space-3) 0 0; color: var(--text-muted); line-height: 1.6; font-size: var(--fs-lead); }
 .hist2 { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-3); align-items: start; }
 .hist2__item { position: relative; text-align: center; }
