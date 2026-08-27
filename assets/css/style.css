@@ -1791,7 +1791,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .hist2__banner { border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); }
 }
 /* 조직도 재구성(시안형): 중앙 헤더 + 대표이사·총괄전무 + 8팀 카드 + 하단 배너 */
-.org2__head { margin-bottom: var(--space-10); }
+.org2__head { margin-bottom: var(--space-10); text-align: center; }
+.org2__head .eyebrow { justify-content: center; }
+.org2__head .org2__sub { margin-inline: auto; }
 .org2__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin: var(--space-2) 0 0; }
 .org2__sub { color: var(--text-muted); margin-top: var(--space-3); font-size: var(--fs-lead); }
 .org2__top { display: flex; flex-direction: column; align-items: center; }
