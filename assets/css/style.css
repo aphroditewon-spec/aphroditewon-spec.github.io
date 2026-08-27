@@ -1886,6 +1886,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ovstat__label { grid-column: 2; grid-row: 2; text-align: left; }
 .ovstat__ic { color: var(--eyebrow); display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--space-3); }
 .ovstat__ic svg { width: 40px; height: 40px; }
+.ovstat__ic--img { margin-bottom: 0; }
+.ovstat__ic--img img { width: 60px; height: 60px; object-fit: contain; display: block; }
 .ovstat__num { display: block; font-size: 1.35rem; font-weight: 800; color: var(--eyebrow); line-height: 1.1; white-space: nowrap; }
 .ovstat__label { display: block; font-size: .8rem; color: var(--text-muted); margin-top: 4px; }
 .ovcard { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 1fr 1fr; }
