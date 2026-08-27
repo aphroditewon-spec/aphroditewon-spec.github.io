@@ -1592,6 +1592,31 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .prodlineup--top .prodlineup__title, .prodlineup--top .prodlineup__desc { display: none; }
 .prodlineup__note { margin-top: var(--space-6); text-align: center; font-size: .82rem; color: var(--text-muted); }
 @media (max-width: 640px) { .prodlineup--top .prodlineup__nav { flex-wrap: wrap; } .prodlineup--top .prodlineup__btn { flex: 1 1 calc(50% - 4px); } }
+/* 가스별 특성 및 용도: 가로 탭 + 좌 상세/우 사진 (참고이미지) */
+.gasinfo { margin-top: var(--space-8); }
+.gasinfo__nav { display: flex; gap: 4px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 5px; margin-bottom: var(--space-6); }
+.gasinfo__btn { flex: 1; text-align: center; border: none; border-radius: 8px; background: transparent; padding: var(--space-3) var(--space-2); font-weight: 700; font-size: .92rem; color: var(--text); cursor: pointer; transition: background .2s ease, color .2s ease; }
+.gasinfo__btn span { font-weight: 500; color: var(--text-muted); }
+.gasinfo__btn:hover { background: rgba(0,0,0,.04); color: var(--brand); }
+.gasinfo__btn.is-active { background: var(--brand); color: #fff; box-shadow: var(--shadow-sm); }
+.gasinfo__btn.is-active span { color: rgba(255,255,255,.85); }
+.gasinfo__panel[hidden] { display: none; }
+.gasinfo__panel { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; animation: gasFade .35s ease; }
+.gasinfo__detail { padding: var(--space-9) var(--space-8); }
+.gasinfo__title { display: flex; align-items: baseline; gap: .35em; font-size: 1.5rem; font-weight: 800; color: var(--text); }
+.gasinfo__formula { font-size: 2.1rem; font-weight: 800; color: var(--eyebrow); line-height: 1; }
+.gasinfo__formula sub { font-size: .55em; }
+.gasinfo__title em { font-style: normal; font-size: 1rem; font-weight: 600; color: var(--text-muted); }
+.gasinfo__desc { color: var(--text-muted); line-height: 1.7; margin: var(--space-4) 0 var(--space-5); word-break: keep-all; }
+.gasinfo__rows { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--border); }
+.gasinfo__rows li { display: grid; grid-template-columns: 26px 78px 1fr; align-items: center; gap: var(--space-3); padding: var(--space-4) 0; border-bottom: 1px solid var(--border); }
+.gasinfo__ic { color: var(--brand); display: inline-flex; }
+.gasinfo__ic svg { width: 20px; height: 20px; }
+.gasinfo__rows b { font-size: .86rem; font-weight: 700; color: var(--text); }
+.gasinfo__rows li > span:last-child { font-size: .86rem; color: var(--text-muted); word-break: keep-all; }
+.gasinfo__photo { min-height: 340px; }
+.gasinfo__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 800px) { .gasinfo__panel { grid-template-columns: 1fr; } .gasinfo__photo { min-height: 0; aspect-ratio: 16 / 9; order: -1; } .gasinfo__nav { flex-wrap: wrap; } .gasinfo__btn { flex: 1 1 calc(33.33% - 4px); } }
 /* KLCC GAS 개요: 4 스탯 카드 + 우측 시설 사진 */
 .klccgas { display: grid; grid-template-columns: 1fr 300px; gap: var(--space-5); align-items: stretch; margin-top: var(--space-8); }
 .klccgas__stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: 0; }

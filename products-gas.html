@@ -7,7 +7,7 @@
   <meta name="description" content="산업용·의료용·혼합·특수·액화석유가스 — 고순도 산소·질소·아르곤·수소·헬륨·탄산·LPG를 Bulk·실린더로 공급·제조합니다.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-222">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-223">
 </head>
 <body>
 
@@ -279,36 +279,103 @@
       </div>
     </section>
 
-    <!-- 03 가스별 규격·용도 -->
+    <!-- 03 가스별 특성 및 용도 (GAS INFORMATION) -->
     <section class="section" id="gas-spec">
       <div class="container">
-        <div class="section__head">
-          <span class="eyebrow">Specification</span>
+        <div class="section__head section__head--center">
+          <span class="eyebrow">GAS INFORMATION</span>
           <h2 class="section__title">가스별 특성 및 용도</h2>
-          <p class="section__lead">주요 취급 가스의 특성과 대표 용도, 공급 형태입니다.</p>
         </div>
-        <div style="overflow-x:auto">
-          <table class="spec-table">
-            <thead>
-              <tr>
-                <th>가스</th>
-                <th>화학식</th>
-                <th>주요 특성</th>
-                <th>주요 용도</th>
-                <th>공급 형태</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>산소</td><td>O₂</td><td>조연성 · 무색무취</td><td>용접·절단, 의료, 폐수처리</td><td>Bulk · 실린더</td></tr>
-              <tr><td>질소</td><td>N₂</td><td>불활성 · 무색무취</td><td>식품포장, 반도체, 산화방지·퍼지</td><td>Bulk · 실린더</td></tr>
-              <tr><td>아르곤</td><td>Ar</td><td>불활성 · 무색무취</td><td>용접 보호가스, 열처리, 분석</td><td>Bulk · 실린더</td></tr>
-              <tr><td>탄산(이산화탄소)</td><td>CO₂</td><td>불연성 · 무색</td><td>식음료, 용접, 소화설비, 드라이아이스 원료</td><td>Bulk · 실린더</td></tr>
-              <tr><td>수소</td><td>H₂</td><td>가연성 · 최경량</td><td>환원·열처리, 반도체, 연료</td><td>실린더</td></tr>
-              <tr><td>헬륨</td><td>He</td><td>불활성 · 최경량</td><td>분석, 냉각, 누설검사</td><td>실린더</td></tr>
-            </tbody>
-          </table>
+        <div class="gasinfo">
+          <div class="gasinfo__nav" role="tablist" aria-label="가스 선택">
+            <button class="gasinfo__btn is-active" role="tab" aria-selected="true" data-gas="o2">산소 <span>(O₂)</span></button>
+            <button class="gasinfo__btn" role="tab" aria-selected="false" data-gas="n2">질소 <span>(N₂)</span></button>
+            <button class="gasinfo__btn" role="tab" aria-selected="false" data-gas="ar">아르곤 <span>(Ar)</span></button>
+            <button class="gasinfo__btn" role="tab" aria-selected="false" data-gas="co2">탄산 <span>(CO₂)</span></button>
+            <button class="gasinfo__btn" role="tab" aria-selected="false" data-gas="h2">수소 <span>(H₂)</span></button>
+            <button class="gasinfo__btn" role="tab" aria-selected="false" data-gas="he">헬륨 <span>(He)</span></button>
+          </div>
+          <div class="gasinfo__panels">
+            <div class="gasinfo__panel is-active" role="tabpanel" data-gas="o2">
+              <div class="gasinfo__detail">
+                <h3 class="gasinfo__title"><span class="gasinfo__formula">O<sub>2</sub></span> 산소 <em>(Oxygen)</em></h3>
+                <p class="gasinfo__desc">무색·무취의 조연성 가스로 용접·절단 및 다양한 산업공정에 사용됩니다.</p>
+                <ul class="gasinfo__rows">
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9.5A1.5 1.5 0 0 0 6.4 21h11.2a1.5 1.5 0 0 0 1.4-2.5L14 9V3"/><line x1="7.5" y1="14" x2="16.5" y2="14"/></svg></span><b>특성</b><span>조연성 가스, 강력한 산화력</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.2"/></svg></span><b>주요용도</b><span>용접·절단, 의료, 폐수처리, 제철</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="6.5" width="11.5" height="9.5" rx="1.5"/><path d="M13 10h4.2l2.8 3.2V16H13z"/><circle cx="5.5" cy="18.3" r="1.9"/><circle cx="16.5" cy="18.3" r="1.9"/></svg></span><b>공급형태</b><span>Bulk(벌크) / 실린더</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 6-10 6-10z"/></svg></span><b>순도</b><span>99.5% 이상 ~ 99.999%</span></li>
+                </ul>
+              </div>
+              <div class="gasinfo__photo"><img src="assets/images/site/co2-recovery.jpg?v=20260827" alt="산소 생산·공급 시설" loading="lazy"></div>
+            </div>
+            <div class="gasinfo__panel" role="tabpanel" data-gas="n2" hidden>
+              <div class="gasinfo__detail">
+                <h3 class="gasinfo__title"><span class="gasinfo__formula">N<sub>2</sub></span> 질소 <em>(Nitrogen)</em></h3>
+                <p class="gasinfo__desc">무색·무취의 불활성 가스로 산화방지·퍼지 등 폭넓은 산업 현장에 사용됩니다.</p>
+                <ul class="gasinfo__rows">
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9.5A1.5 1.5 0 0 0 6.4 21h11.2a1.5 1.5 0 0 0 1.4-2.5L14 9V3"/><line x1="7.5" y1="14" x2="16.5" y2="14"/></svg></span><b>특성</b><span>불활성 가스, 산화방지</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.2"/></svg></span><b>주요용도</b><span>식품포장, 반도체, 금속열처리, 퍼지</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="6.5" width="11.5" height="9.5" rx="1.5"/><path d="M13 10h4.2l2.8 3.2V16H13z"/><circle cx="5.5" cy="18.3" r="1.9"/><circle cx="16.5" cy="18.3" r="1.9"/></svg></span><b>공급형태</b><span>Bulk(벌크) / 실린더</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 6-10 6-10z"/></svg></span><b>순도</b><span>99.9% 이상 ~ 99.999%</span></li>
+                </ul>
+              </div>
+              <div class="gasinfo__photo"><img src="assets/images/site/co2-recovery.jpg?v=20260827" alt="질소 생산·공급 시설" loading="lazy"></div>
+            </div>
+            <div class="gasinfo__panel" role="tabpanel" data-gas="ar" hidden>
+              <div class="gasinfo__detail">
+                <h3 class="gasinfo__title"><span class="gasinfo__formula">Ar</span> 아르곤 <em>(Argon)</em></h3>
+                <p class="gasinfo__desc">무색·무취의 불활성 가스로 용접 보호가스 및 열처리 공정에 사용됩니다.</p>
+                <ul class="gasinfo__rows">
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9.5A1.5 1.5 0 0 0 6.4 21h11.2a1.5 1.5 0 0 0 1.4-2.5L14 9V3"/><line x1="7.5" y1="14" x2="16.5" y2="14"/></svg></span><b>특성</b><span>불활성 가스, 안정성</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.2"/></svg></span><b>주요용도</b><span>용접 보호가스, 금속가공, 열처리, 분석</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="6.5" width="11.5" height="9.5" rx="1.5"/><path d="M13 10h4.2l2.8 3.2V16H13z"/><circle cx="5.5" cy="18.3" r="1.9"/><circle cx="16.5" cy="18.3" r="1.9"/></svg></span><b>공급형태</b><span>Bulk(벌크) / 실린더</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 6-10 6-10z"/></svg></span><b>순도</b><span>99.99% 이상 ~ 99.999%</span></li>
+                </ul>
+              </div>
+              <div class="gasinfo__photo"><img src="assets/images/site/co2-recovery.jpg?v=20260827" alt="아르곤 생산·공급 시설" loading="lazy"></div>
+            </div>
+            <div class="gasinfo__panel" role="tabpanel" data-gas="co2" hidden>
+              <div class="gasinfo__detail">
+                <h3 class="gasinfo__title"><span class="gasinfo__formula">CO<sub>2</sub></span> 탄산 <em>(Carbon Dioxide)</em></h3>
+                <p class="gasinfo__desc">무색의 불연성 가스로 식음료·용접·소화설비 및 드라이아이스 원료로 사용됩니다.</p>
+                <ul class="gasinfo__rows">
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9.5A1.5 1.5 0 0 0 6.4 21h11.2a1.5 1.5 0 0 0 1.4-2.5L14 9V3"/><line x1="7.5" y1="14" x2="16.5" y2="14"/></svg></span><b>특성</b><span>불연성, 냉각·불활성</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.2"/></svg></span><b>주요용도</b><span>식음료, 용접, 소화설비, 드라이아이스 원료</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="6.5" width="11.5" height="9.5" rx="1.5"/><path d="M13 10h4.2l2.8 3.2V16H13z"/><circle cx="5.5" cy="18.3" r="1.9"/><circle cx="16.5" cy="18.3" r="1.9"/></svg></span><b>공급형태</b><span>Bulk(벌크) / 실린더</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 6-10 6-10z"/></svg></span><b>순도</b><span>99.9% 이상</span></li>
+                </ul>
+              </div>
+              <div class="gasinfo__photo"><img src="assets/images/site/co2-recovery.jpg?v=20260827" alt="탄산 생산·공급 시설" loading="lazy"></div>
+            </div>
+            <div class="gasinfo__panel" role="tabpanel" data-gas="h2" hidden>
+              <div class="gasinfo__detail">
+                <h3 class="gasinfo__title"><span class="gasinfo__formula">H<sub>2</sub></span> 수소 <em>(Hydrogen)</em></h3>
+                <p class="gasinfo__desc">무색·무취의 최경량 가연성 가스로 환원·열처리 및 전자산업에 사용됩니다.</p>
+                <ul class="gasinfo__rows">
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9.5A1.5 1.5 0 0 0 6.4 21h11.2a1.5 1.5 0 0 0 1.4-2.5L14 9V3"/><line x1="7.5" y1="14" x2="16.5" y2="14"/></svg></span><b>특성</b><span>가연성, 최경량, 환원성</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.2"/></svg></span><b>주요용도</b><span>반도체·전자, 환원·열처리, 연료</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="6.5" width="11.5" height="9.5" rx="1.5"/><path d="M13 10h4.2l2.8 3.2V16H13z"/><circle cx="5.5" cy="18.3" r="1.9"/><circle cx="16.5" cy="18.3" r="1.9"/></svg></span><b>공급형태</b><span>실린더</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 6-10 6-10z"/></svg></span><b>순도</b><span>99.99% 이상 ~ 99.9999%</span></li>
+                </ul>
+              </div>
+              <div class="gasinfo__photo"><img src="assets/images/site/co2-recovery.jpg?v=20260827" alt="수소 생산·공급 시설" loading="lazy"></div>
+            </div>
+            <div class="gasinfo__panel" role="tabpanel" data-gas="he" hidden>
+              <div class="gasinfo__detail">
+                <h3 class="gasinfo__title"><span class="gasinfo__formula">He</span> 헬륨 <em>(Helium)</em></h3>
+                <p class="gasinfo__desc">무색·무취의 불활성 최경량 가스로 분석·냉각·누설검사에 사용됩니다.</p>
+                <ul class="gasinfo__rows">
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9.5A1.5 1.5 0 0 0 6.4 21h11.2a1.5 1.5 0 0 0 1.4-2.5L14 9V3"/><line x1="7.5" y1="14" x2="16.5" y2="14"/></svg></span><b>특성</b><span>불활성, 최경량</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.2"/></svg></span><b>주요용도</b><span>분석, 냉각, 누설검사, 연구</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="6.5" width="11.5" height="9.5" rx="1.5"/><path d="M13 10h4.2l2.8 3.2V16H13z"/><circle cx="5.5" cy="18.3" r="1.9"/><circle cx="16.5" cy="18.3" r="1.9"/></svg></span><b>공급형태</b><span>실린더</span></li>
+                  <li><span class="gasinfo__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 6-10 6-10z"/></svg></span><b>순도</b><span>99.99% 이상 ~ 99.999%</span></li>
+                </ul>
+              </div>
+              <div class="gasinfo__photo"><img src="assets/images/site/co2-recovery.jpg?v=20260827" alt="헬륨 생산·공급 시설" loading="lazy"></div>
+            </div>
+          </div>
         </div>
-        <p class="spec-note">위 용도는 대표 예시이며, 순도·규격은 용도에 맞춰 공급합니다. 의료용·특수·혼합가스는 상단 <b>제품 라인업</b>을 참고하세요.</p>
       </div>
     </section>
 
@@ -460,6 +527,18 @@
           var cat = b.getAttribute('data-cat');
           btns.forEach(function (x) { var on = x === b; x.classList.toggle('is-active', on); x.setAttribute('aria-selected', on ? 'true' : 'false'); });
           panels.forEach(function (p) { var on = p.getAttribute('data-cat') === cat; p.classList.toggle('is-active', on); p.hidden = !on; });
+        });
+      });
+    })();
+    (function () {
+      var btns = Array.prototype.slice.call(document.querySelectorAll('.gasinfo__btn'));
+      var panels = Array.prototype.slice.call(document.querySelectorAll('.gasinfo__panel'));
+      if (!btns.length) return;
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          var g = b.getAttribute('data-gas');
+          btns.forEach(function (x) { var on = x === b; x.classList.toggle('is-active', on); x.setAttribute('aria-selected', on ? 'true' : 'false'); });
+          panels.forEach(function (p) { var on = p.getAttribute('data-gas') === g; p.classList.toggle('is-active', on); p.hidden = !on; });
         });
       });
     })();
