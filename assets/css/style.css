@@ -607,6 +607,8 @@ section[id] { scroll-margin-top: 88px; }
 .about-home__feats .introfeat:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green-200); }
 .about-home__feats .introfeat__ic { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--surface-brand); color: var(--brand); margin-bottom: var(--space-2); }
 .about-home__feats .introfeat__ic svg { width: 20px; height: 20px; }
+.about-home__feats .introfeat__ic--img { width: 48px; height: 48px; background: transparent; }
+.about-home__feats .introfeat__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .about-home__feats .introfeat b { font-size: .86rem; letter-spacing: 0; color: var(--text); margin-bottom: 2px; word-break: keep-all; }
 .about-home__feats .introfeat small { font-size: .74rem; color: var(--text-muted); line-height: 1.4; word-break: keep-all; }
 
