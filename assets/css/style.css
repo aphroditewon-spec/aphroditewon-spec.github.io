@@ -1592,6 +1592,18 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .prodlineup--top .prodlineup__title, .prodlineup--top .prodlineup__desc { display: none; }
 .prodlineup__note { margin-top: var(--space-6); text-align: center; font-size: .82rem; color: var(--text-muted); }
 @media (max-width: 640px) { .prodlineup--top .prodlineup__nav { flex-wrap: wrap; } .prodlineup--top .prodlineup__btn { flex: 1 1 calc(50% - 4px); } }
+/* 생산·공급 시설: 다크 오버레이 사진 카드 4열 (참고이미지) */
+.facilcards { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: var(--space-8) 0 0; }
+.facilcard { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3 / 4; box-shadow: var(--shadow-md); background: #0f1a25; }
+.facilcard img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.facilcard:hover img { transform: scale(1.05); }
+.facilcard::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,26,37,.1) 30%, rgba(15,26,37,.88) 100%); }
+.facilcard__tx { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: var(--space-6) var(--space-5); color: #fff; }
+.facilcard__num { display: block; font-size: .82rem; font-weight: 800; letter-spacing: .08em; color: var(--green-200); margin-bottom: 8px; }
+.facilcard__title { display: block; font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+.facilcard__desc { font-size: .8rem; line-height: 1.5; color: rgba(255,255,255,.82); }
+@media (max-width: 760px) { .facilcards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 430px) { .facilcards { grid-template-columns: 1fr; } .facilcard { aspect-ratio: 16 / 9; } }
 /* 가스별 특성 및 용도: 가로 탭 + 좌 상세/우 사진 (참고이미지) */
 .gasinfo { margin-top: var(--space-8); }
 .gasinfo__nav { display: flex; gap: 4px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 5px; margin-bottom: var(--space-6); }
