@@ -7,7 +7,7 @@
   <meta name="description" content="산업용·의료용·혼합·특수·액화석유가스 — 고순도 산소·질소·아르곤·수소·헬륨·탄산·LPG를 Bulk·실린더로 공급·제조합니다.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-224">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-225">
 </head>
 <body>
 
@@ -426,89 +426,80 @@
     <!-- 05 가스 공급 방식 (공급 흐름 다이어그램) -->
     <section class="section section--soft" id="supply">
       <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="products.supply.eyebrow">Supply</span>
-          <h2 class="section__title" data-i18n="products.supply.title">가스 공급 방식</h2>
-          <p class="section__lead" data-i18n="products.supply.lead">제조부터 고객처까지, 형태에 맞춰 공급합니다.</p>
+        <div class="section__head section__head--center">
+          <span class="eyebrow">SUPPLY PROCESS</span>
+          <h2 class="section__title">가스 공급 프로세스</h2>
         </div>
-        <div class="supply-list">
-          <!-- 01 제조 -->
-          <div class="supply-step">
-            <span class="supply-step__num">01</span>
-            <div class="supply-step__body">
-              <span class="supply-step__eyebrow" data-i18n="products.flow.step1">제조</span>
-              <h3 class="supply-step__title" data-i18n="products.flow.make">가스 제조</h3>
-              <p class="supply-step__text" data-i18n="products.flow.maked">공기분리장치(ASU)로 고순도 산소·질소·아르곤 가스를 생산합니다.</p>
-            </div>
-            <div class="supply-step__media"><img src="assets/images/site/supply-make.jpg" alt="가스 제조 설비(ASU)"></div>
+        <div class="procflow">
+          <div class="procstep">
+            <span class="procstep__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10.5l5 3v-3l5 3V7l6 3.2V21z"/><line x1="2.5" y1="21" x2="21.5" y2="21"/></svg></span>
+            <span class="procstep__num">01</span>
+            <b class="procstep__title">생산 · 충전</b>
+            <p class="procstep__desc">공기분리(ASU) 및<br>충전설비로 생산</p>
           </div>
-          <!-- 02 공급 -->
-          <div class="supply-step">
-            <span class="supply-step__num">02</span>
-            <div class="supply-step__body">
-              <span class="supply-step__eyebrow" data-i18n="products.flow.step2">공급</span>
-              <h3 class="supply-step__title" data-i18n="products.supply2title">벌크 · 실린더 공급</h3>
-              <div class="supply-step__cols">
-                <div class="supply-sub">
-                  <p class="supply-sub__title" data-i18n="products.supply.bulk">벌크 (Bulk)</p>
-                  <p class="supply-sub__text" data-i18n="products.supply.bulkd">액체가스를 탱크로리로 운반해 고객 저장탱크에 공급.</p>
-                </div>
-                <div class="supply-sub">
-                  <p class="supply-sub__title" data-i18n="products.supply.cyl">실린더 (Cylinder)</p>
-                  <p class="supply-sub__text" data-i18n="products.supply.cyld">충전장에서 충전 후 실린더 운반·대리점 공급.</p>
-                </div>
-              </div>
-            </div>
-            <div class="supply-step__media"><img src="assets/images/site/supply-bulk.jpg?v=20260703" alt="액화가스 운송 차량"></div>
+          <span class="procflow__arrow" aria-hidden="true">→</span>
+          <div class="procstep">
+            <span class="procstep__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M8.5 11l1.5 1.5 3-3"/><path d="M8.5 16h5"/></svg></span>
+            <span class="procstep__num">02</span>
+            <b class="procstep__title">품질검사</b>
+            <p class="procstep__desc">출하 전 품질 검사 및<br>성적서 발행</p>
           </div>
-          <!-- 03 저장·기화 -->
-          <div class="supply-step">
-            <span class="supply-step__num">03</span>
-            <div class="supply-step__body">
-              <span class="supply-step__eyebrow" data-i18n="products.flow.step3">저장·기화</span>
-              <h3 class="supply-step__title" data-i18n="products.flow.store">고객 저장·기화</h3>
-              <p class="supply-step__text" data-i18n="products.flow.stored">저장탱크 → 대기식 기화기·제어밸브를 거쳐 사용 형태로 전환됩니다.</p>
-            </div>
-            <div class="supply-step__media"><img src="assets/images/site/supply-o2-station.jpg" alt="산소 충전대 — 가스 실린더 저장·충전 설비"></div>
+          <span class="procflow__arrow" aria-hidden="true">→</span>
+          <div class="procstep">
+            <span class="procstep__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7.5" width="4" height="12.5" rx="2"/><rect x="10" y="7.5" width="4" height="12.5" rx="2"/><rect x="16" y="7.5" width="4" height="12.5" rx="2"/><path d="M6 7.5V6M12 7.5V6M18 7.5V6"/></svg></span>
+            <span class="procstep__num">03</span>
+            <b class="procstep__title">저장</b>
+            <p class="procstep__desc">벌크 탱크 및<br>실린더 안전 저장</p>
           </div>
-          <!-- 04 사용 -->
-          <div class="supply-step">
-            <span class="supply-step__num">04</span>
-            <div class="supply-step__body">
-              <span class="supply-step__eyebrow" data-i18n="products.flow.step4">사용</span>
-              <h3 class="supply-step__title" data-i18n="products.flow.use">고객 사용</h3>
-              <p class="supply-step__text" data-i18n="products.flow.used">진공·단열 배관을 통해 기체·액체가스를 고객 설비로 공급합니다.</p>
-            </div>
+          <span class="procflow__arrow" aria-hidden="true">→</span>
+          <div class="procstep">
+            <span class="procstep__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="6.5" width="11.5" height="9.5" rx="1.5"/><path d="M13 10h4.2l2.8 3.2V16H13z"/><circle cx="5.5" cy="18.3" r="1.9"/><circle cx="16.5" cy="18.3" r="1.9"/></svg></span>
+            <span class="procstep__num">04</span>
+            <b class="procstep__title">운송</b>
+            <p class="procstep__desc">전문 차량으로<br>안전 운송</p>
+          </div>
+          <span class="procflow__arrow" aria-hidden="true">→</span>
+          <div class="procstep">
+            <span class="procstep__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.5 19a4.6 4.6 0 0 1 6.2-4.3"/></svg></span>
+            <span class="procstep__num">05</span>
+            <b class="procstep__title">고객 공급</b>
+            <p class="procstep__desc">안정적인 가스 공급 및<br>기술 지원</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 05 품질·안전 -->
+    <!-- 06 품질·안전 -->
     <section class="section" id="gas-quality">
       <div class="container">
-        <div class="section__head">
-          <span class="eyebrow">Quality &amp; Safety</span>
-          <h2 class="section__title">품질과 안전</h2>
-          <p class="section__lead">정밀 분석과 안전관리 체계로 신뢰할 수 있는 가스를 안정적으로 공급합니다.</p>
+        <div class="section__head section__head--center">
+          <span class="eyebrow">QUALITY &amp; SAFETY</span>
+          <h2 class="section__title">품질과 안전을 최우선으로</h2>
         </div>
-        <div class="cards">
-          <article class="feature">
-            <span class="feature__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V5l7-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></svg></span>
-            <h3 class="feature__title">고순도 품질관리</h3>
-            <p class="feature__text">가스 분석실의 정밀 장비로 출하 전 순도를 검증해 일관된 고순도 품질을 보장합니다.</p>
-            <a class="pgcard__more" href="quality.html">품질·인증 보기</a>
-          </article>
-          <article class="feature">
-            <span class="feature__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 15.5h6"/></svg></span>
-            <h3 class="feature__title">안전 취급 안내</h3>
-            <p class="feature__text">고압가스 안전관리 기준에 따라 취급하며, 제품별 물질안전보건자료(MSDS)와 취급 정보를 안내합니다.</p>
-          </article>
-          <article class="feature">
-            <span class="feature__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="6.5" width="11.5" height="9.5" rx="1.5"/><path d="M13 10h4.2l2.8 3.2V16H13z"/><circle cx="5.5" cy="18.3" r="1.9"/><circle cx="16.5" cy="18.3" r="1.9"/></svg></span>
-            <h3 class="feature__title">안정적 공급망</h3>
-            <p class="feature__text">Bulk·실린더 공급 체계와 전문 운송으로 365일 끊김 없는 가스 공급에 대응합니다.</p>
-          </article>
+        <div class="qualsafe">
+          <div class="qualsafe__photo"><img src="assets/images/site/quality-inspect.jpg?v=20260827" alt="가스 품질 검사 — 정밀 계측" loading="lazy"></div>
+          <ul class="qualsafe__feats">
+            <li>
+              <span class="qs-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 1.3 2.5-.3 1 2.3 2.3 1-.3 2.5L23 12l-1.3 2.2.3 2.5-2.3 1-1 2.3-2.5-.3L12 22l-2.2-1.3-2.5.3-1-2.3-2.3-1 .3-2.5L1 12l1.3-2.2-.3-2.5 2.3-1 1-2.3 2.5.3z"/><circle cx="12" cy="12" r="3.2"/></svg></span>
+              <b>HIGH PURITY</b>
+              <p>99.9999% 고순도<br>엄격한 품질 기준</p>
+            </li>
+            <li>
+              <span class="qs-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/><path d="M8 11l2 2 3.5-3.5"/></svg></span>
+              <b>QUALITY CONTROL</b>
+              <p>첨단 장비로<br>정밀 품질 검사</p>
+            </li>
+            <li>
+              <span class="qs-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l9 15.5H3z"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="12" y1="16.5" x2="12" y2="16.6"/></svg></span>
+              <b>SAFETY FIRST</b>
+              <p>고압가스 안전관리<br>및 정기 점검</p>
+            </li>
+            <li>
+              <span class="qs-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.5 19a4.6 4.6 0 0 1 6.2-4.3"/></svg></span>
+              <b>STABLE SUPPLY</b>
+              <p>전국 네트워크로<br>안정적인 공급</p>
+            </li>
+          </ul>
         </div>
         <div class="section__foot"><a class="btn btn--primary" href="support.html#contact">가스 공급 문의하기 →</a></div>
       </div>
