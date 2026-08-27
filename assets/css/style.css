@@ -1879,13 +1879,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ovsec2__intro .tx-brand { letter-spacing: normal; }
 .ovsec2__intro .ovsec__lead { color: var(--text-muted); line-height: 1.7; margin-top: var(--space-3); }
 .ovstats { display: flex; flex-direction: column; flex: 1; margin-top: var(--space-7); padding-top: var(--space-6); border-top: 1px solid var(--border); }
-.ovstat { flex: 1; display: flex; align-items: center; gap: var(--space-4); }
+.ovstat { flex: 1; display: flex; align-items: center; gap: var(--space-7); }
 .ovstat + .ovstat { border-top: 1px solid var(--border); }
 .ovstat__ic { flex: none; align-self: center; color: var(--eyebrow); display: inline-flex; align-items: center; justify-content: center; margin: 0; }
 .ovstat__ic svg { width: 40px; height: 40px; }
 .ovstat__ic--img img { width: 60px; height: 60px; object-fit: contain; display: block; }
 .ovstat__num { font-size: 1.35rem; font-weight: 800; color: var(--eyebrow); line-height: 1.1; white-space: nowrap; }
-.ovstat__label { font-size: .9rem; color: var(--text-muted); margin-left: calc(-1 * var(--space-2)); }
+.ovstat__label { font-size: .9rem; color: var(--text-muted); margin-left: calc(-1 * var(--space-5)); }
 .ovcard { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 1fr 1fr; }
 /* 02 큰 정보 카드는 정적(hover 이동 해제) */
 .ovsec2 .ovcard { transition: none; }
