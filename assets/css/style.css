@@ -648,7 +648,6 @@ section[id] { scroll-margin-top: 88px; }
 .facshow__photo { width: 100%; height: 100%; object-fit: cover; display: block; }
 .facshow__media .ice-slideshow { display: block; height: 100%; }
 .facshow__media .ice-slideshow__frame { aspect-ratio: auto; height: 100%; border-radius: 0; box-shadow: none; }
-.facshow__media .ice-slide[src*="facility-main-4"] { object-fit: contain; background: #cfe2f2; }
 .facshow::after { content: ""; position: absolute; inset: 0; background: linear-gradient(270deg, rgba(9,26,58,0) 55%, rgba(9,26,58,.22) 100%); pointer-events: none; z-index: 2; }
 /* 참고 이미지 카드 삽입형 */
 .facshow__cards { position: absolute; z-index: 3; top: 50%; left: var(--space-8); transform: translateY(-50%); width: min(19.4%, 193px); height: auto; display: block; }
