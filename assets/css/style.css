@@ -1852,7 +1852,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .bizcard { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
 .bizcard__media { aspect-ratio: 1 / 1; overflow: hidden; }
 .bizcard__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.bizcard__media img[src*="biz-1-gas"] { object-position: 66% center; }
+.bizcard__media img[src*="biz-1-gas"] { object-position: 82% center; }
 .bizcard__media img[src*="biz-3-tank"] { object-position: 62% 22%; }
 .bizcard__media img[src*="biz-facility"] { object-position: 30% center; }
 .bizcard__title { display: block; margin: var(--space-3) var(--space-3); font-size: .9rem; font-weight: 500; color: var(--eyebrow); word-break: keep-all; }
