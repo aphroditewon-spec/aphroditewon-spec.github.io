@@ -1925,7 +1925,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ceohome__msg { display: flex; flex-direction: column; justify-content: center; }
 .ceohome__quote { font-size: var(--fs-h2); font-weight: 800; color: var(--text); line-height: 1.32; margin: var(--space-2) 0 var(--space-3); }
 .ceohome__desc { color: var(--text-muted); line-height: 1.65; }
-.ceohome__sign { margin-top: var(--space-4); font-weight: 700; color: var(--text); display: flex; align-items: center; gap: .5em; }
+.ceohome__sign { margin-top: var(--space-4); font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 1.1em; }
 .ceohome__sign .sign-img { height: 2.3em; width: auto; }
 .ceohome__policy { display: flex; flex-direction: column; gap: var(--space-4); }
 /* CEO 섹션 우측 경영이념 카드(세로 스택, 컴팩트) */
