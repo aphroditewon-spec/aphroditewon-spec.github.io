@@ -139,12 +139,18 @@
     <!-- 제품 라인업 (너겟·블록) -->
     <section class="section section--soft" id="ice">
       <div class="container">
-        <div class="section__head">
-          <span class="eyebrow">Lineup</span>
+        <div class="section__head section__head--center">
+          <span class="eyebrow">PRODUCT LINEUP</span>
           <h2 class="section__title">제품 라인업</h2>
-          <p class="section__lead">당사 드라이아이스 공장에서는 <b>너겟</b>과 <b>블록</b> 두 가지 형태를 생산합니다. 용도에 맞는 형태로 공급해 드립니다.</p>
         </div>
-        <!-- 너겟 -->
+        <div class="prodlineup prodlineup--top">
+          <div class="prodlineup__nav" role="tablist" aria-label="드라이아이스 제품">
+            <button class="prodlineup__btn is-active" role="tab" aria-selected="true" data-cat="nugget">너겟 (Nugget)</button>
+            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="block">블록 (Block)</button>
+          </div>
+          <div class="prodlineup__panels">
+          <!-- 너겟 -->
+          <div class="prodlineup__panel is-active" role="tabpanel" data-cat="nugget">
         <div class="ice-slideshow" data-interval="3000">
           <div class="ice-slideshow__frame">
             <img class="ice-slide is-active" src="assets/images/site/ice-nugget.jpg?v=20260710" alt="너겟 드라이아이스 압축 성형 설비" loading="lazy">
@@ -167,8 +173,10 @@
             </ul>
           </div>
         </div>
-        <!-- 블록 -->
-        <div class="ice-slideshow" data-interval="3000" style="margin-top: var(--space-12);">
+          </div>
+          <!-- 블록 -->
+          <div class="prodlineup__panel" role="tabpanel" data-cat="block" hidden>
+        <div class="ice-slideshow" data-interval="3000">
           <div class="ice-slideshow__frame">
             <img class="ice-slide is-active" src="assets/images/site/ice-block.jpg?v=20260710" alt="블록 드라이아이스 압축 성형 설비" loading="lazy">
             <img class="ice-slide" src="assets/images/site/ice-block-2.jpg?v=20260710" alt="블록 드라이아이스 생산 현장 1" loading="lazy">
@@ -189,6 +197,9 @@
               <li><b>특성</b>작은 표면적으로 승화가 느려 냉각이 오래 지속됩니다.</li>
               <li><b>용도</b>신선·냉동식품 택배 보냉, 장시간·대량 보냉, 물류 운송용</li>
             </ul>
+          </div>
+        </div>
+          </div>
           </div>
         </div>
       </div>
@@ -451,5 +462,19 @@
   <script src="assets/i18n/translations.js?v=20260821q"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      var btns = Array.prototype.slice.call(document.querySelectorAll('.prodlineup__btn'));
+      var panels = Array.prototype.slice.call(document.querySelectorAll('.prodlineup__panel'));
+      if (!btns.length) return;
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          var cat = b.getAttribute('data-cat');
+          btns.forEach(function (x) { var on = x === b; x.classList.toggle('is-active', on); x.setAttribute('aria-selected', on ? 'true' : 'false'); });
+          panels.forEach(function (p) { var on = p.getAttribute('data-cat') === cat; p.classList.toggle('is-active', on); p.hidden = !on; });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
