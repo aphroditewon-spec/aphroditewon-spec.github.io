@@ -1661,6 +1661,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .klccgas__card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-6) var(--space-3); text-align: center; display: flex; flex-direction: column; align-items: center; }
 .klccgas__ic { width: 54px; height: 54px; display: inline-flex; align-items: center; justify-content: center; color: var(--brand); margin-bottom: var(--space-3); }
 .klccgas__ic svg { width: 40px; height: 40px; }
+.klccgas__ic--img { width: 72px; height: 72px; }
+.klccgas__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .klccgas__num { font-size: 1.55rem; font-weight: 800; color: var(--eyebrow); line-height: 1.1; }
 .klccgas__num--sm { font-size: 1.1rem; }
 .klccgas__num .klccgas__u { font-size: .62em; font-weight: 700; margin-left: 1px; }
