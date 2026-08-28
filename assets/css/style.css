@@ -1696,6 +1696,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .applyfield:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--brand); }
 .applyfield__ic { display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 50%; background: var(--surface-2); color: var(--eyebrow); margin-bottom: var(--space-4); }
 .applyfield__ic svg { width: 32px; height: 32px; }
+.applyfield__ic--img { width: 92px; height: 92px; background: none; border-radius: 0; }
+.applyfield__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .applyfield__title { display: block; font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: var(--space-2); }
 .applyfield__desc { margin: 0; font-size: .82rem; color: var(--text-muted); line-height: 1.45; }
 @media (max-width: 980px) { .applyfields { grid-template-columns: repeat(3, 1fr); } }
