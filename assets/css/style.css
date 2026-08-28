@@ -1527,9 +1527,6 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .bizfeat__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
 .bizfeat__card > a:hover .bizfeat__media img { transform: scale(1.06); }
 .bizfeat__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9,26,58,0) 45%, rgba(9,26,58,.45) 100%); }
-/* 드라이아이스(2번째) 카드: 이미지 전체가 보이도록 축소(contain) */
-.bizfeat .bizfeat__card:nth-child(2) .bizfeat__media { background: #eaeff4; }
-.bizfeat .bizfeat__card:nth-child(2) .bizfeat__media img { object-fit: contain; }
 .bizfeat__ic { position: absolute; left: 50%; bottom: -27px; transform: translateX(-50%); z-index: 2; width: 56px; height: 56px; border-radius: 50%; background: #fff; color: var(--eyebrow); border: 1px solid var(--border); box-shadow: var(--shadow-md); display: inline-flex; align-items: center; justify-content: center; }
 .bizfeat__ic svg { width: 27px; height: 27px; }
 .bizfeat__body { padding: calc(27px + var(--space-5)) var(--space-4) var(--space-6); }
