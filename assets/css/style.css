@@ -702,9 +702,9 @@ section[id] { scroll-margin-top: 88px; }
 .netchart__group:last-child::after { right: 50%; left: calc(-0.5 * var(--space-12)); }
 /* 그룹 헤드: 왼쪽 원형 배지 + 밝은 pill */
 .netchart__grouphead { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: var(--space-3); background: #2b6cb8; color: #fff; font-weight: 800; font-size: 1.02rem; padding: 4px var(--space-8) 4px 4px; border-radius: 999px; margin-bottom: var(--space-6); }
-.netchart__gh-ic { flex: none; width: 58px; height: 58px; border-radius: 50%; background: #fff; color: #2b6cb8; border: 2.5px solid #2b6cb8; display: inline-flex; align-items: center; justify-content: center; margin: -16px var(--space-1) -16px -18px; box-shadow: 0 2px 8px rgba(43,108,184,.2); }
+.netchart__gh-ic { flex: none; width: 72px; height: 72px; border-radius: 50%; background: #fff; color: #2b6cb8; border: 2.5px solid #2b6cb8; display: inline-flex; align-items: center; justify-content: center; margin: -22px var(--space-1) -22px -24px; box-shadow: 0 2px 8px rgba(43,108,184,.2); }
 .netchart__gh-ic svg { width: 30px; height: 30px; }
-.netchart__gh-ic--img img { width: 38px; height: 38px; object-fit: contain; display: block; }
+.netchart__gh-ic--img img { width: 48px; height: 48px; object-fit: contain; display: block; }
 .netnode__ic--img img { width: 42px; height: 42px; object-fit: contain; display: block; }
 .netchart__group--aff .netchart__grouphead { background: var(--net-teal); color: #fff; }
 .netchart__group--aff .netchart__gh-ic { background: #fff; color: var(--net-teal); border-color: var(--net-teal); }
