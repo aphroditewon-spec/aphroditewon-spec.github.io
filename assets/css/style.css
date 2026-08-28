@@ -1641,10 +1641,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .gasinfo__btn.is-active { background: var(--brand); color: #fff; box-shadow: var(--shadow-sm); }
 .gasinfo__btn.is-active span { color: rgba(255,255,255,.85); }
 .gasinfo__panel[hidden] { display: none; }
-.gasinfo__panel { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; animation: gasFade .35s ease; }
-.gasinfo__detail { padding: var(--space-9) var(--space-8); }
-.gasinfo__title { display: flex; align-items: baseline; gap: .35em; font-size: 1.5rem; font-weight: 800; color: var(--text); }
-.gasinfo__formula { font-size: 2.1rem; font-weight: 800; color: var(--eyebrow); line-height: 1; }
+.gasinfo__panel { display: grid; grid-template-columns: 1fr 1.05fr; gap: 0; align-items: stretch; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; animation: gasFade .35s ease; }
+.gasinfo__detail { padding: var(--space-9) var(--space-8); display: flex; flex-direction: column; justify-content: center; }
+.gasinfo__title { display: flex; align-items: baseline; gap: .4em; font-size: 1.6rem; font-weight: 800; color: var(--text); }
+.gasinfo__formula { font-size: 2.4rem; font-weight: 800; color: var(--eyebrow); line-height: 1; letter-spacing: -.01em; }
 .gasinfo__formula sub { font-size: .55em; }
 .gasinfo__title em { font-style: normal; font-size: 1rem; font-weight: 600; color: var(--text-muted); }
 .gasinfo__desc { color: var(--text-muted); line-height: 1.7; margin: var(--space-4) 0 var(--space-5); word-break: keep-all; }
