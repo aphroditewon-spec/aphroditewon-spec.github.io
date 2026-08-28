@@ -1621,6 +1621,18 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .qualsafe__feats b { font-size: .92rem; font-weight: 800; letter-spacing: .03em; color: var(--text); margin-bottom: 6px; }
 .qualsafe__feats p { font-size: .8rem; color: var(--text-muted); line-height: 1.5; }
 @media (max-width: 800px) { .qualsafe { grid-template-columns: 1fr; gap: var(--space-6); } }
+/* 드라이아이스 — WHY KLCC DRY ICE: 4카드 (참고 디자인) */
+#ice-why .icewhy__title { color: var(--brand); }
+#ice-why .whycards { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); margin-top: var(--space-8); }
+#ice-why .whycards .feature { padding: var(--space-7) var(--space-5); text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+#ice-why .whycards .feature:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+#ice-why .feature__ic { width: auto; height: auto; background: none; border-radius: 0; color: var(--brand); margin: 0 auto var(--space-4); }
+#ice-why .feature__ic svg { width: 44px; height: 44px; }
+#ice-why .feature__title { font-size: 1rem; font-weight: 800; letter-spacing: .05em; color: var(--text); margin-bottom: var(--space-2); }
+#ice-why .icewhy__stat { font-size: .95rem; font-weight: 700; color: var(--eyebrow); margin: 0 0 4px; word-break: keep-all; }
+#ice-why .feature__text { font-size: .82rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
+@media (max-width: 860px) { #ice-why .whycards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px) { #ice-why .whycards { grid-template-columns: 1fr; } }
 /* 용기검사 — 검사 대상 용기: 4장 사진 카드 (참고 디자인) */
 .inspcards { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); list-style: none; padding: 0; margin: var(--space-8) 0 0; }
 .inspcard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
