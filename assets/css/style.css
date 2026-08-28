@@ -1621,9 +1621,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .qualsafe__feats b { font-size: .92rem; font-weight: 800; letter-spacing: .03em; color: var(--text); margin-bottom: 6px; }
 .qualsafe__feats p { font-size: .8rem; color: var(--text-muted); line-height: 1.5; }
 @media (max-width: 800px) { .qualsafe { grid-template-columns: 1fr; gap: var(--space-6); } }
-/* 드라이아이스 — 첫 섹션: 가스제품 KLCC GAS와 동일 스타일(klccgas) */
-#ice-why .klccgas__ic { width: auto; height: auto; margin-bottom: var(--space-3); }
-#ice-why .klccgas__ic svg { width: 60px; height: 60px; }
+/* 드라이아이스 — 첫 섹션: 가스제품 KLCC GAS와 동일 스타일(klccgas, 이미지 아이콘) */
 /* 용기검사 — 검사 대상 용기: 4장 사진 카드 (참고 디자인) */
 .inspcards { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); list-style: none; padding: 0; margin: var(--space-8) 0 0; }
 .inspcard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
