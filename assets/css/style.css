@@ -645,6 +645,7 @@ section[id] { scroll-margin-top: 88px; }
 /* 생산시설: 풀와이드 사진 배경 + 지표 글래스 카드 오버레이 */
 .facshow { position: relative; aspect-ratio: 16 / 7; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
 .facshow__media { position: absolute; inset: 0; }
+.facshow__photo { width: 100%; height: 100%; object-fit: cover; display: block; }
 .facshow__media .ice-slideshow { display: block; height: 100%; }
 .facshow__media .ice-slideshow__frame { aspect-ratio: auto; height: 100%; border-radius: 0; box-shadow: none; }
 .facshow::after { content: ""; position: absolute; inset: 0; background: linear-gradient(270deg, rgba(9,26,58,0) 55%, rgba(9,26,58,.22) 100%); pointer-events: none; z-index: 2; }
