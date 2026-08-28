@@ -1921,7 +1921,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ceohome { display: grid; grid-template-columns: 1.12fr 1fr 1.06fr; gap: var(--space-7); align-items: center; }
 .ceohome__photo { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); align-self: center; }
 /* 레퍼런스: 가로형 사진 비율(16:10), 인물 중앙 프레이밍 */
-.ceohome__photo img { width: 100%; height: auto; aspect-ratio: 5 / 3; object-fit: cover; object-position: 48% 26%; display: block; }
+.ceohome__photo img { width: 100%; height: auto; aspect-ratio: 1.32 / 1; object-fit: cover; object-position: 48% 22%; display: block; }
 .ceohome__msg { display: flex; flex-direction: column; justify-content: center; }
 .ceohome__quote { font-size: var(--fs-h2); font-weight: 800; color: var(--text); line-height: 1.32; margin: var(--space-2) 0 var(--space-3); }
 .ceohome__desc { color: var(--text-muted); line-height: 1.65; }
