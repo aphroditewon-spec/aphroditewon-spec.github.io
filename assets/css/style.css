@@ -1611,6 +1611,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .procstep__title { font-size: 1.02rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
 .procstep__desc { font-size: .8rem; color: var(--text-muted); line-height: 1.5; }
 .procflow__arrow { align-self: flex-start; margin-top: 32px; color: var(--brand); font-size: 1.5rem; opacity: .45; }
+/* 시공 프로세스: 화살표(→)를 드라이아이스 프로세스와 동일한 셰브론(>) 형태로 */
+#const-process .procflow__arrow { font-size: 0; align-self: flex-start; margin-top: 38px; opacity: 1; }
+#const-process .procflow__arrow::before { content: ""; display: block; width: 14px; height: 14px; border-top: 2px solid var(--brand); border-right: 2px solid var(--brand); transform: rotate(45deg); opacity: .55; }
 @media (max-width: 760px) { .procflow { flex-wrap: wrap; gap: var(--space-6); } .procflow__arrow { display: none; } .procstep { flex: 1 1 40%; max-width: none; } }
 /* 품질과 안전: 좌 사진 + 우 4특징(2×2) */
 .qualsafe { display: grid; grid-template-columns: .92fr 1.08fr; gap: var(--space-8); align-items: center; margin-top: var(--space-8); }
