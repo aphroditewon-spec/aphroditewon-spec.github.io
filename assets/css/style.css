@@ -1936,6 +1936,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .about2__right { position: relative; margin-top: 0; }
 #intro .about2__media { position: absolute; top: var(--space-12); left: 0; right: 0; bottom: 0; }
 #intro .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
+#intro .section__title--md { font-size: var(--fs-h2); }
 #intro .secnum, #overview .secnum, #history .secnum { display: flex; align-items: baseline; gap: .55em; margin-bottom: var(--space-6); }
 #intro .secnum__no, #overview .secnum__no, #history .secnum__no { font-size: 1.5rem; }
 #intro .secnum__title, #overview .secnum__title, #history .secnum__title { font-size: .82rem; margin-top: 0; text-transform: uppercase; letter-spacing: .12em; font-weight: 800; color: var(--brand); align-self: center; }
