@@ -1922,7 +1922,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 안전·품질·인허가: 사진 프레임(기업소개 생산시설 스타일) + 우측 텍스트 오버레이 */
 .safetyband { position: relative; aspect-ratio: 1619 / 971; max-width: 780px; margin: var(--space-8) auto 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
 .safetyband__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.safetyband__scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15,32,64,0) 30%, rgba(15,32,64,.35) 52%, rgba(15,32,64,.72) 100%); z-index: 1; }
+.safetyband__scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(28,28,32,0) 30%, rgba(28,28,32,.4) 52%, rgba(28,28,32,.78) 100%); z-index: 1; }
 .safetyband__inner { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: flex-end; padding: 0 clamp(24px, 5vw, 64px); }
 .safetyband__panel { max-width: 460px; color: #fff; }
 .safetyband__title { font-size: var(--fs-h2); font-weight: 800; color: #fff; margin: var(--space-3) 0 var(--space-6); }
@@ -1930,7 +1930,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .safetylist--light li::before { background: #fff; color: var(--brand); }
 @media (max-width: 760px) {
   .safetyband { aspect-ratio: 3 / 4; }
-  .safetyband__scrim { background: linear-gradient(180deg, rgba(15,32,64,.3) 0%, rgba(15,32,64,.78) 55%); }
+  .safetyband__scrim { background: linear-gradient(180deg, rgba(28,28,32,.32) 0%, rgba(28,28,32,.8) 55%); }
   .safetyband__inner { align-items: flex-end; justify-content: flex-start; padding: 0 var(--space-6) var(--space-6); }
   .safetyband__panel { max-width: 100%; }
 }
