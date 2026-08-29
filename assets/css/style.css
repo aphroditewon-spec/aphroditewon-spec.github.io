@@ -1908,6 +1908,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 1080px) { .scopecards { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 720px) { .scopecards { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .scopecards { grid-template-columns: 1fr; } }
+
+/* 안전·품질·인허가: 좌 사진 + 우 카드(2×2) */
+.safetysplit { display: grid; grid-template-columns: 1fr 1.12fr; gap: var(--space-8); align-items: center; margin-top: var(--space-8); }
+.safetysplit__photo { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4 / 3; }
+.safetysplit__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.safetysplit .cards { margin-top: 0; }
+@media (max-width: 900px) { .safetysplit { grid-template-columns: 1fr; gap: var(--space-6); } }
 .whycards .feature__title { font-size: 1rem; margin-bottom: var(--space-2); }
 .whycards .feature__text { font-size: .8rem; line-height: 1.6; }
 @media (max-width: 980px) { .whycards { grid-template-columns: repeat(3, 1fr); } }
