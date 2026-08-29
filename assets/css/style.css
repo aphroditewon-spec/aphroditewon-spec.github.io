@@ -1743,6 +1743,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .co2rec-card__tx p { margin: 0; font-size: .88rem; color: var(--text-muted); line-height: 1.55; }
 .co2rec-flow { margin-top: var(--space-12); background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-7) var(--space-6); }
 .co2rec-flow__title { font-size: 1.1rem; font-weight: 800; color: var(--eyebrow); margin: 0 0 var(--space-5); }
+.co2rec-flow__head { margin: 0 0 var(--space-6); }
+.co2rec-flow__lead { margin: var(--space-2) 0 0; font-size: var(--fs-h2); font-weight: 800; color: var(--text); line-height: 1.35; }
 .co2rec-flow__steps { display: flex; align-items: stretch; gap: var(--space-2); list-style: none; padding: 0; margin: 0; }
 .recstep { position: relative; flex: 1; display: flex; align-items: center; gap: var(--space-3); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-4); }
 .recstep:not(:last-child) { margin-right: 20px; }
