@@ -1885,6 +1885,21 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .introfeat__ic--img { width: 66px; height: 66px; border-radius: 0; background: transparent; margin-bottom: var(--space-2); }
 #intro .introfeat__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 #intro .introfeat b { letter-spacing: .04em; }
+
+/* 시공 범위 (사진 카드) */
+.scopecards { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); margin-top: var(--space-8); }
+.scopecard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+.scopecard:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.scopecard__media { aspect-ratio: 4 / 3; overflow: hidden; background: #eef2f6; }
+.scopecard__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.scopecard:hover .scopecard__media img { transform: scale(1.05); }
+.scopecard__body { padding: var(--space-4) var(--space-4) var(--space-5); }
+.scopecard__num { display: block; font-size: .82rem; font-weight: 800; color: var(--brand); letter-spacing: .06em; }
+.scopecard__title { font-size: 1rem; font-weight: 800; color: var(--text); margin: 2px 0 var(--space-2); word-break: keep-all; }
+.scopecard__desc { margin: 0; font-size: .78rem; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
+@media (max-width: 1080px) { .scopecards { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 720px) { .scopecards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .scopecards { grid-template-columns: 1fr; } }
 .whycards .feature__title { font-size: 1rem; margin-bottom: var(--space-2); }
 .whycards .feature__text { font-size: .8rem; line-height: 1.6; }
 @media (max-width: 980px) { .whycards { grid-template-columns: repeat(3, 1fr); } }
