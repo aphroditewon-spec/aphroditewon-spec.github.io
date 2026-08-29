@@ -1604,7 +1604,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .procstep__ic { width: 92px; height: 92px; border-radius: 50%; border: 1.5px solid var(--border-strong); background: var(--surface); color: var(--brand); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4); }
 .procstep__ic svg { width: 42px; height: 42px; }
 .procstep__ic--img { border: none; background: transparent; padding: 0; }
-.procstep__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; border-radius: 50%; }
+.procstep__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .procstep__num { font-size: .78rem; font-weight: 800; letter-spacing: .1em; color: var(--text-muted); margin-bottom: 5px; }
 .procstep__title { font-size: 1.02rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
 .procstep__desc { font-size: .8rem; color: var(--text-muted); line-height: 1.5; }
