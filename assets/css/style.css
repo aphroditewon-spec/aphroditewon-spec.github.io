@@ -1923,7 +1923,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .safetyband { position: relative; aspect-ratio: 1619 / 971; max-width: 780px; margin: var(--space-8) auto 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
 .safetyband__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .safetyband__scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(28,28,32,0) 30%, rgba(28,28,32,.4) 52%, rgba(28,28,32,.78) 100%); z-index: 1; }
-.safetyband__inner { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: flex-end; padding: 0 clamp(24px, 5vw, 64px); }
+.safetyband__inner { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: flex-end; padding: 0 clamp(16px, 2.5vw, 30px) 0 var(--space-6); }
 .safetyband__panel { max-width: 460px; color: #fff; }
 .safetyband__title { font-size: var(--fs-h2); font-weight: 800; color: #fff; margin: var(--space-3) 0 var(--space-6); }
 .safetylist--light li { color: #fff; }
