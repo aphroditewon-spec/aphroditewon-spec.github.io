@@ -1743,6 +1743,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .recstep:not(:last-child)::after { content: ""; position: absolute; top: 50%; right: -16px; width: 12px; height: 12px; transform: translateY(-50%) rotate(45deg); border-top: 2px solid var(--brand); border-right: 2px solid var(--brand); }
 .recstep__ic { flex: none; width: 40px; height: 40px; color: var(--eyebrow); display: inline-flex; align-items: center; justify-content: center; }
 .recstep__ic svg { width: 32px; height: 32px; }
+.recstep__ic--img { width: 52px; height: 52px; }
+.recstep__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .recstep--green .recstep__ic { color: var(--rec-green); }
 .recstep__tx b { display: block; font-size: .92rem; font-weight: 800; color: var(--text); }
 .recstep__tx span { display: block; font-size: .74rem; color: var(--text-muted); line-height: 1.4; margin-top: 2px; }
