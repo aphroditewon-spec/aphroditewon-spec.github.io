@@ -1837,7 +1837,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* KLCC GAS 개요: 4 스탯 카드 + 우측 시설 사진 */
 .klccgas { display: grid; grid-template-columns: 1fr 300px; gap: var(--space-5); align-items: stretch; margin-top: var(--space-8); }
 .klccgas__stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: 0; }
-.klccgas__card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-6) var(--space-3); text-align: center; display: flex; flex-direction: column; align-items: center; }
+.klccgas__card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-6) var(--space-3); text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210px; }
 .klccgas__ic { width: 54px; height: 54px; display: inline-flex; align-items: center; justify-content: center; color: var(--brand); margin-bottom: var(--space-3); }
 .klccgas__ic svg { width: 40px; height: 40px; }
 .klccgas__ic--img { width: 92px; height: 92px; }
@@ -1848,11 +1848,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .klccgas__num sup { font-size: .6em; }
 .klccgas__label { margin-top: var(--space-2); font-size: .9rem; font-weight: 700; color: var(--text); word-break: keep-all; }
 .klccgas__label small { display: block; margin-top: 3px; font-size: .76rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0; }
-#intro .klccgas__photo { position: relative; min-height: 260px; }
-#intro .klccgas__photo img { position: absolute; inset: 0; }
 .klccgas__sub { margin-top: 2px; font-size: .76rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
-.klccgas__photo { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
-.klccgas__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.klccgas__photo { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+.klccgas__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 900px) { .klccgas { grid-template-columns: 1fr; } .klccgas__stats { grid-template-columns: repeat(2, 1fr); } .klccgas__photo { aspect-ratio: 16 / 9; } }
 @media (max-width: 480px) { .klccgas__stats { grid-template-columns: 1fr 1fr; } }
 #business .section__foot { margin-top: var(--space-6); }
