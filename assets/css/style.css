@@ -1842,6 +1842,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .klccgas__ic svg { width: 40px; height: 40px; }
 .klccgas__ic--img { width: 92px; height: 92px; }
 .klccgas__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+/* 아이콘 시각 크기를 가스 섹션 기준으로 통일 (아트워크 여백 차이 보정) */
+#ice-why .klccgas__ic--img { width: 84px; height: 84px; }
 .klccgas__num { font-size: 1.55rem; font-weight: 800; color: var(--eyebrow); line-height: 1.1; }
 .klccgas__num--sm { font-size: 1.1rem; }
 .klccgas__num .klccgas__u { font-size: .62em; font-weight: 700; margin-left: 1px; }
