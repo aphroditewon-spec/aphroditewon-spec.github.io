@@ -1731,6 +1731,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .co2rec-card__ic { flex: none; width: 64px; height: 64px; border-radius: 50%; border: 1.5px solid var(--border); display: inline-flex; align-items: center; justify-content: center; color: var(--eyebrow); }
 .co2rec-card__ic--green { color: var(--rec-green); }
 .co2rec-card__ic svg { width: 40px; height: 40px; }
+.co2rec-card__ic--img { width: 96px; height: 96px; border: none; border-radius: 0; }
+.co2rec-card__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .co2rec-card__tx b { display: block; font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: var(--space-2); }
 .co2rec-card__tx p { margin: 0; font-size: .88rem; color: var(--text-muted); line-height: 1.55; }
 .co2rec-flow { margin-top: var(--space-12); background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-7) var(--space-6); }
