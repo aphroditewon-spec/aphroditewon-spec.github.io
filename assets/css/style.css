@@ -1914,7 +1914,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .safetysplit__photo { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4 / 3; }
 .safetysplit__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .safetysplit .cards { margin-top: 0; }
-@media (max-width: 900px) { .safetysplit { grid-template-columns: 1fr; gap: var(--space-6); } }
+.safetylist { list-style: none; padding: 0; margin: 0; align-self: center; display: flex; flex-direction: column; gap: var(--space-5); }
+.safetylist li { position: relative; padding-left: 44px; font-size: 1.12rem; font-weight: 600; color: var(--text); line-height: 1.5; word-break: keep-all; }
+.safetylist li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 28px; height: 28px; border-radius: 50%; background: var(--brand); color: #fff; font-size: .82rem; font-weight: 800; display: grid; place-items: center; }
+@media (max-width: 900px) { .safetysplit { grid-template-columns: 1fr; gap: var(--space-6); } .safetylist { align-self: start; } }
 .whycards .feature__title { font-size: 1rem; margin-bottom: var(--space-2); }
 .whycards .feature__text { font-size: .8rem; line-height: 1.6; }
 @media (max-width: 980px) { .whycards { grid-template-columns: repeat(3, 1fr); } }
