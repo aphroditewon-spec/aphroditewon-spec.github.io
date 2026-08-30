@@ -1415,7 +1415,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .capcard--row .capcard__ic { width: 62px; height: 62px; margin: 0; flex: none; }
 .capcard--row .capcard__tx b { display: block; font-size: 1.05rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
 .capcard--row .capcard__tx p { margin: 0; font-size: .84rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
-@media (max-width: 820px) { .capsplit { grid-template-columns: 1fr; } .capsplit__media { min-height: 240px; aspect-ratio: 16/9; } }
+.capsplit--rev { grid-template-columns: 1.15fr 1fr; }
+.svccard__ic { flex: none; width: 56px; height: 56px; border-radius: 50%; background: var(--surface-brand); color: var(--brand); display: grid; place-items: center; }
+.svccard__ic svg { width: 28px; height: 28px; }
+@media (max-width: 820px) { .capsplit { grid-template-columns: 1fr; } .capsplit__media { min-height: 240px; aspect-ratio: 16/9; } .capsplit--rev .capsplit__media { order: -1; } }
 .strcard__ic svg { width: 32px; height: 32px; }
 .strcard b { display: block; font-size: 1.05rem; color: var(--text); margin-bottom: var(--space-2); }
 .strcard p { font-size: .86rem; color: var(--text-muted); line-height: 1.65; word-break: keep-all; }
