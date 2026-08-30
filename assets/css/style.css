@@ -1916,6 +1916,19 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .introfeat__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 #intro .introfeat b { letter-spacing: .04em; }
 
+/* 식품첨가물 탄산가스 품질 (좌 사진 + 우 스탯) */
+.co2quality { display: grid; grid-template-columns: 1fr 1.08fr; gap: var(--space-10); align-items: center; margin-top: var(--space-8); }
+.co2quality__media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4 / 3.2; }
+.co2quality__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.co2quality__body .section__title { margin-top: var(--space-3); }
+.co2stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); list-style: none; padding: 0; margin: var(--space-6) 0; }
+.co2stats li { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); padding: var(--space-4) var(--space-2); text-align: center; }
+.co2stats b { display: block; font-size: 1.5rem; font-weight: 800; color: var(--eyebrow); line-height: 1.1; }
+.co2stats b span { font-size: .52em; font-weight: 700; margin-left: 2px; }
+.co2stats small { display: block; font-size: .74rem; color: var(--text-muted); margin-top: 6px; line-height: 1.35; word-break: keep-all; }
+.co2quality__foot { margin-top: var(--space-2); }
+@media (max-width: 900px) { .co2quality { grid-template-columns: 1fr; gap: var(--space-6); } .co2stats { grid-template-columns: repeat(2, 1fr); } }
+
 /* 고순도 제조 역량 (사진 카드 + 하단 오버레이) */
 .puritycards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-8); }
 .puritycard { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 16 / 10; box-shadow: var(--shadow-md); }
