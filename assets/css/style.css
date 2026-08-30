@@ -1417,6 +1417,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .capcard--row .capcard__tx p { margin: 0; font-size: .84rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
 .capsplit--rev { grid-template-columns: 1.15fr 1fr; }
 .capsplit--wide { grid-template-columns: 1.95fr 1fr; }
+#service .capcards--col { grid-template-columns: 1fr 1fr; }
+#service .capcard--row { align-items: start; }
 .svccard__ic { flex: none; width: 56px; height: 56px; border-radius: 50%; background: var(--surface-brand); color: var(--brand); display: grid; place-items: center; }
 .svccard__ic svg { width: 28px; height: 28px; }
 .svccard__ic--img { background: transparent; width: 62px; height: 62px; }
