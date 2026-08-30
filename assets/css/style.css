@@ -1917,8 +1917,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .introfeat b { letter-spacing: .04em; }
 
 /* 용기검사 전문검사기관 (좌 사진 + 우 회사정보표 + 하단 4스탯) */
-.inspartner { display: grid; grid-template-columns: 1fr 1.12fr; gap: var(--space-10); align-items: start; margin-top: var(--space-8); }
-.inspartner__media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4 / 3.4; }
+.inspartner { display: grid; grid-template-columns: 1fr 1.12fr; gap: var(--space-10); align-items: center; margin-top: var(--space-8); }
+.inspartner__media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 3 / 2; }
 .inspartner__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .inspartner__body .section__title { margin-top: var(--space-3); }
 .inspartner__table { width: 100%; border-collapse: collapse; margin-top: var(--space-6); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
