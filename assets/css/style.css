@@ -1615,6 +1615,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .procstep--active .procstep__ic { background: var(--brand); border-color: var(--brand); color: #fff; box-shadow: 0 8px 20px rgba(65,144,190,.35); }
 .procstep--active .procstep__num { color: var(--brand); }
 .procstep__num { font-size: .78rem; font-weight: 800; letter-spacing: .1em; color: var(--text-muted); margin-bottom: 5px; }
+.procstep__ic { position: relative; }
+.procstep__badge { position: absolute; top: -2px; left: -2px; width: 30px; height: 30px; border-radius: 50%; background: var(--eyebrow); color: #fff; font-size: .74rem; font-weight: 800; display: grid; place-items: center; box-shadow: 0 3px 8px rgba(27,65,149,.3); }
 .procstep__title { font-size: 1.02rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
 .procstep__desc { font-size: .8rem; color: var(--text-muted); line-height: 1.5; }
 .procflow__arrow { align-self: flex-start; margin-top: 32px; color: var(--brand); font-size: 1.5rem; opacity: .45; }
