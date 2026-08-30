@@ -1930,6 +1930,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .inspstat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-6) var(--space-3); text-align: center; display: flex; flex-direction: column; align-items: center; }
 .inspstat__ic { width: 54px; height: 54px; color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--space-3); }
 .inspstat__ic svg { width: 32px; height: 32px; }
+.inspstat__ic--img { width: 84px; height: 84px; }
+.inspstat__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .inspstat b { font-size: 1.05rem; font-weight: 800; color: var(--eyebrow); letter-spacing: .02em; }
 .inspstat small { font-size: .8rem; color: var(--text-muted); margin-top: 5px; line-height: 1.4; word-break: keep-all; }
 @media (max-width: 900px) { .inspartner { grid-template-columns: 1fr; gap: var(--space-6); } .inspstats { grid-template-columns: repeat(2, 1fr); } }
