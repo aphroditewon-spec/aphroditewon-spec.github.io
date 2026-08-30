@@ -1396,6 +1396,16 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .strcard__ic { width: 56px; height: 56px; margin: 0 auto var(--space-4); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; }
 .strcard__ic--img { width: 78px; height: 78px; }
 .strcard__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+/* 검사 장비 및 기술력 4×1 카드 */
+.capcards { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); list-style: none; padding: 0; margin: var(--space-8) 0 0; }
+.capcard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-7) var(--space-4); text-align: center; transition: transform .25s ease, box-shadow .25s ease; }
+.capcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.capcard__ic { width: 88px; height: 88px; margin: 0 auto var(--space-4); display: inline-flex; align-items: center; justify-content: center; }
+.capcard__ic img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.capcard b { display: block; font-size: 1.12rem; font-weight: 800; color: var(--text); margin-bottom: var(--space-3); }
+.capcard p { margin: 0; font-size: .86rem; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
+@media (max-width: 900px) { .capcards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .capcards { grid-template-columns: 1fr; } }
 .strcard__ic svg { width: 32px; height: 32px; }
 .strcard b { display: block; font-size: 1.05rem; color: var(--text); margin-bottom: var(--space-2); }
 .strcard p { font-size: .86rem; color: var(--text-muted); line-height: 1.65; word-break: keep-all; }
