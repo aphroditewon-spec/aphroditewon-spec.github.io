@@ -7,7 +7,7 @@
   <meta name="description" content="한국탄산화학 고객지원 — 사업장 연락처, 자주 묻는 질문.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-348">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-349">
 </head>
 <body>
 
@@ -88,17 +88,40 @@
   </nav>
 
   <main>
-    <!-- CONTACT: 회사정보 + 오시는 길 -->
-    <section class="section" id="contact">
+    <!-- 무엇을 도와드릴까요 -->
+    <section class="section" id="help">
       <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="support.contact.eyebrow">Contact</span>
-          <h2 class="section__title" data-i18n="support.contact.title">문의 안내</h2>
-          <p class="section__lead" data-i18n="support.contact.lead1">회사 정보와 찾아오시는 길을 안내합니다.</p>
+        <div class="section__head section__head--center">
+          <h2 class="section__title">무엇을 도와드릴까요?</h2>
+          <p class="section__lead">제품 문의부터 설비·시공·검사까지 담당 부서에서 신속하게 안내해 드립니다.</p>
         </div>
+        <ul class="helpcards">
+          <li class="helpcard"><a href="products-gas.html">
+            <span class="helpcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 6.5V5a1 1 0 0 1 1-1h0a1 1 0 0 1 1 1v1.5M14.5 6.5V5a1 1 0 0 1 1-1h0a1 1 0 0 1 1 1v1.5"/><rect x="6" y="6.5" width="4" height="14" rx="2"/><rect x="13" y="6.5" width="4" height="14" rx="2"/></svg></span>
+            <b>가스 공급 문의</b><p>산업용·의료용·특수가스<br>공급 관련 문의</p>
+          </a></li>
+          <li class="helpcard"><a href="products-ice.html">
+            <span class="helpcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5l8-4 8 4-8 4z"/><path d="M4 9.5v5l8 4 8-4v-5"/><path d="M12 13.5v5"/><path d="M9 8l1.2 1.2M9 8l-1 1M15 8l-1.2 1.2M15 8l1 1"/></svg></span>
+            <b>드라이아이스 문의</b><p>제품규격·정기공급<br>구매 관련 문의</p>
+          </a></li>
+          <li class="helpcard"><a href="products-construction.html">
+            <span class="helpcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="7" height="14" rx="2"/><path d="M5.5 7V5.5a2 2 0 0 1 4 0V7"/><path d="M11 11h4a2 2 0 0 1 2 2v8"/><path d="M15 21h5v-5M20 11v-2"/></svg></span>
+            <b>설비·시공 문의</b><p>저장탱크·배관·공급설비<br>설계 및 시공 문의</p>
+          </a></li>
+          <li class="helpcard"><a href="products-supply.html">
+            <span class="helpcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="6" width="8" height="15" rx="4"/><path d="M7 6V4.5a2 2 0 0 1 4 0V6"/><circle cx="17" cy="14.5" r="3"/><path d="M19.2 16.7L21.5 19"/></svg></span>
+            <b>용기검사 문의</b><p>고압가스용기 검사·재검사<br>관련 문의</p>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT: 회사정보 + 오시는 길 -->
+    <section class="section section--soft" id="contact">
+      <div class="container">
         <div class="contact2">
         <div class="cinfo">
-          <h2 class="cinfo__title">회사정보</h2>
+          <h2 class="cinfo__title">회사 정보</h2>
           <ul class="cinfo__list">
             <li class="cinfo__row"><span class="cinfo__k">회사명</span><span class="cinfo__v">한국탄산화학㈜</span></li>
             <li class="cinfo__row"><span class="cinfo__k">대표이사</span><span class="cinfo__v">유연채</span></li>
@@ -110,7 +133,7 @@
           </ul>
         </div>
         <div class="cmap">
-          <h2 class="cmap__title" data-i18n="company.loc.title">오시는 길</h2>
+          <h2 class="cmap__title">오시는 길 (본사)</h2>
           <a class="cmap__box" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 서해안로 140" aria-label="네이버 지도에서 한국탄산화학 위치 보기">
             <img src="assets/images/site/map-hq.jpg?v=20260821b" alt="한국탄산화학㈜ 위치 지도 (경기도 시흥시 서해안로 140)" loading="lazy">
             <span class="cmap__cta" data-i18n="company.loc.map">지도에서 보기</span>
@@ -121,37 +144,47 @@
       </div>
     </section>
 
-    <!-- 사업장 안내 (사업장별 연락처) -->
-    <section class="section section--soft" id="offices">
+    <!-- 사업장 안내 (사진 카드) -->
+    <section class="section" id="offices">
       <div class="container">
-        <div class="section__head">
-          <span class="eyebrow" data-i18n="support.offices.eyebrow">Offices</span>
+        <div class="section__head section__head--center">
           <h2 class="section__title" data-i18n="support.offices.title">사업장 안내</h2>
-          <p class="section__lead" data-i18n="support.contact.lead">사업장별 연락처입니다. 가까운 곳으로 문의하세요.</p>
+          <p class="section__lead">가까운 사업장으로 문의해 주세요.</p>
         </div>
-        <div class="cards">
-          <article class="feature">
-            <h3 class="feature__title" data-i18n="company.loc.hq">본사·시흥공장</h3>
-            <p class="feature__text" data-i18n="company.loc.hqAddr">경기도 시흥시 서해안로 140</p>
-            <p class="feature__text"><a href="tel:+820314989231">031-498-9231~6</a></p>
-            <a class="loc__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 서해안로 140" data-i18n="company.loc.map">지도에서 보기</a>
+        <div class="officecards">
+          <article class="officecard">
+            <div class="officecard__media"><img src="assets/images/site/facility-yard.jpg?v=20260828" alt="본사·시흥공장 전경" loading="lazy"><span class="officecard__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-6 8 6"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg></span></div>
+            <div class="officecard__body">
+              <h3>본사·시흥공장</h3>
+              <p class="officecard__addr">경기도 시흥시 서해안로 140</p>
+              <p class="officecard__row"><b>대표전화</b><a href="tel:+820314989231">031-498-9231~6</a></p>
+              <p class="officecard__row"><b>팩스</b>031-498-9237</p>
+              <a class="btn btn--outline btn--sm" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 서해안로 140">지도에서 보기 →</a>
+            </div>
           </article>
-          <article class="feature">
-            <h3 class="feature__title" data-i18n="company.loc.hwaseong">화성공장·용기검사장</h3>
-            <p class="feature__text" data-i18n="company.loc.hwaseongAddr">경기도 화성시 우정읍 포승향남로 1411-24</p>
-            <p class="feature__text"><a href="tel:+820313516324">031-351-6324~6</a></p>
-            <a class="loc__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 화성시 우정읍 포승향남로 1411-24" data-i18n="company.loc.map">지도에서 보기</a>
+          <article class="officecard">
+            <div class="officecard__media"><img src="assets/images/site/busung-site.jpg?v=20260821" alt="화성공장·용기검사장 전경" loading="lazy"><span class="officecard__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="4" width="13" height="17" rx="2"/><path d="M9 3.5h6v2.5H9z"/><path d="M8.5 11l1.3 1.3 2.3-2.5"/><line x1="13.5" y1="11" x2="16" y2="11"/><path d="M8.5 15.5l1.3 1.3 2.3-2.5"/></svg></span></div>
+            <div class="officecard__body">
+              <h3>화성공장·용기검사장</h3>
+              <p class="officecard__addr">경기도 화성시 우정읍 포승향남로 1411-24</p>
+              <p class="officecard__row"><b>대표전화</b><a href="tel:+820313516324">031-351-6324~6</a></p>
+              <p class="officecard__row"><b>팩스</b>031-351-6237</p>
+              <a class="btn btn--outline btn--sm" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 화성시 우정읍 포승향남로 1411-24">지도에서 보기 →</a>
+            </div>
           </article>
-          <article class="feature">
-            <h3 class="feature__title" data-i18n="company.loc.sihwa">시화영업소</h3>
-            <p class="feature__text" data-i18n="company.loc.sihwaAddr">경기도 시흥시 오이도로 22-29</p>
-            <p class="feature__text"><a href="tel:+820314984989">031-498-4989, 8989</a></p>
-            <a class="loc__map" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29" data-i18n="company.loc.map">지도에서 보기</a>
+          <article class="officecard">
+            <div class="officecard__media"><img src="assets/images/site/sihwa-site.jpg?v=20260828" alt="시화영업소 전경" loading="lazy"><span class="officecard__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/></svg></span></div>
+            <div class="officecard__body">
+              <h3>시화영업소</h3>
+              <p class="officecard__addr">경기도 시흥시 오이도로 22-29</p>
+              <p class="officecard__row"><b>대표전화</b><a href="tel:+820314984989">031-498-4989, 8989</a></p>
+              <p class="officecard__row"><b>팩스</b>031-498-4988</p>
+              <a class="btn btn--outline btn--sm" target="_blank" rel="noopener" href="https://map.naver.com/p/search/경기도 시흥시 오이도로 22-29">지도에서 보기 →</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
-
 
     <!-- FAQ -->
     <section class="section" id="faq">
@@ -177,6 +210,25 @@
             <p class="faq__q" data-i18n="support.faq.q4">드라이아이스 정기 납품이 가능한가요?</p>
             <p class="faq__a" data-i18n="support.faq.a4">日産 150톤 규모 생산설비로 정기 납품·대량 공급이 가능합니다.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band">
+      <div class="container contact-band__inner">
+        <div class="contact-band__text">
+          <span class="eyebrow eyebrow--light">NEED HELP?</span>
+          <h2 class="contact-band__title">가스와 설비에 대한 상담이 필요하신가요?</h2>
+          <p class="contact-band__lead">제품 공급부터 설비 시공·용기검사까지 한국탄산화학이 필요한 솔루션을 안내해 드립니다.</p>
+        </div>
+        <div class="contact-band__action">
+          <ul class="contact-band__ways">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg>
+              <span><small>대표전화</small><a href="tel:+820314989231">031-498-9231~6</a><small style="display:block;margin-top:2px">평일 09:00~18:00 (토·일·공휴일 휴무)</small></span>
+            </li>
+          </ul>
+          <a class="btn btn--light btn--lg" href="#contact">문의하기</a>
         </div>
       </div>
     </section>
