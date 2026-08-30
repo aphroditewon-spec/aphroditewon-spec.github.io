@@ -1415,10 +1415,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .capcard--row .capcard__ic { width: 62px; height: 62px; margin: 0; flex: none; }
 .capcard--row .capcard__tx b { display: block; font-size: 1.05rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
 .capcard--row .capcard__tx p { margin: 0; font-size: .84rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
-.capsplit--rev { grid-template-columns: 1.15fr 1fr; }
+.capsplit--rev { grid-template-columns: 1fr 1.4fr; }
 .capsplit--wide { grid-template-columns: 1.95fr 1fr; }
 #service .capcards--col { grid-template-columns: 1fr 1fr; }
-#service .capcard--row { align-items: center; }
+#service .capcard--row { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: var(--space-3); padding: var(--space-6) var(--space-3); }
+#service .capcard--row .svccard__ic--img { width: 66px; height: 66px; }
+#service .capcard__tx b { font-size: 1.02rem; }
 .svccard__ic { flex: none; width: 56px; height: 56px; border-radius: 50%; background: var(--surface-brand); color: var(--brand); display: grid; place-items: center; }
 .svccard__ic svg { width: 28px; height: 28px; }
 .svccard__ic--img { background: transparent; width: 62px; height: 62px; }
