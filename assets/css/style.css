@@ -1918,7 +1918,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 /* 식품첨가물 탄산가스 품질 (좌 사진 + 우 스탯) */
 .co2quality { display: grid; grid-template-columns: 1fr 1.08fr; gap: var(--space-10); align-items: center; margin-top: var(--space-8); }
-.co2quality__media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4 / 3.2; }
+.co2quality__media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 3 / 2; }
 .co2quality__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .co2quality__body .section__title { margin-top: var(--space-3); }
 .co2stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); list-style: none; padding: 0; margin: var(--space-6) 0; }
