@@ -1613,13 +1613,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 900px) { .prodstrip { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 520px) { .prodstrip { grid-template-columns: repeat(2, 1fr); } }
 /* 가스제품 라인업: 6종 가스 카드(사진+형식 오버레이+국문/영문명+배지) */
-.gasgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 400px)); justify-content: center; gap: var(--space-6); list-style: none; padding: 0; margin: var(--space-6) 0 0; }
+.gasgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 440px)); justify-content: center; gap: var(--space-6); list-style: none; padding: 0; margin: var(--space-6) 0 0; }
 .gascard { display: flex; }
 .gascard > a { display: flex; flex-direction: column; width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
 .gascard > a:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.gascard__media { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #eceff3; }
-.gascard__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 32%; display: block; }
-.gascard__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,26,37,0) 45%, rgba(15,26,37,.55) 100%); }
+.gascard__media { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #fff; }
+.gascard__media img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+.gascard__media::after { content: none; }
+.gascard__formula { display: none; }
 .gascard__formula { position: absolute; left: 12px; bottom: 8px; z-index: 2; color: #fff; font-size: 1.7rem; font-weight: 800; line-height: 1; letter-spacing: -.01em; text-shadow: 0 2px 8px rgba(0,0,0,.45); }
 .gascard__formula sub { font-size: .55em; font-weight: 700; }
 .gascard__body { padding: var(--space-4) var(--space-3) var(--space-5); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 4px; }
