@@ -1625,6 +1625,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 식음료가스: 단일 실사진 카드 */
 .prodlineup .prodgrid.prodgrid--cyl.prodgrid--food { grid-template-columns: minmax(0, 760px); }
 .prodgrid--food .pgcard__media img { aspect-ratio: 16 / 9; object-fit: cover; background: none; }
+/* 흰 배경 실린더 합성 이미지(라벨 전체 노출) */
+.pgcard--cyl .pgcard__media img { object-fit: contain; background: #fff; }
 /* 제품 라인업: 상단 가로 탭(세그먼트) 레이아웃 (참고이미지) */
 .prodlineup--top { display: block; margin-top: var(--space-8); }
 .prodlineup--top .prodlineup__nav { flex-direction: row; position: static; top: auto; gap: 4px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 5px; margin-bottom: var(--space-7); }
