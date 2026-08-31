@@ -1700,6 +1700,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .icespec-figs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin: var(--space-5) 0 var(--space-5); }
 .icespec-figs__photo { border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 4 / 3; background: #eef2f6; }
 .icespec-figs__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.icespec-figs__photo--contain { background: #fff; }
+.icespec-figs__photo--contain img { object-fit: contain; }
 .icespec-figs__dim { margin: 0; border: 1px solid var(--border); border-radius: var(--radius-md); background: #fff; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; padding: var(--space-3); }
 .icespec-figs__dim img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
 .specrows--cols th, .specrows--cols td { width: auto; text-align: center; border-radius: 0; }
