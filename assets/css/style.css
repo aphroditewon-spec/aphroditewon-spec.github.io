@@ -1613,11 +1613,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 900px) { .prodstrip { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 520px) { .prodstrip { grid-template-columns: repeat(2, 1fr); } }
 /* 가스제품 라인업: 6종 가스 카드(사진+형식 오버레이+국문/영문명+배지) */
-/* 산업용가스: 실린더 이미지 카드 (상단 이미지 / 하단 설명) */
-.prodlineup .prodgrid.prodgrid--ind { grid-template-columns: repeat(2, minmax(0, 520px)); justify-content: center; }
-.prodgrid--ind .pgcard__media img { aspect-ratio: 3 / 2; object-fit: contain; background: #fff; }
-.prodgrid--ind .pgcard__text--gases { font-size: 1.05rem; font-weight: 600; color: var(--text); text-align: center; letter-spacing: .01em; margin: var(--space-5) var(--space-5) var(--space-6); word-break: keep-all; }
-@media (max-width: 720px) { .prodlineup .prodgrid.prodgrid--ind { grid-template-columns: minmax(0, 480px); } }
+/* 실린더 이미지 카드 (상단 이미지 / 하단 설명) — 산업용·의료용 공용 */
+.prodlineup .prodgrid.prodgrid--cyl { grid-template-columns: repeat(2, minmax(0, 520px)); justify-content: center; }
+.prodgrid--cyl .pgcard__media img { aspect-ratio: 3 / 2; object-fit: contain; background: #fff; }
+.prodgrid--cyl .pgcard__text--gases { font-size: 1.05rem; font-weight: 600; color: var(--text); text-align: center; letter-spacing: .01em; margin: var(--space-5) var(--space-5) var(--space-6); word-break: keep-all; }
+@media (max-width: 720px) { .prodlineup .prodgrid.prodgrid--cyl { grid-template-columns: minmax(0, 480px); } }
 /* 제품 라인업: 상단 가로 탭(세그먼트) 레이아웃 (참고이미지) */
 .prodlineup--top { display: block; margin-top: var(--space-8); }
 .prodlineup--top .prodlineup__nav { flex-direction: row; position: static; top: auto; gap: 4px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 5px; margin-bottom: var(--space-7); }
