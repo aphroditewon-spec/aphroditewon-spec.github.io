@@ -1727,7 +1727,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 규격·포장 탭 구조 */
 .icespec-tabs { margin-top: var(--space-8); }
 .icespec-tabs .icespec-col { border: none; box-shadow: none; padding: var(--space-2) 0 0; }
-.icespec-tabs .icespec-figs { max-width: 760px; }
+.icespec-tabs .icespec-figs { max-width: 920px; grid-template-columns: 1.35fr 1fr; }
 .icespec-col--wide { margin-top: var(--space-6); }
 .icespec-col--wide .specpanel__title { margin-bottom: var(--space-5); }
 .handling--wide { grid-template-columns: repeat(3, 1fr); }
