@@ -1613,7 +1613,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 900px) { .prodstrip { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 520px) { .prodstrip { grid-template-columns: repeat(2, 1fr); } }
 /* 가스제품 라인업: 6종 가스 카드(사진+형식 오버레이+국문/영문명+배지) */
-.gasgrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: var(--space-6) 0 0; }
+.gasgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 400px)); justify-content: center; gap: var(--space-6); list-style: none; padding: 0; margin: var(--space-6) 0 0; }
 .gascard { display: flex; }
 .gascard > a { display: flex; flex-direction: column; width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
 .gascard > a:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
@@ -1627,8 +1627,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .gascard__name span { display: block; margin-top: 2px; font-size: .7rem; font-weight: 500; color: var(--text-muted); letter-spacing: .02em; }
 .gascard__desc { font-size: .76rem; color: var(--text-muted); line-height: 1.45; word-break: keep-all; }
 .gascard__badge { margin-top: 4px; font-size: .64rem; font-weight: 600; letter-spacing: .06em; color: var(--eyebrow); border: 1px solid var(--border-strong); border-radius: 999px; padding: 3px 10px; }
-@media (max-width: 900px) { .gasgrid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 520px) { .gasgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px) { .gasgrid { grid-template-columns: repeat(2, minmax(0, 340px)); } }
+@media (max-width: 520px) { .gasgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); } }
 /* 제품 라인업: 상단 가로 탭(세그먼트) 레이아웃 (참고이미지) */
 .prodlineup--top { display: block; margin-top: var(--space-8); }
 .prodlineup--top .prodlineup__nav { flex-direction: row; position: static; top: auto; gap: 4px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 5px; margin-bottom: var(--space-7); }
