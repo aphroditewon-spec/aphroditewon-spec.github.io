@@ -451,7 +451,7 @@
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // 1) 콘텐츠 리빌(자연스럽게 상승)
-    var targets = document.querySelectorAll('.about-home, .whycards, .biztile, .bizfeat, .prodgrid, .prodstrip, .ceohome, .histlist, .factory__overlay .container');
+    var targets = document.querySelectorAll('.abouthome-grid, .whycards, .biztile, .bizfeat, .prodgrid, .prodstrip, .ceohome, .histlist, .factory__overlay .container');
     targets.forEach(function (el) { el.classList.add('reveal'); });
     if (!reduce && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (es) {
