@@ -1351,7 +1351,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .about-home__feats { margin: var(--space-6) 0 var(--space-7); }
 .about-home__more { display: inline-flex; align-items: center; gap: .5em; }
 /* 회사소개 히어로: 사진 위 텍스트 오버레이 */
-.abouthero { position: relative; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: flex; align-items: center; min-height: 470px; aspect-ratio: 16 / 8.4; }
+.abouthome-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-8); align-items: stretch; }
+.abouthome-side { display: flex; flex-direction: column; gap: var(--space-4); }
+.abouthome-side .introfeats { grid-template-columns: 1fr; gap: var(--space-4); margin: 0; flex: 1; }
+.abouthome-side .about-home__more { align-self: flex-start; margin-top: var(--space-2); }
+@media (max-width: 860px){ .abouthome-grid { grid-template-columns: 1fr; } .abouthome-side .introfeats { grid-template-columns: repeat(2, 1fr); } }
+.abouthero { position: relative; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: flex; align-items: flex-start; min-height: 380px; height: 100%; aspect-ratio: auto; }
 .abouthero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
 .abouthero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(233,242,251,.97) 0%, rgba(233,242,251,.9) 26%, rgba(233,242,251,.45) 50%, rgba(233,242,251,0) 68%); }
 .abouthero__inner { position: relative; z-index: 2; max-width: 600px; padding: clamp(28px,4.5vw,56px) clamp(24px,5vw,60px); }
