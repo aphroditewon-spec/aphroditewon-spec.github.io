@@ -1344,6 +1344,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .about-home__media { margin-top: var(--space-9); }
 .about-home__media img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
 .about-home__lead { color: var(--text-muted); line-height: 1.9; margin: var(--space-5) 0 var(--space-6); max-width: 72ch; }
+.about-home__cols { display: grid; grid-template-columns: 1fr 1.15fr; gap: var(--space-9); align-items: center; margin: var(--space-6) 0 var(--space-7); }
+.about-home__cols .about-home__lead { margin: 0; max-width: none; }
+.about-home__cols .about-home__feats { grid-template-columns: repeat(2, 1fr); margin: 0; }
+@media (max-width: 760px) { .about-home__cols { grid-template-columns: 1fr; gap: var(--space-6); } }
 .about-home__feats { margin: var(--space-6) 0 var(--space-7); }
 .about-home__more { display: inline-flex; align-items: center; gap: .5em; }
 
