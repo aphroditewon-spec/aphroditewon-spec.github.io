@@ -1358,7 +1358,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 860px){ .abouthome-grid { grid-template-columns: 1fr; } .abouthome-side .introfeats { grid-template-columns: repeat(2, 1fr); } }
 .abouthero { position: relative; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: flex; align-items: flex-start; min-height: 380px; height: 100%; aspect-ratio: auto; }
 .abouthero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
-.abouthero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(233,242,251,.97) 0%, rgba(233,242,251,.9) 26%, rgba(233,242,251,.45) 50%, rgba(233,242,251,0) 68%); }
+.abouthero::before { content: none; }
 .abouthero__inner { position: relative; z-index: 2; max-width: 600px; padding: clamp(28px,4.5vw,56px) clamp(24px,5vw,60px); }
 .abouthero__eyebrow { display: inline-block; font-size: .78rem; letter-spacing: .3em; font-weight: 700; color: var(--eyebrow); text-transform: uppercase; }
 .abouthero__eyebrow::after { content: ""; display: inline-block; width: 46px; height: 1.5px; background: var(--eyebrow); opacity: .5; vertical-align: middle; margin-left: 14px; }
