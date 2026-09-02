@@ -1351,7 +1351,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .about-home__feats { margin: var(--space-6) 0 var(--space-7); }
 .about-home__more { display: inline-flex; align-items: center; gap: .5em; }
 /* 회사소개 히어로: 사진 위 텍스트 오버레이 */
-.abouthome-grid { display: grid; grid-template-columns: 1fr 200px; gap: var(--space-6); align-items: stretch; }
+.abouthome-grid { display: grid; grid-template-columns: 1fr 170px; gap: var(--space-5); align-items: stretch; }
 .abouthome-side { display: flex; flex-direction: column; gap: var(--space-4); }
 .abouthome-side .introfeats { grid-template-columns: 1fr; gap: var(--space-4); margin: 0; flex: 1; }
 .abouthome-side .about-home__more { align-self: flex-start; margin-top: var(--space-2); }
