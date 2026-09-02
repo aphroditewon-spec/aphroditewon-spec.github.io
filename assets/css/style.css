@@ -1350,6 +1350,29 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 760px) { .about-home__cols { grid-template-columns: 1fr; gap: var(--space-6); } }
 .about-home__feats { margin: var(--space-6) 0 var(--space-7); }
 .about-home__more { display: inline-flex; align-items: center; gap: .5em; }
+/* 회사소개 히어로: 사진 위 텍스트 오버레이 */
+.abouthero { position: relative; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: flex; align-items: center; min-height: 470px; aspect-ratio: 16 / 8.4; }
+.abouthero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
+.abouthero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(233,242,251,.97) 0%, rgba(233,242,251,.9) 26%, rgba(233,242,251,.45) 50%, rgba(233,242,251,0) 68%); }
+.abouthero__inner { position: relative; z-index: 2; max-width: 600px; padding: clamp(28px,4.5vw,56px) clamp(24px,5vw,60px); }
+.abouthero__eyebrow { display: inline-block; font-size: .78rem; letter-spacing: .3em; font-weight: 700; color: var(--eyebrow); text-transform: uppercase; }
+.abouthero__eyebrow::after { content: ""; display: inline-block; width: 46px; height: 1.5px; background: var(--eyebrow); opacity: .5; vertical-align: middle; margin-left: 14px; }
+.abouthero__title { margin: 16px 0 20px; line-height: 1.16; }
+.abouthero__title-sm { display: block; font-size: clamp(1.15rem,2.3vw,1.55rem); font-weight: 700; color: var(--text); }
+.abouthero__title-lg { display: block; font-size: clamp(2.1rem,5vw,3.3rem); font-weight: 800; color: var(--eyebrow); letter-spacing: -.01em; margin-top: 2px; }
+.abouthero__lead { color: var(--slate-700); font-size: clamp(.92rem,1.5vw,1.04rem); line-height: 1.8; margin: 0 0 clamp(22px,3vw,30px); }
+.abouthero__feats { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: clamp(12px,2vw,22px); }
+.abfeat { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 9px; width: 88px; }
+.abfeat__ic { width: 58px; height: 58px; border-radius: 50%; background: #fff; box-shadow: 0 6px 16px rgba(20,55,100,.16); display: grid; place-items: center; color: var(--eyebrow); }
+.abfeat__ic svg { width: 27px; height: 27px; }
+.abfeat b { font-size: .76rem; font-weight: 600; color: var(--text); line-height: 1.35; word-break: keep-all; }
+.abouthero__more { margin-top: clamp(24px,3.2vw,32px); }
+@media (max-width: 820px){
+  .abouthero { aspect-ratio: auto; min-height: 0; }
+  .abouthero__bg { object-position: 24% center; }
+  .abouthero::before { background: linear-gradient(180deg, rgba(233,242,251,.94) 0%, rgba(233,242,251,.78) 100%); }
+  .abouthero__inner { max-width: none; padding-block: 40px; }
+}
 
 /* 브레드크럼 */
 .breadcrumb { border-bottom: 1px solid var(--border); background: var(--surface); }
