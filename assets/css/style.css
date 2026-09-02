@@ -1339,10 +1339,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
    홈 리뉴얼 섹션 (회사소개·팩토리·Why6·사업영역·제품슬라이드)
    ===================================================================== */
 /* ② 회사소개 */
-.about-home { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-12); align-items: stretch; }
+.about-home { display: grid; grid-template-columns: 1.7fr 1fr; gap: var(--space-10); align-items: center; }
 .about-home__body .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
-.about-home__media { position: relative; margin-top: 40px; }
-.about-home__media img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
+.about-home__media { position: static; margin: 0; }
+.about-home__media img { position: static; width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: block; }
 .about-home__lead { color: var(--text-muted); line-height: 1.9; margin: var(--space-5) 0 var(--space-6); }
 .about-home__feats { margin: var(--space-6) 0 var(--space-7); }
 .about-home__more { display: inline-flex; align-items: center; gap: .5em; }
