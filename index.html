@@ -7,7 +7,7 @@
   <meta name="description" content="한국탄산화학㈜(KLCC)는 산소·질소·아르곤·탄산·수소 등 산업용·의료용 가스와 드라이아이스를 제조·공급하는 전문기업입니다.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-379">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-380">
 </head>
 <body>
 
@@ -107,42 +107,35 @@
       </div>
     </div>
 
-    <!-- ===== ② 회사소개 (사진 위 텍스트 오버레이 히어로) ===== -->
+    <!-- ===== ② 회사소개 (사진 → 설명글 → 카드 하단 배열) ===== -->
     <section class="section" id="about-home">
-      <div class="container">
-        <div class="abouthome-grid">
-        <div class="abouthero">
-          <img class="abouthero__bg" src="assets/images/site/about-plant.jpg?v=20260902j" alt="한국탄산화학㈜ 시흥공장 전경" loading="lazy">
-          <div class="abouthero__inner">
-            <span class="abouthero__eyebrow" data-i18n="home.about.eyebrow">ABOUT US</span>
-            <h2 class="abouthero__title">
-              <span class="abouthero__title-sm">산업용가스 전문기업</span>
-              <span class="abouthero__title-lg">한국탄산화학㈜</span>
-            </h2>
-            <p class="abouthero__lead">2001년 설립 이후, 고순도 산업용 가스와 드라이아이스를<br>안정적으로 공급하며 대한민국 산업 발전에 기여하고 있습니다.</p>
+      <div class="container about-home">
+        <div class="about-home__body">
+          <span class="eyebrow" data-i18n="home.about.eyebrow">About Us</span>
+          <h2 class="section__title" data-i18n-html="home.about.title">산업용가스 전문기업 <span class="tx-brand">한국탄산화학㈜</span></h2>
+          <div class="about-home__media">
+            <img src="assets/images/site/about-plant.jpg?v=20260902j" alt="한국탄산화학㈜ 시흥공장 전경" loading="lazy">
           </div>
-        </div>
-        <div class="abouthome-side">
-        <ul class="introfeats about-home__feats">
-          <li class="introfeat">
-            <span class="introfeat__ic introfeat__ic--img" aria-hidden="true"><img src="assets/images/site/about/ic-gas.png?v=20260827b" alt="" loading="lazy"></span>
-            <b>산업가스 전문</b><small>제조부터 공급까지</small>
-          </li>
-          <li class="introfeat">
-            <span class="introfeat__ic introfeat__ic--img" aria-hidden="true"><img src="assets/images/site/about/ic-onestop.png?v=20260827b" alt="" loading="lazy"></span>
-            <b>One-Stop 솔루션</b><small>설비·시공·검사 통합</small>
-          </li>
-          <li class="introfeat">
-            <span class="introfeat__ic introfeat__ic--img" aria-hidden="true"><img src="assets/images/site/about/ic-safety.png?v=20260827b" alt="" loading="lazy"></span>
-            <b>안전 경영</b><small>안전 최우선 운영</small>
-          </li>
-          <li class="introfeat">
-            <span class="introfeat__ic introfeat__ic--img" aria-hidden="true"><img src="assets/images/site/about/ic-growth.png?v=20260827b" alt="" loading="lazy"></span>
-            <b>기술 혁신</b><small>지속적인 R&D 투자</small>
-          </li>
-        </ul>
+          <p class="about-home__lead">2001년 설립 이후 고순도 산업용가스 제조와 안정적인 공급을 통해 산업 현장과 함께 성장해 왔습니다. 축적된 기술력과 철저한 품질관리를 바탕으로 신뢰할 수 있는 가스 솔루션을 제공합니다.</p>
+          <ul class="introfeats about-home__feats">
+            <li class="introfeat">
+              <span class="introfeat__ic introfeat__ic--img" aria-hidden="true"><img src="assets/images/site/about/ic-gas.png?v=20260827b" alt="" loading="lazy"></span>
+              <b>산업가스 전문</b><small>제조부터 공급까지</small>
+            </li>
+            <li class="introfeat">
+              <span class="introfeat__ic introfeat__ic--img" aria-hidden="true"><img src="assets/images/site/about/ic-onestop.png?v=20260827b" alt="" loading="lazy"></span>
+              <b>One-Stop 솔루션</b><small>설비·시공·검사 통합</small>
+            </li>
+            <li class="introfeat">
+              <span class="introfeat__ic introfeat__ic--img" aria-hidden="true"><img src="assets/images/site/about/ic-safety.png?v=20260827b" alt="" loading="lazy"></span>
+              <b>안전 경영</b><small>안전 최우선 운영</small>
+            </li>
+            <li class="introfeat">
+              <span class="introfeat__ic introfeat__ic--img" aria-hidden="true"><img src="assets/images/site/about/ic-growth.png?v=20260827b" alt="" loading="lazy"></span>
+              <b>기술 혁신</b><small>지속적인 R&D 투자</small>
+            </li>
+          </ul>
           <a class="btn btn--primary about-home__more" href="company.html"><span data-i18n="home.about.more">회사소개 더보기</span> →</a>
-        </div>
         </div>
       </div>
     </section>
@@ -451,7 +444,7 @@
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // 1) 콘텐츠 리빌(자연스럽게 상승)
-    var targets = document.querySelectorAll('.abouthome-grid, .whycards, .biztile, .bizfeat, .prodgrid, .prodstrip, .ceohome, .histlist, .factory__overlay .container');
+    var targets = document.querySelectorAll('.about-home, .whycards, .biztile, .bizfeat, .prodgrid, .prodstrip, .ceohome, .histlist, .factory__overlay .container');
     targets.forEach(function (el) { el.classList.add('reveal'); });
     if (!reduce && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (es) {
