@@ -1346,6 +1346,16 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .about-home__lead { color: var(--text-muted); line-height: 1.9; margin: var(--space-5) 0 var(--space-6); max-width: 72ch; }
 .about-home__feats { margin: var(--space-6) 0 var(--space-7); }
 .about-home__more { display: inline-flex; align-items: center; gap: .5em; }
+/* 주요제품: 5개 카테고리 카드 */
+.prodcats { list-style: none; margin: var(--space-8) 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-4); }
+.prodcat > a { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); text-decoration: none; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.prodcat > a:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--cyan-line, #bcd6ea); }
+.prodcat__media { display: block; aspect-ratio: 4 / 3; background: #fff; overflow: hidden; }
+.prodcat__media img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .5s ease; }
+.prodcat > a:hover .prodcat__media img { transform: scale(1.05); }
+.prodcat__name { display: block; text-align: center; padding: var(--space-4) var(--space-2); font-size: 1rem; font-weight: 700; color: var(--text); word-break: keep-all; border-top: 1px solid var(--border); }
+@media (max-width: 900px) { .prodcats { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .prodcats { grid-template-columns: repeat(2, 1fr); } }
 
 /* 브레드크럼 */
 .breadcrumb { border-bottom: 1px solid var(--border); background: var(--surface); }
