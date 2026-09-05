@@ -2239,6 +2239,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .bizarea__banner-tx { font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; }
 @media (max-width: 992px) { .bizarea { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
 @media (max-width: 560px) { .bizarea { grid-template-columns: repeat(2, 1fr); } .bizarea__banner { flex-direction: column; text-align: center; padding: var(--space-5); } .bizarea__banner-tx { font-size: .95rem; } }
+.bizarea--4 { grid-template-columns: repeat(4, 1fr); max-width: 980px; margin-inline: auto; }
+@media (max-width: 992px) { .bizarea--4 { grid-template-columns: repeat(2, 1fr); } }
 /* 비전 문구 — 대형 타이포 인용(박스 제거, 중앙 정렬 에디토리얼) */
 .about2__quote { position: relative; margin: var(--space-10) 0 0; padding: var(--space-8) 0 var(--space-6); border-top: 1px solid var(--border); text-align: center; }
 .about2__quote-mark { position: absolute; top: 0; left: 50%; transform: translate(-50%, -28%); background: transparent; padding: 0 var(--space-4); font-family: Georgia, "Times New Roman", serif; font-size: 4.5rem; line-height: 1; color: var(--eyebrow); opacity: .85; pointer-events: none; }
