@@ -362,14 +362,14 @@ section[id] { scroll-margin-top: 88px; }
 .eyebrow--light::before { background: #fff; }
 .contact-band__title { font-size: var(--fs-h2); font-weight: 800; margin: var(--space-3) 0; }
 .contact-band__lead { color: #dcecf6; max-width: 520px; }
-.contact-band__action { text-align: right; flex-shrink: 0; }
+.contact-band__action { text-align: right; flex-shrink: 0; transform: translateY(29px); }
 .contact-band__call-label { display: block; font-size: var(--fs-sm); color: #a9cfe6; letter-spacing: .06em; }
 .contact-band__phone {
   display: block; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800;
   color: #fff; margin: .15rem 0 var(--space-4); letter-spacing: -.01em;
 }
 @media (max-width: 760px) {
-  .contact-band__action { text-align: left; }
+  .contact-band__action { text-align: left; transform: none; }
 }
 
 /* =====================================================================
