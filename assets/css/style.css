@@ -1378,7 +1378,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .cinfo__v a { color: var(--text); }
 .cinfo__tbd { color: var(--text-muted); }
 .cmap__box { position: relative; display: block; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
-.cmap__box img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.cmap__box img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: #eef2f6; }
 .cmap__cta { position: absolute; right: 12px; bottom: 12px; z-index: 2; font-size: .8rem; font-weight: 700; color: #fff; background: var(--brand); padding: 6px 13px; border-radius: var(--radius-pill); box-shadow: var(--shadow-md); }
 .cmap__box:hover .cmap__cta { background: var(--primary-hover); }
 .cmap__addr { margin: var(--space-3) 0 0; font-size: .86rem; color: var(--text-muted); }
