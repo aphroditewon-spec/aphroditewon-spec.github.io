@@ -2353,9 +2353,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .contact-band__ways { list-style: none; margin: 0 0 var(--space-5); padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-7); }
 .contact-band__ways li { display: flex; align-items: center; gap: .6em; }
 .contact-band__ways svg { width: 22px; height: 22px; color: rgba(255,255,255,.85); flex: none; }
-.contact-band__ways .contact-band__ic { width: 34px; height: 34px; object-fit: contain; flex: none; }
+.contact-band__ways .contact-band__ic { width: 46px; height: 46px; object-fit: contain; flex: none; }
 .contact-band__ways small { display: block; font-size: .72rem; color: rgba(255,255,255,.7); }
 .contact-band__ways a, .contact-band__ways b { color: #fff; font-weight: 700; font-size: 1.05rem; }
+.contact-band__ways a[href^="tel:"] { font-size: clamp(1.7rem, 3vw, 2.1rem); font-weight: 800; letter-spacing: -.01em; line-height: 1.15; }
 
 /* =====================================================================
    홈 인터랙션 — 스크롤 리빌, 가스 종류 탭
