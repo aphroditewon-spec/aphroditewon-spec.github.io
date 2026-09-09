@@ -7,7 +7,7 @@
   <meta name="description" content="산업용·의료용·혼합·특수·액화석유가스 — 고순도 산소·질소·아르곤·수소·헬륨·탄산·LPG를 Bulk·실린더로 공급·제조합니다.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-410">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-411">
 </head>
 <body>
 
@@ -147,10 +147,21 @@
         </div>
         <div class="prodlineup prodlineup--top">
           <div class="prodlineup__nav" role="tablist" aria-label="가스 카테고리">
-            <button class="prodlineup__btn is-active" role="tab" aria-selected="true" data-cat="ind" data-i18n="products.cat.ind">산업용가스</button>
-            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="med" data-i18n="products.cat.med">의료용가스</button>
-            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="spec" data-i18n="products.cat.spec">특수·혼합가스</button>
-            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="mix">식음료가스</button>
+            <button class="prodlineup__btn is-active" role="tab" aria-selected="true" data-cat="ind">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10.5l5 3v-3l5 3V7l6 3.2V21z"/><line x1="2.5" y1="21" x2="21.5" y2="21"/></svg>
+              <span data-i18n="products.cat.ind">산업용가스</span></button>
+            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="med">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M12 8.5v5M9.5 11h5"/></svg>
+              <span data-i18n="products.cat.med">의료용가스</span></button>
+            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="spec">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-4.6 8a2 2 0 0 0 1.7 3h9.8a2 2 0 0 0 1.7-3L14 9V3"/><line x1="8" y1="15" x2="16" y2="15"/></svg>
+              <span data-i18n="products.cat.spec">특수·혼합가스</span></button>
+            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="mix">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v6a2 2 0 0 0 4 0V3"/><line x1="8" y1="9" x2="8" y2="21"/><path d="M16.5 3c-1.6 0-2.5 2-2.5 4.5s.9 4 2.5 4 2.5-1.5 2.5-4S18.1 3 16.5 3z"/><line x1="16.5" y1="11.5" x2="16.5" y2="21"/></svg>
+              <span>식음료가스</span></button>
+            <button class="prodlineup__btn" role="tab" aria-selected="false" data-cat="ice">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="22"/><line x1="3.4" y1="7" x2="20.6" y2="17"/><line x1="20.6" y1="7" x2="3.4" y2="17"/><path d="M12 5.5l-2 -2M12 5.5l2 -2M12 18.5l-2 2M12 18.5l2 2M4.8 8.3l-2.7 .3M4.8 8.3l.3 -2.7M19.2 15.7l2.7 -.3M19.2 15.7l-.3 2.7M4.8 15.7l-2.7 -.3M4.8 15.7l.3 2.7M19.2 8.3l2.7 .3M19.2 8.3l-.3 -2.7"/></svg>
+              <span>드라이아이스</span></button>
           </div>
           <div class="prodlineup__panels">
             <!-- 산업용가스 -->
@@ -158,13 +169,23 @@
               <h3 class="prodlineup__title" data-i18n="products.cat.ind">산업용가스</h3>
               <p class="prodlineup__desc">다양한 산업현장에서 요구하는 고순도 가스를 안정적으로 공급합니다.</p>
               <ul class="prodgrid prodgrid--cyl">
-                <li class="pgcard">
+                <li class="pgcard pgcard--titled">
+                  <div class="pgcard__head">
+                    <span class="pgcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="4" width="7" height="17" rx="3.2"/><path d="M10.5 4V2.6h3V4"/><line x1="8.5" y1="9" x2="15.5" y2="9"/></svg></span>
+                    <div><b class="pgcard__name">고압가스</b><span class="pgcard__lead">다양한 산업 현장에 필요한 주요 고압가스를 공급합니다.</span></div>
+                  </div>
                   <a class="pgcard__media" href="support.html"><img src="assets/images/site/gas-o2.jpg?v=20260831c" alt="산소·질소·아르곤·탄산·수소·헬륨 가스 실린더" loading="lazy"></a>
                   <p class="pgcard__text pgcard__text--gases">산소, 질소, 아르곤, 탄산, 수소, 헬륨</p>
+                  <p class="pgcard__use">제조·반도체·철강·화학 등 다양한 산업 현장에 안정적으로 공급합니다.</p>
                 </li>
-                <li class="pgcard">
+                <li class="pgcard pgcard--titled">
+                  <div class="pgcard__head">
+                    <span class="pgcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg></span>
+                    <div><b class="pgcard__name">액화가스</b><span class="pgcard__lead">대용량 사용처를 위한 초저온 액화가스를 공급합니다.</span></div>
+                  </div>
                   <a class="pgcard__media" href="support.html"><img src="assets/images/site/gas-liquefied.jpg?v=20260831" alt="액화산소·액화질소·액화아르곤 저장용기" loading="lazy"></a>
                   <p class="pgcard__text pgcard__text--gases">액화산소, 액화질소, 액화아르곤</p>
+                  <p class="pgcard__use">대량 사용이 필요한 산업현장에 경제적이고 안정적으로 공급합니다.</p>
                 </li>
               </ul>
             </div>
@@ -213,6 +234,21 @@
                 <li class="pgcard">
                   <a class="pgcard__media" href="support.html"><img src="assets/images/site/gas-foodbev.jpg?v=20260831b" alt="식음료용 가스 저장·공급 설비" loading="lazy"></a>
                   <p class="pgcard__text pgcard__text--gases">식품·음료용 탄산가스</p>
+                </li>
+              </ul>
+            </div>
+            <!-- 드라이아이스 -->
+            <div class="prodlineup__panel" role="tabpanel" data-cat="ice" hidden>
+              <h3 class="prodlineup__title">드라이아이스</h3>
+              <p class="prodlineup__desc">고밀도·고순도 식품용 드라이아이스를 너겟·블록 형태로 공급합니다.</p>
+              <ul class="prodgrid prodgrid--cyl">
+                <li class="pgcard">
+                  <a class="pgcard__media" href="products-ice.html"><img src="assets/images/site/ice-nugget-pack.jpg?v=20260831" alt="드라이아이스 너겟 제품" loading="lazy"></a>
+                  <p class="pgcard__text pgcard__text--gases">너겟 (NUGGET)</p>
+                </li>
+                <li class="pgcard">
+                  <a class="pgcard__media" href="products-ice.html"><img src="assets/images/site/ice-block-product.jpg?v=20260909" alt="드라이아이스 블록" loading="lazy"></a>
+                  <p class="pgcard__text pgcard__text--gases">블록 (BLOCK)</p>
                 </li>
               </ul>
             </div>
