@@ -1672,6 +1672,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .prodlineup--top .prodlineup__btn.is-active .prodlineup__ic { filter: brightness(0) invert(1); }
 /* 산업용가스: 소제목형 카드(고압가스/액화가스) */
 .pgcard--titled .pgcard__head { display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-5) var(--space-5) 0; }
+.pgcard--titled .pgcard__head--center { align-items: center; }
 .pgcard--titled .pgcard__ic { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--surface-2); color: var(--brand); display: grid; place-items: center; }
 .pgcard--titled .pgcard__ic svg { width: 22px; height: 22px; }
 .pgcard--titled .pgcard__ic--img { width: 48px; height: 48px; background: none; border-radius: 0; }
