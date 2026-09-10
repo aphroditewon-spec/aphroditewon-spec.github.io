@@ -1821,7 +1821,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .proc4__step p { margin: 0; padding: 0 var(--space-3) var(--space-3); font-size: .78rem; color: var(--text-muted); line-height: 1.45; }
 .handling { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4) var(--space-5); list-style: none; padding: var(--space-2) 0 0; margin: 0; }
 .handling li { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: var(--space-3); align-items: center; }
-.handling__ic { grid-row: 1 / 3; width: 46px; height: 46px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--border); color: var(--eyebrow); display: inline-flex; align-items: center; justify-content: center; }
+.handling__ic { grid-row: 1 / 3; width: 46px; height: 46px; border-radius: 50%; background: var(--surface-brand); border: none; color: var(--brand); display: inline-flex; align-items: center; justify-content: center; }
 .handling__ic svg { width: 24px; height: 24px; }
 .handling b { font-size: .9rem; color: var(--text); font-weight: 800; }
 .handling p { margin: 2px 0 0; font-size: .8rem; color: var(--text-muted); line-height: 1.4; }
