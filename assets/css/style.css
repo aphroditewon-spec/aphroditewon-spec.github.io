@@ -1035,6 +1035,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #ice .prodlineup__nav { display: grid; grid-template-columns: minmax(0, 554px) 1fr; }
 #ice .ice-slideshow { align-items: stretch; }
 #ice .prodlineup__panel .ice-slideshow__frame { aspect-ratio: auto; height: 100%; }
+#ice .iceline__detail { min-height: 486px; }
 .iceline__title { font-size: 1.6rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); }
 .iceline__title em { font-style: normal; font-size: 1rem; font-weight: 600; color: var(--text-muted); margin-left: .3em; }
 .iceline__lead { color: var(--text-muted); line-height: 1.7; margin: 0 0 var(--space-4); word-break: keep-all; }
