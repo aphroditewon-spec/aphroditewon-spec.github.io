@@ -1819,7 +1819,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .handling b { font-size: .9rem; color: var(--text); font-weight: 800; }
 .handling p { margin: 2px 0 0; font-size: .8rem; color: var(--text-muted); line-height: 1.4; }
 /* 규격·포장 탭 구조 */
-.icespec-tabs { margin-top: var(--space-8); }
+.icespec-tabs { margin-top: var(--space-4); }
 .icespec-tabs .icespec-col { border: none; box-shadow: none; padding: var(--space-2) 0 0; }
 .icespec-tabs .icespec-figs { max-width: 920px; grid-template-columns: 1.35fr 1fr; }
 .icespec-tabs .icespec-figs--single { grid-template-columns: 1fr; max-width: 540px; }
