@@ -1445,10 +1445,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .capsplit--rev { grid-template-columns: 1fr 1.4fr; }
 .capsplit--wide { grid-template-columns: 4fr 1fr; gap: var(--space-3); margin-top: var(--space-4); }
 #gas-quality .capcard:hover { transform: none; box-shadow: var(--shadow-sm); }
-#gas-quality .capcard { display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: var(--space-2); padding: var(--space-5); }
-#gas-quality .capcard__head { display: flex; align-items: center; gap: var(--space-3); }
-#gas-quality .capcard__head .svccard__ic { margin: 0; }
-#gas-quality .capcard__head b { font-size: 1.05rem; font-weight: 800; color: var(--text); }
+#gas-quality .capcard { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: var(--space-4); text-align: left; padding: var(--space-5) var(--space-5) var(--space-5) var(--space-3); }
+#gas-quality .capcard .svccard__ic { margin: 0; }
+#gas-quality .capcard__tx b { display: block; font-size: 1.05rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
 #gas-quality .capcard__desc { margin: 0; font-size: .84rem; line-height: 1.5; color: var(--text-muted); text-align: left; word-break: keep-all; }
 #gas-quality .capsplit__media { align-self: start; aspect-ratio: 2 / 1; min-height: 0; }
 #service .capcards--col { grid-template-columns: 1fr 1fr; }
