@@ -1644,7 +1644,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 카드를 탭 바 전체 폭에 맞춰 좌우 정렬(모든 탭 동일) */
 .prodlineup .prodgrid.prodgrid--cyl { grid-template-columns: 1fr 1fr; }
 .prodgrid--cyl .pgcard__media img { aspect-ratio: 3 / 2; object-fit: contain; background: #fff; }
-.prodgrid--cyl .pgcard__text--gases { font-size: 1.05rem; font-weight: 600; color: var(--text); text-align: center; letter-spacing: .01em; margin: var(--space-5) var(--space-5) var(--space-6); word-break: keep-all; }
+.prodgrid--cyl .pgcard__text--gases,
+.prodgrid--3 .pgcard__text--gases { font-size: 1.05rem; font-weight: 600; color: var(--text); text-align: center; letter-spacing: .01em; margin: var(--space-5) var(--space-5) var(--space-6); word-break: keep-all; }
 @media (max-width: 720px) { .prodlineup .prodgrid.prodgrid--cyl { grid-template-columns: 1fr; } }
 /* 특수·혼합가스: 3열 카드 */
 .prodlineup .prodgrid.prodgrid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
