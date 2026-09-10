@@ -1029,6 +1029,27 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ice-slideshow__cap .feature__text { margin-bottom: var(--space-3); }
 @media (max-width: 860px) { .ice-slideshow { grid-template-columns: 1fr; gap: var(--space-6); } }
 
+/* 드라이아이스 제품 라인업 상세 */
+.iceline__title { font-size: 1.6rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); }
+.iceline__title em { font-style: normal; font-size: 1rem; font-weight: 600; color: var(--text-muted); margin-left: .3em; }
+.iceline__lead { color: var(--text-muted); line-height: 1.7; margin: 0 0 var(--space-4); word-break: keep-all; }
+.iceline__rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
+.iceline__rows > li { display: grid; grid-template-columns: 40px 48px 1fr; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; border-bottom: 1px solid var(--border); }
+.iceline__ic { width: 40px; height: 40px; border-radius: 50%; background: var(--surface-2); color: var(--brand); display: grid; place-items: center; }
+.iceline__ic svg { width: 20px; height: 20px; }
+.iceline__label { font-size: .9rem; font-weight: 700; color: var(--text); }
+.iceline__rtx { display: flex; flex-direction: column; gap: 2px; }
+.iceline__main { font-size: .92rem; font-weight: 600; color: var(--text); line-height: 1.5; word-break: keep-all; }
+.iceline__sub { font-size: .82rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
+.iceline__feats { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+.iceline__feats > li { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding: var(--space-4) var(--space-3); background: var(--surface-2); border-radius: var(--radius-md); }
+.iceline__featic { color: var(--brand); }
+.iceline__featic svg { width: 26px; height: 26px; }
+.iceline__feats b { font-size: .86rem; font-weight: 700; color: var(--text); margin-top: 4px; }
+.iceline__feats > li > span:last-child { font-size: .78rem; color: var(--text-muted); line-height: 1.45; word-break: keep-all; }
+.iceline__note { margin: var(--space-4) 0 0; font-size: .8rem; color: var(--text-muted); }
+@media (max-width: 620px) { .iceline__feats { grid-template-columns: 1fr; } }
+
 /* 제품 규격 표 + 치수 도면 */
 .spec-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: start; }
 .spec-wrap { max-width: 720px; }
