@@ -1819,6 +1819,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .proc4__step b { display: flex; align-items: center; gap: 6px; padding: var(--space-3) var(--space-3) 4px; font-size: .84rem; color: var(--text); }
 .proc4__n { flex: none; width: 20px; height: 20px; border-radius: 50%; background: var(--eyebrow); color: #fff; font-size: .75rem; display: inline-flex; align-items: center; justify-content: center; }
 .proc4__step p { margin: 0; padding: 0 var(--space-3) var(--space-3); font-size: .78rem; color: var(--text-muted); line-height: 1.45; }
+.handling-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin-bottom: var(--space-4); }
+.handling-head .specpanel__title { margin-bottom: 0; }
+.handling-head .icespec__sublead { margin: 0; }
 .handling { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4) var(--space-5); list-style: none; padding: var(--space-2) 0 0; margin: 0; }
 .handling li { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: var(--space-3); align-items: center; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-4) var(--space-5); }
 .handling__ic { grid-row: 1 / 3; width: 46px; height: 46px; border-radius: 50%; background: var(--surface-brand); border: none; color: var(--brand); display: inline-flex; align-items: center; justify-content: center; }
