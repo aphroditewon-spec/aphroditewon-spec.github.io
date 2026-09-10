@@ -1855,7 +1855,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .pkgdetail b { font-size: .8rem; font-weight: 700; color: var(--text); word-break: keep-all; }
 .pkgdetail__unit { font-style: normal; font-weight: 500; font-size: .82em; color: var(--text-muted); margin-left: .15em; }
 .pkgdetail__val { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; padding: var(--space-3) var(--space-4); background: #fff; font-size: .8rem; font-weight: 400; color: var(--text); word-break: keep-all; }
-.pkgdetail__val--1line { flex-direction: row; align-items: baseline; flex-wrap: nowrap; white-space: nowrap; }
+.pkgdetail__val--1line { flex-direction: row; align-items: baseline; justify-content: flex-start; flex-wrap: nowrap; white-space: nowrap; }
 .pkgdetail__mut { font-weight: 500; color: var(--text-muted); font-size: .74rem; margin-left: .3em; }
 .pkgdetail__mut--block { display: block; margin: 2px 0 0; }
 .pkgspec__dim { margin: 0; text-align: center; }
