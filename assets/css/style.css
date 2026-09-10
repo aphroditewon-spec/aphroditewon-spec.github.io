@@ -1445,6 +1445,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .capsplit--rev { grid-template-columns: 1fr 1.4fr; }
 .capsplit--wide { grid-template-columns: 4fr 1fr; gap: var(--space-3); margin-top: var(--space-4); }
 #gas-quality .capcard:hover { transform: none; box-shadow: var(--shadow-sm); }
+#gas-quality .capcard--row { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+#gas-quality .capcard--row .capcard__tx { text-align: center; }
 #service .capcards--col { grid-template-columns: 1fr 1fr; }
 #service .capcard--row { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: var(--space-3); padding: var(--space-6) var(--space-3); }
 #service .capcard--row .svccard__ic--img { width: 66px; height: 66px; }
