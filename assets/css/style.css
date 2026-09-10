@@ -1041,8 +1041,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .iceline__rows > li { display: grid; grid-template-columns: 40px 48px 1fr; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; border-bottom: 1px solid var(--border); }
 .iceline__ic { width: 40px; height: 40px; border-radius: 50%; background: var(--surface-2); color: var(--brand); display: grid; place-items: center; }
 .iceline__ic svg { width: 20px; height: 20px; }
-.iceline__ic img { width: 32px; height: 32px; object-fit: contain; }
-.iceline__featic img { width: 44px; height: 44px; object-fit: contain; display: block; }
+.iceline__ic img { width: 24px; height: 24px; object-fit: contain; }
+.iceline__featic img { width: 36px; height: 36px; object-fit: contain; display: block; }
 .iceline__label { font-size: .9rem; font-weight: 700; color: var(--text); }
 .iceline__rtx { display: flex; flex-direction: column; gap: 2px; }
 .iceline__main { font-size: .92rem; font-weight: 600; color: var(--text); line-height: 1.5; word-break: keep-all; }
