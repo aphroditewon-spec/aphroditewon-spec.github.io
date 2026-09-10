@@ -1085,7 +1085,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .prodlineup__desc { color: var(--text-muted); margin: var(--space-2) 0 var(--space-6); line-height: 1.7; }
 .prodlineup__panel[hidden] { display: none; }
 .prodlineup__panel { animation: gasFade .35s ease; }
-.prodlineup .prodgrid { grid-template-columns: repeat(4, 1fr); margin-top: 0; }
+.prodlineup .prodgrid { grid-template-columns: repeat(4, 1fr); margin-top: 0; gap: var(--space-3); }
 @media (max-width: 900px) {
   .prodlineup { grid-template-columns: 1fr; gap: var(--space-6); }
   .prodlineup__nav { flex-direction: row; flex-wrap: wrap; position: static; }
@@ -1674,8 +1674,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 산업용가스: 소제목형 카드(고압가스/액화가스) */
 .pgcard--titled .pgcard__head { display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-5) var(--space-5) 0; }
 .pgcard--titled .pgcard__head--center { align-items: center; }
-.pgcard--titled .pgcard__ic { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--surface-2); color: var(--brand); display: grid; place-items: center; }
-.pgcard--titled .pgcard__ic svg { width: 22px; height: 22px; }
+.pgcard--titled .pgcard__ic { flex: none; width: 48px; height: 48px; border-radius: 50%; background: var(--surface-2); color: var(--brand); display: grid; place-items: center; }
+.pgcard--titled .pgcard__ic svg { width: 26px; height: 26px; }
 .pgcard--titled .pgcard__ic--img { width: 48px; height: 48px; background: none; border-radius: 0; }
 .pgcard--titled .pgcard__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .pgcard__name { display: block; font-size: 1.15rem; font-weight: 800; color: var(--text); line-height: 1.2; }
