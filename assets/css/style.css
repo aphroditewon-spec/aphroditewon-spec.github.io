@@ -1030,6 +1030,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 860px) { .ice-slideshow { grid-template-columns: 1fr; gap: var(--space-6); } }
 
 /* 드라이아이스 제품 라인업 상세 */
+#ice .ice-slideshow { align-items: start; }
 .iceline__title { font-size: 1.6rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); }
 .iceline__title em { font-style: normal; font-size: 1rem; font-weight: 600; color: var(--text-muted); margin-left: .3em; }
 .iceline__lead { color: var(--text-muted); line-height: 1.7; margin: 0 0 var(--space-4); word-break: keep-all; }
