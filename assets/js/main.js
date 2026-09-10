@@ -1,4 +1,29 @@
 /* =====================================================================
+   대형 화면 비율 확대 — 16인치(1440px) 디자인을 기준으로,
+   그보다 넓은 화면에서는 화면폭÷기준폭 만큼 전체를 같은 비율로 확대해
+   모든 모니터에서 16인치와 동일한 배치로 보이도록 함(zoom).
+   ===================================================================== */
+(function () {
+  "use strict";
+  var DESIGN_WIDTH = 1440; // 16인치 기준 폭
+  var MAX_ZOOM = 2.0;      // 과도한 확대 방지 상한(초대형 화면)
+
+  function applyScale() {
+    // 스크롤바를 제외한 실제 레이아웃 폭(줌 피드백 루프 방지)
+    var w = document.documentElement.clientWidth;
+    var z = 1;
+    if (w > DESIGN_WIDTH) {
+      z = Math.min(w / DESIGN_WIDTH, MAX_ZOOM);
+    }
+    document.documentElement.style.zoom = z;
+  }
+
+  applyScale();
+  window.addEventListener("resize", applyScale);
+  window.addEventListener("orientationchange", applyScale);
+})();
+
+/* =====================================================================
    공통 인터랙션 — 모바일 네비 토글 · 헤더 스크롤 그림자
    ===================================================================== */
 (function () {
