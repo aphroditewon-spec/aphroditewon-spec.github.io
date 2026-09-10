@@ -14,6 +14,9 @@ body {
 }
 
 .container { max-width: var(--container); margin-inline: auto; padding-inline: var(--space-6); }
+/* 대형 모니터(27인치+)에서 본문 폭 단계적 확대: 좌우 여백 축소 */
+@media (min-width: 1600px) { :root { --container: 1360px; } }
+@media (min-width: 1920px) { :root { --container: 1480px; } }
 section { scroll-margin-top: 84px; }
 
 /* ===== 공통 타이포 유틸 ===== */
