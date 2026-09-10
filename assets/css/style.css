@@ -1869,7 +1869,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .specfact__ic { width: 48px; height: 48px; flex: none; display: grid; place-items: center; }
 .specfact__ic img { width: 100%; height: 100%; object-fit: contain; }
 .specfact__tx { min-width: 0; }
-.specfact__tx b { display: block; font-size: .8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 2px; }
+.specfact__tx b { display: block; font-size: .9rem; font-weight: 800; color: var(--brand); margin-bottom: 2px; }
 .specfact__val { font-size: .92rem; font-weight: 800; color: var(--text); line-height: 1.35; word-break: keep-all; }
 .specfact__val em { display: block; font-style: normal; font-size: .74rem; font-weight: 500; color: var(--text-muted); margin-top: 2px; }
 @media (max-width: 860px) { .specfacts { grid-template-columns: repeat(2, 1fr); } .specfact:nth-child(3), .specfact:nth-child(4) { border-top: 1px solid var(--border); } .specfact:nth-child(3) { border-left: none; } }
