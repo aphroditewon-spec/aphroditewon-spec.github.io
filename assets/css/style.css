@@ -1836,7 +1836,19 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .pkgspec__photo { border-radius: var(--radius-md); overflow: hidden; background: #fff; }
 .pkgspec__photo img { width: 100%; height: auto; display: block; }
 .pkgspec__table { margin: 0; }
-@media (max-width: 640px) { .pkgspec { grid-template-columns: 1fr; } }
+.pkgspec { align-items: start; }
+.pkgspec__head span { font-size: .8rem; font-weight: 600; color: var(--text-muted); margin-left: .5em; letter-spacing: .02em; }
+.pkgspec__infotitle { font-size: 1rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); }
+.pkgdetail { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
+.pkgdetail > li { display: grid; grid-template-columns: 34px auto 1fr; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; border-bottom: 1px solid var(--border); }
+.pkgdetail__ic { width: 34px; height: 34px; border-radius: 9px; background: var(--surface-brand); color: var(--brand); display: grid; place-items: center; }
+.pkgdetail__ic svg { width: 20px; height: 20px; }
+.pkgdetail b { font-size: .84rem; font-weight: 700; color: var(--text-muted); white-space: nowrap; }
+.pkgdetail > li > span:last-child { font-size: .9rem; font-weight: 800; color: var(--text); text-align: right; word-break: keep-all; }
+.pkgdetail em { font-style: normal; font-weight: 500; color: var(--text-muted); font-size: .78rem; margin-left: .3em; }
+.pkgspec__dim { margin: var(--space-4) 0 0; text-align: center; }
+.pkgspec__dim img { max-width: 300px; width: 100%; }
+@media (max-width: 640px) { .pkgspec { grid-template-columns: 1fr; } .pkgdetail > li { grid-template-columns: 30px auto 1fr; } }
 /* 제품 규격 스펙 카드 4종 */
 .specfacts { list-style: none; margin: var(--space-5) 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); }
 .specfact { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: var(--space-3); padding: var(--space-4); background: var(--surface-brand); border: 1px solid var(--border); border-radius: var(--radius-md); }
