@@ -1918,9 +1918,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .facilcards { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: var(--space-8) 0 0; }
 .facilcard { display: flex; flex-direction: column; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); background: var(--surface); border: 1px solid var(--border); }
 .facilcard__media { overflow: hidden; }
-.facilcard__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .4s ease; }
+.facilcard__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .facilcards .facilcard:nth-child(4) .facilcard__media img { object-position: 18% center; }
-.facilcard:hover .facilcard__media img { transform: scale(1.05); }
 .facilcard__tx { padding: var(--space-5); color: var(--text); }
 .facilcard__num { display: block; font-size: .82rem; font-weight: 800; letter-spacing: .08em; color: var(--eyebrow); margin-bottom: 8px; }
 .facilcard__title { display: block; font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
