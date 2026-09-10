@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#1e63e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/>
-<line x1="4.6" y1="4.6" x2="19.4" y2="19.4"/><line x1="19.4" y1="4.6" x2="4.6" y2="19.4"/>
-<path d="M12 5.4 9.6 7.8M12 5.4l2.4 2.4M12 18.6l-2.4-2.4M12 18.6l2.4-2.4M5.4 12 7.8 9.6M5.4 12l2.4 2.4M18.6 12l-2.4-2.4M18.6 12l-2.4 2.4"/>
-</svg>
