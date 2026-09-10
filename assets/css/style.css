@@ -1799,7 +1799,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .icespec-figs__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .icespec-figs__photo--contain { background: #fff; }
 .icespec-figs__photo--contain img { object-fit: contain; }
-.icespec-figs__dim { margin: 0; align-self: stretch; background: var(--surface-brand); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: stretch; justify-content: center; padding: var(--space-4) var(--space-5); }
+.icespec-figs__dim { margin: 0; align-self: start; aspect-ratio: 1.85 / 1; background: var(--surface-brand); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: stretch; justify-content: center; padding: var(--space-4) var(--space-5); overflow: hidden; }
 .icespec-figs__dim img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto; mix-blend-mode: multiply; }
 .icespec-figs__dimtitle { font-size: 1.02rem; font-weight: 800; color: var(--eyebrow); margin: 0 0 var(--space-2); }
 .icespec-figs__dim--titled img { min-height: 0; flex: 1; }
@@ -1828,7 +1828,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 규격·포장 탭 구조 */
 .icespec-tabs { margin-top: var(--space-4); }
 .icespec-tabs .icespec-col { border: none; box-shadow: none; padding: var(--space-2) 0 0; }
-.icespec-tabs .icespec-figs { max-width: 920px; grid-template-columns: 1.35fr 1fr; }
+.icespec-tabs .icespec-figs { grid-template-columns: 1.08fr 1fr; gap: var(--space-3); }
 .icespec-tabs .icespec-figs--single { grid-template-columns: 1fr; max-width: 540px; }
 /* 48P 포장 사진: 전체 이미지가 잘리지 않도록 자연 비율로 표시 */
 .icespec-figs__photo--full { aspect-ratio: auto; background: #fff; }
