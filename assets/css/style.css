@@ -280,7 +280,7 @@ section[id] { scroll-margin-top: 88px; }
 .section { padding-block: var(--space-6); }
 .section--soft { background: var(--surface-2); border-block: 1px solid var(--border); }
 .section--brand { background: linear-gradient(180deg, var(--surface-brand), var(--surface-2)); }
-.section__head { max-width: 680px; margin-bottom: var(--space-4); }
+.section__head { max-width: 680px; margin-bottom: var(--space-2); }
 .section__head--center { margin-inline: auto; text-align: center; }
 .section__head--center .eyebrow { justify-content: center; }
 .section__title { font-size: var(--fs-h2); font-weight: 800; letter-spacing: -.01em; margin-top: var(--space-3); color: var(--text); }
