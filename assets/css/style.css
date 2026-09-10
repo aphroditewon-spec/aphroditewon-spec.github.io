@@ -1861,7 +1861,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .pkgspec__dim { margin: 0; text-align: center; }
 .pkgspec__dim--in { padding: var(--space-4); border-top: 1px solid var(--border); }
 .pkgspec__dim img { max-width: 320px; width: 100%; display: block; margin-inline: auto; }
-.pkgspec__dimcap { margin: var(--space-1) 0 0; font-size: .78rem; color: var(--text-muted); text-align: right; }
+.pkgspec__dimcap { margin: -28px 0 0; font-size: .78rem; color: var(--text-muted); text-align: right; }
 @media (max-width: 640px) { .pkgspec { grid-template-columns: 1fr; } .pkgdetail__row { grid-template-columns: 44% 1fr; } }
 /* 제품 규격 스펙 카드 4종 */
 .specfacts { list-style: none; margin: var(--space-5) 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
