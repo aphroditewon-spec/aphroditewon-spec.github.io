@@ -1695,7 +1695,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 제품 라인업: 상단 가로 탭(세그먼트) 레이아웃 (참고이미지) */
 .prodlineup--top { display: block; margin-top: var(--space-4); }
 .prodlineup--top .prodlineup__nav { flex-direction: row; position: static; top: auto; gap: 4px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 5px; margin-bottom: var(--space-4); }
-.prodlineup--top .prodlineup__btn { flex: 1; text-align: center; border: none; border-radius: 8px; background: transparent; padding: 0.8rem var(--space-3); }
+.prodlineup--top .prodlineup__btn { flex: 1; text-align: center; border: none; border-radius: 8px; background: transparent; padding: 0.55rem var(--space-3); }
 .prodlineup--top .prodlineup__btn:hover { background: rgba(0,0,0,.04); color: var(--brand); }
 .prodlineup--top .prodlineup__btn.is-active { background: var(--brand); color: #fff; box-shadow: var(--shadow-sm); }
 .prodlineup--top .prodlineup__title, .prodlineup--top .prodlineup__desc { display: none; }
@@ -2017,7 +2017,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 가스별 특성 및 용도: 가로 탭 + 좌 상세/우 사진 (참고이미지) */
 .gasinfo { margin-top: var(--space-4); }
 .gasinfo__nav { display: flex; gap: 4px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 5px; margin-bottom: var(--space-4); }
-.gasinfo__btn { flex: 1; text-align: center; border: none; border-radius: 8px; background: transparent; padding: 0.6rem var(--space-2); font-weight: 700; font-size: .92rem; color: var(--text); cursor: pointer; transition: background .2s ease, color .2s ease; }
+.gasinfo__btn { flex: 1; text-align: center; border: none; border-radius: 8px; background: transparent; padding: 0.45rem var(--space-2); font-weight: 700; font-size: .92rem; color: var(--text); cursor: pointer; transition: background .2s ease, color .2s ease; }
 .gasinfo__btn span { font-weight: 500; color: var(--text-muted); }
 .gasinfo__btn:hover { background: rgba(0,0,0,.04); color: var(--brand); }
 .gasinfo__btn.is-active { background: var(--brand); color: #fff; box-shadow: var(--shadow-sm); }
