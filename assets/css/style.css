@@ -1837,6 +1837,17 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .pkgspec__photo img { width: 100%; height: auto; display: block; }
 .pkgspec__table { margin: 0; }
 @media (max-width: 640px) { .pkgspec { grid-template-columns: 1fr; } }
+/* 제품 규격 스펙 카드 4종 */
+.specfacts { list-style: none; margin: var(--space-5) 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); }
+.specfact { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: var(--space-3); padding: var(--space-4); background: var(--surface-brand); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.specfact__ic { width: 44px; height: 44px; border-radius: 12px; background: #fff; color: var(--brand); display: grid; place-items: center; flex: none; }
+.specfact__ic svg { width: 24px; height: 24px; }
+.specfact__tx { min-width: 0; }
+.specfact__tx b { display: block; font-size: .8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 2px; }
+.specfact__val { font-size: .92rem; font-weight: 800; color: var(--text); line-height: 1.35; word-break: keep-all; }
+.specfact__val em { display: block; font-style: normal; font-size: .74rem; font-weight: 500; color: var(--text-muted); margin-top: 2px; }
+@media (max-width: 860px) { .specfacts { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .specfacts { grid-template-columns: 1fr; } }
 .icespec-col--wide { margin-top: var(--space-6); }
 .icespec-col--wide .specpanel__title { margin-bottom: var(--space-5); }
 .handling--wide { grid-template-columns: repeat(3, 1fr); }
