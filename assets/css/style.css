@@ -1937,14 +1937,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .gasinfo__btn.is-active span { color: rgba(255,255,255,.85); }
 .gasinfo__panel[hidden] { display: none; }
 .gasinfo__panel { display: grid; grid-template-columns: 1fr 1.05fr; gap: 0; align-items: stretch; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; animation: gasFade .35s ease; }
-.gasinfo__detail { padding: var(--space-8); display: flex; flex-direction: column; justify-content: center; }
+.gasinfo__detail { padding: var(--space-6) var(--space-8); display: flex; flex-direction: column; justify-content: center; }
 .gasinfo__title { display: flex; align-items: baseline; gap: .4em; font-size: 1.6rem; font-weight: 800; color: var(--text); }
 .gasinfo__formula { font-size: 2.4rem; font-weight: 800; color: var(--eyebrow); line-height: 1; letter-spacing: -.01em; }
 .gasinfo__formula sub { font-size: .55em; }
 .gasinfo__title em { font-style: normal; font-size: 1rem; font-weight: 600; color: var(--text-muted); }
-.gasinfo__desc { color: var(--text-muted); line-height: 1.7; margin: var(--space-4) 0 var(--space-5); word-break: keep-all; }
+.gasinfo__desc { color: var(--text-muted); line-height: 1.6; margin: var(--space-3) 0 var(--space-4); word-break: keep-all; }
 .gasinfo__rows { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--border); }
-.gasinfo__rows li { display: grid; grid-template-columns: 26px 84px 1fr; align-items: center; gap: var(--space-3); padding: var(--space-4) 0; border-bottom: 1px solid var(--border); }
+.gasinfo__rows li { display: grid; grid-template-columns: 26px 84px 1fr; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; border-bottom: 1px solid var(--border); }
 .gasinfo__rows li:last-child { border-bottom: none; }
 .gasinfo__ic { color: var(--brand); display: inline-flex; }
 .gasinfo__ic svg { width: 20px; height: 20px; }
