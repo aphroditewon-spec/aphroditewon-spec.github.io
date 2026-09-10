@@ -1769,7 +1769,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .spec2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-8); }
 .specpanel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-6) var(--space-6) var(--space-7); }
 .specpanel__title { font-size: 1.2rem; font-weight: 800; color: var(--text); border-left: 4px solid var(--brand); padding-left: var(--space-3); }
-.specpanel__desc { color: var(--text-muted); font-size: .88rem; margin: var(--space-2) 0 var(--space-5); line-height: 1.5; }
+.specpanel__desc { color: var(--text-muted); font-size: .88rem; margin: var(--space-2) 0 var(--space-5); line-height: 1.5; padding-left: calc(4px + var(--space-3)); }
 .specpanel__media { border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 16 / 9; margin-bottom: var(--space-5); background: #eef2f6; }
 .specpanel__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .specrows { width: 100%; border-collapse: collapse; }
