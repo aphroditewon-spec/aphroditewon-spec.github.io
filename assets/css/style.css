@@ -1443,7 +1443,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .capcard--row .capcard__tx b { display: block; font-size: 1.05rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
 .capcard--row .capcard__tx p { margin: 0; font-size: .84rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
 .capsplit--rev { grid-template-columns: 1fr 1.4fr; }
-.capsplit--wide { grid-template-columns: 3.2fr 1fr; gap: var(--space-5); }
+.capsplit--wide { grid-template-columns: 4fr 1fr; gap: var(--space-5); }
 #gas-quality .capcard:hover { transform: none; box-shadow: var(--shadow-sm); }
 #service .capcards--col { grid-template-columns: 1fr 1fr; }
 #service .capcard--row { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: var(--space-3); padding: var(--space-6) var(--space-3); }
