@@ -1855,6 +1855,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .pkgdetail b { font-size: .8rem; font-weight: 700; color: var(--text); word-break: keep-all; }
 .pkgdetail__unit { font-style: normal; font-weight: 500; font-size: .82em; color: var(--text-muted); margin-left: .15em; }
 .pkgdetail__val { display: flex; flex-direction: column; justify-content: center; padding: var(--space-3) var(--space-4); font-size: .8rem; font-weight: 700; color: var(--text); word-break: keep-all; }
+.pkgdetail__val--1line { flex-direction: row; align-items: baseline; flex-wrap: nowrap; white-space: nowrap; }
 .pkgdetail__mut { font-weight: 500; color: var(--text-muted); font-size: .74rem; margin-left: .3em; }
 .pkgdetail__mut--block { display: block; margin: 2px 0 0; }
 .pkgspec__dim { margin: 0; text-align: center; }
@@ -1871,7 +1872,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .specfact__tx { min-width: 0; }
 .specfact__tx b { display: block; font-size: .9rem; font-weight: 800; color: var(--brand); margin-bottom: 2px; }
 .specfact__val { font-size: .78rem; font-weight: 400; color: var(--text-muted); line-height: 1.45; word-break: keep-all; }
-.specfact__val em { display: block; font-style: normal; font-size: .74rem; font-weight: 400; color: var(--text-muted); margin-top: 1px; }
+.specfact__val em { font-style: normal; font-size: .9em; font-weight: 400; color: var(--text-muted); margin-left: .3em; }
 @media (max-width: 860px) { .specfacts { grid-template-columns: repeat(2, 1fr); } .specfact:nth-child(3), .specfact:nth-child(4) { border-top: 1px solid var(--border); } .specfact:nth-child(3) { border-left: none; } }
 @media (max-width: 480px) { .specfacts { grid-template-columns: 1fr; } .specfact { border-left: none; border-top: 1px solid var(--border); } .specfact:first-child { border-top: none; } }
 .icespec-col--wide { margin-top: var(--space-6); }
