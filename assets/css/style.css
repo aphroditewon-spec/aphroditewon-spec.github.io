@@ -1836,9 +1836,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 48P 포장 규격: 사진(좌)+표(우) 2단 배치 */
 .pkgspec { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-6); align-items: center; margin: var(--space-5) 0; }
 .pkgspec__photo { border-radius: var(--radius-lg); overflow: hidden; background: #fff; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
-.pkgspec__photo img { width: 100%; height: auto; display: block; }
+.pkgspec__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .pkgspec__table { margin: 0; }
-.pkgspec { align-items: start; }
+.pkgspec { align-items: stretch; }
 .pkgspec__head { border-left: 4px solid var(--brand); padding-left: var(--space-3); line-height: 1.25; }
 .pkgspec__head span { display: block; margin: 2px 0 0; font-size: .8rem; font-weight: 600; color: var(--text-muted); letter-spacing: .02em; }
 .pkgspec__infotitle { font-size: 1rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); }
