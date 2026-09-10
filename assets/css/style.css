@@ -1826,6 +1826,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 48P 포장 사진: 전체 이미지가 잘리지 않도록 자연 비율로 표시 */
 .icespec-figs__photo--full { aspect-ratio: auto; background: #fff; }
 .icespec-figs__photo--full img { height: auto; object-fit: contain; }
+/* 48P 포장 규격: 사진(좌)+표(우) 2단 배치 */
+.pkgspec { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-6); align-items: center; margin: var(--space-5) 0; }
+.pkgspec__photo { border-radius: var(--radius-md); overflow: hidden; background: #fff; }
+.pkgspec__photo img { width: 100%; height: auto; display: block; }
+.pkgspec__table { margin: 0; }
+@media (max-width: 640px) { .pkgspec { grid-template-columns: 1fr; } }
 .icespec-col--wide { margin-top: var(--space-6); }
 .icespec-col--wide .specpanel__title { margin-bottom: var(--space-5); }
 .handling--wide { grid-template-columns: repeat(3, 1fr); }
