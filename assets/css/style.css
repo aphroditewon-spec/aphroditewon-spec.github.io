@@ -1030,6 +1030,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 860px) { .ice-slideshow { grid-template-columns: 1fr; gap: var(--space-6); } }
 
 /* 드라이아이스 제품 라인업 상세 */
+/* 너겟 탭 오른쪽 경계를 좌측 이미지(560px) 오른쪽 라인과 일치시킴(nav 좌측 인셋 6px 보정) */
+#ice .prodlineup__nav { display: grid; grid-template-columns: minmax(0, 554px) 1fr; }
 #ice .ice-slideshow { align-items: start; }
 .iceline__title { font-size: 1.6rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); }
 .iceline__title em { font-style: normal; font-size: 1rem; font-weight: 600; color: var(--text-muted); margin-left: .3em; }
