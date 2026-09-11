@@ -1864,7 +1864,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .pkgspec__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.08); }
 .pkgspec__table { margin: 0; }
 .pkgspec { align-items: stretch; }
-.pkgspec__head { border-left: 4px solid var(--brand); padding-left: var(--space-3); line-height: 1.25; }
+.pkgspec__head { position: relative; border-left: none; padding-left: var(--space-3); line-height: 1.25; }
+/* 바(네모)를 제목 한 줄만 감싸 '너겟 (NUGGET)' 제목 바와 동일하게 */
+.pkgspec__head::before { content: ""; position: absolute; left: 0; top: 0.12em; width: 4px; height: 1.15em; background: var(--brand); }
 .pkgspec__head span { display: block; margin: 2px 0 0; font-size: .8rem; font-weight: 600; color: var(--text-muted); letter-spacing: .02em; }
 .pkgspec__infotitle { font-size: 1rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); }
 .pkgspec__titles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-6); align-items: end; margin: var(--space-6) 0 var(--space-4); }
@@ -1893,12 +1895,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 640px) { .pkgspec { grid-template-columns: 1fr; } .pkgdetail__row { grid-template-columns: 44% 1fr; } }
 /* 제품 규격 스펙 카드 4종 */
 .specfacts { list-style: none; margin: var(--space-5) 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
-.specfact { display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-left: 1px solid var(--border); }
+.specfact { display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-2) var(--space-4); border-left: 1px solid var(--border); }
 .specfact:first-child { border-left: none; }
 .specfact__ic { width: 48px; height: 48px; flex: none; display: grid; place-items: center; }
 .specfact__ic img { width: 100%; height: 100%; object-fit: contain; }
 .specfact__tx { min-width: 0; }
-.specfact__tx b { display: block; font-size: .9rem; font-weight: 800; color: var(--brand); margin-bottom: 2px; }
+.specfact__tx b { display: block; font-size: .9rem; font-weight: 800; color: var(--brand); margin-bottom: 0; line-height: 1.2; }
 .specfact__val { font-size: .78rem; font-weight: 400; color: var(--text-muted); line-height: 1.45; word-break: keep-all; }
 .specfact__val em { font-style: normal; font-size: .9em; font-weight: 400; color: var(--text-muted); margin-left: .3em; }
 @media (max-width: 860px) { .specfacts { grid-template-columns: repeat(2, 1fr); } .specfact:nth-child(3), .specfact:nth-child(4) { border-top: 1px solid var(--border); } .specfact:nth-child(3) { border-left: none; } }
