@@ -1903,7 +1903,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .specfact__val em { font-style: normal; font-size: .9em; font-weight: 400; color: var(--text-muted); margin-left: .3em; }
 @media (max-width: 860px) { .specfacts { grid-template-columns: repeat(2, 1fr); } .specfact:nth-child(3), .specfact:nth-child(4) { border-top: 1px solid var(--border); } .specfact:nth-child(3) { border-left: none; } }
 @media (max-width: 480px) { .specfacts { grid-template-columns: 1fr; } .specfact { border-left: none; border-top: 1px solid var(--border); } .specfact:first-child { border-top: none; } }
-.icespec-col--wide { margin-top: var(--space-6); }
+.icespec-col--wide { margin-top: var(--space-6); padding-top: var(--space-4); padding-bottom: var(--space-4); }
 .icespec-col--wide .specpanel__title { margin-bottom: var(--space-5); }
 .handling--wide { grid-template-columns: repeat(3, 1fr); }
 
