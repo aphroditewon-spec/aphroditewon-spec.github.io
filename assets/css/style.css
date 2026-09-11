@@ -2244,8 +2244,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .mainfacil__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .mainfacil__body { padding: var(--space-4) var(--space-5) var(--space-5); }
 .mainfacil__head { display: flex; align-items: center; gap: var(--space-2); margin-bottom: 8px; }
-.mainfacil__ic { flex: none; width: 30px; height: 30px; color: var(--brand); }
-.mainfacil__ic svg { width: 100%; height: 100%; }
+.mainfacil__ic { flex: none; height: 30px; color: var(--brand); display: flex; align-items: center; }
+.mainfacil__ic svg { width: 30px; height: 30px; }
+.mainfacil__ic img { height: 100%; width: auto; display: block; }
 .mainfacil__title { margin: 0; font-size: 1.02rem; font-weight: 800; color: var(--text); }
 .mainfacil__desc { margin: 0; font-size: .84rem; line-height: 1.5; color: var(--text-muted); word-break: keep-all; }
 @media (max-width: 900px) { .mainfacil { grid-template-columns: repeat(2, 1fr); } }
