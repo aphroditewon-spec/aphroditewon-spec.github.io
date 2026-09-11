@@ -2040,7 +2040,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 쇼트설비(2번): 5% 확대 + 위로 이동 */
 #equipment .facilcard:nth-child(2) .facilcard__media img { transform: translateY(-8px) scale(1.05); }
 /* 도장설비(3번): 10% 확대 + 위로 이동 */
-#equipment .facilcard:nth-child(3) .facilcard__media img { transform: translateY(-10px) scale(1.155); }
+#equipment .facilcard:nth-child(3) .facilcard__media img { transform: translateY(-18px) scale(1.213); }
 /* 신뢰할 수 있는 검사 서비스(좌 2x2 카드+CTA / 우 사진) */
 .svchead { display: flex; align-items: flex-end; gap: var(--space-6); flex-wrap: wrap; margin-bottom: var(--space-6); }
 .svchead__tt .section__title { margin: 0; }
