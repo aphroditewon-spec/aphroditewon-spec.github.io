@@ -2030,6 +2030,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .facilcards--4 { grid-template-columns: repeat(4, 1fr); }
 /* 참고 스타일: 사진 프레임(그림자) 없이 라운드 이미지만 */
 .facilcards--4 .facilcard__media { box-shadow: none; }
+/* 제목 폰트 크기를 설명문과 동일하게 */
+.facilcards--4 .facilcard__title { font-size: .82rem; }
 .facilcard { display: flex; flex-direction: column; background: none; border: none; box-shadow: none; }
 .facilcard__media { overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
 .facilcard__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
