@@ -1839,7 +1839,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .proc4__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .proc4__step b { display: flex; align-items: center; gap: 6px; padding: var(--space-3) var(--space-3) 4px; font-size: .84rem; color: var(--text); }
 .proc4__n { flex: none; width: 20px; height: 20px; border-radius: 50%; background: var(--eyebrow); color: #fff; font-size: .75rem; display: inline-flex; align-items: center; justify-content: center; }
-.proc4__step p { margin: 0; padding: 0 var(--space-3) var(--space-3); font-size: .78rem; color: var(--text-muted); line-height: 1.45; }
+.proc4__step p { margin: 0; padding: 0 var(--space-3) var(--space-3) calc(var(--space-3) + 26px); font-size: .78rem; color: var(--text-muted); line-height: 1.45; }
 .handling-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin-bottom: var(--space-1); }
 .handling-head .specpanel__title { margin-bottom: 0; }
 .handling-head .icespec__sublead { margin: 0; }
