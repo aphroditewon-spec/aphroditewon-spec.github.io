@@ -2277,6 +2277,31 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .safetyband__inner { align-items: flex-end; justify-content: flex-start; padding: 0 var(--space-6) var(--space-6); }
   .safetyband__panel { max-width: 100%; }
 }
+
+/* 안전·품질·인허가 재구성(SAFETY & COMPLIANCE) */
+.safecompl { display: grid; grid-template-columns: 1fr 1.15fr 0.92fr; align-items: stretch; gap: 0; margin-top: var(--space-6); background: var(--surface-brand); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
+.safecompl__intro { padding: var(--space-7); display: flex; flex-direction: column; justify-content: center; }
+.safecompl__ic-lg { width: 46px; height: 46px; color: var(--brand); margin-bottom: var(--space-4); }
+.safecompl__ic-lg svg { width: 100%; height: 100%; }
+.safecompl__title { margin: 0 0 var(--space-3); font-size: 1.18rem; font-weight: 800; color: var(--brand); line-height: 1.45; }
+.safecompl__desc { margin: 0; font-size: .86rem; line-height: 1.65; color: var(--text-muted); word-break: keep-all; }
+.safecompl__list { list-style: none; margin: 0; padding: var(--space-7) var(--space-7) var(--space-7) var(--space-6); display: flex; flex-direction: column; justify-content: center; gap: var(--space-5); border-left: 1px solid var(--border); }
+.safecompl__item { display: grid; grid-template-columns: auto 1fr; gap: var(--space-3); align-items: start; }
+.safecompl__ic { width: 30px; height: 30px; color: var(--brand); flex: none; }
+.safecompl__ic svg { width: 100%; height: 100%; }
+.safecompl__tx b { display: block; font-size: .95rem; font-weight: 800; color: var(--text); margin-bottom: 3px; }
+.safecompl__tx p { margin: 0; font-size: .82rem; line-height: 1.5; color: var(--text-muted); word-break: keep-all; }
+.safecompl__media { position: relative; min-height: 260px; }
+.safecompl__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.safecompl__hand { position: absolute; top: var(--space-5); right: var(--space-5); z-index: 1; text-align: right; font-size: 1.05rem; font-weight: 800; color: var(--brand); line-height: 1.4; transform: rotate(-6deg); text-shadow: 0 1px 6px rgba(255,255,255,.8); }
+@media (max-width: 980px) {
+  .safecompl { grid-template-columns: 1fr 1fr; }
+  .safecompl__media { grid-column: 1 / -1; min-height: 220px; border-top: 1px solid var(--border); }
+}
+@media (max-width: 640px) {
+  .safecompl { grid-template-columns: 1fr; }
+  .safecompl__list { border-left: none; border-top: 1px solid var(--border); }
+}
 .whycards .feature__title { font-size: 1rem; margin-bottom: var(--space-2); }
 .whycards .feature__text { font-size: .8rem; line-height: 1.6; }
 @media (max-width: 980px) { .whycards { grid-template-columns: repeat(3, 1fr); } }
