@@ -2045,12 +2045,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #equipment .facilcard:nth-child(4) .facilcard__media img { transform: translateY(8px) scale(1.05); }
 /* 품질과 안전을 최우선으로(좌 사진 / 우 2x2 카드+CTA) */
 .qualsafe { display: grid; grid-template-columns: 1.16fr 1fr; gap: var(--space-5); align-items: stretch; margin-top: var(--space-6); }
-.qualsafe__media { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); min-height: 430px; }
+.qualsafe__media { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); min-height: 350px; }
 .qualsafe__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .qualsafe__tagline { position: absolute; left: var(--space-6); bottom: var(--space-6); z-index: 1; color: #fff; font-size: .82rem; font-weight: 700; letter-spacing: .14em; line-height: 1.6; text-shadow: 0 1px 8px rgba(0,0,0,.45); }
 .qualsafe__right { display: flex; flex-direction: column; }
 .qualsafe__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); flex: 1; }
-.qscard { position: relative; display: flex; align-items: center; gap: var(--space-4); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-5) var(--space-6); }
+.qscard { position: relative; display: flex; align-items: center; gap: var(--space-4); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-4) var(--space-6); }
 .qscard__num { position: absolute; top: var(--space-4); right: var(--space-4); font-size: .95rem; font-weight: 800; color: #c3cddb; }
 .qscard__ic { flex: none; width: 52px; height: 52px; border-radius: 50%; background: var(--surface-brand); display: grid; place-items: center; }
 .qscard__ic img { width: 30px; height: 30px; object-fit: contain; display: block; }
