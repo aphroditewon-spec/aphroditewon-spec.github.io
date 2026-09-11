@@ -2044,7 +2044,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 건조설비(4번): 5% 확대 + 아래로 이동 */
 #equipment .facilcard:nth-child(4) .facilcard__media img { transform: translateY(8px) scale(1.05); }
 /* 품질과 안전을 최우선으로(좌 사진 / 우 2x2 카드+CTA) */
-.qualsafe { display: grid; grid-template-columns: 1.16fr 1fr; gap: var(--space-5); align-items: stretch; margin-top: var(--space-6); }
+.qualsafe { display: grid; grid-template-columns: 1.16fr 1fr; gap: var(--space-5); align-items: stretch; margin-top: var(--space-4); }
 .qualsafe__media { position: relative; min-height: 300px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
 .qualsafe__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .qualsafe__tagline { position: absolute; left: var(--space-6); bottom: var(--space-6); z-index: 1; color: #fff; font-size: .82rem; font-weight: 700; letter-spacing: .14em; line-height: 1.6; text-shadow: 0 1px 8px rgba(0,0,0,.45); }
