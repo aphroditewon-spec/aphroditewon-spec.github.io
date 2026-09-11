@@ -1808,7 +1808,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 우측 '박스 규격' 제목을 상단 설명문(specpanel__desc) 라인에 맞춰 위로 올림 */
 .boxspec { margin-top: -41px; }
 /* 표 줄간격 축소 + 캡션 위로 이동 → 표 하단을 좌측 이미지 하단과 일직선 정렬 */
-.boxspec .pkgdetail__key, .boxspec .pkgdetail__val { padding-top: 3px; padding-bottom: 3px; }
+.boxspec .pkgdetail__key, .boxspec .pkgdetail__val { padding-top: 4px; padding-bottom: 4px; }
 .boxspec .pkgspec__dim--in .icespec-figs__dimnote { margin-top: -13px; padding-top: 0; }
 .boxspec__note--in { margin: 2px 0 0; text-align: right; }
 .icespec-figs__dimtitle { font-size: 1.02rem; font-weight: 800; color: var(--eyebrow); margin: 0 0 var(--space-2); }
