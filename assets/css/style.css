@@ -2027,6 +2027,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 860px) { .proccards { flex-wrap: wrap; gap: var(--space-4); } .proccards__arrow { display: none; } .proccard { flex: 1 1 calc(50% - var(--space-4)); } }
 /* 생산·공급 시설: 다크 오버레이 사진 카드 4열 (참고이미지) */
 .facilcards { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: var(--space-4) 0 0; }
+.facilcards--4 { grid-template-columns: repeat(4, 1fr); }
 .facilcard { display: flex; flex-direction: column; background: none; border: none; box-shadow: none; }
 .facilcard__media { overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
 .facilcard__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
