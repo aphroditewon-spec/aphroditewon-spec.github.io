@@ -2035,6 +2035,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .proccards__arrow { align-self: center; flex: none; color: var(--brand); font-size: 1.4rem; opacity: .5; }
 @media (max-width: 860px) { .proccards { flex-wrap: wrap; gap: var(--space-4); } .proccards__arrow { display: none; } .proccard { flex: 1 1 calc(50% - var(--space-4)); } }
 
+/* 주요 검사 설비: 내압시험 설비(1번) 사진 5% 확대 */
+#equipment .facilcard:first-child .facilcard__media img { transform: scale(1.05); }
 /* 신뢰할 수 있는 검사 서비스(좌 2x2 카드+CTA / 우 사진) */
 .svchead { display: flex; align-items: flex-end; gap: var(--space-6); flex-wrap: wrap; margin-bottom: var(--space-6); }
 .svchead__tt .section__title { margin: 0; }
