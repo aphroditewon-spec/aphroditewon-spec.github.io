@@ -2258,7 +2258,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .inspartner__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .inspartner__body .section__title { margin-top: var(--space-3); }
 .inspartner__table { width: 100%; border-collapse: collapse; margin-top: 0; border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
-.inspartner__table th, .inspartner__table td { text-align: left; padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--border); font-size: .9rem; vertical-align: top; }
+.inspartner__table th, .inspartner__table td { text-align: left; padding: var(--space-2) var(--space-4); border-bottom: 1px solid var(--border); font-size: .9rem; vertical-align: top; }
 .inspartner__table tr:last-child th, .inspartner__table tr:last-child td { border-bottom: none; }
 .inspartner__table th { width: 32%; background: var(--surface-2); color: var(--eyebrow); font-weight: 700; white-space: nowrap; }
 .inspartner__table td { color: var(--text); }
