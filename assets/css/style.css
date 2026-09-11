@@ -1803,8 +1803,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .icespec-figs__photo--contain img { object-fit: contain; }
 .icespec-figs__dim { margin: 0; align-self: start; aspect-ratio: 1.85 / 1; background: var(--surface-brand); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: stretch; justify-content: center; padding: var(--space-4) var(--space-5); overflow: hidden; }
 .icespec-figs__dim img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto; mix-blend-mode: multiply; }
-.boxspec { align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+.boxspec { align-self: stretch; display: flex; flex-direction: column; justify-content: flex-start; }
 .boxspec__note { margin: var(--space-2) 0 0; font-size: .78rem; color: var(--text-muted); }
+/* 우측 '박스 규격' 제목을 좌측 '블록 성형 규격' 제목과 같은 라인에 맞춤 */
+.boxspec .pkgspec__infotitle { margin-top: 17px; }
 .icespec-figs__dimtitle { font-size: 1.02rem; font-weight: 800; color: var(--eyebrow); margin: 0 0 var(--space-2); }
 .icespec-figs__dimtitle em { font-style: normal; font-size: .82rem; font-weight: 600; color: var(--text-muted); margin-left: .25em; }
 .icespec-figs__dimnote { display: block; margin-top: auto; padding-top: var(--space-2); text-align: right; font-size: .74rem; color: var(--text-muted); }
