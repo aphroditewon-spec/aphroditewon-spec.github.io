@@ -2028,6 +2028,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 생산·공급 시설: 다크 오버레이 사진 카드 4열 (참고이미지) */
 .facilcards { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: var(--space-4) 0 0; }
 .facilcards--4 { grid-template-columns: repeat(4, 1fr); }
+/* 참고 스타일: 사진 프레임(그림자) 없이 라운드 이미지만 */
+.facilcards--4 .facilcard__media { box-shadow: none; }
 .facilcard { display: flex; flex-direction: column; background: none; border: none; box-shadow: none; }
 .facilcard__media { overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
 .facilcard__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
