@@ -1811,6 +1811,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .boxspec .pkgdetail__key, .boxspec .pkgdetail__val { padding-top: 4px; padding-bottom: 4px; }
 .boxspec .pkgspec__dim--in .icespec-figs__dimnote { margin-top: -13px; padding-top: 0; }
 .boxspec__note--in { margin: 2px 0 0; text-align: right; }
+/* 블록 탭: 좌측 '블록 성형 규격' 카드를 우측 표(pkgcard)와 상·하단 일직선 정렬 */
+.prodlineup__panel[data-cat="spec-block"] .icespec-figs__dim--titled { margin-top: -7px; aspect-ratio: auto; height: 339px; }
 .icespec-figs__dimtitle { font-size: 1.02rem; font-weight: 800; color: var(--eyebrow); margin: 0 0 var(--space-2); }
 .icespec-figs__dimtitle em { font-style: normal; font-size: .82rem; font-weight: 600; color: var(--text-muted); margin-left: .25em; }
 .icespec-figs__dimnote { display: block; margin-top: auto; padding-top: var(--space-2); text-align: right; font-size: .74rem; color: var(--text-muted); }
