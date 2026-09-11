@@ -2028,6 +2028,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 생산·공급 시설: 다크 오버레이 사진 카드 4열 (참고이미지) */
 .facilcards { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: var(--space-4) 0 0; }
 .facilcards--4 { grid-template-columns: repeat(4, 1fr); }
+/* 블록 포장 프로세스 외곽 프레임(보관·취급 안내와 동일) */
+.procflow-frame { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-6) var(--space-6) var(--space-7); margin-top: var(--space-7); }
+.procflow-frame > .icespec__subhead { margin-top: 0; }
 /* 블록 포장 프로세스 흐름(번호 배지 + 화살표 + 라운드 이미지) */
 .proc-eyebrow { font-weight: 700; font-size: .7rem; color: var(--text-muted); letter-spacing: .1em; margin-left: .5rem; }
 .icespec__subhead .proc-eyebrow { color: var(--text-muted); }
