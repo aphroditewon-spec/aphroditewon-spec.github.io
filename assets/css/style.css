@@ -2282,13 +2282,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .safecompl { display: grid; grid-template-columns: 1fr 1.15fr 0.92fr; align-items: stretch; gap: 0; margin-top: var(--space-6); background: var(--surface-brand); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
 .safecompl__intro { padding: var(--space-7); display: flex; flex-direction: column; justify-content: center; }
 .safecompl__ic-lg { width: 46px; height: 46px; color: var(--brand); margin-bottom: var(--space-4); }
-.safecompl__ic-lg svg { width: 100%; height: 100%; }
+.safecompl__ic-lg svg, .safecompl__ic-lg img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .safecompl__title { margin: 0 0 var(--space-3); font-size: 1.18rem; font-weight: 800; color: var(--brand); line-height: 1.45; }
 .safecompl__desc { margin: 0; font-size: .86rem; line-height: 1.65; color: var(--text-muted); word-break: keep-all; }
 .safecompl__list { list-style: none; margin: 0; padding: var(--space-7) var(--space-7) var(--space-7) var(--space-6); display: flex; flex-direction: column; justify-content: center; gap: var(--space-5); border-left: 1px solid var(--border); }
 .safecompl__item { display: grid; grid-template-columns: auto 1fr; gap: var(--space-3); align-items: start; }
-.safecompl__ic { width: 30px; height: 30px; color: var(--brand); flex: none; }
-.safecompl__ic svg { width: 100%; height: 100%; }
+.safecompl__ic { width: 34px; height: 34px; color: var(--brand); flex: none; }
+.safecompl__ic svg, .safecompl__ic img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .safecompl__tx b { display: block; font-size: .95rem; font-weight: 800; color: var(--text); margin-bottom: 3px; }
 .safecompl__tx p { margin: 0; font-size: .82rem; line-height: 1.5; color: var(--text-muted); word-break: keep-all; }
 .safecompl__media { position: relative; min-height: 260px; }
