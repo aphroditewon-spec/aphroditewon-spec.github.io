@@ -2052,8 +2052,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .qualsafe__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: var(--space-4); height: 250px; }
 .qscard { position: relative; display: flex; align-items: center; gap: var(--space-4); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-4) var(--space-6); }
 .qscard__num { position: absolute; top: var(--space-4); right: var(--space-4); font-size: .95rem; font-weight: 800; color: #c3cddb; }
-.qscard__ic { flex: none; width: 52px; height: 52px; border-radius: 50%; background: var(--surface-brand); display: grid; place-items: center; }
-.qscard__ic img { width: 30px; height: 30px; object-fit: contain; display: block; }
+.qscard__ic { flex: none; width: 56px; height: 56px; }
+.qscard__ic img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .qscard__tx { min-width: 0; }
 .qscard__tx b { display: block; font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
 .qscard__tx p { margin: 0; font-size: .82rem; line-height: 1.5; color: var(--text-muted); word-break: keep-all; }
