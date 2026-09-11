@@ -2074,8 +2074,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .inspstep__title { display: block; font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
 .inspstep__desc { margin: 0; font-size: .82rem; line-height: 1.5; color: var(--text-muted); word-break: keep-all; }
 .inspflow__arrow { flex: none; align-self: center; width: 11px; height: 11px; border-top: 2px solid var(--text-muted); border-right: 2px solid var(--text-muted); transform: rotate(45deg); opacity: .45; }
-@media (max-width: 960px) { .inspflow { flex-wrap: wrap; gap: var(--space-3); } .inspflow__arrow { display: none; } .inspstep { flex: 1 1 calc(33.333% - var(--space-3)); } }
-@media (max-width: 620px) { .inspstep { flex: 1 1 calc(50% - var(--space-3)); } }
+@media (max-width: 960px) { .inspflow:not(.inspflow--8) { flex-wrap: wrap; gap: var(--space-3); } .inspflow:not(.inspflow--8) .inspflow__arrow { display: none; } .inspflow:not(.inspflow--8) .inspstep { flex: 1 1 calc(33.333% - var(--space-3)); } }
+@media (max-width: 620px) { .inspflow:not(.inspflow--8) .inspstep { flex: 1 1 calc(50% - var(--space-3)); } }
+
+/* 검사 프로세스 8단계: 4열 x 2행 그리드 + 열 사이 화살표 */
+.inspflow--8 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6) var(--space-5); }
+.inspflow--8 .inspstep:not(:nth-child(4n))::after { content: ""; position: absolute; top: 84px; right: calc(-1 * var(--space-5) / 2); width: 10px; height: 10px; border-top: 2px solid var(--text-muted); border-right: 2px solid var(--text-muted); transform: translate(50%, -50%) rotate(45deg); opacity: .45; }
+@media (max-width: 900px) { .inspflow--8 { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); } .inspflow--8 .inspstep::after { display: none; } }
+@media (max-width: 520px) { .inspflow--8 { grid-template-columns: 1fr; } }
 /* 생산·공급 시설: 다크 오버레이 사진 카드 4열 (참고이미지) */
 .facilcards { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: var(--space-4) 0 0; }
 .facilcards--4 { grid-template-columns: repeat(4, 1fr); }
