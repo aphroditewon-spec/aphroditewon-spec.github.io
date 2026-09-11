@@ -1820,6 +1820,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .specrows--cols tbody td:last-child { text-align: left; color: var(--text-muted); }
 .icespec__subhead { margin: var(--space-6) 0 var(--space-1); font-size: 1.02rem; font-weight: 800; color: var(--eyebrow); }
 .icespec__subhead span { font-weight: 600; font-size: .8em; color: var(--brand); }
+/* 제목 앞 세로 바(브랜드 컬러) */
+.icespec__subhead--bar { display: flex; align-items: center; gap: var(--space-3); }
+.icespec__subhead--bar::before { content: ""; flex: none; width: 5px; height: 1.15em; border-radius: 2px; background: var(--brand); }
 .icespec__sublead { margin: 0 0 var(--space-4); font-size: .85rem; color: var(--text-muted); line-height: 1.5; }
 .proc4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); list-style: none; padding: 0; margin: 0; }
 .proc4__step { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; background: var(--surface-2); }
