@@ -2260,7 +2260,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .inspartner__body .section__title { margin-top: var(--space-3); }
 .inspartner__table { width: 100%; border-collapse: collapse; margin-top: 0; border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
 .inspartner__table th, .inspartner__table td { text-align: left; padding: var(--space-2) var(--space-4); border-bottom: 1px solid var(--border); font-size: .9rem; vertical-align: top; }
-.inspartner__table tr:last-child th, .inspartner__table tr:last-child td { border-bottom: none; }
+.inspartner__table tr:last-child th, .inspartner__table tr:last-child td { border-bottom: 1px solid var(--border); }
 .inspartner__table th { width: 30%; background: transparent; color: var(--eyebrow); font-weight: 700; white-space: nowrap; border-right: 1px solid var(--border); vertical-align: middle; }
 .inspartner__table td { vertical-align: middle; }
 .ipt-ic { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: var(--brand); vertical-align: middle; margin-right: var(--space-2); position: relative; top: -1px; }
