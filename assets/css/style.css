@@ -1806,7 +1806,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .icespec-figs__dimtitle { font-size: 1.02rem; font-weight: 800; color: var(--eyebrow); margin: 0 0 var(--space-2); }
 .icespec-figs__dimtitle em { font-style: normal; font-size: .82rem; font-weight: 600; color: var(--text-muted); margin-left: .25em; }
 .icespec-figs__dimnote { display: block; margin-top: auto; padding-top: var(--space-2); text-align: right; font-size: .74rem; color: var(--text-muted); }
-.icespec-figs__dim--titled img { min-height: 0; flex: 1; width: 100%; object-fit: cover; }
+.icespec-figs__dim--titled { position: relative; }
+.icespec-figs__dim--titled img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; margin: 0; mix-blend-mode: normal; }
+.icespec-figs__dim--titled .icespec-figs__dimtitle,
+.icespec-figs__dim--titled .icespec-figs__dimnote { position: relative; z-index: 1; }
 .specrows--cols th, .specrows--cols td { width: auto; text-align: center; border-radius: 0; }
 .specrows--cols thead th { background: var(--eyebrow); color: #fff; border-bottom: none; font-size: .82rem; padding: var(--space-2) var(--space-2); }
 .specrows--cols thead th:first-child { border-radius: 6px 0 0 0; }
