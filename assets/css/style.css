@@ -1846,7 +1846,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .icespec-figs__photo--full img { height: auto; object-fit: contain; }
 /* 48P 포장 규격: 사진(좌)+표(우) 2단 배치 */
 .pkgspec { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-6); align-items: center; margin: var(--space-5) 0; }
-.pkgspec__photo { position: relative; align-self: stretch; border-radius: var(--radius-lg); overflow: hidden; background: #fff; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+.pkgspec__photo { position: relative; align-self: start; height: 400px; border-radius: var(--radius-lg); overflow: hidden; background: #fff; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
 .pkgspec__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .pkgspec__table { margin: 0; }
 .pkgspec { align-items: stretch; }
