@@ -421,6 +421,8 @@ section[id] { scroll-margin-top: 88px; }
 .page-banner__fade { position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(90deg, rgba(237,240,244,1) 0%, rgba(237,240,244,0.98) 32%, rgba(237,240,244,0.75) 54%, rgba(237,240,244,0) 76%); }
 .page-banner--overlay .gas-banner { z-index: 2; }
+/* 좌측 상단 라이트 레이 장식 (오버레이 위·텍스트 아래) */
+.page-banner__rays { position: absolute; top: 0; left: 0; width: clamp(360px, 50%, 760px); height: auto; z-index: 1; pointer-events: none; opacity: .8; }
 .ice-banner {
   position: absolute; inset: 0; line-height: 1.4;
   display: flex; align-items: center;
