@@ -2307,6 +2307,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .qlab--imgonly .qlab__panel { width: min(60%, 460px); min-height: 100%; padding: var(--space-7); justify-content: flex-start; }
 .qlab__eyebrow { display: inline-flex; align-items: center; gap: var(--space-3); }
 .qlab__eyebrow::after { content: ""; width: 22px; height: 2px; background: var(--eyebrow); }
+/* 가스분석실 완성 시안 이미지 */
+.qlab--full { width: 100%; margin-top: var(--space-4); border-radius: var(--radius-lg); overflow: hidden; background: none; box-shadow: none; }
+.qlab--full img { width: 100%; height: auto; display: block; }
 /* 가스분석실 히어로(우측 사진 + 좌측 웨이브 패널 + 하단 3개 항목) */
 .qlab--hero { margin-top: var(--space-4); }
 .qlab--hero .qlab__bg { transform: none; object-position: right center; }
