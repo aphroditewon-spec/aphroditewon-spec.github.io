@@ -2278,6 +2278,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .klccard__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .klccard__title { display: block; margin: var(--space-3) 0 6px; font-size: 1.05rem; font-weight: 800; color: var(--text); }
 .klccard__value { display: block; margin-bottom: 6px; font-size: 1rem; font-weight: 800; color: var(--brand); }
+/* 드라이아이스 경쟁력: 카드 컴팩트화로 사진 가로 비율 확대·섹션 높이 축소 */
+#ice-why .klccgas2__cards { gap: var(--space-3); }
+#ice-why .klccard { padding: var(--space-3) var(--space-4); }
+#ice-why .klccard__ic--img { width: 46px; height: 46px; }
+#ice-why .klccard__title { margin: 8px 0 3px; font-size: 1rem; }
+#ice-why .klccard__value { margin-bottom: 4px; font-size: .92rem; }
+#ice-why .klccard__desc { font-size: .82rem; line-height: 1.45; }
 .klccard__desc { margin: 0; font-size: .86rem; line-height: 1.55; color: var(--text-muted); word-break: keep-all; }
 @media (max-width: 900px) { .klccgas2 { grid-template-columns: 1fr; } .klccgas2__photo { min-height: 0; aspect-ratio: 16 / 9; } }
 @media (max-width: 480px) { .klccgas2__cards { grid-template-columns: 1fr; } }
