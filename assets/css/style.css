@@ -575,8 +575,7 @@ section[id] { scroll-margin-top: 88px; }
 .gas-point__icon--img { background: none; border-radius: 0; width: clamp(31px, 3.6vw, 52px); height: clamp(31px, 3.6vw, 52px); }
 .gas-point__icon--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 /* 가스제품 히어로: 라벨만 있는 큰 포인트 + 항목 사이 구분선 (참고 이미지) */
-.gas-banner:has(.gas-banner__points--lg) .gas-banner__col { transform: translateY(-26px); }
-.gas-banner:has(.gas-banner__points--lg) .gas-banner__eyebrow { margin: clamp(10px, 1.4vw, 22px) 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.192em; text-indent: -0.09em; }
+.gas-banner:has(.gas-banner__points--lg) .gas-banner__eyebrow { margin: 0 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.192em; text-indent: -0.09em; }
 .gas-banner:has(.gas-banner__points--lg) .gas-banner__rule { margin-top: clamp(9px, 1.1vw, 15px); margin-bottom: clamp(9px, 1.1vw, 15px); }
 .gas-banner:has(.gas-banner__points--lg) .gas-banner__sub { margin-top: clamp(3px, 0.42vw, 6px); }
 .gas-banner__points--lg { gap: clamp(23px, 3.5vw, 54px); align-items: flex-start; }
@@ -604,8 +603,7 @@ section[id] { scroll-margin-top: 88px; }
 .ice-banner:has(.ice-banner__points--lg) .ice-banner__title { font-size: clamp(27px, 4.18vw, 57px); }
 .ice-banner:has(.ice-banner__points--lg) .ice-banner__sub { font-size: clamp(12px, 1.43vw, 20px); }
 /* 드라이아이스 히어로: 가스 히어로와 동일 구조/스타일로 통일 */
-.ice-banner__inner { transform: translateY(-26px); }
-.ice-banner__eyebrow { margin: clamp(10px, 1.4vw, 22px) 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.192em; text-indent: -0.09em; }
+.ice-banner__eyebrow { margin: 0 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.192em; text-indent: -0.09em; }
 .ice-banner__sub { margin-top: clamp(3px, 0.42vw, 6px); }
 .ice-banner__rule { margin-top: clamp(9px, 1.1vw, 15px); margin-bottom: clamp(9px, 1.1vw, 15px); }
 .ice-banner__points--lg { gap: clamp(23px, 3.5vw, 54px); align-items: flex-start; }
