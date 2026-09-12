@@ -2229,7 +2229,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 480px) { .klccgas__stats { grid-template-columns: 1fr 1fr; } }
 
 /* KLCC GAS 개요: 좌측 사진(캡션) + 우측 2×2 카드 (참고 이미지) */
-.klccgas2 { display: grid; grid-template-columns: 1.05fr 1fr; gap: var(--space-5); align-items: stretch; margin-top: var(--space-5); }
+.klccgas2 { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-5); align-items: stretch; margin-top: var(--space-5); }
 .klccgas2__photo { position: relative; margin: 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); min-height: 420px; }
 .klccgas2__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .klccgas2__cap { position: absolute; left: var(--space-5); bottom: var(--space-5); color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.45); }
