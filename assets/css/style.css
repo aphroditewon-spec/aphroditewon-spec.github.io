@@ -2277,6 +2277,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .klccard__ic--img { width: 58px; height: 58px; border-radius: 0; background: none; }
 .klccard__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .klccard__title { display: block; margin: var(--space-3) 0 6px; font-size: 1.05rem; font-weight: 800; color: var(--text); }
+.klccard__value { display: block; margin-bottom: 6px; font-size: 1rem; font-weight: 800; color: var(--brand); }
 .klccard__desc { margin: 0; font-size: .86rem; line-height: 1.55; color: var(--text-muted); word-break: keep-all; }
 @media (max-width: 900px) { .klccgas2 { grid-template-columns: 1fr; } .klccgas2__photo { min-height: 0; aspect-ratio: 16 / 9; } }
 @media (max-width: 480px) { .klccgas2__cards { grid-template-columns: 1fr; } }
