@@ -2315,7 +2315,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #quality-intro .klccgas2__cap--img img { width: auto; height: 33px; }
 #quality-intro .klccard { position: relative; display: flex; align-items: flex-start; gap: var(--space-5); padding: var(--space-5); text-align: left; }
 #quality-intro .klccard__num { display: block; position: absolute; top: var(--space-4); right: var(--space-5); font-size: 1.05rem; font-weight: 800; color: #b9c6d6; letter-spacing: .02em; }
-#quality-intro .klccard__ic--img { flex: none; width: 132px; height: 132px; }
+#quality-intro .klccard__ic--img { flex: none; width: 66px; height: 66px; }
 #quality-intro .klccard__body { display: flex; flex-direction: column; min-width: 0; }
 #quality-intro .klccard__value { display: block; margin: 0; font-size: 1.7rem; font-weight: 800; color: #143b63; line-height: 1.1; letter-spacing: -0.01em; }
 #quality-intro .klccard__title { display: block; margin: 5px 0 0; font-size: 1.12rem; font-weight: 800; color: var(--brand); }
@@ -2323,11 +2323,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .section__lead, #quality-intro .section__lead { max-width: none; white-space: nowrap; }
 @media (max-width: 760px) { #intro .section__lead, #quality-intro .section__lead { white-space: normal; } }
 #ice-why .klccgas2__cards, #quality-intro .klccgas2__cards { gap: var(--space-3); }
-#ice-why .klccard, #quality-intro .klccard { padding: 9px var(--space-4); }
-#ice-why .klccard__ic--img, #quality-intro .klccard__ic--img { width: 40px; height: 40px; }
-#ice-why .klccard__title, #quality-intro .klccard__title { margin: 5px 0 1px; font-size: .98rem; }
-#ice-why .klccard__value, #quality-intro .klccard__value { margin-bottom: 2px; font-size: .88rem; }
-#ice-why .klccard__desc, #quality-intro .klccard__desc { font-size: .82rem; line-height: 1.4; }
+#ice-why .klccard { padding: 9px var(--space-4); }
+#ice-why .klccard__ic--img { width: 40px; height: 40px; }
+#ice-why .klccard__title { margin: 5px 0 1px; font-size: .98rem; }
+#ice-why .klccard__value { margin-bottom: 2px; font-size: .88rem; }
+#ice-why .klccard__desc { font-size: .82rem; line-height: 1.4; }
 #ice-why .klccgas2__cap--img img { width: auto; height: 33px; }
 .klccard__desc { margin: 0; font-size: .86rem; line-height: 1.55; color: var(--text-muted); word-break: keep-all; }
 @media (max-width: 900px) { .klccgas2 { grid-template-columns: 1fr; } .klccgas2__photo { min-height: 0; aspect-ratio: 16 / 9; } }
