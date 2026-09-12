@@ -2240,6 +2240,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .klccard__num { position: absolute; top: var(--space-4); right: var(--space-5); font-size: 1.15rem; font-weight: 800; color: #b9c6d6; letter-spacing: .02em; }
 .klccard__ic { width: 60px; height: 60px; border-radius: 50%; background: #eef4fb; display: inline-flex; align-items: center; justify-content: center; color: var(--brand); }
 .klccard__ic svg { width: 32px; height: 32px; }
+.klccard__ic--img { width: 72px; height: 72px; border-radius: 0; background: none; }
+.klccard__ic--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .klccard__title { display: block; margin: var(--space-4) 0 var(--space-2); font-size: 1.12rem; font-weight: 800; color: var(--text); }
 .klccard__desc { margin: 0; font-size: .92rem; line-height: 1.6; color: var(--text-muted); word-break: keep-all; }
 @media (max-width: 900px) { .klccgas2 { grid-template-columns: 1fr; } .klccgas2__photo { min-height: 0; aspect-ratio: 16 / 9; } }
