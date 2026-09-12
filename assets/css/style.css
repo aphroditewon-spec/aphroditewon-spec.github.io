@@ -2313,7 +2313,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 품질·인증 카드: 왼쪽 큰 아이콘 + 오른쪽 내용(번호·값·제목·구분선·설명) 상세형 (참고 이미지) */
 #quality-intro .klccgas2__photo { aspect-ratio: 703 / 380; }
 #quality-intro .klccgas2__cap--img img { width: auto; height: 33px; }
-#quality-intro .klccard { position: relative; display: flex; align-items: center; gap: var(--space-5); padding: var(--space-5); text-align: left; }
+#quality-intro .klccard { position: relative; display: flex; align-items: flex-start; gap: var(--space-5); padding: var(--space-5); text-align: left; }
 #quality-intro .klccard__num { display: block; position: absolute; top: var(--space-4); right: var(--space-5); font-size: 1.05rem; font-weight: 800; color: #b9c6d6; letter-spacing: .02em; }
 #quality-intro .klccard__ic--img { flex: none; width: 110px; height: 110px; }
 #quality-intro .klccard__body { display: flex; flex-direction: column; min-width: 0; }
