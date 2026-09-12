@@ -2309,7 +2309,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .klccgas2__cap--img img { width: auto; height: 33px; }
 #intro .klccgas2__photo img { object-position: center 60%; }
 #quality-intro { padding-bottom: calc(var(--space-6) * 0.7 * 1.5); }
-/* 카드 제목+값 한 줄 표현 */
+/* 카드 제목+값 한 줄 표현 (사진 높이는 기존 유지) */
+#quality-intro .klccgas2__photo { aspect-ratio: 703 / 300; }
 #quality-intro .klccard__ic { display: flex; }
 #quality-intro .klccard__title { display: inline; }
 #quality-intro .klccard__value { display: inline; margin: 0 0 0 8px; }
