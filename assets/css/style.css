@@ -192,7 +192,6 @@ section[id] { scroll-margin-top: 88px; }
   font-size: calc(var(--fs-eyebrow) * 1.2); font-weight: 700; letter-spacing: .1em;
   color: #2c6788; margin-bottom: var(--space-5);
 }
-.hero__kicker::before { content: ""; width: 26px; height: 2px; background: #2c6788; }
 /* 스크롤 안내 인디케이터 (마우스 아이콘 + SCROLL) */
 .hero__scroll {
   position: absolute; right: var(--space-10); bottom: var(--space-8);
@@ -472,6 +471,12 @@ section[id] { scroll-margin-top: 88px; }
   padding-inline: var(--space-6);
 }
 .gas-banner__col { max-width: min(780px, 62%); }
+/* 회사소개 히어로: ABOUT US 아이브로우(참고 이미지) */
+.gas-banner__eyebrow {
+  display: block; font-size: clamp(11px, 1.1vw, 15px); font-weight: 700;
+  letter-spacing: 0.18em; color: #6a7683; margin: 0 0 clamp(8px, 1vw, 16px);
+}
+.gas-banner--const .gas-banner__eyebrow { text-shadow: 0 1px 3px rgba(255,255,255,0.85), 0 0 2px rgba(255,255,255,0.85); }
 .gas-point__label, .gas-point__desc { white-space: nowrap; }
 .gas-banner__title {
   font-size: clamp(28px, 4.4vw, 60px); font-weight: 800; line-height: 1.2;
