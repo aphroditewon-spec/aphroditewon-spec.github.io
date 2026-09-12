@@ -2309,6 +2309,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .klccgas2__cap--img img { width: auto; height: 33px; }
 #intro .klccgas2__photo img { object-position: center 60%; }
 #quality-intro { padding-bottom: calc(var(--space-6) * 0.7 * 1.5); }
+/* 카드 제목+값 한 줄 표현 */
+#quality-intro .klccard__ic { display: flex; }
+#quality-intro .klccard__title { display: inline; }
+#quality-intro .klccard__value { display: inline; margin: 0 0 0 8px; }
 #intro .section__lead, #quality-intro .section__lead { max-width: none; white-space: nowrap; }
 @media (max-width: 760px) { #intro .section__lead, #quality-intro .section__lead { white-space: normal; } }
 #ice-why .klccgas2__cards, #quality-intro .klccgas2__cards { gap: var(--space-3); }
