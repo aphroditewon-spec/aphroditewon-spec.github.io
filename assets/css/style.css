@@ -566,6 +566,8 @@ section[id] { scroll-margin-top: 88px; }
   border-radius: 50%; background: #2b6cb8; color: #fff;
 }
 .gas-point__icon svg { width: 54%; height: 54%; }
+.gas-point__icon--img { background: none; border-radius: 0; }
+.gas-point__icon--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .gas-point__label {
   display: block; margin-top: clamp(5px, 0.8vw, 10px);
   font-size: clamp(11px, 1.15vw, 16px); font-weight: 700; color: #1c5fc0;
