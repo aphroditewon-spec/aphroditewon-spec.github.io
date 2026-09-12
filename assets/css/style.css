@@ -2318,8 +2318,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #quality-intro .klccard__ic--img { flex: none; width: 66px; height: 66px; }
 #quality-intro .klccard__body { display: flex; flex-direction: column; min-width: 0; }
 #quality-intro .klccard__value { display: block; margin: 0; font-size: 1.7rem; font-weight: 800; color: #143b63; line-height: 1.1; letter-spacing: -0.01em; }
-#quality-intro .klccard__title { display: block; margin: 5px 0 0; font-size: 1.12rem; font-weight: 800; color: var(--brand); }
-#quality-intro .klccard__desc { margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--border); font-size: .88rem; line-height: 1.5; color: var(--text-muted); white-space: normal; }
+#quality-intro .klccard__title { display: block; margin: 5px 0 0; font-size: 1rem; font-weight: 800; color: var(--brand); }
+#quality-intro .klccard__desc { margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--border); font-size: .83rem; line-height: 1.45; color: var(--text-muted); white-space: normal; }
 #intro .section__lead, #quality-intro .section__lead { max-width: none; white-space: nowrap; }
 @media (max-width: 760px) { #intro .section__lead, #quality-intro .section__lead { white-space: normal; } }
 #ice-why .klccgas2__cards, #quality-intro .klccgas2__cards { gap: var(--space-3); }
