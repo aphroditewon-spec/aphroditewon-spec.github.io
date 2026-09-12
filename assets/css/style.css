@@ -417,6 +417,10 @@ section[id] { scroll-margin-top: 88px; }
 /* 배경 이미지 + 왼쪽 텍스트/아이콘 오버레이 배너 */
 .page-banner--overlay { position: relative; }
 .page-banner--overlay .page-banner__bg { display: block; width: 100%; height: auto; }
+/* 왼쪽 텍스트 가독성용 화이트톤 그라데이션 오버레이 (참고 이미지) */
+.page-banner__fade { position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(90deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 22%, rgba(255,255,255,0.4) 42%, rgba(255,255,255,0) 60%); }
+.page-banner--overlay .gas-banner { z-index: 2; }
 .ice-banner {
   position: absolute; inset: 0; line-height: 1.4;
   display: flex; align-items: center;
