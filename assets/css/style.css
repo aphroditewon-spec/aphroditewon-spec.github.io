@@ -570,7 +570,7 @@ section[id] { scroll-margin-top: 88px; }
 .gas-point__icon--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 /* 가스제품 히어로: 라벨만 있는 큰 포인트 + 항목 사이 구분선 (참고 이미지) */
 .gas-banner:not(.gas-banner--const):not(.gas-banner--supply) .gas-banner__col { transform: translateY(-16px); }
-.gas-banner:not(.gas-banner--const):not(.gas-banner--supply) .gas-banner__eyebrow { margin: clamp(10px, 1.4vw, 22px) 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.189em; text-indent: -0.09em; }
+.gas-banner:not(.gas-banner--const):not(.gas-banner--supply) .gas-banner__eyebrow { margin: clamp(10px, 1.4vw, 22px) 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.192em; text-indent: -0.09em; }
 .gas-banner:not(.gas-banner--const):not(.gas-banner--supply) .gas-banner__rule { margin-top: clamp(5px, 0.7vw, 10px); margin-bottom: clamp(10px, 1.26vw, 18px); }
 .gas-banner:not(.gas-banner--const):not(.gas-banner--supply) .gas-banner__sub { margin-top: clamp(3px, 0.42vw, 6px); }
 .gas-banner__points--lg { gap: clamp(15px, 2.3vw, 36px); align-items: flex-start; }
