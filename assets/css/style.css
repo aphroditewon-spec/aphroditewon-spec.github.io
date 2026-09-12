@@ -2315,7 +2315,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #quality-intro .klccgas2__cap--img img { width: auto; height: 33px; }
 #quality-intro .klccard { position: relative; display: flex; align-items: flex-start; gap: var(--space-5); padding: var(--space-5); text-align: left; }
 #quality-intro .klccard__num { display: block; position: absolute; top: var(--space-4); right: var(--space-5); font-size: 1.05rem; font-weight: 800; color: #b9c6d6; letter-spacing: .02em; }
-#quality-intro .klccard__ic--img { flex: none; width: 110px; height: 110px; }
+#quality-intro .klccard__ic--img { flex: none; width: 132px; height: 132px; }
 #quality-intro .klccard__body { display: flex; flex-direction: column; min-width: 0; }
 #quality-intro .klccard__value { display: block; margin: 0; font-size: 1.7rem; font-weight: 800; color: #143b63; line-height: 1.1; letter-spacing: -0.01em; }
 #quality-intro .klccard__title { display: block; margin: 5px 0 0; font-size: 1.12rem; font-weight: 800; color: var(--brand); }
