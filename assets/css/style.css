@@ -566,7 +566,7 @@ section[id] { scroll-margin-top: 88px; }
   border-radius: 50%; background: #2b6cb8; color: #fff;
 }
 .gas-point__icon svg { width: 54%; height: 54%; }
-.gas-point__icon--img { background: none; border-radius: 0; }
+.gas-point__icon--img { background: none; border-radius: 0; width: clamp(31px, 3.6vw, 52px); height: clamp(31px, 3.6vw, 52px); }
 .gas-point__icon--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .gas-point__label {
   display: block; margin-top: clamp(5px, 0.8vw, 10px);
