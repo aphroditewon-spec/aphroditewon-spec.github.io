@@ -190,7 +190,7 @@ section[id] { scroll-margin-top: 88px; }
 .hero__kicker {
   display: inline-flex; align-items: center; gap: .55em;
   font-size: calc(var(--fs-eyebrow) * 1.2); font-weight: 700; letter-spacing: .1em;
-  color: #2c6788; margin-bottom: var(--space-5);
+  color: #6a7683; margin-bottom: var(--space-5);
 }
 /* 스크롤 안내 인디케이터 (마우스 아이콘 + SCROLL) */
 .hero__scroll {
