@@ -1596,6 +1596,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .herostat__item:last-child { border-right: 0; }
 .herostat__ic { color: var(--brand); margin-bottom: 6px; }
 .herostat__ic svg { width: 30px; height: 30px; }
+.herostat__ic--img { display: inline-flex; align-items: center; justify-content: center; }
+.herostat__ic--img img { width: 42px; height: 42px; object-fit: contain; }
 .herostat__num { font-size: clamp(1.7rem, 2.8vw, 2.5rem); font-weight: 800; color: #143b63; line-height: 1; }
 .herostat__num sup { font-size: .48em; color: var(--accent); vertical-align: super; }
 .herostat__label { font-size: .8rem; font-weight: 700; letter-spacing: .08em; color: var(--text); margin-top: 5px; }
