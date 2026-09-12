@@ -2285,11 +2285,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #gas-intro .klccard__title { margin: 7px 0 4px; font-size: 1rem; }
 #gas-intro .klccard__desc { font-size: .83rem; line-height: 1.45; }
 #ice-why .klccgas2__cards { gap: var(--space-3); }
-#ice-why .klccard { padding: 10px var(--space-4); }
-#ice-why .klccard__ic--img { width: 46px; height: 46px; }
-#ice-why .klccard__title { margin: 8px 0 3px; font-size: 1rem; }
-#ice-why .klccard__value { margin-bottom: 4px; font-size: .92rem; }
-#ice-why .klccard__desc { font-size: .82rem; line-height: 1.45; }
+#ice-why .klccard { padding: 9px var(--space-4); }
+#ice-why .klccard__ic--img { width: 40px; height: 40px; }
+#ice-why .klccard__title { margin: 5px 0 1px; font-size: .98rem; }
+#ice-why .klccard__value { margin-bottom: 2px; font-size: .88rem; }
+#ice-why .klccard__desc { font-size: .82rem; line-height: 1.4; }
 .klccard__desc { margin: 0; font-size: .86rem; line-height: 1.55; color: var(--text-muted); word-break: keep-all; }
 @media (max-width: 900px) { .klccgas2 { grid-template-columns: 1fr; } .klccgas2__photo { min-height: 0; aspect-ratio: 16 / 9; } }
 @media (max-width: 480px) { .klccgas2__cards { grid-template-columns: 1fr; } }
