@@ -2309,7 +2309,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 }
 .qlab__panel { position: relative; z-index: 1; width: min(52%, 500px); min-height: 340px; padding: var(--space-8) var(--space-8) var(--space-7); background: linear-gradient(100deg, rgba(243,247,252,.98) 62%, rgba(243,247,252,.82) 82%, rgba(243,247,252,0) 100%); display: flex; flex-direction: column; justify-content: center; }
 .qlab__eyebrow { font-size: var(--fs-eyebrow); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--eyebrow); }
-.qlab__title { margin: var(--space-2) 0 var(--space-4); font-size: clamp(2rem, 3.2vw, 2.6rem); font-weight: 800; color: var(--text); letter-spacing: -.01em; }
+.qlab__title { margin: var(--space-2) 0 var(--space-4); font-size: var(--fs-h2); font-weight: 800; color: var(--text); letter-spacing: -.01em; }
 .qlab__sub { margin: 0 0 var(--space-3); font-size: 1.12rem; font-weight: 700; color: var(--text); line-height: 1.45; }
 .qlab__desc { margin: 0 0 var(--space-5); font-size: .88rem; line-height: 1.65; color: var(--text-muted); word-break: keep-all; }
 .qlab__cards { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
