@@ -2309,6 +2309,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .klccgas2__cap--img img { width: auto; height: 33px; }
 #intro .klccgas2__photo img { object-position: center 60%; }
 #quality-intro { padding-bottom: calc(var(--space-6) * 0.7 * 2.2); }
+#qc-process { padding-bottom: calc(var(--space-6) * 0.7 * 2.2); }
 /* 품질·인증 카드: 왼쪽 아이콘 + 오른쪽 내용(값·제목·설명) 가로형 */
 #quality-intro .klccgas2__photo { aspect-ratio: 703 / 380; }
 #quality-intro .klccgas2__cap--img img { width: auto; height: 33px; }
