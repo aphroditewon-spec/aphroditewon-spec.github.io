@@ -415,7 +415,7 @@ section[id] { scroll-margin-top: 88px; }
 .page-banner img { display: block; width: 100%; height: auto; }
 
 /* 배경 이미지 + 왼쪽 텍스트/아이콘 오버레이 배너 */
-.page-banner--overlay { position: relative; }
+.page-banner--overlay { position: relative; overflow: hidden; }
 .page-banner--overlay .page-banner__bg { display: block; width: 100%; height: auto; }
 /* 왼쪽 텍스트 가독성용 화이트톤 그라데이션 오버레이 (참고 이미지) */
 .page-banner__fade { position: absolute; inset: 0; z-index: 1; pointer-events: none;
