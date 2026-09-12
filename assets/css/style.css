@@ -2311,10 +2311,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .qlab--full { width: 100%; margin-top: var(--space-4); border-radius: var(--radius-lg); overflow: hidden; background: none; box-shadow: none; }
 .qlab--full img { width: 100%; height: auto; display: block; }
 /* 가스분석실 히어로(우측 사진 + 좌측 웨이브 패널 + 하단 3개 항목) */
-.qlab--hero { margin-top: var(--space-4); }
-.qlab--hero .qlab__bg { transform: none; object-position: right center; }
-.qlab--hero .qlab__panel { width: min(55%, 600px); min-height: 480px; padding: var(--space-8) var(--space-8) var(--space-7); justify-content: flex-start;
-  background: linear-gradient(100deg, rgba(240,246,252,.98) 74%, rgba(240,246,252,.7) 90%, rgba(240,246,252,0) 100%), url('../images/site/qlab-panel-bg.jpg') left center / cover no-repeat; }
+.qlab--hero { margin-top: var(--space-4); aspect-ratio: 2.547 / 1; }
+.qlab--hero .qlab__bg { transform: none; object-position: center; }
+.qlab--hero .qlab__panel { width: min(52%, 600px); min-height: 100%; padding: clamp(var(--space-4), 4vw, var(--space-8)); justify-content: center; background: none; }
 .qlab--hero .qlab__feats { list-style: none; margin: auto 0 0; padding: var(--space-5) 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
 .qlab--hero .qlab__feat { text-align: center; padding: 0 var(--space-2); border-left: 1px solid rgba(30,60,100,.14); }
 .qlab--hero .qlab__feat:first-child { border-left: none; }
