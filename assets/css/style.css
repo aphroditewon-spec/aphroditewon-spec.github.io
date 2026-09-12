@@ -1818,6 +1818,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .icespec-figs__dimnote { display: block; margin-top: auto; padding-top: var(--space-2); text-align: right; font-size: .74rem; color: var(--text-muted); }
 .icespec-figs__dim--titled { position: relative; }
 .icespec-figs__dim--titled img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; margin: 0; mix-blend-mode: normal; }
+/* 완성 이미지(제목·치수 포함)는 크롭 없이 전체 표시 */
+.icespec-figs__dim--full { background: #fff; }
+.icespec-figs__dim--full img { object-fit: contain; }
 .icespec-figs__dim--titled .icespec-figs__dimtitle,
 .icespec-figs__dim--titled .icespec-figs__dimnote { position: relative; z-index: 1; }
 .specrows--cols th, .specrows--cols td { width: auto; text-align: center; border-radius: 0; }
