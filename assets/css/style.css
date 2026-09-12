@@ -2313,7 +2313,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #quality-intro .klccgas2__photo { aspect-ratio: 703 / 380; }
 #quality-intro .klccard { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4) var(--space-5); text-align: left; }
 #quality-intro .klccard__num { display: none; }
-#quality-intro .klccard__ic--img { flex: none; width: 66px; height: 66px; }
+#quality-intro .klccard__ic--img { flex: none; width: 86px; height: 86px; }
 #quality-intro .klccard__body { display: flex; flex-direction: column; }
 #quality-intro .klccard__value { display: block; margin: 0; font-size: 1.45rem; font-weight: 800; color: #143b63; letter-spacing: -0.01em; }
 #quality-intro .klccard__title { display: block; margin: 2px 0 0; font-size: 1.02rem; font-weight: 800; color: var(--brand); }
