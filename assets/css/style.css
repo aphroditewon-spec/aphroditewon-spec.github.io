@@ -2311,7 +2311,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .qlab__eyebrow { font-size: var(--fs-eyebrow); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--eyebrow); }
 .qlab__title { margin: var(--space-2) 0 var(--space-4); font-size: var(--fs-h2); font-weight: 800; color: var(--text); letter-spacing: -.01em; }
 .qlab__sub { margin: 0 0 var(--space-3); font-size: 1.12rem; font-weight: 700; color: var(--text); line-height: 1.45; }
-.qlab__desc { margin: 0 0 var(--space-5); font-size: .88rem; line-height: 1.65; color: var(--text-muted); word-break: keep-all; }
+.qlab__desc { margin: 0 0 var(--space-5); font-size: var(--fs-lead); line-height: 1.65; color: var(--text-muted); word-break: keep-all; }
 .qlab__cards { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
 .qlab__card { display: flex; align-items: center; gap: var(--space-3); background: rgba(255,255,255,.9); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); padding: var(--space-3) var(--space-4); }
 .qlab__ic { flex: none; width: 38px; height: 38px; color: var(--brand); display: grid; place-items: center; }
