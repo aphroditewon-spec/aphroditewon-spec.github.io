@@ -2301,7 +2301,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .klccard__title { margin: 7px 0 4px; font-size: 1rem; }
 #intro .klccard__desc { font-size: .83rem; line-height: 1.45; }
 #intro .klccgas2__cap--img img { width: auto; height: 33px; }
-#intro .klccgas2__photo img { object-position: center 42%; }
+#intro .klccgas2__photo img { object-position: center 60%; }
 #intro .section__lead { max-width: none; white-space: nowrap; }
 @media (max-width: 760px) { #intro .section__lead { white-space: normal; } }
 #ice-why .klccgas2__cards { gap: var(--space-3); }
