@@ -2286,6 +2286,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #gas-intro .klccard__ic--img { width: 44px; height: 44px; }
 #gas-intro .klccard__title { margin: 7px 0 4px; font-size: 1rem; }
 #gas-intro .klccard__desc { font-size: .83rem; line-height: 1.45; }
+/* 시설·시공 개요: 가스 KLCC 섹션과 동일 (사진 비율·높이 일치) */
+#intro .klccard { padding: 12px var(--space-4); }
+#intro .klccard__ic--img { width: 44px; height: 44px; }
+#intro .klccard__title { margin: 7px 0 4px; font-size: 1rem; }
+#intro .klccard__desc { font-size: .83rem; line-height: 1.45; }
 #ice-why .klccgas2__cards { gap: var(--space-3); }
 #ice-why .klccard { padding: 9px var(--space-4); }
 #ice-why .klccard__ic--img { width: 40px; height: 40px; }
