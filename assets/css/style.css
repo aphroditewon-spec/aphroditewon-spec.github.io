@@ -573,11 +573,11 @@ section[id] { scroll-margin-top: 88px; }
 .gas-banner:not(.gas-banner--const):not(.gas-banner--supply) .gas-banner__eyebrow { margin: clamp(10px, 1.4vw, 22px) 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.192em; text-indent: -0.09em; }
 .gas-banner:not(.gas-banner--const):not(.gas-banner--supply) .gas-banner__rule { margin-top: clamp(5px, 0.7vw, 10px); margin-bottom: clamp(10px, 1.26vw, 18px); }
 .gas-banner:not(.gas-banner--const):not(.gas-banner--supply) .gas-banner__sub { margin-top: clamp(3px, 0.42vw, 6px); }
-.gas-banner__points--lg { gap: clamp(15px, 2.3vw, 36px); align-items: flex-start; }
+.gas-banner__points--lg { gap: clamp(17px, 2.65vw, 41px); align-items: flex-start; }
 .gas-banner__points--lg .gas-point { position: relative; }
 .gas-banner__points--lg .gas-point:not(:last-child)::after {
   content: ""; position: absolute; top: clamp(14px, 1.9vw, 26px);
-  right: calc(-1 * clamp(8px, 1.15vw, 18px)); width: 1px; height: clamp(34px, 4vw, 56px);
+  right: calc(-1 * clamp(9px, 1.32vw, 20px)); width: 1px; height: clamp(34px, 4vw, 56px);
   background: rgba(23, 69, 127, 0.18);
 }
 .gas-banner__points--lg .gas-point__icon--img { width: clamp(28px, 3.4vw, 45px); height: clamp(28px, 3.4vw, 45px); }
