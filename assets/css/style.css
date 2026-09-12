@@ -594,6 +594,7 @@ section[id] { scroll-margin-top: 88px; }
   margin-top: clamp(5px, 0.7vw, 9px); font-size: clamp(10px, 1vw, 14px);
   font-weight: 800; color: #17457f;
 }
+.gas-banner__points--desc .gas-point__desc { display: block; margin-top: 3px; font-size: clamp(10px, 0.95vw, 13px); font-weight: 600; color: #5a6875; letter-spacing: 0; white-space: nowrap; }
 /* 드라이아이스 히어로: 가스 히어로와 동일 구조/스타일로 통일 */
 .ice-banner__inner { transform: translateY(-26px); }
 .ice-banner__eyebrow { margin: clamp(10px, 1.4vw, 22px) 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.192em; text-indent: -0.09em; }
