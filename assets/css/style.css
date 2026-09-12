@@ -2254,7 +2254,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .klccgas2__cap { position: absolute; left: var(--space-5); bottom: var(--space-5); color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.45); }
 .klccgas2__cap b { display: block; font-size: 1.05rem; font-weight: 700; }
 .klccgas2__cap span { display: inline-block; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,.6); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; opacity: .9; }
-.klccgas2__cap--img img { position: static; inset: auto; display: block; width: clamp(200px, 24vw, 320px); height: auto; object-fit: contain; filter: drop-shadow(0 1px 4px rgba(0,0,0,.55)) drop-shadow(0 0 2px rgba(0,0,0,.4)); }
+.klccgas2__cap--img img { position: static; inset: auto; display: block; width: clamp(140px, 16.8vw, 224px); height: auto; object-fit: contain; filter: drop-shadow(0 1px 4px rgba(0,0,0,.55)) drop-shadow(0 0 2px rgba(0,0,0,.4)); }
 .klccgas2__cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
 .klccard { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-4); }
 .klccard__num { position: absolute; top: var(--space-3); right: var(--space-4); font-size: 1.05rem; font-weight: 800; color: #b9c6d6; letter-spacing: .02em; }
