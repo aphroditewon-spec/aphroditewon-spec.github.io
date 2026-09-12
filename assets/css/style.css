@@ -595,6 +595,14 @@ section[id] { scroll-margin-top: 88px; }
   font-weight: 800; color: #17457f;
 }
 .gas-banner__points--desc .gas-point__desc { display: block; margin-top: 3px; font-size: clamp(10px, 0.95vw, 13px); font-weight: 600; color: #5a6875; letter-spacing: 0; white-space: nowrap; }
+/* 제품 히어로 텍스트 5% 축소 (가스제품·시설시공·용기검사 공통) */
+.gas-banner:has(.gas-banner__points--lg) .gas-banner__eyebrow { font-size: clamp(9px, 0.9vw, 12.2px); }
+.gas-banner:has(.gas-banner__points--lg) .gas-banner__title { font-size: clamp(27px, 4.18vw, 57px); }
+.gas-banner:has(.gas-banner__points--lg) .gas-banner__sub { font-size: clamp(12px, 1.43vw, 20px); }
+/* 드라이아이스 히어로 텍스트 5% 축소 */
+.ice-banner:has(.ice-banner__points--lg) .ice-banner__eyebrow { font-size: clamp(9px, 0.9vw, 12.2px); }
+.ice-banner:has(.ice-banner__points--lg) .ice-banner__title { font-size: clamp(27px, 4.18vw, 57px); }
+.ice-banner:has(.ice-banner__points--lg) .ice-banner__sub { font-size: clamp(12px, 1.43vw, 20px); }
 /* 드라이아이스 히어로: 가스 히어로와 동일 구조/스타일로 통일 */
 .ice-banner__inner { transform: translateY(-26px); }
 .ice-banner__eyebrow { margin: clamp(10px, 1.4vw, 22px) 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.192em; text-indent: -0.09em; }
