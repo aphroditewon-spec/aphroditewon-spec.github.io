@@ -2309,11 +2309,15 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #intro .klccgas2__cap--img img { width: auto; height: 33px; }
 #intro .klccgas2__photo img { object-position: center 60%; }
 #quality-intro { padding-bottom: calc(var(--space-6) * 0.7 * 1.5); }
-/* 카드 제목+값 한 줄 표현 (사진 높이는 기존 유지) */
+/* 품질·인증 카드: 왼쪽 아이콘 + 오른쪽 내용(값·제목·설명) 가로형 */
 #quality-intro .klccgas2__photo { aspect-ratio: 703 / 380; }
-#quality-intro .klccard__ic { display: flex; }
-#quality-intro .klccard__title { display: inline; }
-#quality-intro .klccard__value { display: inline; margin: 0 0 0 8px; }
+#quality-intro .klccard { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4) var(--space-5); text-align: left; }
+#quality-intro .klccard__num { display: none; }
+#quality-intro .klccard__ic--img { flex: none; width: 66px; height: 66px; }
+#quality-intro .klccard__body { display: flex; flex-direction: column; }
+#quality-intro .klccard__value { display: block; margin: 0; font-size: 1.45rem; font-weight: 800; color: #143b63; letter-spacing: -0.01em; }
+#quality-intro .klccard__title { display: block; margin: 2px 0 0; font-size: 1.02rem; font-weight: 800; color: var(--brand); }
+#quality-intro .klccard__desc { margin: 3px 0 0; font-size: .85rem; line-height: 1.45; color: var(--text-muted); white-space: normal; }
 #intro .section__lead, #quality-intro .section__lead { max-width: none; white-space: nowrap; }
 @media (max-width: 760px) { #intro .section__lead, #quality-intro .section__lead { white-space: normal; } }
 #ice-why .klccgas2__cards, #quality-intro .klccgas2__cards { gap: var(--space-3); }
