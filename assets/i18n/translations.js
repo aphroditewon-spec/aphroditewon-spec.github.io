@@ -35,9 +35,9 @@ window.I18N = {
     "nav.sub.contact": "문의하기",
     "nav.sub.faq": "자주 묻는 질문",
 
-    "hero.kicker": "KOREA LIQUID CARBONIC CHEMICAL",
-    "hero.title": "산업용가스 전문기업<br>한국탄산화학(주)",
-    "hero.lead": "신뢰와 기술로, 더 안전한 내일을 만듭니다.",
+    "hero.kicker": "SINCE 2001 · 산업용가스 전문기업",
+    "hero.title": "신뢰로 채우는<br>대한민국 가스 산업의 중심",
+    "hero.lead": "산소·질소·아르곤·탄산·수소부터 드라이아이스까지.<br>고순도 99.9999% 품질과 안정적인 공급망으로 함께합니다.",
     "hero.cta1": "제품보기",
     "hero.cta2": "문의하기",
     "hero.stat.since": "설립연도",
