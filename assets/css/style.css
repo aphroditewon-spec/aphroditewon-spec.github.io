@@ -1402,7 +1402,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 /* FAQ */
 /* FAQ 헤더: 좌측 타이틀 + 우측 안내 문구 */
-.faq__head.section__head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-5); flex-wrap: wrap; }
+.faq__head.section__head { max-width: none; display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-5); flex-wrap: wrap; }
+.faq__note { margin-left: auto; }
 .faq__note { color: var(--text-muted); font-size: .82rem; margin: 0; text-align: right; }
 /* FAQ 카드(아코디언): 질문만 보이고, 화살표 클릭 시 답변이 아래로 펼쳐짐 */
 .faq { display: flex; flex-direction: column; gap: var(--space-4); }
