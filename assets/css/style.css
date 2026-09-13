@@ -1112,21 +1112,24 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 너겟 이미지 슬라이드쇼 (좌측 정렬 프레임 + 우측 캡션) */
 .ice-slideshow { display: grid; grid-template-columns: minmax(0, 560px) 1fr; gap: var(--space-8); align-items: center; }
 .ice-slideshow__frame { position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); background: var(--surface-2); }
+/* 하단 도트 가독성용 은은한 스크림 */
+.ice-slideshow__frame::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 68px; background: linear-gradient(to top, rgba(0,0,0,.34), rgba(0,0,0,0)); pointer-events: none; z-index: 1; }
 .ice-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease; }
 .ice-slide.is-active { opacity: 1; }
 .ice-slideshow__arrow {
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
   width: 40px; height: 40px; border: 0; border-radius: 50%;
-  background: rgba(15,26,37,.42); color: #fff; font-size: 1.5rem; line-height: 1;
+  background: rgba(15,26,37,.5); color: #fff; font-size: 1.5rem; line-height: 1;
   display: flex; align-items: center; justify-content: center; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
   transition: var(--transition);
 }
 .ice-slideshow__arrow:hover { background: rgba(15,26,37,.72); }
 .ice-slideshow__arrow--prev { left: 12px; }
 .ice-slideshow__arrow--next { right: 12px; }
 .ice-slideshow__dots { position: absolute; left: 0; right: 0; bottom: 12px; display: flex; gap: 8px; justify-content: center; z-index: 2; }
-.ice-slideshow__dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.55); cursor: pointer; transition: var(--transition); }
-.ice-slideshow__dots button.is-active { width: 20px; border-radius: 5px; background: #fff; }
+.ice-slideshow__dots button { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.6); box-shadow: 0 1px 3px rgba(0,0,0,.45); cursor: pointer; transition: var(--transition); }
+.ice-slideshow__dots button.is-active { width: 22px; border-radius: 5px; background: #fff; }
 .ice-slideshow__cap .feature__title { margin-bottom: var(--space-3); }
 .ice-slideshow__cap .feature__text { margin-bottom: var(--space-3); }
 @media (max-width: 860px) { .ice-slideshow { grid-template-columns: 1fr; gap: var(--space-6); } }
