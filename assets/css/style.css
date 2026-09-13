@@ -2827,7 +2827,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
    홈 시안 — CEO 메시지, 연혁, 인증/수상
    ===================================================================== */
 /* CEO 메시지 + 방침 */
-.ceohome { display: grid; grid-template-columns: 1.12fr 1fr 0.98fr; gap: var(--space-7); align-items: center; }
+.ceohome { display: grid; grid-template-columns: 1.08fr 0.96fr 1.12fr; gap: var(--space-7); align-items: center; }
 .ceohome__photo { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); align-self: center; }
 /* 레퍼런스: 가로형 사진 비율(16:10), 인물 중앙 프레이밍 */
 .ceohome__photo img { width: 100%; height: auto; aspect-ratio: 1.32 / 1; object-fit: cover; object-position: 48% 22%; display: block; }
@@ -2847,7 +2847,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 레퍼런스: 아이콘과 텍스트 사이 세로 구분선 */
 .ceohome__phil .phil__body { border-left: 1px solid var(--border); padding-left: var(--space-5); }
 .ceohome__phil .phil__title { font-size: 1rem; }
-.ceohome__phil .phil__desc { font-size: .84rem; }
+.ceohome__phil .phil__desc { font-size: .8rem; }
 /* 레퍼런스: 아이콘 좌측 + 텍스트 우측(가로형) */
 .policycard { flex: 1; display: flex; flex-direction: row; align-items: center; gap: var(--space-5); padding: var(--space-4) var(--space-6);
   border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface);
