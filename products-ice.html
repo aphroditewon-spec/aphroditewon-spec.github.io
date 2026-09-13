@@ -677,7 +677,7 @@
 
   <script src="assets/i18n/translations.js?v=20260913h"></script>
   <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/main.js?v=20260913"></script>
+  <script src="assets/js/main.js?v=20260913b"></script>
   <script>
     (function () {
       // 각 .prodlineup 컨테이너 단위로 탭을 스코프 처리 (라인업·규격 탭 간 충돌 방지)
@@ -689,7 +689,11 @@
           b.addEventListener('click', function () {
             var cat = b.getAttribute('data-cat');
             btns.forEach(function (x) { var on = x === b; x.classList.toggle('is-active', on); x.setAttribute('aria-selected', on ? 'true' : 'false'); });
-            panels.forEach(function (p) { var on = p.getAttribute('data-cat') === cat; p.classList.toggle('is-active', on); p.hidden = !on; });
+            panels.forEach(function (p) {
+              var on = p.getAttribute('data-cat') === cat; p.classList.toggle('is-active', on); p.hidden = !on;
+              // 탭을 활성화하면 해당 패널의 슬라이드쇼를 첫 장부터 다시 시작
+              if (on) { var ss = p.querySelector('.ice-slideshow'); if (ss && ss.resetSlideshow) ss.resetSlideshow(); }
+            });
           });
         });
       });
