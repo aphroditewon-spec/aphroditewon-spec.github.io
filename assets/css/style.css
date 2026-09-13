@@ -613,6 +613,11 @@ section[id] { scroll-margin-top: 88px; }
 .ice-banner:has(.ice-banner__points--lg) .ice-banner__eyebrow { font-size: clamp(8px, 0.81vw, 11px); }
 .ice-banner:has(.ice-banner__points--lg) .ice-banner__title { font-size: clamp(24px, 3.76vw, 51px); }
 .ice-banner:has(.ice-banner__points--lg) .ice-banner__sub { font-size: clamp(11px, 1.29vw, 18px); }
+/* 고객지원 헤더: 타 제품 헤더와 텍스트 통일(아이브로우·타이틀·서브·구분선) */
+.gas-banner--sup .gas-banner__eyebrow { margin: 0 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.202em; text-indent: -0.09em; }
+.gas-banner--sup .gas-banner__title { font-size: clamp(24px, 3.76vw, 51px); }
+.gas-banner--sup .gas-banner__sub { font-size: clamp(11px, 1.29vw, 18px); margin-top: clamp(3px, 0.42vw, 6px); line-height: 1.4; }
+.gas-banner--sup .gas-banner__rule { margin-top: clamp(9px, 1.1vw, 15px); margin-bottom: clamp(9px, 1.1vw, 15px); }
 /* 드라이아이스 히어로: 가스 히어로와 동일 구조/스타일로 통일 */
 .ice-banner__eyebrow { margin: 0 0 clamp(2px, 0.3vw, 5px); font-size: clamp(10px, 0.95vw, 12.8px); letter-spacing: 0.202em; text-indent: -0.09em; }
 .ice-banner__sub { margin-top: clamp(3px, 0.42vw, 6px); }
