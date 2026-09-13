@@ -760,6 +760,18 @@ section[id] { scroll-margin-top: 88px; }
 .facshow__cards { position: absolute; z-index: 3; top: 50%; left: var(--space-8); transform: translateY(-50%); width: min(19.4%, 193px); height: auto; display: block; }
 @media (max-width: 768px) { .facshow__cards { position: static; transform: none; width: 100%; max-width: 340px; margin: var(--space-5) auto 0; right: auto; } }
 .facshow__stats { position: absolute; z-index: 3; top: 50%; right: var(--space-8); transform: translateY(-50%); list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: var(--space-3); width: min(27%, 258px); }
+/* 생산시설 지표 카드(HTML) — 사진 좌측 오버레이 */
+.faccards { position: absolute; z-index: 3; top: 50%; left: var(--space-6); transform: translateY(-50%); list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: clamp(6px, 0.8vw, 10px); width: min(32%, 310px); }
+.faccard { display: flex; align-items: center; gap: clamp(8px, 0.9vw, 12px); background: rgba(255,255,255,.96); border-radius: 14px; box-shadow: 0 6px 18px rgba(9,26,58,.15); padding: clamp(7px, 0.8vw, 11px) clamp(10px, 1vw, 14px); }
+.faccard__ic { flex: none; width: clamp(40px, 4.2vw, 54px); height: auto; }
+.faccard__ic img { width: 100%; height: auto; display: block; }
+.faccard__body { min-width: 0; }
+.faccard__label { display: block; font-size: clamp(.72rem, 0.92vw, .84rem); font-weight: 700; color: var(--text); line-height: 1.2; }
+.faccard__num { display: block; font-size: clamp(1.05rem, 1.55vw, 1.4rem); font-weight: 800; color: #1c5fc0; line-height: 1.15; margin: 1px 0; white-space: nowrap; }
+.faccard__desc { display: block; font-size: clamp(.62rem, 0.76vw, .74rem); color: var(--text-muted); line-height: 1.2; }
+@media (max-width: 768px) {
+  .faccards { position: static; transform: none; width: auto; max-width: 420px; margin: var(--space-5) auto 0; }
+}
 /* 아이콘 좌측 + 라벨/숫자/설명 우측(시안형) */
 .facstat.facstat--row { aspect-ratio: auto; display: flex; flex-direction: row; align-items: center; gap: var(--space-4); text-align: left; padding: var(--space-4) var(--space-5); background: rgba(255,255,255,.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.7); box-shadow: 0 10px 26px rgba(9,26,58,.16); }
 .facstat--row .facstat__ic { flex: none; width: 52px; height: 52px; margin: 0; border-radius: 50%; background: var(--surface-brand); color: var(--eyebrow); display: inline-flex; align-items: center; justify-content: center; }
