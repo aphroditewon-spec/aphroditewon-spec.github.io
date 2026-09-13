@@ -2839,7 +2839,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ceohome__policy { display: flex; flex-direction: column; gap: var(--space-4); }
 /* CEO 섹션 우측 경영이념 카드(세로 스택, 컴팩트) */
 .ceohome__phil { display: flex; flex-direction: column; gap: var(--space-4); }
-.ceohome__phil .phil { padding: var(--space-4) var(--space-6); gap: var(--space-5); background: var(--surface); }
+.ceohome__phil .phil { padding: 0.65rem var(--space-6); gap: var(--space-5); background: var(--surface); }
 .ceohome__phil .phil__ic { width: 48px; height: 48px; }
 .ceohome__phil .phil__ic svg { width: 44px; height: 44px; }
 .ceohome__phil .phil__ic--img { width: 56px; height: 56px; }
