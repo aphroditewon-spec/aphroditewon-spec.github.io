@@ -7,7 +7,7 @@
   <meta name="description" content="한국탄산화학㈜(KLCC)는 산소·질소·아르곤·탄산·수소 등 산업용·의료용 가스와 드라이아이스를 제조·공급하는 전문기업입니다.">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-758">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-759">
 </head>
 <body>
 
@@ -498,15 +498,7 @@
       function onScroll() {
         if (ticking) return; ticking = true;
         requestAnimationFrame(function () {
-          var y = window.scrollY || 0;
-          // 히어로 배경은 전체 이미지 노출 유지를 위해 이동시키지 않음(팩토리 배경만 패럴랙스)
-          if (facBg && facSec) {
-            var r = facSec.getBoundingClientRect();
-            if (r.bottom > 0 && r.top < window.innerHeight) {
-              var off = (window.innerHeight - r.top) * 0.06;
-              facBg.style.transform = 'translate3d(0,' + (30 - off) + 'px,0) scale(1.14)';
-            }
-          }
+          // 팩토리 배경은 이미지 전체 노출을 위해 확대/이동(패럴랙스)하지 않음
           ticking = false;
         });
       }
