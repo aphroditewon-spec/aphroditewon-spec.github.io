@@ -188,8 +188,7 @@ section[id] { scroll-margin-top: 88px; }
 .hero > .container, .hero__scroll { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) { .hero__slide { transition: none; } }
 .hero__kicker {
-  /* 레퍼런스: 아이브로우("SINCE 2001…") 숨김 — 필요 시 inline-flex로 복원 */
-  display: none; align-items: center; gap: .55em;
+  display: inline-flex; align-items: center; gap: .55em;
   font-size: calc(var(--fs-eyebrow) * 1.2); font-weight: 700; letter-spacing: .1em;
   color: #2c6788; margin-bottom: var(--space-5);
 }
