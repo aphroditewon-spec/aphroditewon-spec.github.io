@@ -1403,23 +1403,21 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* FAQ */
 /* FAQ 헤더: 좌측 타이틀 + 우측 안내 문구 */
 .faq__head.section__head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-5); flex-wrap: wrap; }
-.faq__note { color: var(--text-muted); font-size: .95rem; margin: 0; }
-/* FAQ 카드(아코디언) */
+.faq__note { color: var(--text-muted); font-size: .82rem; margin: 0; text-align: right; }
+/* FAQ 카드(아코디언): 질문만 보이고, 화살표 클릭 시 답변이 아래로 펼쳐짐 */
 .faq { display: flex; flex-direction: column; gap: var(--space-4); }
-.faq__item { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: 0 1px 3px rgba(20,40,70,.05); transition: box-shadow .2s ease, border-color .2s ease; }
+.faq__item { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: 0 1px 3px rgba(20,40,70,.05); transition: box-shadow .2s ease, border-color .2s ease; overflow: hidden; }
 .faq__item:hover { box-shadow: 0 4px 14px rgba(20,40,70,.09); border-color: var(--green-200); }
 .faq__row { display: flex; align-items: center; gap: var(--space-4); width: 100%; padding: var(--space-4) var(--space-5); background: none; border: 0; cursor: pointer; text-align: left; font: inherit; color: inherit; }
 .faq__badge { flex: none; width: 34px; height: 34px; border-radius: 50%; background: #1c5fc0; color: #fff; font-weight: 800; font-size: .95rem; display: inline-flex; align-items: center; justify-content: center; }
-.faq__q { flex: none; font-weight: 700; color: var(--text); }
-.faq__a { flex: 1 1 auto; color: var(--text-muted); font-size: .92rem; line-height: 1.5; }
+.faq__q { flex: 1 1 auto; font-weight: 700; color: var(--text); }
 .faq__chevron { flex: none; width: 20px; height: 20px; color: #9aa6b2; transition: transform .25s ease; }
-.faq__item:not(.is-open) .faq__a { display: none; }
-.faq__item:not(.is-open) .faq__chevron { transform: rotate(-90deg); }
+.faq__item.is-open .faq__chevron { transform: rotate(180deg); }
+.faq__panel { display: none; padding: 0 var(--space-5) var(--space-5); }
+.faq__item.is-open .faq__panel { display: block; }
+.faq__a { margin: 0 0 0 calc(34px + var(--space-4)); color: var(--text-muted); font-size: .92rem; line-height: 1.6; }
 @media (max-width: 720px) {
-  .faq__row { flex-wrap: wrap; }
-  .faq__q { flex: 1 1 100%; }
-  .faq__a { flex: 1 1 100%; margin-left: calc(34px + var(--space-4)); }
-  .faq__chevron { position: absolute; }
+  .faq__a { margin-left: 0; }
 }
 
 /* =====================================================================
