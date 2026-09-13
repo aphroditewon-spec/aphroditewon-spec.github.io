@@ -136,8 +136,8 @@ window.I18N = {
     "support.faq.a1": "제품·공급 형태(벌크/실린더/드라이아이스)에 따라 다릅니다. 전화 상담 시 안내해 드립니다.",
     "support.faq.q2": "수도권 외 지역도 공급 가능한가요?",
     "support.faq.a2": "공급 가능 지역은 물량·품목에 따라 달라집니다. 담당 영업팀이 확인해 드립니다.",
-    "support.faq.q3": "저장탱크 설치·시공도 의뢰할 수 있나요?",
-    "support.faq.a3": "네. 저장탱크 설치부터 가스시설 시공까지 종합적으로 지원합니다.",
+    "support.faq.q3": "가스공급설비 설치·시공도 가능한가요?",
+    "support.faq.a3": "저장탱크, 기화설비, 배관 등 가스공급설비는 고객의 현장 여건을 검토한 후 전문 시공업체와 연계하여 설비 구축을 지원합니다.",
     "support.faq.q4": "드라이아이스 정기 납품이 가능한가요?",
     "support.faq.a4": "日産 36톤 규모 생산설비로 정기 납품·대량 공급이 가능합니다.",
 
@@ -537,8 +537,8 @@ window.I18N = {
     "support.faq.a1": "It depends on the product and supply form (bulk / cylinder / dry ice). We'll guide you during a phone consultation.",
     "support.faq.q2": "Can you supply outside the metropolitan area?",
     "support.faq.a2": "Serviceable areas vary by volume and product. Our sales team will confirm for you.",
-    "support.faq.q3": "Can you also install storage tanks and gas facilities?",
-    "support.faq.a3": "Yes. We provide everything from storage-tank installation to gas-facility construction.",
+    "support.faq.q3": "Can you also install and construct gas supply facilities?",
+    "support.faq.a3": "For gas supply facilities such as storage tanks, vaporizers and piping, we review the site conditions and support the build in partnership with specialist contractors.",
     "support.faq.q4": "Is regular dry ice delivery available?",
     "support.faq.a4": "With a 36 t/day production line, we offer regular delivery and bulk supply.",
 
@@ -934,8 +934,8 @@ window.I18N = {
     "support.faq.a1": "製品・供給形態(バルク/シリンダー/ドライアイス)により異なります。お電話でご案内します。",
     "support.faq.q2": "首都圏以外の地域にも供給できますか?",
     "support.faq.a2": "供給可能地域は数量・品目により異なります。担当営業がご確認します。",
-    "support.faq.q3": "貯蔵タンクの設置・施工も依頼できますか?",
-    "support.faq.a3": "はい。貯蔵タンク設置からガス設備施工まで総合的に対応します。",
+    "support.faq.q3": "ガス供給設備の設置・施工も可能ですか?",
+    "support.faq.a3": "貯蔵タンク、気化設備、配管などのガス供給設備は、お客様の現場状況を確認のうえ、専門施工業者と連携して設備構築を支援します。",
     "support.faq.q4": "ドライアイスの定期納品は可能ですか?",
     "support.faq.a4": "日産36トン規模の生産設備で、定期納品・大量供給が可能です。",
 
