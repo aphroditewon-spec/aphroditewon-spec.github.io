@@ -50,7 +50,7 @@ window.I18N = {
     "home.about.more": "회사소개 더보기",
     "home.factory.eyebrow": "Our Facility",
     "home.factory.title": "최신 생산설비와<br>안정적인 공급망",
-    "home.factory.lead": "고순도 제조설비와 대용량 저장탱크, 전국 공급 네트워크를 기반으로 안정적인 가스 공급을 실현합니다.",
+    "home.factory.lead": "첨단 설비와 체계적인 생산 인프라로<br>언제나 안정적인 산업용가스를 공급합니다.",
     "home.factory.more": "시설 더보기",
     "why.c1.t": "24년의 노하우", "why.c1.d": "오랜 경험과 전문성으로 고객 맞춤 솔루션 제공",
     "why.c2.t": "고순도 제조", "why.c2.d": "최첨단 설비와 공정으로 고순도 가스 생산",
