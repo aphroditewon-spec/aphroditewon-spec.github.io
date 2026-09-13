@@ -111,12 +111,23 @@
   function initHeroSlider() {
     var slides = document.querySelectorAll(".hero__slide");
     if (slides.length < 2) return;
-    var i = 0;
-    setInterval(function () {
+    var nav = document.querySelector(".hero__nav");
+    var dots = document.querySelectorAll(".hero__navdot");
+    var i = 0, timer = null;
+    function show(n) {
       slides[i].classList.remove("is-active");
-      i = (i + 1) % slides.length;
+      if (dots[i]) dots[i].classList.remove("is-active");
+      i = (n + slides.length) % slides.length;
       slides[i].classList.add("is-active");
-    }, 5000);
+      if (dots[i]) dots[i].classList.add("is-active");
+      if (nav) nav.setAttribute("data-active", String(i));
+    }
+    function play() { stop(); timer = setInterval(function () { show(i + 1); }, 5000); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    dots.forEach(function (d, n) {
+      d.addEventListener("click", function () { show(n); play(); });
+    });
+    play();
   }
 
   // 전역 고정 스크롤 인디케이터 — 클릭 시 한 화면 이동, 배경 밝기에 따라 색 자동 전환

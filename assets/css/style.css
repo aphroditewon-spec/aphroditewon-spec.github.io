@@ -193,6 +193,13 @@ section[id] { scroll-margin-top: 88px; }
   color: #6a7683; margin-bottom: var(--space-5);
 }
 .hero__kicker::before { content: ""; width: 26px; height: 2px; background: #6a7683; }
+/* 히어로 배경 슬라이드 전환 인디케이터 (좌측 하단) */
+.hero__nav { display: flex; align-items: center; gap: 14px; margin-top: var(--space-6); }
+.hero__navdot { background: none; border: 0; padding: 0; cursor: pointer; font: inherit; font-weight: 800; font-size: .82rem; letter-spacing: .06em; color: rgba(20,59,99,.45); transition: color .3s ease; }
+.hero__navdot.is-active { color: #143b63; }
+.hero__navbar { position: relative; width: 60px; height: 2px; background: rgba(20,59,99,.25); overflow: hidden; }
+.hero__navbar-fill { position: absolute; top: 0; left: 0; height: 100%; width: 50%; background: #143b63; transition: transform .4s ease; }
+.hero__nav[data-active="1"] .hero__navbar-fill { transform: translateX(100%); }
 /* 스크롤 안내 인디케이터 (마우스 아이콘 + SCROLL) */
 .hero__scroll {
   position: absolute; right: var(--space-10); bottom: var(--space-8);
