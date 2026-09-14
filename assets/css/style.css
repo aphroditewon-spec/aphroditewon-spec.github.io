@@ -2752,7 +2752,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .org2__evp-ic { display: inline-flex; }
 .org2__evp-ic svg { width: 20px; height: 20px; }
 .org2__teams { list-style: none; margin: 0; padding: var(--space-7) 0 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--space-3); position: relative; }
-.org2__teams::before { content: ""; position: absolute; top: 0; left: 6.25%; right: 6.25%; height: 2px; background: var(--border-strong); }
+/* 가로 연결선 양 끝을 실제 팀 칸 중심(8칸·gap 보정)에 맞춤: 칸 중심 = 6.25% - (7/16)*gap */
+.org2__teams::before { content: ""; position: absolute; top: 0; left: calc(6.25% - 0.4375 * var(--space-3)); right: calc(6.25% - 0.4375 * var(--space-3)); height: 2px; background: var(--border-strong); }
 .org2team { position: relative; text-align: center; display: flex; flex-direction: column; align-items: center; }
 .org2team::before { content: ""; position: absolute; top: calc(-1 * var(--space-7)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-7); background: var(--border-strong); }
 .org2team__ic { width: 62px; height: 62px; border-radius: 50%; border: 1.5px solid var(--border-strong); background: var(--surface); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; }
