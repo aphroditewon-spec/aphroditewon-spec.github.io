@@ -2031,6 +2031,16 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 절단규격 구분 헤더(전체 폭) */
 .pkgdetail__row--sub { grid-template-columns: 1fr; }
 .pkgdetail__subhead { padding: var(--space-2) var(--space-4); background: var(--surface-brand); font-size: .8rem; font-weight: 800; color: var(--brand); }
+/* 1P 포장 박스 규격 카드(참고 이미지 구성): 박스 이미지 + 규격 라벨 */
+.pkgcard.boxpkg { display: grid; grid-template-columns: 1.12fr .88fr; align-items: center; gap: var(--space-4); padding: var(--space-4) var(--space-5); }
+.boxpkg__media img { width: 100%; height: auto; display: block; }
+.boxpkg__size { background: var(--surface-brand); border-radius: var(--radius-md); padding: var(--space-4) var(--space-3); text-align: center; }
+.boxpkg__label { display: inline-flex; align-items: center; gap: .4em; font-weight: 800; color: #17263a; font-size: .92rem; margin-bottom: var(--space-2); }
+.boxpkg__ic { color: #1c5fc0; display: inline-flex; }
+.boxpkg__ic svg { width: 20px; height: 20px; }
+.boxpkg__dim { display: block; font-size: clamp(1.1rem, 1.6vw, 1.42rem); font-weight: 800; color: #17263a; line-height: 1.15; letter-spacing: -.01em; white-space: nowrap; }
+.boxpkg__unit { display: block; margin-top: 3px; color: var(--text-muted); font-size: .78rem; }
+@media (max-width: 900px) { .pkgcard.boxpkg { grid-template-columns: 1fr; } .boxpkg__size { max-width: 320px; margin-inline: auto; } }
 .pkgspec__dim { margin: 0; text-align: center; }
 .pkgspec__dim--in { padding: var(--space-2) var(--space-4); border-top: 1px solid var(--border); }
 .pkgspec__dim img { max-width: 220px; width: 100%; display: block; margin-inline: auto; }
