@@ -1082,14 +1082,16 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .affpanel__muted { color: var(--text-muted); font-style: italic; }
 .affpanel__map { margin-top: var(--space-7); }
 .affpanel__map svg { width: 18px; height: 18px; }
-/* 화성공장: 사진이 와이드(1.68)라 정보 줄간격을 줄여 지도 버튼 하단을 사진 하단과 일직선으로 맞춤 */
-#aff-hwaseong .affpanel__list { margin-top: var(--space-3); gap: var(--space-3); }
-#aff-hwaseong .affpanel__map { margin-top: var(--space-3); }
+/* 화성공장·시화영업소: 사진이 와이드(1.68)라 정보 영역을 사진 높이에 맞춰 늘리고
+   지도 버튼을 하단으로 밀어 버튼 하단을 사진 하단과 일직선으로 맞춤(문구 길이와 무관) */
+#aff-hwaseong .affpanel__info, #aff-sihwa .affpanel__info { align-self: stretch; display: flex; flex-direction: column; }
+#aff-hwaseong .affpanel__list, #aff-sihwa .affpanel__list { margin-top: var(--space-3); gap: var(--space-3); }
+#aff-hwaseong .affpanel__map, #aff-sihwa .affpanel__map { margin-top: auto; }
 /* 계열사 패널: 정보 + 사진 2단 배열 */
 .affpanel__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: start; }
 .affpanel__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
-/* 화성공장: 첨부 이미지처럼 와이드 크롭 비율(1448:862) */
-#aff-hwaseong .affpanel__media img { aspect-ratio: 1448 / 862; }
+/* 화성공장·시화영업소: 와이드 크롭 비율(1448:862) 통일 */
+#aff-hwaseong .affpanel__media img, #aff-sihwa .affpanel__media img { aspect-ratio: 1448 / 862; }
 @media (max-width: 700px) { .affpanel__grid { grid-template-columns: 1fr; gap: var(--space-6); } }
 @media (max-width: 560px) { .afftab { flex: 1 1 50%; } }
 
