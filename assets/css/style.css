@@ -1936,38 +1936,6 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .icespec2--bottom { margin-top: var(--space-6); }
 .icespec-col { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-6) var(--space-6) var(--space-7); }
 .specpanel__title em { font-style: normal; font-weight: 600; font-size: .78em; color: var(--brand); margin-left: 6px; letter-spacing: .02em; }
-/* 블록 제품 규격 표 + 1P 포장 박스 규격(참고 이미지 구성) */
-.blkspec { display: flex; flex-direction: column; gap: var(--space-5); margin: var(--space-5) 0; }
-.blkspec__card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: clamp(18px, 2.2vw, 30px); }
-.blkspec__head { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-5); }
-.blkspec__ic { flex: none; width: 40px; height: 40px; color: #1c5fc0; display: inline-flex; align-items: center; justify-content: center; }
-.blkspec__ic svg { width: 100%; height: 100%; }
-.blkspec__ic--sm { width: 22px; height: 22px; }
-.blkspec__title { font-size: clamp(1.35rem, 2vw, 1.7rem); font-weight: 800; color: #17263a; margin: 0; line-height: 1.2; }
-.blkspec__sub { margin: 4px 0 0; color: var(--text-muted); font-size: var(--fs-sm); }
-.blkspec__note { margin: var(--space-4) 0 0; text-align: right; color: var(--text-muted); font-size: .82rem; }
-/* 표 */
-.blktable-wrap { overflow-x: auto; border-radius: var(--radius-md); }
-.blktable { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 640px; font-size: clamp(.86rem, 1vw, .98rem); }
-.blktable thead th { background: #4a76b3; color: #fff; font-weight: 700; padding: 14px 10px; text-align: center; }
-.blktable thead th:first-child { border-top-left-radius: var(--radius-md); }
-.blktable thead th:last-child { border-top-right-radius: var(--radius-md); }
-.blktable tbody th { background: #eef4fb; color: var(--text); font-weight: 700; text-align: left; padding: 14px 18px; white-space: nowrap; }
-.blktable tbody th small { color: var(--text-muted); font-weight: 600; }
-.blktable tbody td { padding: 14px 10px; text-align: center; color: #2f3d4c; border-bottom: 1px solid var(--border); }
-.blktable tbody tr:last-child td, .blktable tbody tr:last-child th { border-bottom: 0; }
-.blktable tbody th { border-bottom: 1px solid var(--border); }
-.blktable tbody td + td, .blktable tbody th + td, .blktable thead th + th { border-left: 1px solid var(--border); }
-/* 1P 포장 박스 */
-.pkgbox { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-7); align-items: center; }
-.pkgbox__lead { margin: 0 0 var(--space-5); color: #3a4654; font-size: var(--fs-lead); line-height: 1.6; }
-.pkgbox__size { background: #eef4fb; border-radius: var(--radius-md); padding: clamp(16px, 1.8vw, 24px); }
-.pkgbox__sizehead { display: flex; align-items: center; gap: .5em; color: #17263a; font-weight: 800; margin-bottom: var(--space-3); }
-.pkgbox__sizehead .blkspec__ic { color: #1c5fc0; }
-.pkgbox__dim { display: block; font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 800; color: #17263a; line-height: 1.15; letter-spacing: -.01em; }
-.pkgbox__unit { display: block; margin-top: 4px; color: var(--text-muted); font-size: var(--fs-sm); }
-.pkgbox__media img { width: 100%; height: auto; display: block; }
-@media (max-width: 760px) { .pkgbox { grid-template-columns: 1fr; gap: var(--space-5); } }
 .icespec-figs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin: var(--space-5) 0 var(--space-5); }
 .icespec-figs__photo { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 2 / 1; background: #fff; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
 .icespec-figs__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
