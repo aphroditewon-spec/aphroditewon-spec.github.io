@@ -1938,7 +1938,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .specpanel__title em { font-style: normal; font-weight: 600; font-size: .78em; color: var(--brand); margin-left: 6px; letter-spacing: .02em; }
 .icespec-figs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin: var(--space-5) 0 var(--space-5); }
 /* 블록 제품 규격 표 + 1P 포장 박스 규격(참고 이미지 2카드 구성) */
-.blkspec2-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: clamp(16px, 2vw, 26px); align-self: start; }
+/* 오른쪽 컬럼(원래 표 자리): 두 카드를 세로로 쌓음 */
+.blkspec2-col { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; }
+.blkspec2-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: clamp(14px, 1.8vw, 22px); }
+.blkspec2-col .blkspec2-card--pkg { margin-top: 0; }
+/* 좁은 오른쪽 컬럼에서는 1P 박스 본문을 세로로 쌓음 */
+.blkspec2-col .pkgbox2 { grid-template-columns: 1fr; gap: var(--space-4); }
 .blkspec2-card--pkg { margin-top: var(--space-4); }
 .blkspec2__head { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
 .blkspec2__ic { flex: none; width: 34px; height: 34px; color: #1c5fc0; display: inline-flex; align-items: center; justify-content: center; }
