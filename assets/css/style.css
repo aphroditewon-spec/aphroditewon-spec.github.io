@@ -1937,6 +1937,40 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .icespec-col { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-6) var(--space-6) var(--space-7); }
 .specpanel__title em { font-style: normal; font-weight: 600; font-size: .78em; color: var(--brand); margin-left: 6px; letter-spacing: .02em; }
 .icespec-figs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin: var(--space-5) 0 var(--space-5); }
+/* 블록 제품 규격 표 + 1P 포장 박스 규격(참고 이미지 2카드 구성) */
+.blkspec2-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: clamp(16px, 2vw, 26px); align-self: start; }
+.blkspec2-card--pkg { margin-top: var(--space-4); }
+.blkspec2__head { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
+.blkspec2__ic { flex: none; width: 34px; height: 34px; color: #1c5fc0; display: inline-flex; align-items: center; justify-content: center; }
+.blkspec2__ic svg { width: 100%; height: 100%; }
+.blkspec2__title { font-size: clamp(1.2rem, 1.7vw, 1.5rem); font-weight: 800; color: #17263a; margin: 0; line-height: 1.2; }
+.blkspec2__sub { margin: 2px 0 0; color: var(--text-muted); font-size: .84rem; }
+.blkspec2__note { margin: var(--space-3) 0 0; text-align: right; color: var(--text-muted); font-size: .8rem; }
+.blktbl__ic { display: inline-flex; width: 18px; height: 18px; color: #1c5fc0; vertical-align: -3px; margin-right: .35em; }
+.blktbl__ic svg { width: 100%; height: 100%; }
+/* 표 공통 */
+.blktbl-wrap { overflow-x: auto; border-radius: var(--radius-md); }
+.blktbl { width: 100%; border-collapse: separate; border-spacing: 0; font-size: clamp(.78rem, .95vw, .92rem); }
+.blktbl thead th { background: #eef4fb; color: var(--text); font-weight: 700; padding: 11px 8px; text-align: center; white-space: nowrap; }
+.blktbl thead th:first-child { text-align: left; padding-left: 14px; }
+.blktbl tbody th { background: #eef4fb; color: var(--text); font-weight: 700; text-align: left; padding: 11px 14px; white-space: nowrap; }
+.blktbl tbody th small, .blktbl thead th small { color: var(--text-muted); font-weight: 600; }
+.blktbl tbody td { padding: 11px 8px; text-align: center; color: #2f3d4c; white-space: nowrap; }
+.blktbl th, .blktbl td { border-bottom: 1px solid var(--border); }
+.blktbl tr:last-child th, .blktbl tr:last-child td { border-bottom: 0; }
+.blktbl th + th, .blktbl th + td, .blktbl td + td { border-left: 1px solid var(--border); }
+.blktbl thead th:first-child { border-top-left-radius: var(--radius-md); }
+.blktbl thead th:last-child { border-top-right-radius: var(--radius-md); }
+/* 1P 포장 박스 규격 본문: 좌 미니표 + 우 박스 이미지 */
+.pkgbox2 { display: grid; grid-template-columns: 1.05fr .95fr; gap: var(--space-6); align-items: start; }
+.pkgbox2__tbl { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; font-size: clamp(.82rem, 1vw, .95rem); }
+.pkgbox2__tbl th { background: #eef4fb; color: var(--text); font-weight: 700; text-align: left; padding: 14px 16px; white-space: nowrap; width: 42%; vertical-align: middle; }
+.pkgbox2__tbl th small { color: var(--text-muted); font-weight: 600; }
+.pkgbox2__tbl td { padding: 14px 16px; color: #2f3d4c; word-break: keep-all; }
+.pkgbox2__tbl tr + tr th, .pkgbox2__tbl tr + tr td { border-top: 1px solid var(--border); }
+.pkgbox2__tbl th { border-right: 1px solid var(--border); }
+.pkgbox2__media img { width: 100%; height: auto; display: block; }
+@media (max-width: 760px) { .pkgbox2 { grid-template-columns: 1fr; gap: var(--space-5); } }
 .icespec-figs__photo { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 2 / 1; background: #fff; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
 .icespec-figs__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .icespec-figs__photo--contain { background: #fff; }
