@@ -232,7 +232,18 @@
       // 외부(탭 전환 등)에서 첫 장부터 다시 시작할 수 있도록 노출
       box.resetSlideshow = function () { show(0); play(); };
 
-      play();
+      // 섹션이 화면에 보일 때마다 첫 사진부터 시작, 벗어나면 정지
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { show(0); play(); }
+            else { stop(); }
+          });
+        }, { threshold: 0.35 });
+        io.observe(box);
+      } else {
+        play();
+      }
     });
   }
 
