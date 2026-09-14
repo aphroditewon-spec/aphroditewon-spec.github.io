@@ -1082,6 +1082,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .affpanel__muted { color: var(--text-muted); font-style: italic; }
 .affpanel__map { margin-top: var(--space-7); }
 .affpanel__map svg { width: 18px; height: 18px; }
+/* 화성공장: 사진이 와이드(1.68)라 정보 줄간격을 줄여 지도 버튼 하단을 사진 하단과 일직선으로 맞춤 */
+#aff-hwaseong .affpanel__list { margin-top: var(--space-3); gap: var(--space-3); }
+#aff-hwaseong .affpanel__map { margin-top: var(--space-3); }
 /* 계열사 패널: 정보 + 사진 2단 배열 */
 .affpanel__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: start; }
 .affpanel__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
