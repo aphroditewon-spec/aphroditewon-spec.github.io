@@ -2922,7 +2922,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* CEO 섹션 배경(파도 워터마크) + 사진 없는 2열 구성(메시지 중앙정렬 + 우측 카드) */
 .ceo-section { position: relative; background: #f4f8fd; padding-block: clamp(18px, 2vw, 30px); }
 .ceo-section > .ceohome { position: relative; z-index: 1; }
-.ceo-section::before { content: ""; position: absolute; inset: 0; background: url("../images/site/ceo-bg.jpg?v=20260914") center/cover no-repeat; z-index: 0; }
+.ceo-section::before { content: ""; position: absolute; inset: 0; background: url("../images/site/ceo-bg.jpg?v=20260914b") center/cover no-repeat; z-index: 0; }
 .ceohome--nophoto { grid-template-columns: 1.55fr 1fr; gap: var(--space-8); align-items: center; }
 .ceohome--nophoto .ceohome__msg { align-items: center; text-align: center; }
 .ceohome--nophoto .ceohome__msg .eyebrow { justify-content: center; }
