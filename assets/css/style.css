@@ -831,7 +831,8 @@ section[id] { scroll-margin-top: 88px; }
 .netchart__group--aff .netchart__gh-ic { background: #fff; color: var(--net-teal); border-color: var(--net-teal); }
 /* 노드: 그룹당 카드 2개 가로 배열 */
 .netchart__nodes { list-style: none; margin: 0; padding: var(--space-7) 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); width: 100%; position: relative; }
-.netchart__nodes::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 2px; background: var(--net-line); }
+/* 가로 연결선 양 끝을 실제 노드 중심(2열·gap 보정)에 맞춤: 노드 중심 = 25% - gap/4 */
+.netchart__nodes::before { content: ""; position: absolute; top: 0; left: calc(25% - 0.25 * var(--space-4)); right: calc(25% - 0.25 * var(--space-4)); height: 2px; background: var(--net-line); }
 .netchart__nodes::after { content: ""; position: absolute; top: calc(-1 * var(--space-6)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-6); background: var(--net-line); }
 .netchart__nodes li { position: relative; display: flex; align-items: center; gap: var(--space-4); background: #fff; border: 1px solid rgba(43,108,184,.22); border-radius: var(--radius-lg); padding: var(--space-5); text-align: left; box-shadow: var(--shadow-sm); }
 .netchart__nodes li::before { content: ""; position: absolute; top: calc(-1 * var(--space-7)); left: 50%; transform: translateX(-50%); width: 2px; height: var(--space-7); background: var(--net-line); }
