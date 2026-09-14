@@ -1945,7 +1945,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 두 섹션 사이 구분선(카드 간 여백 없이 하나의 카드로) */
 .blkspec2-sec--pkg { border-top: 1px solid var(--border); margin-top: clamp(8px, 1vw, 12px); padding-top: clamp(8px, 1vw, 12px); flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 .blkspec2-sec--pkg .blkspec2__head { margin-bottom: 0; }
-.blkspec2-sec--pkg .pkgbox2 { flex: 1 1 auto; min-height: 0; margin-top: -14px; }
+.blkspec2-sec--pkg .pkgbox2 { flex: 1 1 auto; min-height: 0; margin-top: -20px; }
 /* 1P 박스 본문(단일 열: 박스 이미지) */
 .blkspec2-col .pkgbox2 { grid-template-columns: 1fr; gap: var(--space-3); }
 .blkspec2__head { display: flex; align-items: flex-start; gap: var(--space-2); margin-bottom: var(--space-3); }
@@ -1961,11 +1961,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 래퍼에 테두리+라운드, 표는 collapse로 선이 끊김 없이 이어짐 */
 .blktbl-wrap { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-md); }
 .blktbl { width: 100%; border-collapse: collapse; font-size: .8rem; }
-.blktbl thead th { background: #eef4fb; color: var(--text); font-weight: 700; padding: 7px 8px; text-align: center; white-space: nowrap; }
+.blktbl thead th { background: #eef4fb; color: var(--text); font-weight: 700; padding: 5px 8px; text-align: center; white-space: nowrap; }
 .blktbl thead th:first-child { text-align: left; padding-left: 12px; }
-.blktbl tbody th { background: #eef4fb; color: var(--text); font-weight: 700; text-align: left; padding: 7px 12px; white-space: nowrap; }
+.blktbl tbody th { background: #eef4fb; color: var(--text); font-weight: 700; text-align: left; padding: 5px 12px; white-space: nowrap; }
 .blktbl tbody th small, .blktbl thead th small { color: var(--text-muted); font-weight: 600; }
-.blktbl tbody td { padding: 7px 8px; text-align: center; color: #2f3d4c; white-space: nowrap; }
+.blktbl tbody td { padding: 5px 8px; text-align: center; color: #2f3d4c; white-space: nowrap; }
 /* 모든 셀 사이 구분선(collapse로 모서리까지 이어짐) */
 .blktbl th, .blktbl td { border: 1px solid var(--border); }
 .blktbl tr > *:first-child { border-left: 0; }
@@ -2003,7 +2003,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .blkspec2-col { height: 339px; }
 .blkspec2-col .blkspec2-card { height: 100%; }
 .blkspec2-col .pkgbox2__media { height: 100%; display: flex; align-items: flex-start; justify-content: center; overflow: hidden; }
-.blkspec2-col .pkgbox2__media img { max-width: 240px; max-height: 100%; width: auto; height: auto; object-fit: contain; margin: 0 auto; }
+.blkspec2-col .pkgbox2__media img { max-width: 264px; max-height: 100%; width: auto; height: auto; object-fit: contain; margin: 0 auto; }
 /* 주석을 카드 하단에 고정(박스와 분리), 위치 살짝 아래 */
 .blkspec2-sec--pkg .blkspec2__note { margin-top: auto; position: relative; top: 4px; }
 .icespec-figs__dimtitle { font-size: 1.02rem; font-weight: 800; color: var(--eyebrow); margin: 0 0 var(--space-2); }
@@ -2064,7 +2064,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 바(네모)를 제목 한 줄만 감싸 '너겟 (NUGGET)' 제목 바와 동일하게 */
 .pkgspec__head::before { content: ""; position: absolute; left: 0; top: 0.12em; width: 4px; height: 1.15em; background: var(--brand); }
 .pkgspec__head span { display: block; margin: 2px 0 0; font-size: .8rem; font-weight: 600; color: var(--text-muted); letter-spacing: .02em; }
-.pkgspec__infotitle { font-size: 1rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); }
+.pkgspec__infotitle { font-size: 1rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); display: flex; align-items: center; gap: var(--space-2); }
+.pkgspec__infoic { flex: none; width: 22px; height: 22px; color: #1c5fc0; display: inline-flex; align-items: center; justify-content: center; margin-top: -1px; }
+.pkgspec__infoic svg { width: 100%; height: 100%; }
 .pkgspec__titles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-6); align-items: end; margin: var(--space-6) 0 var(--space-4); }
 .pkgspec__titles .pkgspec__head { margin: 0; }
 .pkgspec__titles .pkgspec__infotitle { margin: 0; }
