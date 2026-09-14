@@ -1078,7 +1078,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .affpanel__map svg { width: 18px; height: 18px; }
 /* 계열사 패널: 정보 + 사진 2단 배열 */
 .affpanel__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: center; }
-.affpanel__media img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
+.affpanel__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
 @media (max-width: 700px) { .affpanel__grid { grid-template-columns: 1fr; gap: var(--space-6); } }
 @media (max-width: 560px) { .afftab { flex: 1 1 50%; } }
 
