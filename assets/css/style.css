@@ -1046,9 +1046,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   flex: 1 1 200px; min-width: 160px; padding: var(--space-4) var(--space-5);
   font-size: var(--fs-sm); font-weight: 700; color: var(--text-muted);
   background: #fff; border: 0; cursor: pointer; text-align: center;
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-3);
   border-right: 1px solid var(--border); border-top: 1px solid var(--border);
   transition: var(--transition);
 }
+/* 탭 아이콘 (조직도 아이콘 재사용) */
+.afftab__ic { flex: none; display: inline-flex; }
+.afftab__ic img { width: 26px; height: 26px; object-fit: contain; display: block; }
+.afftab.is-active .afftab__ic img { filter: brightness(0) invert(1); }
 /* 첫 줄 상단선·좌측 첫 칸 정리 */
 .afftab:hover { background: var(--surface-2); color: var(--text); }
 .afftab.is-active { background: var(--green-800); color: #fff; }
