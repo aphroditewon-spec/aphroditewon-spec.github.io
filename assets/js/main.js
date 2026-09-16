@@ -39,7 +39,7 @@
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
 
-    var isMobile = function () { return window.matchMedia("(max-width: 1000px)").matches; };
+    var isMobile = function () { return window.matchMedia("(max-width: 820px)").matches; };
 
     // 상위 메뉴(하위메뉴 보유): 모바일에선 탭 시 하위메뉴 펼침/접기
     menu.querySelectorAll(".nav__item.has-sub > .nav__link").forEach(function (link) {
