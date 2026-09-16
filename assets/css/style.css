@@ -358,7 +358,7 @@ section[id] { scroll-margin-top: 88px; }
 .contact-band {
   color: #fff;
   background:
-    linear-gradient(115deg, rgba(52,127,166,.95) 0%, rgba(21,42,56,.90) 60%, rgba(95,168,210,.78) 100%),
+    linear-gradient(112deg, rgba(74,120,160,.74) 0%, rgba(42,76,110,.66) 44%, rgba(58,102,142,.56) 72%, rgba(128,178,215,.56) 100%),
     url("../images/site/contact-bg.jpg");
   background-size: cover; background-position: center;
   padding-block: var(--space-12);
