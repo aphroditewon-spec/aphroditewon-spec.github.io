@@ -2831,7 +2831,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .hist2__head--center .section__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin-top: var(--space-2); }
 .hist2__head--center .hist2__sub { margin-inline: auto; }
 .hist2__sub { max-width: 70ch; margin: var(--space-3) 0 0; color: var(--text-muted); line-height: 1.6; font-size: var(--fs-lead); }
-.hist2 { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-3); align-items: start; }
+.hist2 { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--space-3); align-items: start; }
 .hist2__item { position: relative; text-align: center; }
 .hist2__item--card::before { content: ""; position: absolute; inset: calc(-1 * var(--space-4)) 0 calc(-1 * var(--space-5)); background: var(--surface-brand); border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px var(--border); z-index: 0; }
 .hist2__year { position: relative; z-index: 2; display: block; color: var(--eyebrow); font-size: 1.3rem; font-weight: 800; margin-bottom: var(--space-4); letter-spacing: .02em; }
@@ -2860,8 +2860,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .hist2__item:has(.hist2__ic:hover) .hist2__desc { color: var(--text); }
 .hist2__body { position: relative; z-index: 2; display: flex; flex-direction: column; gap: var(--space-5); padding: 0 var(--space-2); }
 .hist2__entry + .hist2__entry { padding-top: var(--space-4); border-top: 1px dashed var(--border-strong); }
-.hist2__title { display: block; font-size: .98rem; font-weight: 800; color: var(--text); line-height: 1.35; word-break: keep-all; }
-.hist2__desc { margin: var(--space-2) 0 0; font-size: .82rem; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
+.hist2__title { display: block; font-size: .98rem; font-weight: 800; color: var(--text); line-height: 1.35; word-break: keep-all; overflow-wrap: anywhere; }
+.hist2__desc { margin: var(--space-2) 0 0; font-size: .82rem; color: var(--text-muted); line-height: 1.55; word-break: keep-all; overflow-wrap: anywhere; }
+/* 일본어 등 공백 없는 CJK가 칸을 넘치지 않도록 nowrap 강제 해제 */
+.hist2 .nowrap { white-space: normal; }
 .hist2__banner { display: flex; align-items: center; gap: var(--space-4); width: max-content; max-width: 100%; margin: var(--space-10) auto 0; padding: var(--space-4) var(--space-8); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; box-shadow: var(--shadow-sm); }
 .hist2__banner-ic { flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--eyebrow); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
 .hist2__banner-ic svg { width: 20px; height: 20px; }
