@@ -497,7 +497,8 @@
         function step(ts) {
           if (!start) start = ts;
           var p = Math.min((ts - start) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = (to * eased).toFixed(dec);
+          // 소수점 지표(99.9999 등)는 진행 중엔 정수로 큼직하게 세고, 끝에 정확한 값으로 스냅
+          el.textContent = dec > 0 ? String(Math.floor(to * eased)) : (to * eased).toFixed(dec);
           if (p < 1) requestAnimationFrame(step); else el.textContent = to.toFixed(dec);
         }
         requestAnimationFrame(step);
