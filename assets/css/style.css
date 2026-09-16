@@ -439,6 +439,9 @@ section[id] { scroll-margin-top: 88px; }
 .footer__brand-name { color: var(--footer-heading); font-weight: 800; font-size: 1.4rem; }
 .footer__desc { font-size: calc(var(--fs-sm) * 1.2); font-weight: 700; line-height: 1.7; }
 .footer__slogan { font-size: var(--fs-sm); line-height: 1.7; color: rgba(196,219,233,.7); margin-top: var(--space-2); }
+/* 태그라인을 위 회사명(로고 폭 50px×비율 + 간격 12px = 약 114px) 시작 위치와 일직선으로 정렬 */
+.footer__desc, .footer__slogan { margin-left: 114px; }
+@media (max-width: 560px) { .footer__desc, .footer__slogan { margin-left: 0; } }
 .footer__col h4 { color: var(--footer-heading); font-size: .95rem; margin-bottom: var(--space-4); font-weight: 700; }
 .footer__col li { font-size: var(--fs-sm); margin-bottom: var(--space-3); }
 .footer__sites li { margin-bottom: var(--space-4); }
