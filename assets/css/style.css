@@ -392,12 +392,7 @@ section[id] { scroll-margin-top: 88px; }
 /* 우측: 대표전화 + 견적문의 버튼 */
 .contact-band__action { flex-shrink: 0; display: flex; flex-direction: column; align-items: stretch; gap: var(--space-5); min-width: 340px; }
 .contact-band__phone { display: flex; align-items: center; gap: var(--space-4); justify-content: flex-end; }
-.contact-band__phone-ic {
-  flex: none; width: 52px; height: 52px; border-radius: 50%;
-  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3);
-  display: inline-flex; align-items: center; justify-content: center; color: #fff;
-}
-.contact-band__phone-ic svg { width: 26px; height: 26px; }
+.contact-band__phone-ic { flex: none; width: 54px; height: 54px; object-fit: contain; display: block; }
 .contact-band__phone-tx { display: flex; flex-direction: column; line-height: 1.15; }
 .contact-band__phone-tx small { font-size: var(--fs-sm); color: #a9cfe6; letter-spacing: .04em; }
 .contact-band__phone-tx a { font-size: clamp(1.8rem, 3vw, 2.35rem); font-weight: 800; color: #fff; letter-spacing: -.01em; margin: .1rem 0; }
@@ -439,9 +434,9 @@ section[id] { scroll-margin-top: 88px; }
   display: grid; grid-template-columns: 1.6fr 1fr 1.4fr; gap: var(--space-10);
   padding-bottom: var(--space-8); border-bottom: 1px solid var(--footer-border);
 }
-.footer__brand { display: flex; align-items: center; gap: 10px; margin-bottom: var(--space-4); }
-.footer__brand img { height: 38px; filter: brightness(0) invert(1); opacity: .92; }
-.footer__brand-name { color: var(--footer-heading); font-weight: 800; font-size: 1.1rem; }
+.footer__brand { display: flex; align-items: center; gap: 11px; margin-bottom: var(--space-4); }
+.footer__brand img { height: 44px; filter: brightness(0) invert(1); opacity: .92; }
+.footer__brand-name { color: var(--footer-heading); font-weight: 800; font-size: 1.27rem; }
 .footer__desc { font-size: var(--fs-sm); line-height: 1.7; }
 .footer__slogan { font-size: var(--fs-sm); line-height: 1.7; color: rgba(196,219,233,.7); margin-top: var(--space-2); }
 .footer__col h4 { color: var(--footer-heading); font-size: .95rem; margin-bottom: var(--space-4); font-weight: 700; }
