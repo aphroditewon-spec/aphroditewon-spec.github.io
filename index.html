@@ -493,7 +493,7 @@
       band.querySelectorAll('.count').forEach(function (el) {
         var to = parseFloat(el.getAttribute('data-to')) || 0, dec = parseInt(el.getAttribute('data-dec'), 10) || 0;
         if (reduce) { el.textContent = to.toFixed(dec); return; }
-        var start = null, dur = 1400;
+        var start = null, dur = 2400;
         function step(ts) {
           if (!start) start = ts;
           var p = Math.min((ts - start) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
