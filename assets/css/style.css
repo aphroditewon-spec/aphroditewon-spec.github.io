@@ -439,8 +439,9 @@ section[id] { scroll-margin-top: 88px; }
 }
 /* 브랜드 열 전체를 오른쪽으로 살짝 이동 */
 .footer__grid > .footer__col:nth-child(1) { padding-left: var(--space-6); }
-/* 메뉴 열 전체를 오른쪽으로 50px 이동 */
-.footer__grid > .footer__col:nth-child(2) { padding-left: 50px; }
+/* 메뉴·사업장 안내 열을 오른쪽으로 50px 이동 */
+.footer__grid > .footer__col:nth-child(2),
+.footer__grid > .footer__col:nth-child(3) { padding-left: 50px; }
 /* 열 사이 세로 구분선 (브랜드↔메뉴, 메뉴↔사업장 안내) */
 .footer__grid > .footer__col:nth-child(2),
 .footer__grid > .footer__col:nth-child(3) { position: relative; }
