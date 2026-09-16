@@ -358,8 +358,8 @@ section[id] { scroll-margin-top: 88px; }
 .contact-band {
   color: #fff;
   background:
-    linear-gradient(112deg, rgba(74,120,160,.74) 0%, rgba(42,76,110,.66) 44%, rgba(58,102,142,.56) 72%, rgba(128,178,215,.56) 100%),
-    url("../images/site/contact-bg.jpg");
+    linear-gradient(100deg, rgba(26,54,88,.78) 0%, rgba(32,66,102,.52) 40%, rgba(40,82,122,.26) 66%, rgba(48,92,134,.14) 100%),
+    url("../images/site/contact-bg.jpg?v=20260916");
   background-size: cover; background-position: center;
   padding-block: var(--space-12);
 }
