@@ -434,9 +434,9 @@ section[id] { scroll-margin-top: 88px; }
   display: grid; grid-template-columns: 1.6fr 1fr 1.4fr; gap: var(--space-10);
   padding-bottom: var(--space-8); border-bottom: 1px solid var(--footer-border);
 }
-.footer__brand { display: flex; align-items: center; gap: 11px; margin-bottom: var(--space-4); }
-.footer__brand img { height: 44px; filter: brightness(0) invert(1); opacity: .92; }
-.footer__brand-name { color: var(--footer-heading); font-weight: 800; font-size: 1.27rem; }
+.footer__brand { display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-4); }
+.footer__brand img { height: 50px; filter: brightness(0) invert(1); opacity: .92; }
+.footer__brand-name { color: var(--footer-heading); font-weight: 800; font-size: 1.4rem; }
 .footer__desc { font-size: var(--fs-sm); line-height: 1.7; }
 .footer__slogan { font-size: var(--fs-sm); line-height: 1.7; color: rgba(196,219,233,.7); margin-top: var(--space-2); }
 .footer__col h4 { color: var(--footer-heading); font-size: .95rem; margin-bottom: var(--space-4); font-weight: 700; }
