@@ -488,17 +488,29 @@
 
     // 2) 숫자 카운트업
     var band = document.querySelector('.herostat'), counted = false;
+    // 모든 카드가 비슷한 횟수(약 20스텝)로 같은 시간에 세도록 "보기 좋은 증감 단위" 계산
+    function niceStep(target) {
+      var raw = target / 20;
+      if (raw <= 1) return 1;
+      var mag = Math.pow(10, Math.floor(Math.log10(raw)));
+      return [1, 2, 5, 10].map(function (m) { return m * mag; })
+        .reduce(function (a, b) { return Math.abs(b - raw) < Math.abs(a - raw) ? b : a; });
+    }
     function runCount() {
       if (counted || !band) return; counted = true;
       band.querySelectorAll('.count').forEach(function (el) {
         var to = parseFloat(el.getAttribute('data-to')) || 0, dec = parseInt(el.getAttribute('data-dec'), 10) || 0;
         if (reduce) { el.textContent = to.toFixed(dec); return; }
         var start = null, dur = 2400;
+        // 소수점 지표(99.9999 등)는 소수부는 최종값으로 고정 표시하고 정수부만 카운트
+        var decPart = dec > 0 ? to.toFixed(dec).split('.')[1] : '';
+        var target = dec > 0 ? Math.floor(to) : to;      // 정수 카운트 대상
+        var stepSize = niceStep(target);                 // 카드별 증감 단위(24는 1, 500·365는 20 등)
         function step(ts) {
           if (!start) start = ts;
           var p = Math.min((ts - start) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
-          // 소수점 지표(99.9999 등)는 진행 중엔 정수로 큼직하게 세고, 끝에 정확한 값으로 스냅
-          el.textContent = dec > 0 ? String(Math.floor(to * eased)) : (to * eased).toFixed(dec);
+          var v = Math.min(Math.round(target * eased / stepSize) * stepSize, target);
+          el.textContent = dec > 0 ? (v + '.' + decPart) : String(v);
           if (p < 1) requestAnimationFrame(step); else el.textContent = to.toFixed(dec);
         }
         requestAnimationFrame(step);
