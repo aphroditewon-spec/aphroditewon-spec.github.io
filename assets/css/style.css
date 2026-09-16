@@ -370,15 +370,59 @@ section[id] { scroll-margin-top: 88px; }
 .eyebrow--light { color: #fff; }
 .eyebrow--light::before { background: #fff; }
 .contact-band__title { font-size: var(--fs-h2); font-weight: 800; margin: var(--space-3) 0; }
-.contact-band__lead { color: #dcecf6; max-width: 520px; }
-.contact-band__action { text-align: right; flex-shrink: 0; transform: translateY(29px); }
-.contact-band__call-label { display: block; font-size: var(--fs-sm); color: #a9cfe6; letter-spacing: .06em; }
-.contact-band__phone {
-  display: block; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800;
-  color: #fff; margin: .15rem 0 var(--space-4); letter-spacing: -.01em;
+.contact-band__lead { color: #dcecf6; max-width: 560px; }
+
+/* 좌측: 강점 3종 (구분선으로 분리) */
+.contact-band__feats {
+  list-style: none; margin: var(--space-7) 0 0; padding: 0;
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-6);
 }
+.contact-band__feats > li { display: flex; align-items: center; gap: .7em; position: relative; }
+.contact-band__feats > li + li { padding-left: var(--space-6); }
+.contact-band__feats > li + li::before {
+  content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  width: 1px; height: 34px; background: rgba(255,255,255,.28);
+}
+.contact-band__feat-ic { flex: none; width: 30px; height: 30px; color: #cfe6f6; }
+.contact-band__feat-ic svg { width: 100%; height: 100%; }
+.contact-band__feat-tx { display: flex; flex-direction: column; line-height: 1.3; }
+.contact-band__feat-tx b { color: #fff; font-weight: 700; font-size: .98rem; }
+.contact-band__feat-tx small { color: rgba(220,236,246,.82); font-size: .8rem; }
+
+/* 우측: 대표전화 + 견적문의 버튼 */
+.contact-band__action { flex-shrink: 0; display: flex; flex-direction: column; align-items: stretch; gap: var(--space-5); min-width: 340px; }
+.contact-band__phone { display: flex; align-items: center; gap: var(--space-4); justify-content: flex-end; }
+.contact-band__phone-ic {
+  flex: none; width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3);
+  display: inline-flex; align-items: center; justify-content: center; color: #fff;
+}
+.contact-band__phone-ic svg { width: 26px; height: 26px; }
+.contact-band__phone-tx { display: flex; flex-direction: column; line-height: 1.15; }
+.contact-band__phone-tx small { font-size: var(--fs-sm); color: #a9cfe6; letter-spacing: .04em; }
+.contact-band__phone-tx a { font-size: clamp(1.8rem, 3vw, 2.35rem); font-weight: 800; color: #fff; letter-spacing: -.01em; margin: .1rem 0; }
+.contact-band__phone-tx em { font-style: normal; font-size: .82rem; color: rgba(200,222,238,.85); }
+
+.contact-band__btn2 {
+  display: flex; align-items: center; gap: var(--space-4);
+  background: #2f7fd6; color: #fff; border-radius: var(--radius-md);
+  padding: 1em 1.4em; box-shadow: 0 12px 28px rgba(20,60,110,.35);
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.contact-band__btn2:hover { background: #2871c2; transform: translateY(-2px); box-shadow: 0 16px 34px rgba(20,60,110,.45); }
+.contact-band__btn2-ic { flex: none; width: 34px; height: 34px; color: #fff; }
+.contact-band__btn2-ic svg { width: 100%; height: 100%; }
+.contact-band__btn2-tx { display: flex; flex-direction: column; line-height: 1.25; margin-right: auto; }
+.contact-band__btn2-tx b { font-weight: 700; font-size: 1.15rem; }
+.contact-band__btn2-tx small { font-size: .82rem; color: rgba(255,255,255,.85); }
+.contact-band__btn2-arrow { flex: none; width: 22px; height: 22px; color: rgba(255,255,255,.9); }
+.contact-band__btn2-arrow svg { width: 100%; height: 100%; }
+
 @media (max-width: 760px) {
-  .contact-band__action { text-align: left; transform: none; }
+  .contact-band__action { align-items: stretch; min-width: 0; width: 100%; }
+  .contact-band__phone { justify-content: flex-start; }
+  .contact-band__feats { gap: var(--space-4); }
+  .contact-band__feats > li + li { padding-left: var(--space-4); }
 }
 
 /* =====================================================================
@@ -399,10 +443,19 @@ section[id] { scroll-margin-top: 88px; }
 .footer__brand img { height: 38px; filter: brightness(0) invert(1); opacity: .92; }
 .footer__brand-name { color: var(--footer-heading); font-weight: 800; font-size: 1.1rem; }
 .footer__desc { font-size: var(--fs-sm); line-height: 1.7; }
+.footer__slogan { font-size: var(--fs-sm); line-height: 1.7; color: rgba(196,219,233,.7); margin-top: var(--space-2); }
 .footer__col h4 { color: var(--footer-heading); font-size: .95rem; margin-bottom: var(--space-4); font-weight: 700; }
 .footer__col li { font-size: var(--fs-sm); margin-bottom: var(--space-3); }
 .footer__sites li { margin-bottom: var(--space-4); }
 .footer__sites b { color: #c4dbe9; font-weight: 600; display: block; font-size: .9rem; }
+/* 사업장 안내: 주소 앞 위치 핀 아이콘 */
+.footer__sites--pin li { position: relative; padding-left: 1.7em; }
+.footer__sites--pin li::before {
+  content: ""; position: absolute; left: 0; top: 2px; width: 15px; height: 15px;
+  background: currentColor; color: var(--blue-200); opacity: .85;
+  -webkit-mask: no-repeat center/contain url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z'/><circle cx='12' cy='9' r='2.5'/></svg>");
+          mask: no-repeat center/contain url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z'/><circle cx='12' cy='9' r='2.5'/></svg>");
+}
 .footer__bottom {
   padding-top: var(--space-5); font-size: .82rem; opacity: .8;
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-3);
@@ -2997,16 +3050,6 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 860px) { .certlist { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 460px) { .certlist { grid-template-columns: repeat(2, 1fr); } }
 
-/* 연락처 밴드 — 전화/이메일 */
-.contact-band__ways { list-style: none; margin: 0 0 var(--space-5); padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-7); }
-.contact-band__ways li { display: flex; align-items: center; gap: .6em; }
-.contact-band__ways svg { width: 22px; height: 22px; color: rgba(255,255,255,.85); flex: none; }
-.contact-band__ways .contact-band__ic { width: 46px; height: 46px; object-fit: contain; flex: none; }
-.contact-band__ways small { display: block; font-size: .72rem; color: rgba(255,255,255,.7); }
-.contact-band__ways a, .contact-band__ways b { color: #fff; font-weight: 700; font-size: 1.05rem; }
-.contact-band__ways a[href^="tel:"] { font-size: clamp(1.7rem, 3vw, 2.1rem); font-weight: 800; letter-spacing: -.01em; line-height: 1.15; }
-.contact-band__btn { padding: 1.05em 2.8em; font-size: 1.12rem; background: transparent; border: 1.5px solid rgba(255,255,255,.9); color: #fff; transition: background .25s ease, color .25s ease, border-color .25s ease; }
-.contact-band__btn:hover { background: #fff; color: var(--eyebrow); border-color: #fff; }
 
 /* =====================================================================
    홈 인터랙션 — 스크롤 리빌, 가스 종류 탭
