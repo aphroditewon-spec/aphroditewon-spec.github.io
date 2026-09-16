@@ -458,8 +458,10 @@ section[id] { scroll-margin-top: 88px; }
 /* 태그라인을 로고 내 'KLCC' 글자 중 L 위치와 일직선으로 정렬(로고 폭 102px의 약 44%) */
 .footer__desc, .footer__slogan { margin-left: 45px; }
 @media (max-width: 560px) { .footer__desc, .footer__slogan { margin-left: 0; } }
-.footer__col h4 { color: var(--footer-heading); font-size: .95rem; margin-bottom: var(--space-4); font-weight: 700; }
+.footer__col h4 { color: var(--footer-heading); font-size: calc(var(--fs-sm) * 1.2); margin-bottom: var(--space-4); font-weight: 700; }
 .footer__col li { font-size: var(--fs-sm); margin-bottom: var(--space-3); }
+/* 메뉴 링크 폰트를 '전문기업' 문구와 동일 크기로 */
+.footer__grid > .footer__col:nth-child(2) li { font-size: calc(var(--fs-sm) * 1.2); }
 .footer__sites li { margin-bottom: var(--space-4); }
 .footer__sites b { color: #c4dbe9; font-weight: 600; display: block; font-size: .9rem; }
 /* 사업장 안내: 주소 앞 위치 핀 아이콘 */
