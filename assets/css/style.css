@@ -394,8 +394,8 @@ section[id] { scroll-margin-top: 88px; }
 .contact-band__phone { display: flex; align-items: center; gap: var(--space-4); justify-content: flex-end; }
 .contact-band__phone-ic { flex: none; width: 54px; height: 54px; object-fit: contain; display: block; }
 .contact-band__phone-tx { display: flex; flex-direction: column; line-height: 1.15; }
-.contact-band__phone-tx small { font-size: var(--fs-sm); color: #a9cfe6; letter-spacing: .04em; }
-.contact-band__phone-tx a { font-size: clamp(1.8rem, 3vw, 2.35rem); font-weight: 800; color: #fff; letter-spacing: -.01em; margin: .1rem 0; }
+.contact-band__phone-tx small { font-size: var(--fs-sm); color: #fff; letter-spacing: .04em; }
+.contact-band__phone-tx a { font-size: clamp(1.89rem, 3.15vw, 2.47rem); font-weight: 800; color: #fff; letter-spacing: -.01em; margin: .1rem 0; }
 .contact-band__phone-tx em { font-style: normal; font-size: .82rem; color: rgba(200,222,238,.85); }
 
 .contact-band__btn2 {
