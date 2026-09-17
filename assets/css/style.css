@@ -1569,7 +1569,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .nav__sub {
     position: static; transform: none; opacity: 1; visibility: visible;
     min-width: 0; box-shadow: none; border: none; border-radius: 0;
-    padding: 0 0 var(--space-2) var(--space-5);
+    /* 하위 메뉴를 상위(회사소개) 글자와 좌측 일직선으로 맞춤(들여쓰기 제거) */
+    padding: 0 0 var(--space-2) 0;
     display: none;
   }
   .nav__sub::before { display: none; }
