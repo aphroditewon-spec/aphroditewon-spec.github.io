@@ -185,6 +185,8 @@ section[id] { scroll-margin-top: 88px; }
   opacity: 0; transition: opacity 1.4s ease; will-change: opacity;
 }
 .hero__slide.is-active { opacity: 1; }
+/* 2번 슬라이드: 분자 전용 이미지(탱크 제외·비율 일치). 데스크탑은 분자가 우측에 표시 */
+.hero__slide--mol { background-position: center; }
 .hero__slides::after { content: ""; position: absolute; inset: 0; background: transparent; }
 .hero > .container, .hero__scroll { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) { .hero__slide { transition: none; } }
