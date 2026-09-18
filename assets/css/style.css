@@ -189,16 +189,18 @@ section[id] { scroll-margin-top: 88px; }
 .hero__slides::after { content: ""; position: absolute; inset: 0; background: transparent; }
 .hero > .container, .hero__scroll { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) { .hero__slide { transition: none; } }
-/* 모바일 히어로: 텍스트는 상단(하늘 위), 탱크는 하단에 크게 — 세로형 전용 이미지 사용 */
+/* 모바일 히어로: 데스크탑과 동일한 파노라마(탱크 오른쪽)를 폭에 맞춰 통째로 축소.
+   contain + 오른쪽·아래 기준 → 폭이 줄면 데스크탑을 폭 비율만큼 축소한 그대로 보임 */
 @media (max-width: 820px) {
   .hero { aspect-ratio: auto; min-height: 660px; padding-block: 24px clamp(24px, 3.5vw, 44px); }
-  /* 폭에 맞춰 이미지 전체가 축소되도록 contain + 오른쪽·아래 기준 정렬.
-     이미지가 못 채우는 위쪽 여백은 각 사진의 하늘/배경색으로 채워 자연스럽게 이음 */
+  /* 데스크탑과 같은 이미지 사용(세로형 전용 크롭 제거). 사진이 못 채우는 위쪽 여백은
+     파노라마 상단의 좌→우 하늘 그라데이션과 맞춘 가로 그라데이션으로 채워 이음새 제거 */
   .hero__slide--tank {
-    background-image: url("../images/site/hero-mobile.jpg?v=20260918") !important;
-    background-size: contain;
-    background-position: right bottom;
-    background-color: #1392f5; /* 탱크 사진 상단 하늘색 */
+    background-image: url("../images/site/hero-main.jpg?v=20260913e"),
+                      linear-gradient(90deg, #b3d1fb 0%, #36a0f8 55%, #0d8ff5 100%);
+    background-size: contain, cover;
+    background-position: right bottom, center;
+    background-repeat: no-repeat, no-repeat;
   }
   /* eyebrow: 폰트 축소해 한 줄에 표현 (특이성 ↑로 base 규칙 덮음) */
   .hero .hero__kicker { font-size: 12.5px; letter-spacing: .04em; white-space: nowrap; }
