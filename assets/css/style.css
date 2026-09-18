@@ -191,6 +191,21 @@ section[id] { scroll-margin-top: 88px; }
 .hero__slides::after { content: ""; position: absolute; inset: 0; background: transparent; }
 .hero > .container, .hero__scroll { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) { .hero__slide { transition: none; } }
+/* 데스크탑(≥821px): 히어로 높이(750px)는 고정, 배경 사진만 폭에 맞춰 축소(오른쪽·아래 기준).
+   사진이 못 채우는 위쪽 여백은 각 사진의 하늘색으로 채워 이음새 최소화 */
+@media (min-width: 821px) {
+  .hero__slides .hero__slide { background-size: contain; background-position: right bottom; background-repeat: no-repeat; }
+  /* 1번(탱크 파노라마): 상단 하늘 좌→우 그라데이션으로 채워 사진 상단과 매끄럽게 이음 */
+  .hero__slides .hero__slide:nth-of-type(1) {
+    background-image: url('../images/site/hero-main.jpg?v=20260913e'),
+                      linear-gradient(90deg, #b3d1fb 0%, #36a0f8 55%, #0d8ff5 100%) !important;
+    background-size: contain, cover !important;
+    background-position: right bottom, center !important;
+    background-repeat: no-repeat, no-repeat !important;
+  }
+  /* 2번(분자): 배경 하늘색 채움 */
+  .hero__slides .hero__slide:nth-of-type(2) { background-color: #cfe0f7; }
+}
 .hero__kicker {
   display: inline-flex; align-items: center; gap: .55em;
   font-size: calc(var(--fs-eyebrow) * 1.2); font-weight: 700; letter-spacing: .1em;
