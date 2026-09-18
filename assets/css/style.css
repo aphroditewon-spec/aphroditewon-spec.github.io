@@ -173,11 +173,14 @@ section[id] { scroll-margin-top: 88px; }
   position: relative; color: var(--hero-text); overflow: hidden;
   display: flex; align-items: flex-start;
   /* 배경 이미지(약 2.49:1, 하단 바닥면만 크롭)가 전부 보이도록 히어로 높이를 이미지 비율에 맞춤 */
-  aspect-ratio: 1876 / 754; min-height: 500px;
+  /* min-height를 낮춰 창폭 900px까지 폭에 맞춰 계속 축소되도록(900×754/1876≈362px) */
+  aspect-ratio: 1876 / 754; min-height: 362px;
   /* 레퍼런스: 콘텐츠(제목·버튼)를 상단에서 시작(상단 정렬), 카드는 아래에서 크게 겹침 */
   padding-block: clamp(48px, 7vw, 84px) clamp(24px, 3.5vw, 44px);
 }
 .hero > .container { width: 100%; }
+/* 모바일(≤820px)은 기존 히어로 높이(500px) 유지 — 데스크탑 축소 확장과 분리 */
+@media (max-width: 820px) { .hero { min-height: 500px; } }
 /* 히어로 배경 슬라이드(3장 자동 전환) */
 .hero__slides { position: absolute; inset: 0; z-index: 0; }
 .hero__slide {
