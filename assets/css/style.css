@@ -182,6 +182,7 @@ section[id] { scroll-margin-top: 88px; }
 .hero__slides { position: absolute; inset: 0; z-index: 0; }
 .hero__slide {
   position: absolute; inset: 0; background-size: cover; background-position: center;
+  background-repeat: no-repeat;
   opacity: 0; transition: opacity 1.4s ease; will-change: opacity;
 }
 .hero__slide.is-active { opacity: 1; }
@@ -191,15 +192,23 @@ section[id] { scroll-margin-top: 88px; }
 /* 모바일 히어로: 텍스트는 상단(하늘 위), 탱크는 하단에 크게 — 세로형 전용 이미지 사용 */
 @media (max-width: 820px) {
   .hero { aspect-ratio: auto; min-height: 660px; padding-block: 24px clamp(24px, 3.5vw, 44px); }
+  /* 폭에 맞춰 이미지 전체가 축소되도록 contain + 오른쪽·아래 기준 정렬.
+     이미지가 못 채우는 위쪽 여백은 각 사진의 하늘/배경색으로 채워 자연스럽게 이음 */
   .hero__slide--tank {
     background-image: url("../images/site/hero-mobile.jpg?v=20260918") !important;
-    background-position: 50% bottom;
+    background-size: contain;
+    background-position: right bottom;
+    background-color: #1392f5; /* 탱크 사진 상단 하늘색 */
   }
   /* eyebrow: 폰트 축소해 한 줄에 표현 (특이성 ↑로 base 규칙 덮음) */
   .hero .hero__kicker { font-size: 12.5px; letter-spacing: .04em; white-space: nowrap; }
   .hero .hero__kicker::before { width: 18px; }
-  /* 2번 분자 슬라이드: 분자 클러스터를 오른쪽으로 조금 이동 */
-  .hero__slide--mol { background-position: 66% 40%; }
+  /* 2번 분자 슬라이드: 폭에 맞춰 축소, 오른쪽·아래 기준 */
+  .hero__slide--mol {
+    background-size: contain;
+    background-position: right bottom;
+    background-color: #cedef9; /* 분자 사진 배경색 */
+  }
   /* 상단 하늘 영역을 확보해 텍스트 가독성 유지(연한 밝은 그라데이션) */
   .hero__slides::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(233,244,252,.72) 0%, rgba(233,244,252,.25) 30%, rgba(233,244,252,0) 52%); }
 }
