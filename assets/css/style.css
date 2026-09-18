@@ -172,8 +172,8 @@ section[id] { scroll-margin-top: 88px; }
 .hero {
   position: relative; color: var(--hero-text); overflow: hidden;
   display: flex; align-items: flex-start;
-  /* 배경 이미지(약 2.49:1, 하단 바닥면만 크롭)가 전부 보이도록 히어로 높이를 이미지 비율에 맞춤 */
-  aspect-ratio: 1876 / 754; min-height: 500px;
+  /* 높이는 고정(500px). 폭이 줄어도 높이는 그대로, 오른쪽 탱크만 폭에 비례해 축소됨 */
+  aspect-ratio: auto; min-height: 500px;
   /* 레퍼런스: 콘텐츠(제목·버튼)를 상단에서 시작(상단 정렬), 카드는 아래에서 크게 겹침 */
   padding-block: clamp(48px, 7vw, 84px) clamp(24px, 3.5vw, 44px);
 }
@@ -188,6 +188,15 @@ section[id] { scroll-margin-top: 88px; }
 .hero__slides::after { content: ""; position: absolute; inset: 0; background: transparent; }
 .hero > .container, .hero__scroll { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) { .hero__slide { transition: none; } }
+/* 1번 슬라이드: 하늘(고정 배경) + 탱크 누끼(폭에 비례해 축소, 오른쪽·아래 기준).
+   background-size의 % 는 슬라이드(=히어로) 폭 기준이라, 폭이 줄면 탱크도 함께 작아짐. 높이는 고정. */
+.hero__slide--tank {
+  background-image: url('../images/site/hero-tank.png?v=20260918'),
+                    url('../images/site/hero-sky.jpg?v=20260918');
+  background-size: 48% auto, cover;
+  background-position: right bottom, left center;
+  background-repeat: no-repeat, no-repeat;
+}
 .hero__kicker {
   display: inline-flex; align-items: center; gap: .55em;
   font-size: calc(var(--fs-eyebrow) * 1.2); font-weight: 700; letter-spacing: .1em;
