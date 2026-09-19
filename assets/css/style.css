@@ -1846,7 +1846,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 480px) {
   .herostat__num { font-size: clamp(1.3rem, 6.2vw, 1.6rem); }
   .herostat__label { font-size: .72rem; letter-spacing: .04em; margin-top: 3px; }
-  .herostat__sub { font-size: .68rem; }
+  /* 서브 문구를 한 줄로 — 폭에 맞춰 크기 축소, 넘침 방지 */
+  .herostat__sub { font-size: clamp(.5rem, 2.7vw, .68rem); white-space: nowrap; }
   .herostat__ic--img img { width: 34px; height: 34px; }
   .herostat__ic svg { width: 24px; height: 24px; }
 }
