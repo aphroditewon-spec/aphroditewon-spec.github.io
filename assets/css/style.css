@@ -75,7 +75,7 @@ section { scroll-margin-top: 84px; }
 .brand { display: flex; align-items: center; gap: 12px; margin-right: var(--space-6); }
 .brand__logo { height: 42px; width: auto; }
 .brand__text { position: relative; display: flex; flex-direction: column; justify-content: center; line-height: 1; }
-.brand__name { font-size: 1.370rem; line-height: 1; font-weight: 800; color: var(--slate-900); letter-spacing: .06em; white-space: nowrap; }
+.brand__name { font-size: clamp(0.95rem, calc(0.72rem + 0.9vw), 1.37rem); line-height: 1; font-weight: 800; color: var(--slate-900); letter-spacing: .06em; white-space: nowrap; }
 .brand__en { position: absolute; top: calc(100% + 1.6mm); left: 0; font-size: .57rem; line-height: 1; letter-spacing: .16em; color: var(--text-muted); font-weight: 600; white-space: nowrap; }
 
 .nav { display: flex; align-items: center; gap: var(--space-7); flex: 1; }
@@ -1555,7 +1555,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 1080px) and (min-width: 821px) {
   .site-header__inner { gap: var(--space-4); }
   .brand { margin-right: var(--space-3); }
-  .brand__name { font-size: 1.15rem; letter-spacing: .04em; }
+  .brand__name { letter-spacing: .04em; }
   .nav { gap: var(--space-4); }
   .nav__menu { gap: clamp(1.4rem, 3.4vw, 4.5rem); }
   .nav__link { font-size: .92rem; }
@@ -1599,7 +1599,6 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 @media (max-width: 680px) {
   .brand__en { display: none; }
-  .brand__name { font-size: .95rem; }
   .brand__logo { height: 30px; }
   .stats { grid-template-columns: 1fr 1fr; }
   .cards { grid-template-columns: 1fr; }
