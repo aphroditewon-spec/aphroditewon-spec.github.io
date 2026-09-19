@@ -192,9 +192,9 @@ section[id] { scroll-margin-top: 88px; }
    background-size의 % 는 슬라이드(=히어로) 폭 기준이라, 폭이 줄면 탱크도 함께 작아짐. 높이는 고정. */
 .hero__slide--tank {
   background-image: url('../images/site/hero-grass.png?v=20260919'),
-                    url('../images/site/hero-tank.png?v=20260918'),
+                    url('../images/site/hero-tank.png?v=20260919b'),
                     url('../images/site/hero-sky.jpg?v=20260919');
-  background-size: 100% auto, 48% auto, cover;
+  background-size: 100% auto, 60% auto, cover;
   background-position: center bottom, right bottom, left center;
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
