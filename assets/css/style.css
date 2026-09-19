@@ -174,8 +174,8 @@ section[id] { scroll-margin-top: 88px; }
   display: flex; align-items: flex-start;
   /* 높이는 고정(500px). 폭이 줄어도 높이는 그대로, 오른쪽 탱크만 폭에 비례해 축소됨 */
   aspect-ratio: auto; min-height: 500px;
-  /* 콘텐츠를 위로 올려 하단 카드(숫자증감)와 겹치지 않도록 상단 패딩 축소 */
-  padding-block: clamp(24px, 3vw, 40px) clamp(20px, 3vw, 40px);
+  /* 상단 패딩을 전 폭에서 40px로 통일 — 폭이 바뀌어도 텍스트 시작 위치 동일 */
+  padding-block: 40px clamp(20px, 3vw, 40px);
 }
 .hero > .container { width: 100%; }
 /* 히어로 배경 슬라이드(3장 자동 전환) */
@@ -1606,7 +1606,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .footer__grid > .footer__col:nth-child(2)::before,
   .footer__grid > .footer__col:nth-child(3)::before { display: none; }
   .cta { padding: var(--space-10) var(--space-6); }
-  .hero { padding-block: var(--space-16) var(--space-20); }
+  .hero { padding-block: 40px var(--space-20); }
   .logo-grid { grid-template-columns: repeat(2, 1fr); }
   .logo-grid__cell { min-height: 96px; font-size: .9rem; }
   .org__depts { grid-template-columns: repeat(2, 1fr); }
