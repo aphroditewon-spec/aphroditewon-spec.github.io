@@ -202,8 +202,8 @@ section[id] { scroll-margin-top: 88px; }
 .hero__kicker {
   display: inline-flex; align-items: center; gap: .55em;
   font-size: clamp(11px, calc(9.3px + 0.44vw), 15.6px); font-weight: 700; letter-spacing: .1em;
-  /* 네이비 글씨 + 화이트 테두리 — 밝은 하늘·구름 위에서도 선명하게 */
-  color: #143b63; -webkit-text-stroke: 0.8px #ffffff; paint-order: stroke fill;
+  /* 그레이 글씨 + 화이트 테두리 — 밝은 하늘·구름 위에서도 선명하게 */
+  color: #6a7683; -webkit-text-stroke: 0.8px #ffffff; paint-order: stroke fill;
   text-shadow: 0 1px 2px rgba(255,255,255,.35);
   margin-bottom: var(--space-5);
 }
