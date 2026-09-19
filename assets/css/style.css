@@ -195,8 +195,8 @@ section[id] { scroll-margin-top: 88px; }
                     url('../images/site/hero-tank.png?v=20260919b'),
                     url('../images/site/hero-sky.jpg?v=20260919');
   background-size: 100% auto, 60% auto, cover;
-  /* 풀은 아래로 2.5vw 내림 / 탱크는 아래로 4vw 내려 밑부분이 카드에 가려지도록 */
-  background-position: center bottom -2.5vw, right bottom -4vw, left center;
+  /* 풀은 아래로 2.5vw 내림 / 탱크는 아래로 2vw 내림(수정 전 0 과 -4vw의 중간) */
+  background-position: center bottom -2.5vw, right bottom -2vw, left center;
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .hero__kicker {
