@@ -195,8 +195,8 @@ section[id] { scroll-margin-top: 88px; }
                     url('../images/site/hero-tank.png?v=20260919b'),
                     url('../images/site/hero-sky.jpg?v=20260919');
   background-size: 100% auto, 60% auto, cover;
-  /* 풀은 아래로 2.5vw / 탱크는 오른쪽으로 5vw 밀고(우측 시설물 덜 보이게) 아래로 2vw */
-  background-position: center bottom -2.5vw, right -5vw bottom -2vw, left center;
+  /* 풀은 아래로 2.5vw / 탱크는 고정 px 오프셋으로 앵커 고정 → 폭 축소 시 위치 이동 없이 크기만 축소 */
+  background-position: center bottom -2.5vw, right -72px bottom -29px, left center;
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .hero__kicker {
