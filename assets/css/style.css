@@ -70,7 +70,7 @@ section { scroll-margin-top: 84px; }
 }
 .site-header__inner {
   position: relative;
-  display: flex; align-items: center; gap: var(--space-6); height: 64px;
+  display: flex; align-items: center; gap: var(--space-6); height: 56px;
 }
 .brand { display: flex; align-items: center; gap: 12px; margin-right: var(--space-6); }
 .brand__logo { height: 42px; width: auto; }
