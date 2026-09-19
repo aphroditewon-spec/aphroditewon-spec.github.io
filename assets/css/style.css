@@ -1842,6 +1842,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .herostat__sub { font-size: .76rem; color: var(--text-muted); }
 @media (max-width: 720px) { .herostat { grid-template-columns: repeat(2, 1fr); }
   .herostat__item:nth-child(2n) { border-right: 0; } .herostat__item:nth-child(-n+2){ border-bottom: 1px solid var(--border);} }
+/* 소형 폰(≤480px): 2×2 유지하되 텍스트·아이콘 축소해 카드에 여유있게 */
+@media (max-width: 480px) {
+  .herostat__num { font-size: clamp(1.3rem, 6.2vw, 1.6rem); }
+  .herostat__label { font-size: .72rem; letter-spacing: .04em; margin-top: 3px; }
+  .herostat__sub { font-size: .68rem; }
+  .herostat__ic--img img { width: 34px; height: 34px; }
+  .herostat__ic svg { width: 24px; height: 24px; }
+}
 
 /* 섹션 헤드 변형 + 공통 */
 .section__head--row { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-6); }
