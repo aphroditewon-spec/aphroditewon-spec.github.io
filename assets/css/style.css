@@ -209,7 +209,7 @@ section[id] { scroll-margin-top: 88px; }
 .hero__kicker::before { content: ""; width: 26px; height: 2px; background: rgba(20,59,99,.45); }
 /* 히어로 배경 슬라이드 전환 인디케이터 (좌측 하단) */
 .hero__nav { display: flex; align-items: center; gap: 14px; margin-top: var(--space-3); }
-.hero__navdot { background: none; border: 0; padding: 0; cursor: pointer; font: inherit; font-weight: 800; font-size: .82rem; letter-spacing: .06em; color: rgba(20,59,99,.45); transition: color .3s ease; }
+.hero__navdot { background: none; border: 0; padding: 0; cursor: pointer; font: inherit; font-weight: 800; font-size: clamp(10px, calc(8.84px + 0.3vw), 13.12px); letter-spacing: .06em; color: rgba(20,59,99,.45); transition: color .3s ease; }
 .hero__navdot.is-active { color: #143b63; }
 .hero__navbar { position: relative; width: 60px; height: 2px; background: rgba(20,59,99,.25); overflow: hidden; }
 .hero__navbar-fill { position: absolute; top: 0; left: 0; height: 100%; width: 50%; background: #143b63; transition: transform .4s ease; }
@@ -269,6 +269,8 @@ section[id] { scroll-margin-top: 88px; }
 .hero .btn--ghost { border-color: rgba(20,59,99,.45); color: #143b63; }
 .hero .btn--ghost:hover { background: rgba(20,59,99,.08); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+/* 히어로 버튼: 폭 따라 16px→12px로 매끄럽게 축소(패딩은 em으로 폰트에 비례), 위치는 좌측 흐름 고정 */
+.hero__actions .btn { font-size: clamp(12px, calc(10.5px + 0.38vw), 16px); padding: .72em 1.6em; }
 .hero__trust {
   display: flex; flex-wrap: wrap; gap: clamp(22px, 4vw, 56px); margin-top: var(--space-8);
   padding-top: var(--space-5); border-top: 1px solid rgba(20,59,99,.2); max-width: 660px;
