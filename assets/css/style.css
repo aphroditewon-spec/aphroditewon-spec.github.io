@@ -87,7 +87,7 @@ section { scroll-margin-top: 84px; }
 }
 /* 메뉴 hover 언더라인: KLCC 블루 3px, 왼→오 0.2s */
 .nav__link::after {
-  content: ""; position: absolute; left: 0; bottom: -6px; height: 3px; width: 0;
+  content: ""; position: absolute; left: 0; bottom: -3px; height: 3px; width: 0;
   background: #1c5fc0; transition: width .2s ease;
 }
 .nav__link:hover { color: var(--primary); }
@@ -98,8 +98,8 @@ section { scroll-margin-top: 84px; }
 /* ===== 상단 메뉴 드롭다운(하위 메뉴) ===== */
 .nav__item { position: relative; display: flex; align-items: center; }
 .nav__sub {
-  /* 드롭다운 상단을 헤더 하단에 맞춤: 헤더 높이 90px 기준 중앙에서 45px 아래 */
-  position: absolute; left: 50%; top: calc(50% + 45px);
+  /* 드롭다운 상단을 메뉴에 더 가깝게(여백 20→10px): 중앙에서 31px 아래 */
+  position: absolute; left: 50%; top: calc(50% + 31px);
   transform: translateX(-50%);
   min-width: 124px; padding: var(--space-2);
   background: #fff; border: 1px solid var(--border);
@@ -108,7 +108,7 @@ section { scroll-margin-top: 84px; }
   opacity: 0; visibility: hidden; transition: opacity .18s ease, visibility .18s ease; z-index: 60;
 }
 /* hover 시 메뉴↔서브 사이 여백을 유지해 마우스가 빠지지 않도록(헤더 하단까지 연결) */
-.nav__sub::before { content: ""; position: absolute; left: 0; right: 0; top: -42px; height: 42px; }
+.nav__sub::before { content: ""; position: absolute; left: 0; right: 0; top: -24px; height: 24px; }
 .nav__item:hover .nav__sub,
 .nav__item:focus-within .nav__sub {
   opacity: 1; visibility: visible;
