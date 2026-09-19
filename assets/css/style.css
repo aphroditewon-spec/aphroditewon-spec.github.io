@@ -174,8 +174,8 @@ section[id] { scroll-margin-top: 88px; }
   display: flex; align-items: flex-start;
   /* 높이는 고정(500px). 폭이 줄어도 높이는 그대로, 오른쪽 탱크만 폭에 비례해 축소됨 */
   aspect-ratio: auto; min-height: 500px;
-  /* 레퍼런스: 콘텐츠(제목·버튼)를 상단에서 시작(상단 정렬), 카드는 아래에서 크게 겹침 */
-  padding-block: clamp(48px, 7vw, 84px) clamp(24px, 3.5vw, 44px);
+  /* 콘텐츠를 위로 올려 하단 카드(숫자증감)와 겹치지 않도록 상단 패딩 축소 */
+  padding-block: clamp(24px, 3vw, 40px) clamp(20px, 3vw, 40px);
 }
 .hero > .container { width: 100%; }
 /* 히어로 배경 슬라이드(3장 자동 전환) */
@@ -205,7 +205,7 @@ section[id] { scroll-margin-top: 88px; }
 }
 .hero__kicker::before { content: ""; width: 26px; height: 2px; background: #6a7683; }
 /* 히어로 배경 슬라이드 전환 인디케이터 (좌측 하단) */
-.hero__nav { display: flex; align-items: center; gap: 14px; margin-top: var(--space-6); }
+.hero__nav { display: flex; align-items: center; gap: 14px; margin-top: var(--space-3); }
 .hero__navdot { background: none; border: 0; padding: 0; cursor: pointer; font: inherit; font-weight: 800; font-size: .82rem; letter-spacing: .06em; color: rgba(20,59,99,.45); transition: color .3s ease; }
 .hero__navdot.is-active { color: #143b63; }
 .hero__navbar { position: relative; width: 60px; height: 2px; background: rgba(20,59,99,.25); overflow: hidden; }
@@ -1823,7 +1823,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 /* 신뢰 지표 흰색 카드(히어로에 겹침) */
 /* 통계 카드를 히어로 이미지 위로 크게 겹치게(레퍼런스: 카드 하단≈이미지 하단) */
-.herostat-band { position: relative; z-index: 3; margin-top: calc(-1 * clamp(56px, 7.5vw, 96px)); }
+.herostat-band { position: relative; z-index: 3; margin-top: calc(-1 * clamp(24px, 3vw, 48px)); }
 /* 레퍼런스: 카드 폭 ≈85% */
 .herostat-band > .container { max-width: var(--container); }
 /* 레퍼런스: 카드를 더 납작하게(≈7.5:1) — 세로 패딩 축소 */
