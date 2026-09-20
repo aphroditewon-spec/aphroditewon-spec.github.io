@@ -1668,6 +1668,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .prodcats__item { flex: 0 0 74%; scroll-snap-align: start; }
   .prodcarousel__nav { display: flex; }
 }
+/* 모바일(≤600px): 3섹션 카드 부제목↔내용 간격·카드 내부 여백 절반 축소 */
+@media (max-width: 600px) {
+  .prodcat__body { padding: var(--space-2) var(--space-2) 10px; }
+  .prodcat__desc { margin-top: 3px; }
+  .whycards .feature { padding: var(--space-3) var(--space-2) !important; }
+  .whycards .feature__title { margin-bottom: 4px !important; }
+}
 
 /* 브레드크럼 */
 .breadcrumb { border-bottom: 1px solid var(--border); background: var(--surface); }
@@ -1921,9 +1928,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .bizfeat__card > a { text-align: left; }
   .bizfeat__media { aspect-ratio: 16 / 9; }
   .bizfeat__ic { display: none; }                 /* 사진 위 아이콘 숨김(구조 변경) */
-  .bizfeat__body { display: grid; grid-template-columns: 1fr auto; column-gap: var(--space-3); align-items: center; padding: var(--space-4); }
+  .bizfeat__body { display: grid; grid-template-columns: 1fr auto; column-gap: var(--space-3); align-items: center; padding: var(--space-2); }
   .bizfeat__title { grid-column: 1; grid-row: 1; align-self: end; font-size: 1rem; }
-  .bizfeat__desc { grid-column: 1; grid-row: 2; margin-top: 4px; }
+  .bizfeat__desc { grid-column: 1; grid-row: 2; margin-top: 2px; }
   .bizfeat__more { grid-column: 2; grid-row: 1 / 3; align-self: center; margin: 0;
     width: 17px; height: 17px; border-radius: 50%; border: 1px solid var(--brand);
     display: inline-flex; align-items: center; justify-content: center; font-size: 0; flex: none; }
