@@ -11,7 +11,7 @@
   var MOBILE_MAX = 820;      // 이 이하는 모바일(스크롤 유지)
   // 히어로가 남는 세로 공간을 채우도록: 카드가 첫 화면 하단에 오게 함
   var NONHERO = 210;         // 헤더(57) + 히어로 아래 카드 부분(125) + 카드를 살짝 위로 올릴 하단 여백(≈28)
-  var HERO_MIN = 480, HERO_MAX = 920; // 히어로 높이 하한/상한(캔버스 px)
+  var HERO_MIN = 360, HERO_MAX = 920; // 히어로 높이 하한/상한(캔버스 px) — 하한 낮춰 짧은 세로(≈360px)에서도 카드까지 노출
 
   function applyScale() {
     var docEl = document.documentElement;
