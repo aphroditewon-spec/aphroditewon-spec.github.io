@@ -966,8 +966,25 @@ section[id] { scroll-margin-top: 88px; }
 .netchart__group--aff .netnode__ic { color: var(--net-teal); }
 .netnode__tx b { display: block; font-weight: 800; color: var(--text); font-size: .98rem; }
 .netnode__tx small { display: block; font-weight: 600; color: var(--text-muted); font-size: .8rem; margin-top: 2px; }
-@media (max-width: 700px) { .netchart__branches { grid-template-columns: 1fr; gap: var(--space-8); } .netchart__branches::before, .netchart__group::before, .netchart__group::after { display: none; } }
-@media (max-width: 460px) { .netchart__nodes { grid-template-columns: 1fr; } .netchart__nodes::before, .netchart__nodes::after, .netchart__nodes li::before { display: none; } }
+/* 모바일: 참고이미지 구조 — 2열(직영|계열사) 유지 + 상단 연결선, 각 그룹 카드는 세로 1열 */
+@media (max-width: 700px) {
+  .netchart__branches { grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+  .netchart__group:first-child::after { left: 50%; right: calc(-0.5 * var(--space-4)); }
+  .netchart__group:last-child::after { right: 50%; left: calc(-0.5 * var(--space-4)); }
+  .netchart__nodes { grid-template-columns: 1fr; padding-top: var(--space-4); }
+  .netchart__nodes::before, .netchart__nodes::after, .netchart__nodes li::before { display: none; }
+  .netchart__root { padding: var(--space-4) var(--space-6); }
+  .netchart__root b { font-size: 1.2rem; }
+  /* 그룹 헤드(직영/계열사 알약) 축소 */
+  .netchart__grouphead { font-size: .82rem; padding: 3px var(--space-4) 3px 3px; margin-bottom: var(--space-5); }
+  .netchart__gh-ic { width: 48px; height: 48px; margin: -14px var(--space-1) -14px -16px; }
+  .netchart__gh-ic--img img { width: 30px; height: 30px; }
+  /* 카드 축소 */
+  .netchart__nodes li { gap: var(--space-2); padding: var(--space-3); }
+  .netnode__ic--img img { width: 32px; height: 32px; }
+  .netnode__tx b { font-size: .8rem; word-break: keep-all; }
+  .netnode__tx small { font-size: .7rem; }
+}
 /* 계열사 페이지 중앙 헤더: 대시 없는 eyebrow + 제목 밑줄 */
 #affiliates .section__head--center .eyebrow::before,
 #aff-network .section__head--center .eyebrow::before { display: none; }
