@@ -1910,9 +1910,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .bizfeat__title { grid-column: 1; grid-row: 1; align-self: end; }
   .bizfeat__desc { grid-column: 1; grid-row: 2; margin-top: 4px; }
   .bizfeat__more { grid-column: 2; grid-row: 1 / 3; align-self: center; margin: 0;
-    width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--brand);
+    width: 17px; height: 17px; border-radius: 50%; border: 1px solid var(--brand);
     display: inline-flex; align-items: center; justify-content: center; font-size: 0; flex: none; }
-  .bizfeat__more::after { content: "→"; font-size: 18px; font-weight: 700; color: var(--brand); }
+  .bizfeat__more::after { content: "→"; font-size: 9px; font-weight: 700; color: var(--brand); line-height: 1; }
 }
 
 /* Why 6열 */
