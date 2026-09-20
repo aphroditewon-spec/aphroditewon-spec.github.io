@@ -20,8 +20,9 @@
     if (hero) hero.style.minHeight = "";   // 히어로 높이 초기화(모바일/재측정)
     var w = docEl.clientWidth;             // 스크롤바 제외 실제 폭
     if (w <= MOBILE_MAX) return;           // 모바일: 스케일 없음(CSS 그대로)
-    // 가로: 1440 기준 균일 스케일(모든 모니터 동일 배치)
-    var zoom = Math.min(w / DESIGN_WIDTH, MAX_ZOOM);
+    // 가로: 1440 초과에서만 확대(줌은 1.0 밑으로 내려가지 않음).
+    // → 1440 이하는 줌 없이 CSS clamp 폰트가 모바일까지 연속 축소 → 820px 경계에서 텍스트 점프 없음
+    var zoom = Math.min(Math.max(w / DESIGN_WIDTH, 1), MAX_ZOOM);
     docEl.style.zoom = zoom;
     // 세로: 히어로가 남는 공간을 채워 카드가 항상 첫 화면 하단에 오도록(화면비별 빈공간 제거)
     if (hero) {
