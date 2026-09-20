@@ -1947,6 +1947,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* Why 6열 */
 .whycards { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
 .whycards .feature { padding: var(--space-6) var(--space-4); text-align: center; }
+/* 모바일: why klcc 카드 왼쪽정렬(아이콘·제목·설명), 줄바꿈은 전역 br 무시로 자연 흐름 */
+@media (max-width: 600px) {
+  .whycards .feature { text-align: left !important; }
+  .whycards .feature__ic, #why .whycards .feature__ic { margin-left: 0 !important; margin-right: auto !important; }
+}
 .whycards .feature__ic { margin: 0 auto var(--space-3); width: 46px; height: 46px; }
 .whycards .feature__ic svg { width: 23px; height: 23px; }
 /* WHY KLCC: 레퍼런스처럼 라인 아이콘(배경 원형 제거·확대) + 아이브로우 대시 숨김 */
