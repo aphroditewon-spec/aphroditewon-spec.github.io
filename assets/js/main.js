@@ -252,7 +252,23 @@
     });
   }
 
-  function start() { initNav(); initHeaderShadow(); initLangDropdown(); initPhotoToggle(); initHeroSlider(); initIceSlideshow(); initScrollFab(); }
+  // 스크롤 진입 시 .reveal 요소를 나타나게(한 번만)
+  function initReveal() {
+    var els = document.querySelectorAll(".reveal");
+    if (!els.length) return;
+    if (!("IntersectionObserver" in window)) {
+      els.forEach(function (e) { e.classList.add("is-visible"); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
+    els.forEach(function (e) { io.observe(e); });
+  }
+
+  function start() { initNav(); initHeaderShadow(); initLangDropdown(); initPhotoToggle(); initHeroSlider(); initIceSlideshow(); initScrollFab(); initReveal(); }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", start);
