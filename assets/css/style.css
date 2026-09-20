@@ -1777,7 +1777,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .factory::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(100deg, rgba(9,30,54,.86) 0%, rgba(9,30,54,.74) 20%, rgba(9,30,54,.52) 40%, rgba(9,30,54,.26) 58%, rgba(9,30,54,0) 74%); }
 .factory__overlay { position: relative; z-index: 2; width: 100%; padding-block: clamp(20px, 3vw, 40px); }
-@media (max-width: 768px) { .factory { aspect-ratio: auto; min-height: 380px; } .factory__overlay { padding-block: clamp(48px, 10vw, 72px); } }
+@media (max-width: 768px) { .factory { aspect-ratio: auto; min-height: 266px; } .factory__bg { object-fit: cover; } .factory__overlay { padding-block: clamp(28px, 6vw, 44px); } }
 .factory__title { font-size: var(--fs-h1); font-weight: 800; color: #fff; margin: var(--space-3) 0 var(--space-4); line-height: 1.2; text-shadow: 0 2px 12px rgba(0,0,0,.55); }
 .factory__lead { color: #fff; font-size: var(--fs-lead); max-width: 460px; line-height: 1.7; text-shadow: 0 1px 8px rgba(0,0,0,.5); }
 /* 모바일: 최신 생산설비 섹션 제목=섹션 제목(20px), 리드=About Us 리드(14px)와 동일 */
