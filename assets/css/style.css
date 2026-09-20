@@ -1633,6 +1633,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .footer__grid { grid-template-columns: 1fr; gap: var(--space-7); }
   .footer__grid > .footer__col:nth-child(2)::before,
   .footer__grid > .footer__col:nth-child(3)::before { display: none; }
+  /* 모바일 푸터: 메뉴·사업장 안내 칼럼 숨김, 브랜드 텍스트 축소, 영문 회사명 줄 숨김(저작권으로 끝맺음) */
+  .footer__grid > .footer__col:nth-child(2),
+  .footer__grid > .footer__col:nth-child(3) { display: none; }
+  .footer__desc { font-size: 13px; }
+  .footer__slogan { font-size: 13px; }
+  .footer__bottom span + span { display: none; }
   .cta { padding: var(--space-10) var(--space-6); }
   .logo-grid { grid-template-columns: repeat(2, 1fr); }
   .logo-grid__cell { min-height: 96px; font-size: .9rem; }
