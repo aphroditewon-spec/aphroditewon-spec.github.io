@@ -1954,6 +1954,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .whycards .feature__ic, #why .whycards .feature__ic { display: flex !important; margin-left: 0 !important; margin-right: 0 !important; }
   #why .whycards .feature__ic--img { height: 50px !important; }
   #why .whycards .feature__ic--img img { height: 50px !important; max-width: 65px !important; }
+  /* 카드 제목은 가운데정렬(설명은 왼쪽정렬 유지) */
+  #why .whycards .feature__title { text-align: center !important; }
 }
 .whycards .feature__ic { margin: 0 auto var(--space-3); width: 46px; height: 46px; }
 .whycards .feature__ic svg { width: 23px; height: 23px; }
@@ -3142,6 +3144,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .ceohome__desc { font-size: 14px; }
   /* 참고이미지 구조: 아이콘·텍스트 사이 세로 구분선 제거 (ID로 기본규칙 우선순위 상회) */
   #ceo-home .ceohome__phil .phil__body { border-left: none; padding-left: 0; }
+  /* 대표이사 서명과 경영이념 카드 사이 간격 절반으로 */
+  #ceo-home .ceohome--nophoto { gap: calc(var(--space-8) * 0.5); }
 }
 .ceohome__sign { margin-top: var(--space-4); font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 1.4em; }
 .ceohome__sign .sign-img { height: 2.3em; width: auto; }
