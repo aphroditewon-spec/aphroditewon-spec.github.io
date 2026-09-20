@@ -1962,14 +1962,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* Why 6열 */
 .whycards { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
 .whycards .feature { padding: var(--space-6) var(--space-4); text-align: center; }
-/* 모바일: why klcc 카드 왼쪽정렬(아이콘·제목·설명), 줄바꿈은 전역 br 무시로 자연 흐름 */
+/* 모바일: why klcc 카드 내용 전체 가운데정렬(아이콘·제목·설명), 줄바꿈은 전역 br 무시로 자연 흐름 */
 @media (max-width: 600px) {
-  .whycards .feature { text-align: left !important; }
+  .whycards .feature { text-align: center !important; }
   /* 아이콘은 가운데정렬(full-width flex+justify-center) + 10% 축소(56→50px) */
   .whycards .feature__ic, #why .whycards .feature__ic { display: flex !important; margin-left: 0 !important; margin-right: 0 !important; }
   #why .whycards .feature__ic--img { height: 50px !important; }
   #why .whycards .feature__ic--img img { height: 50px !important; max-width: 65px !important; }
-  /* 카드 제목은 가운데정렬(설명은 왼쪽정렬 유지) */
   #why .whycards .feature__title { text-align: center !important; }
 }
 .whycards .feature__ic { margin: 0 auto var(--space-3); width: 46px; height: 46px; }
