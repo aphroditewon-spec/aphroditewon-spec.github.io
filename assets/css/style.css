@@ -3143,7 +3143,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ovrow__v ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
 .ovrow__v li { position: relative; padding-left: 12px; }
 .ovrow__v li::before { content: ""; position: absolute; left: 0; top: .55em; width: 4px; height: 4px; border-radius: 50%; background: var(--brand); }
-@media (max-width: 980px) { .ovsec2 { grid-template-columns: 1fr; } .ovcard { grid-template-columns: 1fr; } .ovcard__col + .ovcard__col { border-left: 0; border-top: 1px solid var(--border); } .ovstats { display: none; } }
+@media (max-width: 980px) { .ovsec2 { grid-template-columns: 1fr; gap: calc(var(--space-8) * 0.3); } .ovcard { grid-template-columns: 1fr; } .ovcard__col + .ovcard__col { border-left: 0; border-top: 1px solid var(--border); } .ovstats { display: none; } }
 @media (max-width: 560px) { .ovrow { grid-template-columns: 20px 78px 1fr; } .ovstat { padding: 0 var(--space-4); } }
 /* 사업정보 아코디언: 데스크톱은 기존 그대로(버튼 숨김), 모바일에서만 제목+＋버튼, 클릭 시 상세 펼침 */
 .ovrow__toggle { display: none; }
