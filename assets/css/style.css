@@ -1239,6 +1239,19 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #aff-hwaseong .affpanel__media img, #aff-sihwa .affpanel__media img, #aff-busung .affpanel__media img, #aff-sinla .affpanel__media img { aspect-ratio: 1448 / 862; }
 @media (max-width: 700px) { .affpanel__grid { grid-template-columns: 1fr; gap: var(--space-6); } }
 @media (max-width: 560px) { .afftab { flex: 1 1 50%; } }
+/* 모바일: 참고이미지 순서 — 이름/구분/설명 → 이미지 → 주소·전화·지도버튼, 리드 16px */
+@media (max-width: 700px) {
+  #aff-network .affpanel__grid { display: flex; flex-direction: column; gap: var(--space-4); }
+  #aff-network .affpanel__info { display: contents; }
+  #aff-network .affpanel__name { order: 1; }
+  #aff-network .affpanel__eyebrow { order: 2; }
+  #aff-network .affpanel__cat { order: 3; }
+  #aff-network .affpanel__desc { order: 4; }
+  #aff-network .affpanel__media { order: 5; }
+  #aff-network .affpanel__list { order: 6; margin-top: var(--space-2); }
+  #aff-network .affpanel__map { order: 7; margin-top: var(--space-2); align-self: stretch; justify-content: center; }
+  #aff-network .section__lead { font-size: 16px; }
+}
 
 /* 오시는 길 — 지도 링크 */
 .loc__map {
