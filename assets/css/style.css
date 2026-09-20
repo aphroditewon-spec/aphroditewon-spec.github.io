@@ -172,8 +172,8 @@ section[id] { scroll-margin-top: 88px; }
 .hero {
   position: relative; color: var(--hero-text); overflow: hidden;
   display: flex; align-items: stretch;
-  /* 높이는 고정(500px). 폭이 줄어도 높이는 그대로, 오른쪽 탱크만 폭에 비례해 축소됨 */
-  aspect-ratio: auto; min-height: 500px;
+  /* 높이 고정(580px, 1440px 기준) — 상단 하늘이 더 보이도록(9/15 프레이밍에 근접) */
+  aspect-ratio: auto; min-height: 580px;
   /* 상·하단 패딩을 전 폭 40px로 통일 — 버튼·01/02 하단 앵커 위치 고정 */
   padding-block: 40px 40px;
 }
