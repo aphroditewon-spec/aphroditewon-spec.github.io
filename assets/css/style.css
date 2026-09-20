@@ -3107,7 +3107,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .orgbnr__ic { width: 60px; height: 60px; }
   .orgbnr__ic svg { width: 30px; height: 30px; }
   .orgbnr__tx { padding-left: 0; border-left: 0; }
-  .orgbnr__title { font-size: 1.1rem; }
+  /* 배너 텍스트를 조직도 팀명(생산팀, .78rem)과 동일 크기로 */
+  .orgbnr__title { font-size: .78rem; line-height: 1.4; }
+  .orgbnr__sub { font-size: .78rem; }
   .orgbnr__deco { display: none; }
 }
 @media (max-width: 992px) {
