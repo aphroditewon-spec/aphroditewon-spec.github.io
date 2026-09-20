@@ -1,21 +1,26 @@
 /* =====================================================================
-   대형 화면 비율 확대 — 16인치(1440px) 디자인을 기준으로,
-   그보다 넓은 화면에서는 화면폭÷기준폭 만큼 전체를 같은 비율로 확대해
-   모든 모니터에서 16인치와 동일한 배치로 보이도록 함(zoom).
+   화면 맞춤 스케일 — 1440px 디자인을 기준으로, 데스크탑/노트북에서
+   화면의 '폭'과 '높이' 중 더 빡빡한 쪽에 맞춰 전체를 균일 확대/축소(zoom).
+   → 27인치부터 노트북까지 '첫 화면(헤더+히어로+카드)'이 같은 비율로 한눈에 보임.
+   (모바일 ≤820px은 스케일 없이 세로 스크롤 유지)
    ===================================================================== */
 (function () {
   "use strict";
-  var DESIGN_WIDTH = 1440; // 16인치 기준 폭
-  var MAX_ZOOM = 2.0;      // 과도한 확대 방지 상한(초대형 화면)
+  var DESIGN_WIDTH = 1440;   // 기준 폭
+  var DESIGN_HEIGHT = 800;   // 1440px 첫 화면(헤더+히어로+카드 ≈773px) + 여백
+  var MAX_ZOOM = 2.0;        // 과도한 확대 방지 상한
+  var MOBILE_MAX = 820;      // 이 이하는 모바일(스크롤 유지)
 
   function applyScale() {
-    // 스크롤바를 제외한 실제 레이아웃 폭(줌 피드백 루프 방지)
-    var w = document.documentElement.clientWidth;
-    var z = 1;
-    if (w > DESIGN_WIDTH) {
-      z = Math.min(w / DESIGN_WIDTH, MAX_ZOOM);
-    }
-    document.documentElement.style.zoom = z;
+    var docEl = document.documentElement;
+    docEl.style.zoom = "";                 // 정확 측정 위해 줌 초기화
+    var w = docEl.clientWidth;             // 스크롤바 제외 실제 폭
+    if (w <= MOBILE_MAX) return;           // 모바일: 스케일 없음
+    var h = window.innerHeight;            // 실제 보이는 뷰포트 높이
+    // 폭·높이 중 더 빡빡한 쪽에 맞춰 균일 스케일(첫 화면이 항상 들어오도록)
+    var z = Math.min(w / DESIGN_WIDTH, h / DESIGN_HEIGHT);
+    z = Math.min(z, MAX_ZOOM);
+    docEl.style.zoom = z;
   }
 
   applyScale();
