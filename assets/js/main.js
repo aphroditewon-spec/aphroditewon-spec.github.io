@@ -277,7 +277,65 @@
     els.forEach(function (e) { io.observe(e); });
   }
 
-  function start() { initNav(); initHeaderShadow(); initLangDropdown(); initPhotoToggle(); initHeroSlider(); initIceSlideshow(); initScrollFab(); initReveal(); }
+  // 주요제품 가로 캐러셀 — 도트 + 좌우 화살표(모바일). 컨트롤은 CSS로 모바일에서만 표시
+  function initProdCarousel() {
+    var list = document.querySelector(".prodcats");
+    if (!list) return;
+    var items = Array.prototype.slice.call(list.querySelectorAll(".prodcats__item"));
+    if (items.length < 2) return;
+
+    var nav = document.createElement("div");
+    nav.className = "prodcarousel__nav";
+    var prev = document.createElement("button");
+    prev.type = "button"; prev.className = "prodcarousel__arrow prodcarousel__arrow--prev";
+    prev.setAttribute("aria-label", "이전 제품"); prev.innerHTML = "‹";
+    var next = document.createElement("button");
+    next.type = "button"; next.className = "prodcarousel__arrow prodcarousel__arrow--next";
+    next.setAttribute("aria-label", "다음 제품"); next.innerHTML = "›";
+    var dots = document.createElement("div");
+    dots.className = "prodcarousel__dots";
+    var dotEls = items.map(function (_, n) {
+      var d = document.createElement("button");
+      d.type = "button"; d.className = "prodcarousel__dot";
+      d.setAttribute("aria-label", (n + 1) + "번 제품");
+      if (n === 0) d.classList.add("is-active");
+      d.addEventListener("click", function () { go(n); });
+      dots.appendChild(d);
+      return d;
+    });
+    nav.appendChild(prev); nav.appendChild(dots); nav.appendChild(next);
+    list.parentNode.insertBefore(nav, list.nextSibling);
+
+    var base = function () { return items[0].offsetLeft; };
+    function go(n) {
+      n = Math.max(0, Math.min(items.length - 1, n));
+      list.scrollTo({ left: items[n].offsetLeft - base(), behavior: "smooth" });
+    }
+    function current() {
+      var x = list.scrollLeft, best = 0, bd = Infinity;
+      items.forEach(function (it, n) {
+        var d = Math.abs((it.offsetLeft - base()) - x);
+        if (d < bd) { bd = d; best = n; }
+      });
+      return best;
+    }
+    function update() {
+      var c = current();
+      dotEls.forEach(function (d, n) { d.classList.toggle("is-active", n === c); });
+      prev.disabled = c <= 0;
+      next.disabled = c >= items.length - 1;
+    }
+    prev.addEventListener("click", function () { go(current() - 1); });
+    next.addEventListener("click", function () { go(current() + 1); });
+    var t = null;
+    list.addEventListener("scroll", function () {
+      if (t) clearTimeout(t);
+      t = setTimeout(update, 80);
+    }, { passive: true });
+    update();
+  }
+
+  function start() { initNav(); initHeaderShadow(); initLangDropdown(); initPhotoToggle(); initHeroSlider(); initIceSlideshow(); initScrollFab(); initReveal(); initProdCarousel(); }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", start);

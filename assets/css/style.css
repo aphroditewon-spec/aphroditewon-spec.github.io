@@ -1653,6 +1653,21 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .prodcat__desc { display: block; margin-top: 6px; font-size: .78rem; color: var(--text-muted); line-height: 1.5; word-break: keep-all; }
 @media (max-width: 900px) { .prodcats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .prodcats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* 모바일(≤600px): 주요제품을 가로 스와이프 캐러셀로(도트+좌우 화살표). 사진·내용 유지 */
+.prodcarousel__nav { display: none; align-items: center; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-5); }
+.prodcarousel__dots { display: inline-flex; gap: 7px; }
+.prodcarousel__dot { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: #cdd8e4; cursor: pointer; transition: width .25s ease, background .25s ease; }
+.prodcarousel__dot.is-active { background: var(--brand); width: 20px; border-radius: 4px; }
+.prodcarousel__arrow { flex: none; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border); background: #fff; color: var(--brand); font-size: 20px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow-sm); }
+.prodcarousel__arrow:disabled { opacity: .35; }
+@media (max-width: 600px) {
+  .prodcats { display: flex; flex-wrap: nowrap; grid-template-columns: none; gap: var(--space-3);
+    margin-top: var(--space-5); overflow-x: auto; scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
+  .prodcats::-webkit-scrollbar { display: none; }
+  .prodcats__item { flex: 0 0 74%; scroll-snap-align: start; }
+  .prodcarousel__nav { display: flex; }
+}
 
 /* 브레드크럼 */
 .breadcrumb { border-bottom: 1px solid var(--border); background: var(--surface); }
