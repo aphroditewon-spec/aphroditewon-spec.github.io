@@ -3007,6 +3007,31 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .hist2 { grid-template-columns: 1fr; }
   .hist2__banner { border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); }
 }
+/* 모바일 연혁: 왼쪽 아이콘(세로 타임라인)+연도+제목 가로 구조, 아이콘 60% 축소, 부연설명 숨김 */
+@media (max-width: 700px) {
+  .hist2__head { margin-bottom: var(--space-6); }
+  .hist2 { display: flex; flex-direction: column; gap: 0; }
+  .hist2__item {
+    display: grid; grid-template-columns: 30px auto 1fr; align-items: center;
+    column-gap: var(--space-3); text-align: left; padding: var(--space-3) 0; position: relative;
+  }
+  /* 세로 연결선(아이콘 중심) */
+  .hist2__item::after {
+    content: ""; position: absolute; left: 14px; top: 0; bottom: 0; width: 2px;
+    background: var(--border-strong); z-index: 0;
+  }
+  .hist2__item:first-child::after { top: 50%; }
+  .hist2__item:last-child::after { bottom: 50%; }
+  .hist2__rail { grid-column: 1; grid-row: 1; height: auto; margin: 0; width: 30px; z-index: 1; }
+  .hist2__rail::before { display: none; }
+  .hist2__ic--img { width: 27px; height: 27px; background: var(--surface); border-radius: 50%; }
+  .hist2__year { grid-column: 2; grid-row: 1; margin: 0; font-size: 1.1rem; z-index: 1; }
+  .hist2__body { grid-column: 3; grid-row: 1; padding: 0; gap: var(--space-1); z-index: 1; }
+  .hist2__title { font-size: .95rem; }
+  .hist2__desc { display: none; }                       /* 부연설명 삭제 */
+  .hist2__entry + .hist2__entry { padding-top: var(--space-1); margin-top: var(--space-1); border-top: 0; }
+  .hist2__item--card::before { inset: calc(-1 * var(--space-2)) calc(-1 * var(--space-2)); border-radius: var(--radius-md); }
+}
 /* 조직도 재구성(시안형): 중앙 헤더 + 대표이사·총괄전무 + 8팀 카드 + 하단 배너 */
 .org2__head { margin-bottom: var(--space-10); }
 .org2__title { font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin: var(--space-2) 0 0; text-align: center; }
