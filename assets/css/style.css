@@ -1704,6 +1704,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .breadcrumb__inner svg { width: 15px; height: 15px; }
 .breadcrumb__inner .sep { opacity: .5; }
 .breadcrumb__inner .cur { color: var(--text); font-weight: 600; }
+/* 모바일: 브레드크럼(홈 › 페이지명) 숨김 */
+@media (max-width: 820px) { .breadcrumb { display: none; } }
 
 /* 고객지원 CONTACT: 회사정보 + 오시는 길(정적 지도) */
 .contact2 { display: grid; grid-template-columns: 1fr 1.15fr; gap: var(--space-10); align-items: stretch; }
