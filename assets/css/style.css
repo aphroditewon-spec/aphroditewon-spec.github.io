@@ -891,11 +891,12 @@ section[id] { scroll-margin-top: 88px; }
   /* 참고이미지: 지표 2×2 그리드 */
   .faccards { position: static; transform: none; width: auto; max-width: none; margin: var(--space-5) 0 0;
     display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); pointer-events: auto; }
-  .faccard { padding: var(--space-3) var(--space-3); }
-  .faccard__ic { width: 40px; }
-  .faccard__label { font-size: .82rem; }
-  .faccard__num { font-size: 1.2rem; }
-  .faccard__desc { font-size: .68rem; }
+  .faccard { padding: var(--space-2) var(--space-2); gap: var(--space-2); }
+  .faccard__ic { width: 36px; }
+  .faccard__body { min-width: 0; }
+  .faccard__label { font-size: .78rem; }
+  .faccard__num { font-size: 1rem; }
+  .faccard__desc { font-size: .66rem; }
 }
 /* 아이콘 좌측 + 라벨/숫자/설명 우측(시안형) */
 .facstat.facstat--row { aspect-ratio: auto; display: flex; flex-direction: row; align-items: center; gap: var(--space-4); text-align: left; padding: var(--space-4) var(--space-5); background: rgba(255,255,255,.9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.7); box-shadow: 0 10px 26px rgba(9,26,58,.16); }
