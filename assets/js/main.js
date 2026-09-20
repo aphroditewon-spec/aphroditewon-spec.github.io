@@ -6,21 +6,29 @@
    ===================================================================== */
 (function () {
   "use strict";
-  var DESIGN_WIDTH = 1440;   // 기준 폭
-  var DESIGN_HEIGHT = 800;   // 1440px 첫 화면(헤더+히어로+카드 ≈773px) + 여백
+  var DESIGN_WIDTH = 1440;   // 기준 폭(가로는 1440 기준 균일 스케일)
   var MAX_ZOOM = 2.0;        // 과도한 확대 방지 상한
   var MOBILE_MAX = 820;      // 이 이하는 모바일(스크롤 유지)
+  // 히어로가 남는 세로 공간을 채우도록: 카드가 첫 화면 하단에 오게 함
+  var NONHERO = 193;         // 헤더 + 히어로 하단 아래 카드 부분(캔버스 px, 1440 기준)
+  var HERO_MIN = 480, HERO_MAX = 920; // 히어로 높이 하한/상한(캔버스 px)
 
   function applyScale() {
     var docEl = document.documentElement;
     docEl.style.zoom = "";                 // 정확 측정 위해 줌 초기화
+    var hero = document.querySelector(".hero");
+    if (hero) hero.style.minHeight = "";   // 히어로 높이 초기화(모바일/재측정)
     var w = docEl.clientWidth;             // 스크롤바 제외 실제 폭
-    if (w <= MOBILE_MAX) return;           // 모바일: 스케일 없음
-    var h = window.innerHeight;            // 실제 보이는 뷰포트 높이
-    // 폭·높이 중 더 빡빡한 쪽에 맞춰 균일 스케일(첫 화면이 항상 들어오도록)
-    var z = Math.min(w / DESIGN_WIDTH, h / DESIGN_HEIGHT);
-    z = Math.min(z, MAX_ZOOM);
-    docEl.style.zoom = z;
+    if (w <= MOBILE_MAX) return;           // 모바일: 스케일 없음(CSS 그대로)
+    // 가로: 1440 기준 균일 스케일(모든 모니터 동일 배치)
+    var zoom = Math.min(w / DESIGN_WIDTH, MAX_ZOOM);
+    docEl.style.zoom = zoom;
+    // 세로: 히어로가 남는 공간을 채워 카드가 항상 첫 화면 하단에 오도록(화면비별 빈공간 제거)
+    if (hero) {
+      var canvasVH = window.innerHeight / zoom;   // 줌 보정한 캔버스 기준 뷰포트 높이
+      var hh = Math.max(HERO_MIN, Math.min(canvasVH - NONHERO, HERO_MAX));
+      hero.style.minHeight = hh + "px";
+    }
   }
 
   applyScale();
