@@ -3145,6 +3145,23 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ovrow__v li::before { content: ""; position: absolute; left: 0; top: .55em; width: 4px; height: 4px; border-radius: 50%; background: var(--brand); }
 @media (max-width: 980px) { .ovsec2 { grid-template-columns: 1fr; } .ovcard { grid-template-columns: 1fr; } .ovcard__col + .ovcard__col { border-left: 0; border-top: 1px solid var(--border); } .ovstats { display: none; } }
 @media (max-width: 560px) { .ovrow { grid-template-columns: 20px 78px 1fr; } .ovstat { padding: 0 var(--space-4); } }
+/* 사업정보 아코디언: 데스크톱은 기존 그대로(버튼 숨김), 모바일에서만 제목+＋버튼, 클릭 시 상세 펼침 */
+.ovrow__toggle { display: none; }
+@media (max-width: 980px) {
+  .ovrow--acc { grid-template-columns: 20px 1fr auto; align-items: center; cursor: pointer; }
+  .ovrow--acc .ovrow__ic { grid-column: 1; grid-row: 1; }
+  .ovrow--acc .ovrow__k { grid-column: 2; grid-row: 1; }
+  .ovrow--acc .ovrow__toggle {
+    grid-column: 3; grid-row: 1; display: inline-flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--border);
+    background: #fff; padding: 0; cursor: pointer; flex: none; transition: border-color .2s ease;
+  }
+  .ovrow--acc .ovrow__toggle::before { content: "+"; font-size: 18px; line-height: 1; color: var(--brand); }
+  .ovrow--acc.is-open .ovrow__toggle::before { content: "\2212"; }  /* − */
+  .ovrow--acc.is-open .ovrow__toggle { border-color: var(--brand); }
+  .ovrow--acc .ovrow__v { grid-column: 2 / -1; grid-row: 2; display: none; margin-top: var(--space-2); }
+  .ovrow--acc.is-open .ovrow__v { display: block; }
+}
 @media (max-width: 980px) { .prodgrid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 560px) { .prodgrid { grid-template-columns: repeat(2, 1fr); } }
 
