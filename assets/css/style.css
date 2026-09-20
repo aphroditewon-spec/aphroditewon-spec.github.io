@@ -989,9 +989,10 @@ section[id] { scroll-margin-top: 88px; }
 #affiliates .section__head--center .eyebrow::before,
 #aff-network .section__head--center .eyebrow::before { display: none; }
 #affiliates .section__head--center .section__title,
-#aff-network .section__head--center .section__title { position: relative; padding-bottom: var(--space-4); }
+#aff-network .section__head--center .section__title { position: relative; padding-bottom: 0; }
+/* 제목 하단 구분선 삭제 */
 #affiliates .section__head--center .section__title::after,
-#aff-network .section__head--center .section__title::after { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 46px; height: 3px; border-radius: 2px; background: var(--brand); }
+#aff-network .section__head--center .section__title::after { display: none; }
 /* 소개문 한 줄 표현 */
 #affiliates .section__head { max-width: none; }
 #affiliates .section__lead { white-space: nowrap; }
@@ -1257,6 +1258,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   #aff-network .affpanel__list { order: 6; margin-top: var(--space-2); }
   #aff-network .affpanel__map { order: 7; margin-top: var(--space-2); align-self: stretch; justify-content: center; }
   #aff-network .section__lead { font-size: 16px; }
+  /* 탭↔이름↔영문↔카테고리↔설명 사이 간격 60% 축소(전 탭 공통) */
+  #aff-network .afftabs { margin-bottom: calc(var(--space-8) * 0.4); }
+  #aff-network .affpanel__eyebrow { margin-top: calc(var(--space-2) * 0.4); }
+  #aff-network .affpanel__cat { margin-top: calc(var(--space-2) * 0.4); }
+  #aff-network .affpanel__desc { margin-top: calc(var(--space-3) * 0.4); }
 }
 
 /* 오시는 길 — 지도 링크 */
