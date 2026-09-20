@@ -3092,11 +3092,20 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .introhl__ic svg { width: 28px; height: 28px; }
 .introhl__t { display: block; font-size: .8rem; font-weight: 700; color: var(--text); line-height: 1.45; word-break: keep-all; }
 @media (max-width: 900px) {
-  #intro .about2 { grid-template-columns: 1fr; }
+  #intro .about2 { grid-template-columns: 1fr; gap: 0; }
   /* 모바일: 절대배치 사진을 정상 흐름으로 되돌려 표시(그렇지 않으면 부모 높이 0으로 사진이 사라짐) */
   #intro .about2__right { position: static; }
   #intro .about2__media { position: static; top: auto; }
   #intro .about2__media img { height: auto; aspect-ratio: 16 / 11; }
+  /* 첨부이미지 순서: 제목 → 1단락 → 사진 → 나머지 단락 (컨테이너 펼쳐 order 재정렬) */
+  #intro .about2__text, #intro .about2__right { display: contents; }
+  #intro .about2__rule { display: none; }                              /* 구분선 삭제 */
+  #intro .about2 .eyebrow { order: 1; }
+  #intro .about2 .section__title { order: 2; margin-bottom: var(--space-4); }
+  #intro .about2 .section__title br { display: inline; }               /* 제목 줄바꿈 유지 */
+  #intro .about2__text .about2__lead:first-of-type { order: 3; }
+  #intro .about2__media { order: 4; margin: var(--space-3) 0 var(--space-5); }
+  #intro .about2__text .about2__lead:not(:first-of-type) { order: 5; }
 }
 @media (max-width: 620px) { .introhl { grid-template-columns: repeat(3, 1fr); gap: var(--space-5); } }
 /* 홈 ABOUT US 하단 하이라이트 스트립 */
