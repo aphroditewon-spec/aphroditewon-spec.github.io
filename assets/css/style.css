@@ -2579,6 +2579,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 480px) { .klccgas2__cards { grid-template-columns: 1fr; } }
 /* 모바일: 모든 섹션 제목 공통 20px(각 섹션 개별 오버라이드보다 우선하도록 !important) */
 @media (max-width: 820px) { .section__title { font-size: 20px !important; margin-top: 8px !important; } }
+/* 모바일: 섹션 상단 여백 50% 축소(전 섹션 공통, 개별 padding 오버라이드보다 우선) */
+@media (max-width: 820px) { .section { padding-top: calc(var(--space-6) * 0.35) !important; } }
 /* 모바일: 강제 줄바꿈(br) 무시 → 내용이 이어지다 칸 부족 시 자연 줄바꿈(전 페이지 공통).
    원문 br 앞에 공백을 넣어 무시 시 단어가 붙지 않도록 처리함 */
 @media (max-width: 820px) { br { display: none; } }
