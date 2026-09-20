@@ -3174,9 +3174,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ovrow__v li::before { content: ""; position: absolute; left: 0; top: .55em; width: 4px; height: 4px; border-radius: 50%; background: var(--brand); }
 @media (max-width: 980px) { .ovsec2 { grid-template-columns: 1fr; gap: calc(var(--space-8) * 0.3); } .ovcard { grid-template-columns: 1fr; } .ovcard__col + .ovcard__col { border-left: 0; border-top: 1px solid var(--border); } .ovstats { display: none; } }
 @media (max-width: 560px) { .ovrow { grid-template-columns: 20px 78px 1fr; } .ovstat { padding: 0 var(--space-4); } }
-/* 모바일: 정보표 셀 여백·아이콘 간격 70% 축소 */
+/* 모바일: 정보표 행 왼쪽 여백 70% 축소(아이콘·회사명을 왼쪽으로 이동) */
 @media (max-width: 980px) {
-  .ovrow { padding: calc(var(--space-4) * 0.3) calc(var(--space-5) * 0.3); gap: calc(var(--space-3) * 0.3); }
+  .ovrow { padding-left: calc(var(--space-5) * 0.3); }
 }
 /* 사업정보 아코디언: 데스크톱은 기존 그대로(버튼 숨김), 모바일에서만 제목+＋버튼, 클릭 시 상세 펼침 */
 .ovrow__toggle { display: none; }
