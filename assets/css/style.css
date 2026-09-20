@@ -1950,7 +1950,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 모바일: why klcc 카드 왼쪽정렬(아이콘·제목·설명), 줄바꿈은 전역 br 무시로 자연 흐름 */
 @media (max-width: 600px) {
   .whycards .feature { text-align: left !important; }
-  .whycards .feature__ic, #why .whycards .feature__ic { margin-left: 0 !important; margin-right: auto !important; }
+  /* 아이콘은 가운데정렬(full-width flex+justify-center) + 10% 축소(56→50px) */
+  .whycards .feature__ic, #why .whycards .feature__ic { display: flex !important; margin-left: 0 !important; margin-right: 0 !important; }
+  #why .whycards .feature__ic--img { height: 50px !important; }
+  #why .whycards .feature__ic--img img { height: 50px !important; max-width: 65px !important; }
 }
 .whycards .feature__ic { margin: 0 auto var(--space-3); width: 46px; height: 46px; }
 .whycards .feature__ic svg { width: 23px; height: 23px; }
@@ -3135,7 +3138,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 모바일: CEO 인용문=섹션 제목(20px), 본문=About Us 리드(14px)와 동일 */
 @media (max-width: 820px) {
   .ceohome__quote { font-size: 20px; text-align: left; }
+  .ceohome__quote br { display: inline; }
   .ceohome__desc { font-size: 14px; }
+  /* 참고이미지 구조: 아이콘·텍스트 사이 세로 구분선 제거 (ID로 기본규칙 우선순위 상회) */
+  #ceo-home .ceohome__phil .phil__body { border-left: none; padding-left: 0; }
 }
 .ceohome__sign { margin-top: var(--space-4); font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 1.4em; }
 .ceohome__sign .sign-img { height: 2.3em; width: auto; }
@@ -3172,6 +3178,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .hist__year { font-size: var(--fs-h3); font-weight: 800; color: var(--brand); flex: 0 0 auto; min-width: 3em; }
 .hist__text { color: var(--text); line-height: 1.5; }
 @media (max-width: 700px) { .histlist { grid-template-columns: 1fr; } }
+/* 모바일: 연혁 내용(연도·텍스트)을 위 카드 제목(16px)과 동일 크기로 */
+@media (max-width: 820px) { .hist__year, .hist__text { font-size: 16px; } }
 
 /* 인증/수상 */
 .certlist { list-style: none; margin: var(--space-8) 0 var(--space-5); padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-5); }
