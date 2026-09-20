@@ -1837,9 +1837,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .herostat-band > .container { max-width: var(--container); }
 /* 레퍼런스: 카드를 더 납작하게(≈7.5:1) — 세로 패딩 축소 */
 .herostat { list-style: none; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr);
-  background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: clamp(8px, 1vw, 14px) clamp(16px, 2.2vw, 30px); }
+  background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: clamp(6px, 0.7vw, 10px) clamp(16px, 2.2vw, 30px); }
 .herostat__item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px;
-  padding: clamp(2px, 0.4vw, 6px) var(--space-4); border-right: 1px solid var(--border); }
+  padding: clamp(1px, 0.28vw, 4px) var(--space-4); border-right: 1px solid var(--border); }
 .herostat__item:last-child { border-right: 0; }
 .herostat__ic { color: var(--brand); margin-bottom: 6px; }
 .herostat__ic svg { width: 30px; height: 30px; }
