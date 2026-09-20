@@ -1786,6 +1786,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .factory__lead { font-size: 14px; }
 }
 .factory__more { margin-top: var(--space-5); }
+/* 모바일: 시설 더보기 버튼을 히어로 제품보기 버튼과 동일 크기·폰트로 */
+@media (max-width: 820px) { .factory__more { font-size: clamp(13.5px, 1.111vw, 16px); padding: .72em 1.3em; } }
 
 /* ④ Why 6카드 — 인라인 SVG 아이콘 */
 .feature__ic { display: inline-flex; align-items: center; justify-content: center;
