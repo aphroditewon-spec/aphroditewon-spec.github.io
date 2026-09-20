@@ -448,6 +448,21 @@ section[id] { scroll-margin-top: 88px; }
   .contact-band__feats { gap: var(--space-4); }
   .contact-band__feats > li + li { padding-left: var(--space-4); }
 }
+/* 모바일: contact 상단 여백 60% 축소 + 강점 3종 아이콘 상단·3열 한 줄(크기·폰트 축소, 구분선 제거) */
+@media (max-width: 600px) {
+  .contact-band { padding-top: calc(var(--space-12) * 0.4); }
+  .contact-band__feats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3); margin-top: var(--space-4);
+  }
+  .contact-band__feats > li { flex-direction: column; align-items: center; text-align: center; gap: 5px; padding-left: 0; }
+  .contact-band__feats > li + li { padding-left: 0; }
+  .contact-band__feats > li + li::before { display: none; }
+  .contact-band__feat-ic { width: 26px; height: 26px; }
+  .contact-band__feat-tx { align-items: center; line-height: 1.25; }
+  .contact-band__feat-tx b { font-size: .8rem; }
+  .contact-band__feat-tx small { font-size: .68rem; }
+}
 
 /* =====================================================================
    푸터 (다크)
