@@ -3142,10 +3142,22 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .ceohome__quote { font-size: 20px; text-align: left; }
   .ceohome__quote br { display: inline; }
   .ceohome__desc { font-size: 14px; }
-  /* 참고이미지 구조: 아이콘·텍스트 사이 세로 구분선 제거 (ID로 기본규칙 우선순위 상회) */
-  #ceo-home .ceohome__phil .phil__body { border-left: none; padding-left: 0; }
   /* 대표이사 서명과 경영이념 카드 사이 간격 절반으로 */
   #ceo-home .ceohome--nophoto { gap: calc(var(--space-8) * 0.5); }
+  /* 경영이념 카드 재구성: 아이콘=제목 라인에 정렬, 설명은 카드 왼쪽 전체폭 왼쪽정렬 */
+  #ceo-home .ceohome__phil .phil {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: var(--space-3);
+    row-gap: 0;
+    align-items: start;
+  }
+  #ceo-home .ceohome__phil .phil__body { display: contents; }
+  #ceo-home .ceohome__phil .phil__ic,
+  #ceo-home .ceohome__phil .phil__ic--img { grid-column: 1; grid-row: 1 / 3; align-self: center; width: 46px; height: 46px; }
+  #ceo-home .ceohome__phil .phil__cat { grid-column: 2; grid-row: 1; align-self: end; }
+  #ceo-home .ceohome__phil .phil__title { grid-column: 2; grid-row: 2; align-self: start; margin: 2px 0 0; }
+  #ceo-home .ceohome__phil .phil__desc { grid-column: 1 / -1; grid-row: 3; text-align: left; margin-top: var(--space-2); }
 }
 .ceohome__sign { margin-top: var(--space-4); font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 1.4em; }
 .ceohome__sign .sign-img { height: 2.3em; width: auto; }
