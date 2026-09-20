@@ -3143,7 +3143,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .ovrow__v ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
 .ovrow__v li { position: relative; padding-left: 12px; }
 .ovrow__v li::before { content: ""; position: absolute; left: 0; top: .55em; width: 4px; height: 4px; border-radius: 50%; background: var(--brand); }
-@media (max-width: 980px) { .ovsec2 { grid-template-columns: 1fr; } .ovcard { grid-template-columns: 1fr; } .ovcard__col + .ovcard__col { border-left: 0; border-top: 1px solid var(--border); } }
+@media (max-width: 980px) { .ovsec2 { grid-template-columns: 1fr; } .ovcard { grid-template-columns: 1fr; } .ovcard__col + .ovcard__col { border-left: 0; border-top: 1px solid var(--border); } .ovstats { display: none; } }
 @media (max-width: 560px) { .ovrow { grid-template-columns: 20px 78px 1fr; } .ovstat { padding: 0 var(--space-4); } }
 @media (max-width: 980px) { .prodgrid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 560px) { .prodgrid { grid-template-columns: repeat(2, 1fr); } }
