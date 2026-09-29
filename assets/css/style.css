@@ -2468,6 +2468,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 @media (max-width: 900px) { .icespec2 { grid-template-columns: 1fr; } .handling--wide { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .icespec-figs { grid-template-columns: 1fr; } .proc4 { grid-template-columns: repeat(2, 1fr); } .handling, .handling--wide { grid-template-columns: 1fr; } }
+/* 1번 구간(501~820px): 취급·보관 안전 카드 아코디언 — 아이콘+제목만, 클릭 시 내용 펼침 */
+@media (min-width: 501px) and (max-width: 820px) {
+  .handling > li { position: relative; cursor: pointer; }
+  .handling > li > p { display: none; }
+  .handling > li.is-open > p { display: block; }
+  .handling > li::after { content: "+"; position: absolute; top: var(--space-4); right: var(--space-4); font-size: 1.15rem; font-weight: 400; color: var(--brand); line-height: 1; }
+  .handling > li.is-open::after { content: "\2212"; }  /* − */
+}
 
 /* 주요 적용분야 */
 .applyfields { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: var(--space-4) 0 0; }
