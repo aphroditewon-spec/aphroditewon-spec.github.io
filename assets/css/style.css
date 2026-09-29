@@ -2508,7 +2508,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
     scrollbar-width: none; padding-bottom: 2px;
   }
   .applyfields::-webkit-scrollbar { display: none; }
-  .applyfields > .applyfield { flex: 0 0 40%; scroll-snap-align: start; }
+  .applyfields > .applyfield { flex: 0 0 28%; scroll-snap-align: start; padding: var(--space-3) var(--space-2); }  /* 카드 크기 30%↓: 폭 40→28%, 패딩 축소 */
+  .applyfields .applyfield__ic--img { width: 64px; height: 64px; margin-bottom: var(--space-2); }  /* 아이콘 92→64px(≈30%↓) */
+  .applyfields .applyfield__title { font-size: .9rem; margin-bottom: var(--space-1); }
+  .applyfields .applyfield__desc { font-size: .74rem; }
   .applyfields + .prodcarousel__nav { display: flex; }
 }
 
