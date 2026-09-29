@@ -1345,6 +1345,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 드라이아이스 제품 라인업 상세 */
 /* 너겟 탭 오른쪽 경계를 좌측 이미지(560px) 오른쪽 라인과 일치시킴(nav 좌측 인셋 6px 보정) */
 #ice .prodlineup__nav { display: grid; grid-template-columns: minmax(0, 554px) 1fr; }
+/* 모바일(≤820px): 패널이 1열로 쌓이므로 탭도 균등(너겟/블록 5:5)으로 */
+@media (max-width: 820px) { #ice .prodlineup__nav { grid-template-columns: 1fr 1fr; } }
 #ice .ice-slideshow { align-items: stretch; }
 #ice .prodlineup__panel .ice-slideshow__frame { aspect-ratio: auto; height: 100%; }
 #ice .iceline__detail { min-height: 486px; }
