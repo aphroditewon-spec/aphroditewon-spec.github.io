@@ -1369,7 +1369,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   #ice .prodlineup__panel .iceline__title { grid-column: 1 / -1; grid-row: 2; }
   #ice .prodlineup__panel .iceline__lead { grid-column: 1 / -1; grid-row: 3; margin-bottom: 0; }  /* 리드↔구분선 간격 반으로(32→16px) */
   #ice .prodlineup__panel .iceline__rows { grid-column: 1 / -1; grid-row: 4; }
-  #ice .prodlineup__panel .iceline__note { grid-column: 1 / -1; grid-row: 5; }
+  #ice .prodlineup__panel .iceline__note { grid-column: 1 / -1; grid-row: 5; margin-top: -5px; }  /* 상단 구분선과 간격 반감 */
+  #ice.section { padding-bottom: 11px; }  /* 하단 구분선과 간격 반감 → 주석 중앙정렬 */
 }
 .iceline__title { font-size: 1.6rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); }
 .iceline__title em { font-style: normal; font-size: 1rem; font-weight: 600; color: var(--text-muted); margin-left: .3em; }
