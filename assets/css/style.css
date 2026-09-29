@@ -2040,6 +2040,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .bizfeat__more { display: none; }
   .bizdesc--full { display: none; }
   .bizdesc--b1 { display: inline; }
+  /* 카드 높이 통일: 링크가 그리드 셀(=가장 높은 카드) 전체 높이를 채움 */
+  .bizfeat { align-items: stretch; }
+  .bizfeat__card > a { height: 100%; box-sizing: border-box; }
 }
 
 /* Why 6열 */
