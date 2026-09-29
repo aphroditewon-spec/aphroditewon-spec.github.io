@@ -2603,6 +2603,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .co2rec-hero__text + .co2rec-hero__text { margin-top: calc(-1 * var(--space-2)); }  /* 문단 간격 16→8px(추가 반감): 행 간격 상쇄 */
   /* CO₂ 회수·재활용 흐름도: 5스텝을 한 줄에 — 세로형 컴팩트 카드로 폭 축소, 사이 화살표 유지 */
   #recovery .co2rec-flow { margin-top: var(--space-5); padding-block: var(--space-4); }  /* 본문↔흐름도 간격 축소 + 박스 내부 상하 여백 반감(2rem→1rem) */
+  #recovery .co2rec-banner { gap: var(--space-3); }  /* 하단 배너: 리드 문구↔아이콘 행 간격 축소(2.5rem→0.75rem) */
   #recovery .co2rec-flow__steps { flex-wrap: nowrap; gap: 0; align-items: stretch; }
   #recovery .recstep { flex: 1 1 0; min-width: 0; flex-direction: column; text-align: center; gap: var(--space-2); padding: var(--space-3) var(--space-1); }
   #recovery .recstep:not(:last-child) { margin-right: 18px; }
