@@ -1680,13 +1680,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 820px) {
   .nav__menu {
     display: none; margin: 0;
-    position: absolute; top: 74px; left: 0; right: 0;
+    position: absolute; top: 56px; left: 0; right: 0;
     flex-direction: column; gap: 0;
-    background: #fff; border-bottom: 1px solid var(--border); padding: var(--space-3);
+    background: #fff; border-bottom: 1px solid var(--border); padding: var(--space-2) var(--space-3);
     box-shadow: var(--shadow-md);
   }
   .nav__menu.is-open { display: flex; }
-  .nav__link { padding: .8rem .4rem; }
+  .nav__link { padding: .5rem .4rem; }
   .nav__link::after { display: none; }
   .nav-toggle { display: block; }
   /* 모바일: 하위 메뉴를 접힌 상태로 두고 상위 메뉴 탭하면 펼침 */
@@ -1714,8 +1714,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   }
   .nav__item.has-sub.is-open > .nav__link::after { transform: rotate(-135deg); border-color: var(--brand); margin-top: -2px; }
   .nav__item.has-sub.is-open > .nav__link { color: var(--brand); }
-  .nav__sub { padding-bottom: var(--space-2); }
-  .nav__sub a { padding-left: 1.5rem; margin-left: .5rem; border-left: 2px solid var(--brand); }
+  .nav__sub { padding-bottom: var(--space-1); }
+  /* 하위 항목: 좌측 바 대신 대시(–) 마커 + 줄간격 축소 */
+  .nav__sub a { display: flex; align-items: center; gap: .5rem; padding: .35rem .4rem .35rem .8rem; margin-left: 0; border-left: none; }
+  .nav__sub a::before { content: ""; flex: none; width: 9px; height: 2px; background: var(--brand); border-radius: 1px; }
   /* 로고 + 회사명은 왼쪽, 언어·햄버거는 오른쪽 */
   .nav { gap: var(--space-2); flex: 0 0 auto; margin-left: auto; }
   .toolbar { gap: var(--space-2); }
