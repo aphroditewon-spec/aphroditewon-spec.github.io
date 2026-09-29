@@ -2473,8 +2473,15 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .handling > li { position: relative; cursor: pointer; }
   .handling > li > p { display: none; }
   .handling > li.is-open > p { display: block; }
-  .handling > li::after { content: "+"; position: absolute; top: var(--space-4); right: var(--space-4); font-size: 1.15rem; font-weight: 400; color: var(--brand); line-height: 1; }
-  .handling > li.is-open::after { content: "\2212"; }  /* − */
+  .handling__ic { width: 44px; height: 44px; }          /* 아이콘 5% 축소(46→44) */
+  .handling > li > b { align-self: center; }             /* 제목을 아이콘 세로 가운데 정렬 */
+  /* 표시기: ＋ 대신 화살표(chevron), 펼치면 위로 */
+  .handling > li::after {
+    content: ""; position: absolute; top: calc(var(--space-4) + 15px); right: var(--space-5);
+    width: 8px; height: 8px; border-right: 2px solid var(--brand); border-bottom: 2px solid var(--brand);
+    transform: rotate(45deg); transition: transform .2s ease;
+  }
+  .handling > li.is-open::after { transform: rotate(-135deg); top: calc(var(--space-4) + 18px); }
 }
 
 /* 주요 적용분야 */
