@@ -2667,6 +2667,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .gasinfo__photo { min-height: 340px; }
 .gasinfo__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 800px) { .gasinfo__panel { grid-template-columns: 1fr; } .gasinfo__photo { min-height: 0; aspect-ratio: 16 / 9; order: -1; } .gasinfo__nav { flex-wrap: wrap; } .gasinfo__btn { flex: 1 1 calc(33.33% - 4px); } }
+/* 1번 구간(501~820px): 6개 탭 한 줄 + 패널 1열 통일 + 사진 높이 50% 축소 */
+@media (min-width: 501px) and (max-width: 820px) {
+  #gas-spec .gasinfo__nav { flex-wrap: nowrap; }
+  #gas-spec .gasinfo__btn { flex: 1 1 0; min-width: 0; font-size: .66rem; padding: .4rem 2px; line-height: 1.2; }
+  #gas-spec .gasinfo__btn span { font-size: .58rem; }
+  #gas-spec .gasinfo__panel { grid-template-columns: 1fr; }
+  #gas-spec .gasinfo__photo { order: -1; min-height: 0; aspect-ratio: 32 / 9; }
+}
 /* KLCC GAS 개요: 4 스탯 카드 + 우측 시설 사진 */
 .klccgas { display: grid; grid-template-columns: 1fr 300px; gap: var(--space-5); align-items: stretch; margin-top: var(--space-4); }
 .klccgas__stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); list-style: none; padding: 0; margin: 0; }
