@@ -3684,7 +3684,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .nav__item.has-sub.is-open > .nav__link .nav__ic { background: var(--brand); color: #fff; }
 
   /* 하위: 타임라인(세로선+점) + 제목 + 설명 */
-  .nav__sub { position: relative; padding: 2px 0 10px 0; }
+  .nav__sub { position: relative; left: auto; top: auto; padding: 2px 0 10px 0; }
   .nav__sub::before { content: ""; position: absolute; left: 1.15rem; top: .2rem; bottom: 1rem; width: 2px; background: var(--border); }
   .nav__sub a { display: block; position: relative; padding: .45rem .2rem .45rem 2.4rem; margin: 0; border-left: none; }
   .nav__sub a::before { content: ""; position: absolute; left: calc(1.15rem - 3px); top: .78rem; width: 8px; height: 8px; border-radius: 50%; background: var(--brand); border: 2px solid var(--surface-2); box-shadow: 0 0 0 1px var(--brand); }
