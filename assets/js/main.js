@@ -285,6 +285,8 @@
     makeCarousel(document.querySelector('.prodlineup__panel[data-cat="spec"] .prodgrid--3'), ".pgcard");
     // 가스제품 생산·공급 시설 캐러셀
     makeCarousel(document.querySelector("#gas-facility .facilcards"), ".facilcard");
+    // 가스제품 가스 공급 프로세스 캐러셀
+    makeCarousel(document.querySelector("#supply .procflow"), ".procstep");
   }
 
   function makeCarousel(list, itemSel) {
