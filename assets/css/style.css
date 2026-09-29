@@ -1357,11 +1357,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 }
 /* 1번 구간(501~820px): 제품 라인업(너겟/블록) 슬라이드쇼 — 사진이 프레임을 자연 비율로 꽉 채움(레터박스·크롭 없음), 왼쪽 72%(10%↓) + 아이콘카드 3개를 사진 오른쪽에 세로 배치 */
 @media (min-width: 501px) and (max-width: 820px) {
-  #ice .prodlineup__panel .ice-slide { object-fit: cover; transform: none !important; }
-  #ice .prodlineup__panel .ice-slideshow__frame { aspect-ratio: auto; background: none; }
-  #ice .prodlineup__panel .ice-slide.is-active { position: relative; height: auto; }  /* 활성 사진이 프레임 높이 결정 → 꽉 채움 */
+  /* 고정 aspect 1.07(너겟 사진 자연비율)로 너겟·블록 사진 높이 동일 + 꽉 채움. 크롭 시 상단(표지판) 유지 */
+  #ice .prodlineup__panel .ice-slide { object-fit: cover; object-position: center top; transform: none !important; }
+  #ice .prodlineup__panel .ice-slideshow__frame { aspect-ratio: 1.07; background: none; }
   #ice .prodlineup__panel .ice-slideshow__arrow { width: 28px; height: 28px; font-size: 1.05rem; }  /* 화살표 40→28px(30%↓) */
-  #ice .prodlineup__panel .ice-slideshow { display: grid; grid-template-columns: 72% 1fr; column-gap: var(--space-2); row-gap: var(--space-4); align-items: start; }
+  #ice .prodlineup__panel .ice-slideshow { display: grid; grid-template-columns: 58% 1fr; column-gap: var(--space-2); row-gap: var(--space-4); align-items: start; }
   #ice .prodlineup__panel .iceline__detail { display: contents; }
   #ice .prodlineup__panel .ice-slideshow__frame { grid-column: 1; grid-row: 1; max-width: none; margin: 0; align-self: start; }
   #ice .prodlineup__panel .iceline__feats { grid-column: 2; grid-row: 1; grid-template-columns: 1fr; margin: 0; align-self: start; }
