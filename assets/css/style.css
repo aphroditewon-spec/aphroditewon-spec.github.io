@@ -2115,7 +2115,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
     scrollbar-width: none; padding-bottom: 2px; align-items: stretch;
   }
   .prodlineup__panel[data-cat="spec"] .prodgrid.prodgrid--3::-webkit-scrollbar { display: none; }
-  .prodlineup__panel[data-cat="spec"] .prodgrid.prodgrid--3 > .pgcard { flex: 0 0 38%; scroll-snap-align: start; }
+  /* 3장 높이 동일: 최대 콘텐츠(고순도 2줄 텍스트) 기준 고정 min-height (flex stretch가 균일화 못 함) */
+  .prodlineup__panel[data-cat="spec"] .prodgrid.prodgrid--3 > .pgcard { flex: 0 0 38%; scroll-snap-align: start; min-height: 436px; }
 }
 /* 식음료가스: 단일 실사진 카드 */
 .prodlineup .prodgrid.prodgrid--cyl.prodgrid--food { grid-template-columns: 1fr; }
