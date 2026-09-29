@@ -287,6 +287,8 @@
     makeCarousel(document.querySelector("#gas-facility .facilcards"), ".facilcard");
     // 가스제품 가스 공급 프로세스 캐러셀
     makeCarousel(document.querySelector("#supply .procflow"), ".procstep");
+    // 드라이아이스 주요 적용분야 캐러셀
+    makeCarousel(document.querySelector(".applyfields"), ".applyfield");
   }
 
   function makeCarousel(list, itemSel) {
