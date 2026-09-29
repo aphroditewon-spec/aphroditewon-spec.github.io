@@ -279,9 +279,15 @@
 
   // 주요제품 가로 캐러셀 — 도트 + 좌우 화살표(모바일). 컨트롤은 CSS로 모바일에서만 표시
   function initProdCarousel() {
-    var list = document.querySelector(".prodcats");
+    // 홈 주요제품 캐러셀
+    makeCarousel(document.querySelector(".prodcats"), ".prodcats__item");
+    // 가스제품 제품 라인업 — 특수·혼합가스 탭 캐러셀
+    makeCarousel(document.querySelector('.prodlineup__panel[data-cat="spec"] .prodgrid--3'), ".pgcard");
+  }
+
+  function makeCarousel(list, itemSel) {
     if (!list) return;
-    var items = Array.prototype.slice.call(list.querySelectorAll(".prodcats__item"));
+    var items = Array.prototype.slice.call(list.querySelectorAll(itemSel));
     if (items.length < 2) return;
 
     var nav = document.createElement("div");
