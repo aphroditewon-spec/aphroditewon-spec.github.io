@@ -283,6 +283,8 @@
     makeCarousel(document.querySelector(".prodcats"), ".prodcats__item");
     // 가스제품 제품 라인업 — 특수·혼합가스 탭 캐러셀
     makeCarousel(document.querySelector('.prodlineup__panel[data-cat="spec"] .prodgrid--3'), ".pgcard");
+    // 가스제품 생산·공급 시설 캐러셀
+    makeCarousel(document.querySelector("#gas-facility .facilcards"), ".facilcard");
   }
 
   function makeCarousel(list, itemSel) {

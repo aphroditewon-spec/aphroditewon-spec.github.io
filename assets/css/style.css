@@ -2641,6 +2641,19 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 1080px) { .facilcards { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 720px) { .facilcards { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 430px) { .facilcards { grid-template-columns: 1fr; } }
+/* 생산·공급 시설 캐러셀 nav: 기본 숨김, 1번 구간에서만 표시 */
+#gas-facility .prodcarousel__nav { display: none; }
+/* 1번 구간(501~820px): 생산·공급 시설 가로 스와이프 캐러셀 + nav(화살표·도트) */
+@media (min-width: 501px) and (max-width: 820px) {
+  #gas-facility .facilcards {
+    display: flex; flex-wrap: nowrap; grid-template-columns: none; gap: var(--space-3);
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; padding-bottom: 2px;
+  }
+  #gas-facility .facilcards::-webkit-scrollbar { display: none; }
+  #gas-facility .facilcards > .facilcard { flex: 0 0 44%; scroll-snap-align: start; }
+  #gas-facility .prodcarousel__nav { display: flex; }
+}
 /* 가스별 특성 및 용도: 가로 탭 + 좌 상세/우 사진 (참고이미지) */
 .gasinfo { margin-top: var(--space-4); }
 .gasinfo__nav { display: flex; gap: 4px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 5px; margin-bottom: var(--space-4); }
