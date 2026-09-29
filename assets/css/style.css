@@ -1350,6 +1350,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #ice .ice-slideshow { align-items: stretch; }
 #ice .prodlineup__panel .ice-slideshow__frame { aspect-ratio: auto; height: 100%; }
 #ice .iceline__detail { min-height: 486px; }
+/* 모바일(≤860px): 1열로 쌓일 때 사진 frame이 height:100%로 0높이가 되어 안 보이던 문제 — aspect-ratio 부여해 내용 위에 표시 */
+@media (max-width: 860px) {
+  #ice .prodlineup__panel .ice-slideshow__frame { aspect-ratio: 4 / 3; height: auto; }
+  #ice .iceline__detail { min-height: 0; }
+}
 .iceline__title { font-size: 1.6rem; font-weight: 800; color: var(--text); margin: 0 0 var(--space-2); }
 .iceline__title em { font-style: normal; font-size: 1rem; font-weight: 600; color: var(--text-muted); margin-left: .3em; }
 .iceline__lead { color: var(--text-muted); line-height: 1.7; margin: 0 0 var(--space-4); word-break: keep-all; }
