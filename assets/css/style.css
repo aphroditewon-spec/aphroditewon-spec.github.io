@@ -1361,10 +1361,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   #ice .prodlineup__panel .ice-slide { object-fit: cover; object-position: center top; transform: none !important; }
   #ice .prodlineup__panel .ice-slideshow__frame { aspect-ratio: 1.25; background: none; }  /* 가로 넓힘: 높이 유지·폭 확대(1.07→1.25) */
   #ice .prodlineup__panel .ice-slideshow__arrow { width: 28px; height: 28px; font-size: 1.05rem; }  /* 화살표 40→28px(30%↓) */
-  #ice .prodlineup__panel .ice-slideshow { display: grid; grid-template-columns: 68% 1fr; column-gap: var(--space-2); row-gap: var(--space-4); align-items: start; }
+  #ice .prodlineup__panel .ice-slideshow { display: grid; grid-template-columns: 70% 1fr; column-gap: var(--space-4); row-gap: var(--space-4); align-items: start; }
   #ice .prodlineup__panel .iceline__detail { display: contents; }
   #ice .prodlineup__panel .ice-slideshow__frame { grid-column: 1; grid-row: 1; max-width: none; margin: 0; align-self: start; }
-  #ice .prodlineup__panel .iceline__feats { grid-column: 2; grid-row: 1; grid-template-columns: 1fr; margin: 0; align-self: start; }
+  /* 3개 카드가 사진 높이를 꽉 채우도록 균등 분할(각 1/3) */
+  #ice .prodlineup__panel .iceline__feats { grid-column: 2; grid-row: 1; grid-template-columns: 1fr; grid-template-rows: 1fr 1fr 1fr; gap: var(--space-3); margin: 0; align-self: stretch; }
   #ice .prodlineup__panel .iceline__title { grid-column: 1 / -1; grid-row: 2; }
   #ice .prodlineup__panel .iceline__lead { grid-column: 1 / -1; grid-row: 3; }
   #ice .prodlineup__panel .iceline__rows { grid-column: 1 / -1; grid-row: 4; }
