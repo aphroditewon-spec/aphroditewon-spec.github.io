@@ -2674,6 +2674,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   #gas-spec .gasinfo__btn span { font-size: .58rem; }
   #gas-spec .gasinfo__panel { grid-template-columns: 1fr; }
   #gas-spec .gasinfo__photo { order: -1; min-height: 0; aspect-ratio: 32 / 9; }
+  /* 사진을 아래로 내려 용기 밸브(윗부분)가 더 보이도록 */
+  #gas-spec .gasinfo__photo img { object-position: center 25%; }
 }
 /* KLCC GAS 개요: 4 스탯 카드 + 우측 시설 사진 */
 .klccgas { display: grid; grid-template-columns: 1fr 300px; gap: var(--space-5); align-items: stretch; margin-top: var(--space-4); }
