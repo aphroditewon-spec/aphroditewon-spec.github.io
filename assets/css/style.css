@@ -3669,8 +3669,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .nav__ic, .nav__sdesc, .nav__contact { display: none; }
 
 @media (min-width: 501px) and (max-width: 820px) {
-  /* 2열 그리드: 좌 메뉴 / 우 연락처 패널 (.is-open 우선순위 대응) */
-  .nav__menu.is-open { display: grid; grid-template-columns: 1.12fr .88fr; column-gap: var(--space-5); row-gap: 0; padding: var(--space-4); align-items: start; }
+  /* 우측 드로어: 전체폭이 아닌 절반 정도만 덮고, 왼쪽은 페이지가 비치도록 딤 */
+  .nav__menu.is-open { display: grid; grid-template-columns: 1.12fr .88fr; column-gap: var(--space-5); row-gap: 0; padding: var(--space-4);
+    left: auto; right: 0; width: min(94vw, 640px); border-bottom-left-radius: 16px; border-left: 1px solid var(--border); align-items: start; }
+  .nav__menu.is-open::before { content: ""; position: fixed; left: 0; top: 56px; right: 0; bottom: 0; background: rgba(17, 32, 54, .18); z-index: -1; pointer-events: none; }
   .nav__menu .nav__item { grid-column: 1; }
   .nav__contact { display: block; grid-column: 2; grid-row: 1 / -1; align-self: start; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-4); }
 
