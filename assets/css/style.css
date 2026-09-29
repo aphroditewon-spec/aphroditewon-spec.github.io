@@ -2447,6 +2447,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (min-width: 501px) and (max-width: 820px) {
   .pkgspec__dim--in img { max-width: 150px; }
   .pkgspec__dimcap { margin: var(--space-1) 0 0; text-align: center; font-size: .68rem; }
+  /* 포장 상세정보 표: 좌측 라벨 열 조금 넓게(42→48%) */
+  .pkgdetail__row { grid-template-columns: 48% 1fr; }
+  /* 라벨 옆 단위(배열 '(가로×세로×높이)', 규격 '(mm)')를 라벨 아래로 */
+  .pkgdetail__unit { display: block; margin-left: 0; }
+  /* 전체 포장 규격 값: '(가로 × 세로 × 높이)'를 수치(310×310×255) 아래로 */
+  .pkgdetail__row:nth-child(3) .pkgdetail__val--1line { flex-direction: column; align-items: flex-start; white-space: normal; }
+  .pkgdetail__row:nth-child(3) .pkgdetail__mut { margin-left: 0; margin-top: 2px; }
 }
 /* 제품 규격 스펙 카드 4종 */
 .specfacts { list-style: none; margin: var(--space-5) 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
