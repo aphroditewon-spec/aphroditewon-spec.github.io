@@ -2588,6 +2588,20 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .recstep:not(:last-child) { margin-bottom: 20px; }
 }
 
+/* 1번 구간(501~820px): CO₂ Recovery 히어로 — 제목을 SUSTAINABLE PRODUCTION 아래 상단으로, 사진은 제품라인업 섹션과 동일 크기(70%·1.25), 특징 카드 3개는 사진 오른쪽에 세로 배치 */
+@media (min-width: 501px) and (max-width: 820px) {
+  .co2rec-hero { grid-template-columns: 70% 1fr; column-gap: var(--space-4); row-gap: var(--space-4); align-items: start; }
+  .co2rec-hero__body { display: contents; }
+  .co2rec-hero__title { grid-column: 1 / -1; grid-row: 1; text-align: center; margin: 0 0 var(--space-2); }
+  .co2rec-hero__media { grid-column: 1; grid-row: 2; min-height: 0; aspect-ratio: 1.25; align-self: start; }
+  .co2rec-cards { grid-column: 2; grid-row: 2; grid-template-columns: 1fr; grid-template-rows: 1fr 1fr 1fr; gap: var(--space-3); margin: 0; align-self: stretch; }
+  .co2rec-card { padding: var(--space-3) var(--space-2); gap: var(--space-2); }
+  .co2rec-card__ic--img { width: 64px; height: 64px; }
+  .co2rec-card__tx b { font-size: 1rem; margin-bottom: 0; }
+  .co2rec-hero__sub { grid-column: 1 / -1; grid-row: 3; }
+  .co2rec-hero__text { grid-column: 1 / -1; }
+}
+
 @media (max-width: 820px) { .spec2 { grid-template-columns: 1fr; } .pkgunits { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); } }
 @media (max-width: 460px) { .pkgunits { grid-template-columns: repeat(2, 1fr); } }
 /* 드라이아이스 — 첫 섹션: 가스제품 KLCC GAS와 동일 스타일(klccgas, 이미지 아이콘) */
