@@ -2420,6 +2420,13 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .pkgspec__dim img { max-width: 220px; width: 100%; display: block; margin-inline: auto; }
 .pkgspec__dimcap { margin: -20px 0 0; font-size: .78rem; color: var(--text-muted); text-align: right; }
 @media (max-width: 640px) { .pkgspec { grid-template-columns: 1fr; } .pkgdetail__row { grid-template-columns: 44% 1fr; } }
+/* 1번 구간(2열, 641~820px): 왼쪽 사진 높이를 오른쪽 표 높이에 맞춤(그리드 stretch) */
+@media (min-width: 641px) and (max-width: 820px) { .pkgspec__photo { height: auto; align-self: stretch; } }
+/* 1번 구간(501~820px): 규격 도식 축소 + 캡션 안 가려지게 + 캡션 폰트 살짝 축소 */
+@media (min-width: 501px) and (max-width: 820px) {
+  .pkgspec__dim--in img { max-width: 150px; }
+  .pkgspec__dimcap { margin: var(--space-1) 0 0; text-align: center; font-size: .68rem; }
+}
 /* 제품 규격 스펙 카드 4종 */
 .specfacts { list-style: none; margin: var(--space-5) 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
 .specfact { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-2) var(--space-4); border-left: 1px solid var(--border); }
