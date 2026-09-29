@@ -2473,7 +2473,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .handling > li { position: relative; cursor: pointer; }
   .handling > li > p { display: none; }
   .handling > li.is-open > p { display: block; }
-  .handling__ic { width: 44px; height: 44px; }          /* 아이콘 5% 축소(46→44) */
+  .handling__ic { width: 44px; height: 44px; align-self: center; margin-top: -4px; }  /* 아이콘 5% 축소 + 살짝 위로 */
+  .handling > li .handling__ic { grid-row: 1; }          /* 접힘: 아이콘을 제목과 같은 행에 → 세로 가운데 정렬 */
+  .handling > li.is-open .handling__ic { grid-row: 1 / 3; }  /* 펼침: 아이콘 세로 스팬(제목+내용 중앙) */
   .handling > li > b { align-self: center; }             /* 제목을 아이콘 세로 가운데 정렬 */
   /* 표시기: ＋ 대신 화살표(chevron), 펼치면 위로 */
   .handling > li::after {
