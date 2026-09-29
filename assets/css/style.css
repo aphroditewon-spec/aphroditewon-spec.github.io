@@ -3615,3 +3615,32 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .gaspanel__title { font-size: var(--fs-h1); font-weight: 800; color: var(--text); margin-bottom: var(--space-4); letter-spacing: -.01em; }
 .gaspanel__text { font-size: var(--fs-lead); color: var(--text-muted); line-height: 1.8; margin-bottom: var(--space-7); }
 @media (max-width: 820px) { .gaspanel.is-active { grid-template-columns: 1fr; } }
+
+/* =============================================================
+   모바일 햄버거 버튼 강조 — 1안(501~820px)=E(아이콘+'메뉴' 라벨),
+   2안(≤500px)=C(배경 칩만). HTML 변경 없이 CSS로 처리(라벨은 ::after).
+   ============================================================= */
+@media (max-width: 820px) {
+  /* 공통: 연파랑 배경 칩 + 브랜드색 아이콘 → '버튼'으로 인식 */
+  .nav-toggle {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    width: auto; height: 40px; padding: 0 12px;
+    background: var(--accent-tint); border-radius: 10px;
+  }
+  .nav-toggle > span {
+    position: relative; top: auto; left: auto; transform: none;
+    flex: none; width: 22px; height: 2px; margin: 7px 0; background: var(--brand);
+  }
+  .nav-toggle > span::before, .nav-toggle > span::after { width: 22px; background: var(--brand); }
+  .nav-toggle:active { background: #e3f0fa; }
+}
+/* 1안(501~820px): '메뉴' 라벨 병기 (E) — 공간 충분, 발견율 최상 */
+@media (min-width: 501px) and (max-width: 820px) {
+  .nav-toggle::after {
+    content: "메뉴"; font-size: .82rem; font-weight: 700; color: var(--eyebrow); letter-spacing: .02em;
+  }
+}
+/* 2안(≤500px): 라벨 없이 42px 정사각 배경 칩 (C) — 언어선택기와 겹침 방지 */
+@media (max-width: 500px) {
+  .nav-toggle { width: 42px; padding: 0; gap: 0; }
+}
