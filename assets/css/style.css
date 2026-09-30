@@ -3670,14 +3670,19 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 @media (min-width: 501px) and (max-width: 820px) {
   /* 우측 드로어: 전체폭이 아닌 절반 정도만 덮고, 왼쪽은 페이지가 비치도록 딤 */
-  .nav__menu.is-open { display: grid; grid-template-columns: 1.12fr .88fr; column-gap: var(--space-5); row-gap: 0; padding: var(--space-4);
-    left: auto; right: 0; width: min(94vw, 640px); border-bottom-left-radius: 16px; border-left: 1px solid var(--border); align-items: start; }
+  .nav__menu.is-open { display: block; position: absolute; padding: var(--space-4); min-height: 26rem;
+    left: auto; right: 0; width: min(94vw, 640px); border-bottom-left-radius: 16px; border-left: 1px solid var(--border); }
   .nav__menu.is-open::before { content: ""; position: fixed; left: 0; top: 56px; right: 0; bottom: 0; background: rgba(17, 32, 54, .18); z-index: -1; pointer-events: none; }
-  .nav__menu .nav__item { grid-column: 1; }
-  .nav__contact { display: block; grid-column: 2; grid-row: 1 / -1; align-self: start; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-4); }
+  /* 좌측 메뉴 컬럼 폭(57%), 연락처는 절대배치로 우측에 띄움 → 좌측 항목이 자연 정렬 */
+  .nav__menu .nav__item { width: 57%; }
+  .nav__contact { display: block; position: absolute; top: var(--space-4); right: var(--space-4); left: auto; width: 39%;
+    background: none; border: none; border-left: 1px solid var(--border); border-radius: 0; padding: 0 0 0 var(--space-5); }
 
-  /* 상위 링크: 아이콘 + 제목 */
-  .nav__menu .nav__link { display: flex; align-items: center; gap: .65rem; padding: .7rem .2rem; font-weight: 700; }
+  /* 상위 링크: 아이콘 + 제목 + 활성/호버 하이라이트 */
+  .nav__menu .nav__link { display: flex; align-items: center; gap: .65rem; padding: .7rem .6rem; font-weight: 700; border-radius: 10px; }
+  .nav__menu .nav__link:hover,
+  .nav__menu .nav__item.has-sub.is-open > .nav__link,
+  .nav__menu .nav__link.is-current { background: var(--accent-tint); color: var(--eyebrow); }
   .nav__ic { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 34px; height: 34px; border-radius: 9px; background: var(--accent-tint); color: var(--brand); }
   .nav__ic svg { width: 20px; height: 20px; }
   .nav__tt { font-size: 1rem; }
