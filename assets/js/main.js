@@ -8,7 +8,7 @@
   "use strict";
   var DESIGN_WIDTH = 1440;   // 기준 폭(가로는 1440 기준 균일 스케일)
   var MAX_ZOOM = 2.0;        // 과도한 확대 방지 상한
-  var MOBILE_MAX = 820;      // 이 이하는 모바일(스크롤 유지)
+  var MOBILE_MAX = 900;      // 이 이하는 모바일(스크롤 유지)
   // 히어로가 남는 세로 공간을 채우도록: 카드가 첫 화면 하단에 오게 함
   var NONHERO = 210;         // 헤더(57) + 히어로 아래 카드 부분(125) + 카드를 살짝 위로 올릴 하단 여백(≈28)
   var HERO_MIN = 360, HERO_MAX = 920; // 히어로 높이 하한/상한(캔버스 px) — 하한 낮춰 짧은 세로(≈360px)에서도 카드까지 노출
@@ -53,7 +53,7 @@
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
 
-    var isMobile = function () { return window.matchMedia("(max-width: 820px)").matches; };
+    var isMobile = function () { return window.matchMedia("(max-width: 900px)").matches; };
 
     // 상위 메뉴(하위메뉴 보유): 모바일에선 탭 시 하위메뉴 펼침/접기
     menu.querySelectorAll(".nav__item.has-sub > .nav__link").forEach(function (link) {
