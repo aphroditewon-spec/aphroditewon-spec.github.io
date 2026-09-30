@@ -3680,7 +3680,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .nav__menu.is-open::before { display: none; }
   /* 좌측 메뉴 컬럼 폭(57%), 연락처는 절대배치로 우측에 띄움 → 좌측 항목이 자연 정렬 */
   .nav__menu .nav__item { width: 42%; }
-  .nav__contact { display: block; position: absolute; top: calc(56px + var(--space-2)); right: var(--space-4); left: auto; width: 48%;
+  .nav__contact { display: block; position: absolute; top: 50px; right: var(--space-4); left: auto; width: 48%;
     background: none; border: none; border-left: 1px solid var(--border); border-radius: 0; padding: 0 0 0 var(--space-5); }
 
   /* 상위 링크: 아이콘 + 제목 + 활성/호버 하이라이트 */
@@ -3702,7 +3702,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .nav__sdesc { display: block; font-size: .74rem; color: var(--text-muted); margin-top: 1px; }
 
   /* 연락처 패널: 전화·견적 CTA */
-  .nav__contact .nav__cta { display: flex; align-items: center; gap: .6rem; padding: .55rem .8rem; border-radius: 10px; text-decoration: none; margin-bottom: .4rem; }
+  .nav__contact .nav__cta { display: flex; align-items: center; gap: .6rem; padding: .28rem .8rem; border-radius: 10px; text-decoration: none; margin-bottom: .3rem; }
   .nav__cta--tel { background: var(--brand); color: #fff; }
   .nav__cta--quote { background: #fff; border: 1px solid var(--border); color: var(--text); }
   .nav__cta-ic { flex: none; width: 18px; height: 18px; display: inline-flex; }
