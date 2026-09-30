@@ -3698,11 +3698,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .nav__sub::before { content: ""; position: absolute; left: 1.15rem; top: .2rem; bottom: 1rem; width: 2px; background: var(--border); }
   .nav__sub a { display: block; position: relative; padding: .45rem .2rem .45rem 2.4rem; margin: 0; border-left: none; }
   .nav__sub a::before { content: ""; position: absolute; left: calc(1.15rem - 3px); top: .78rem; width: 8px; height: 8px; border-radius: 50%; background: var(--brand); border: 2px solid var(--surface-2); box-shadow: 0 0 0 1px var(--brand); }
-  .nav__stt { display: block; font-weight: 700; color: var(--text); font-size: .9rem; }
-  .nav__sdesc { display: block; font-size: .74rem; color: var(--text-muted); margin-top: 1px; }
+  .nav__stt { display: block; font-weight: 700; color: var(--text); font-size: .82rem; }
+  .nav__sdesc { display: block; font-size: .68rem; color: var(--text-muted); margin-top: 1px; }
 
   /* 연락처 패널: 전화·견적 CTA */
-  .nav__contact .nav__cta { display: flex; align-items: center; gap: .6rem; padding: .28rem .8rem; border-radius: 10px; text-decoration: none; margin-bottom: .3rem; }
+  .nav__contact .nav__cta { display: flex; align-items: center; gap: .6rem; padding: .38rem .8rem; border-radius: 10px; text-decoration: none; margin-bottom: .3rem; }
   .nav__cta--tel { background: var(--brand); color: #fff; }
   .nav__cta--quote { background: #fff; border: 1px solid var(--border); color: var(--text); }
   .nav__cta-ic { flex: none; width: 18px; height: 18px; display: inline-flex; }
