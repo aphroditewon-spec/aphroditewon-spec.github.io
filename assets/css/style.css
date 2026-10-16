@@ -3726,3 +3726,46 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .nav-toggle[aria-expanded="true"] > span::after { top: 0; transform: rotate(-45deg); }
   .nav-toggle[aria-expanded="true"]::after { content: "닫기"; }
 }
+
+/* =============================================================
+   MSDS 물질안전보건자료 섹션 (품질·인증)
+   ============================================================= */
+.msds-tabs { display: flex; justify-content: center; gap: var(--space-3); margin-bottom: var(--space-7); flex-wrap: wrap; }
+.msds-tab { padding: .6rem 1.5rem; border: 1px solid var(--border); border-radius: var(--radius-pill); background: #fff; color: var(--text-muted); font-weight: 700; font-size: .92rem; cursor: pointer; transition: var(--transition); }
+.msds-tab:hover { border-color: var(--brand); color: var(--brand); }
+.msds-tab.is-active { background: var(--brand); border-color: var(--brand); color: #fff; }
+.msds-panel { display: none; }
+.msds-panel.is-active { display: block; animation: msdsFade .35s ease; }
+@keyframes msdsFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.msds-table { width: 100%; border-collapse: collapse; }
+.msds-table thead th { font-size: .9rem; font-weight: 700; color: var(--text-muted); padding: 14px 18px; border-top: 2px solid var(--text); border-bottom: 1px solid var(--border); }
+.msds-table thead th:nth-child(1) { text-align: left; }
+.msds-table thead th:nth-child(2) { text-align: center; }
+.msds-table thead th:nth-child(3) { text-align: right; }
+.msds-table tbody td { padding: 20px 18px; border-bottom: 1px solid var(--border); font-size: .95rem; color: var(--text-muted); vertical-align: middle; }
+.msds-table tbody td:nth-child(1) { text-align: left; color: var(--text); }
+.msds-table tbody td:nth-child(2) { text-align: center; word-break: keep-all; }
+.msds-table tbody td:nth-child(3) { text-align: right; white-space: nowrap; }
+.msds-table tbody td b { font-weight: 700; color: var(--text); }
+
+.msds-dl { display: inline-flex; align-items: center; gap: 10px; padding: .6rem 1.2rem; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); font-weight: 700; font-size: .9rem; text-decoration: none; transition: var(--transition); }
+.msds-dl:hover { background: var(--brand); border-color: var(--brand); color: #fff; }
+.msds-dl__ic { font-size: 1rem; line-height: 1; }
+.msds-dl--soon { background: transparent; border-color: var(--border); color: var(--text-muted); font-weight: 600; cursor: default; }
+.msds-dl--soon:hover { background: transparent; border-color: var(--border); color: var(--text-muted); }
+
+.msds-note { margin: var(--space-5) 0 0; font-size: .85rem; color: var(--text-muted); text-align: center; }
+
+/* 모바일(≤900px): 표 → 카드 */
+@media (max-width: 900px) {
+  .msds-table, .msds-table tbody, .msds-table tr, .msds-table td { display: block; width: 100%; }
+  .msds-table thead { display: none; }
+  .msds-table tr { border: 1px solid var(--border); border-radius: var(--radius-md); margin-bottom: var(--space-3); padding: var(--space-4); background: #fff; box-shadow: var(--shadow-sm); }
+  .msds-table tbody td { border: none; padding: 4px 0; text-align: left !important; }
+  .msds-table tbody td::before { content: attr(data-th); display: block; font-size: .72rem; font-weight: 700; color: var(--eyebrow); letter-spacing: .02em; margin-bottom: 2px; }
+  .msds-table tbody td:nth-child(1) { font-size: 1.05rem; }
+  .msds-table tbody td:nth-child(1)::before { display: none; }
+  .msds-table tbody td:nth-child(3) { margin-top: var(--space-2); }
+  .msds-dl, .msds-dl--soon { width: 100%; justify-content: center; }
+}

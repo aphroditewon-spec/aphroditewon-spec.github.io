@@ -21,7 +21,7 @@
 
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-1003">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-1004">
 </head>
 <body>
 
@@ -200,6 +200,94 @@
       </div>
     </section>
 
+    <!-- MSDS 물질안전보건자료 -->
+    <section class="section" id="msds">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="eyebrow">SAFETY DATA SHEET</span>
+          <h2 class="section__title" data-i18n="msds.title">물질안전보건자료(MSDS)</h2>
+          <p class="section__lead" data-i18n="msds.lead">제품별 물질안전보건자료(MSDS)를 다운로드하실 수 있습니다.</p>
+        </div>
+
+        <div class="msds-tabs" role="tablist">
+          <button type="button" class="msds-tab is-active" data-cat="gas" data-i18n="msds.tab.gas">가스제품</button>
+          <button type="button" class="msds-tab" data-cat="ice" data-i18n="msds.tab.ice">드라이아이스</button>
+        </div>
+
+        <!-- 가스제품 -->
+        <div class="msds-panel is-active" data-cat="gas">
+          <table class="msds-table">
+            <thead>
+              <tr>
+                <th data-i18n="msds.col.name">제품명</th>
+                <th data-i18n="msds.col.use">특성 및 용도</th>
+                <th data-i18n="msds.col.doc">문서자료</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-th="제품명"><b>탄산가스 (CO₂)</b></td>
+                <td data-th="특성 및 용도" data-i18n="msds.use.co2">식품·음료 탄산, 용접 보호가스, 소화·세정용</td>
+                <td data-th="문서자료"><a class="msds-dl" href="assets/docs/msds/carbondioxide-msds.pdf" target="_blank" rel="noopener" aria-label="탄산가스 MSDS 다운로드">MSDS <span class="msds-dl__ic" aria-hidden="true">↓</span></a></td>
+              </tr>
+              <tr>
+                <td data-th="제품명"><b>질소 (N₂)</b></td>
+                <td data-th="특성 및 용도" data-i18n="msds.use.n2">산화방지·퍼지, 식품 포장, 냉각용</td>
+                <td data-th="문서자료"><span class="msds-dl msds-dl--soon" data-i18n="msds.soon">준비중</span></td>
+              </tr>
+              <tr>
+                <td data-th="제품명"><b>산소 (O₂)</b></td>
+                <td data-th="특성 및 용도" data-i18n="msds.use.o2">의료용, 용접·절단, 환경·수처리용</td>
+                <td data-th="문서자료"><span class="msds-dl msds-dl--soon" data-i18n="msds.soon">준비중</span></td>
+              </tr>
+              <tr>
+                <td data-th="제품명"><b>아르곤 (Ar)</b></td>
+                <td data-th="특성 및 용도" data-i18n="msds.use.ar">용접 보호가스, 금속 열처리용</td>
+                <td data-th="문서자료"><span class="msds-dl msds-dl--soon" data-i18n="msds.soon">준비중</span></td>
+              </tr>
+              <tr>
+                <td data-th="제품명"><b>수소 (H₂)</b></td>
+                <td data-th="특성 및 용도" data-i18n="msds.use.h2">환원·열처리, 에너지·연구용</td>
+                <td data-th="문서자료"><span class="msds-dl msds-dl--soon" data-i18n="msds.soon">준비중</span></td>
+              </tr>
+              <tr>
+                <td data-th="제품명"><b>헬륨 (He)</b></td>
+                <td data-th="특성 및 용도" data-i18n="msds.use.he">누설검사·분석, 냉각용</td>
+                <td data-th="문서자료"><span class="msds-dl msds-dl--soon" data-i18n="msds.soon">준비중</span></td>
+              </tr>
+              <tr>
+                <td data-th="제품명"><b>혼합·특수가스</b></td>
+                <td data-th="특성 및 용도" data-i18n="msds.use.mix">용접·분석·반도체용 맞춤 혼합/고순도 특수가스</td>
+                <td data-th="문서자료"><span class="msds-dl msds-dl--soon" data-i18n="msds.soon">준비중</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 드라이아이스 -->
+        <div class="msds-panel" data-cat="ice">
+          <table class="msds-table">
+            <thead>
+              <tr>
+                <th data-i18n="msds.col.name">제품명</th>
+                <th data-i18n="msds.col.use">특성 및 용도</th>
+                <th data-i18n="msds.col.doc">문서자료</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-th="제품명"><b data-i18n="msds.name.ice">드라이아이스</b></td>
+                <td data-th="특성 및 용도" data-i18n="msds.use.ice">냉동·냉장 식품 저장·수송, 급속 냉각, 세척용</td>
+                <td data-th="문서자료"><span class="msds-dl msds-dl--soon" data-i18n="msds.soon">준비중</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="msds-note" data-i18n="msds.note">※ 본 자료는 참고용이며, 최신 개정본은 고객지원으로 문의 바랍니다.</p>
+      </div>
+    </section>
+
     <!-- 식품첨가물 탄산가스 품질 -->
     <section class="section" id="co2">
       <div class="container">
@@ -264,8 +352,22 @@
     <span class="scroll-fab__text">SCROLL</span>
   </a>
 
-  <script src="assets/i18n/translations.js?v=20260920f"></script>
+  <script src="assets/i18n/translations.js?v=20260920g"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js?v=20260920m"></script>
+  <script>
+    // MSDS 카테고리 탭
+    (function () {
+      var tabs = document.querySelectorAll('.msds-tab');
+      var panels = document.querySelectorAll('.msds-panel');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var cat = tab.getAttribute('data-cat');
+          tabs.forEach(function (t) { t.classList.toggle('is-active', t === tab); });
+          panels.forEach(function (p) { p.classList.toggle('is-active', p.getAttribute('data-cat') === cat); });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
