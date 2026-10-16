@@ -210,12 +210,12 @@
         </div>
 
         <div class="msds-tabs" role="tablist">
-          <button type="button" class="msds-tab is-active" data-cat="gas" data-i18n="msds.tab.gas">가스제품</button>
-          <button type="button" class="msds-tab" data-cat="ice" data-i18n="msds.tab.ice">드라이아이스</button>
+          <button type="button" class="msds-tab is-active" data-cat="ice" data-i18n="msds.tab.ice">드라이아이스</button>
+          <button type="button" class="msds-tab" data-cat="gas" data-i18n="msds.tab.gas">가스제품</button>
         </div>
 
         <!-- 가스제품 -->
-        <div class="msds-panel is-active" data-cat="gas">
+        <div class="msds-panel" data-cat="gas">
           <table class="msds-table">
             <thead>
               <tr>
@@ -228,7 +228,7 @@
               <tr>
                 <td data-th="제품명"><b>탄산가스 (CO₂)</b></td>
                 <td data-th="특성 및 용도" data-i18n="msds.use.co2">식품·음료 탄산, 용접 보호가스, 소화·세정용</td>
-                <td data-th="문서자료"><a class="msds-dl" href="assets/docs/msds/carbondioxide-msds.pdf" target="_blank" rel="noopener" aria-label="탄산가스 MSDS 다운로드">MSDS <span class="msds-dl__ic" aria-hidden="true">↓</span></a></td>
+                <td data-th="문서자료"><span class="msds-dl msds-dl--soon" data-i18n="msds.soon">준비중</span></td>
               </tr>
               <tr>
                 <td data-th="제품명"><b>질소 (N₂)</b></td>
@@ -265,7 +265,7 @@
         </div>
 
         <!-- 드라이아이스 -->
-        <div class="msds-panel" data-cat="ice">
+        <div class="msds-panel is-active" data-cat="ice">
           <table class="msds-table">
             <thead>
               <tr>
@@ -278,7 +278,7 @@
               <tr>
                 <td data-th="제품명"><b data-i18n="msds.name.ice">드라이아이스</b></td>
                 <td data-th="특성 및 용도" data-i18n="msds.use.ice">냉동·냉장 식품 저장·수송, 급속 냉각, 세척용</td>
-                <td data-th="문서자료"><span class="msds-dl msds-dl--soon" data-i18n="msds.soon">준비중</span></td>
+                <td data-th="문서자료"><a class="msds-dl" href="assets/docs/msds/carbondioxide-msds.pdf" target="_blank" rel="noopener" aria-label="드라이아이스 MSDS 다운로드">MSDS <span class="msds-dl__ic" aria-hidden="true">↓</span></a></td>
               </tr>
             </tbody>
           </table>
@@ -289,7 +289,7 @@
     </section>
 
     <!-- 식품첨가물 탄산가스 품질 -->
-    <section class="section" id="co2">
+    <section class="section section--soft" id="co2">
       <div class="container">
         <div class="co2quality">
           <div class="co2quality__media"><img src="assets/images/site/co2-quality.jpg?v=2" alt="식품첨가물 탄산가스(CO₂) 품질" loading="lazy"></div>
