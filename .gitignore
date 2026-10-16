@@ -7,6 +7,6 @@
 # 내부 산출물(공개 저장소 비게시)
 *.pptx
 ref/
-docs/
+/docs/
 tasks/
 SPEC.md
