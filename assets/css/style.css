@@ -2506,6 +2506,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 @media (max-width: 900px) { .icespec2 { grid-template-columns: 1fr; } .handling--wide { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .icespec-figs { grid-template-columns: 1fr; } .proc4 { grid-template-columns: repeat(2, 1fr); } .handling, .handling--wide { grid-template-columns: 1fr; } }
+/* 규격·도면 2장: 좁은 폭(≤620)에서 2열 유지 시 오른쪽 규격 박스가 눌려 제목·치수·주석이 겹쳐 잘림 → 단일 컬럼으로 스택(.icespec-tabs 2클래스 우선순위 덮어쓰기) */
+@media (max-width: 620px) { .icespec-tabs .icespec-figs, .icespec-figs { grid-template-columns: 1fr; } }
 /* 1번 구간(501~820px): 취급·보관 안전 카드 아코디언 — 아이콘+제목만, 클릭 시 내용 펼침 */
 @media (min-width: 501px) and (max-width: 900px) {
   .handling > li { position: relative; cursor: pointer; }
