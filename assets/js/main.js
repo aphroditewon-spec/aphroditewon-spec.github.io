@@ -293,6 +293,8 @@
     makeCarousel(document.querySelector(".applyfields"), ".applyfield");
     // 가스제품 첫 섹션 4카드 — 메인 주요제품처럼 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#gas-intro .klccgas2__cards"), ".klccard");
+    // 가스제품 품질과 안전 4카드 — 가로 스와이프 캐러셀
+    makeCarousel(document.querySelector("#gas-quality .qualsafe__grid"), ".qscard");
   }
 
   function makeCarousel(list, itemSel) {

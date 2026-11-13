@@ -2711,6 +2711,23 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   .qualsafe__grid { grid-template-columns: 1fr; }
   .qualsafe__foot { flex-direction: column; align-items: flex-start; }
 }
+/* 품질과 안전 4카드: 모바일(≤900)에서 가로 스와이프 캐러셀(점·화살표) */
+#gas-quality .qualsafe__grid + .prodcarousel__nav { display: none; }
+@media (max-width: 900px) {
+  #gas-quality .qualsafe { grid-template-columns: minmax(0, 1fr); }
+  #gas-quality .qualsafe__right { min-width: 0; }
+  #gas-quality .qualsafe__grid {
+    display: flex; flex-wrap: nowrap; grid-template-columns: none; grid-auto-rows: auto; gap: var(--space-3); min-width: 0;
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; padding-bottom: 2px;
+  }
+  #gas-quality .qualsafe__grid::-webkit-scrollbar { display: none; }
+  #gas-quality .qualsafe__grid > .qscard { flex: 0 0 85%; scroll-snap-align: start; }
+  #gas-quality .qualsafe__grid + .prodcarousel__nav { display: flex; }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  #gas-quality .qualsafe__grid > .qscard { flex: 0 0 48%; }
+}
 /* 신뢰할 수 있는 검사 서비스(좌 2x2 카드+CTA / 우 사진) */
 .svchead { display: flex; align-items: flex-end; gap: var(--space-6); flex-wrap: wrap; margin-bottom: var(--space-6); }
 .svchead__tt .section__title { margin: 0; }
