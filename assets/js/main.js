@@ -295,6 +295,8 @@
     makeCarousel(document.querySelector("#gas-intro .klccgas2__cards"), ".klccard");
     // 드라이아이스 첫 섹션(경쟁력) 4카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#ice-why .klccgas2__cards"), ".klccard");
+    // 품질인증 첫 섹션(고순도와 안전으로 지키는 신뢰) 4카드 — 가로 스와이프 캐러셀
+    makeCarousel(document.querySelector("#quality-intro .klccgas2__cards"), ".klccard");
     // 드라이아이스 제품 라인업 특징(간편한 소분·효율적 냉각·다양한 포장) — 가로 스와이프 캐러셀
     document.querySelectorAll('#ice .prodlineup__panel .iceline__feats').forEach(function (f) {
       makeCarousel(f, '.iceline__feats > li');
