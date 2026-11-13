@@ -2781,8 +2781,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .svcsplit__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 1080px) { .svcgrid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 900px) {
-  .svcsplit { grid-template-columns: 1fr; }
-  .svcsplit__media { min-height: 260px; order: -1; }
+  /* 그리드 아이템 min-width:auto 때문에 트랙이 이미지 고유폭(399px)으로 넓어져 서비스 캐러셀 nav가 뷰포트를 넘쳐 다음 화살표가 밀리던 문제 → 수축 허용 */
+  .svcsplit { grid-template-columns: minmax(0, 1fr); }
+  .svcsplit__left { min-width: 0; }
+  .svcsplit__media { min-height: 260px; order: -1; min-width: 0; }
 }
 @media (max-width: 520px) { .svcgrid { grid-template-columns: 1fr; } }
 
@@ -2795,10 +2797,12 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 #service .svcgrid + .prodcarousel__nav { display: none; }
 @media (max-width: 900px) {
   #intro .inspstats, #targets .inspcards, #process .inspflow--8, #service .svcgrid {
-    display: flex; flex-wrap: nowrap; grid-template-columns: none; gap: var(--space-3);
+    display: flex; flex-wrap: nowrap; justify-content: flex-start; grid-template-columns: none; gap: var(--space-3);
     overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
     scrollbar-width: none; padding-bottom: 2px;
   }
+  /* svcgrid는 세로 flex(svcsplit__left)의 아이템이라 flex:1(grow)로 세로로 늘어나 빈 공간 생김 → 수축 고정 */
+  #service .svcgrid { flex: none; }
   #intro .inspstats::-webkit-scrollbar, #targets .inspcards::-webkit-scrollbar,
   #process .inspflow--8::-webkit-scrollbar, #service .svcgrid::-webkit-scrollbar { display: none; }
   #intro .inspstats > .inspstat,
