@@ -2474,6 +2474,29 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 640px) { .pkgspec { grid-template-columns: 1fr; } .pkgdetail__row { grid-template-columns: 44% 1fr; } }
 /* 1번 구간(2열, 641~820px): 왼쪽 사진 높이를 오른쪽 표 높이에 맞춤(그리드 stretch) */
 @media (min-width: 641px) and (max-width: 900px) { .pkgspec__photo { height: auto; align-self: stretch; } }
+/* 48P BOX 포장: 모바일(≤900)에서 박스 사진 + 포장 상세정보를 가로 스와이프 캐러셀(점·화살표) */
+#ice-product .pkgspec + .prodcarousel__nav { display: none; }
+@media (max-width: 900px) {
+  #ice-product .pkgspec__titles { grid-template-columns: 1fr; }
+  #ice-product .pkgspec__titles .pkgspec__infotitle { display: none; }  /* 라벨은 캐러셀 슬라이드로 대체 */
+  #ice-product .pkgspec {
+    display: flex; flex-wrap: nowrap; grid-template-columns: none; gap: var(--space-3);
+    align-items: center; margin: var(--space-4) 0 0;
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; padding-bottom: 2px;
+  }
+  #ice-product .pkgspec::-webkit-scrollbar { display: none; }
+  #ice-product .pkgspec > .pkgspec__photo,
+  #ice-product .pkgspec > .pkgspec__info { flex: 0 0 90%; scroll-snap-align: start; align-self: center; }
+  #ice-product .pkgspec > .pkgspec__photo { height: 260px; }
+  #ice-product .pkgspec + .prodcarousel__nav { display: flex; }
+}
+@media (min-width: 641px) and (max-width: 900px) {
+  #ice-product .pkgspec > .pkgspec__photo,
+  #ice-product .pkgspec > .pkgspec__info { flex: 0 0 66%; }
+}
+/* 캐러셀로 카드 폭이 좁아져 한 줄 값의 보조문구가 잘리지 않도록 모바일에서 줄바꿈 허용 */
+@media (max-width: 900px) { #ice-product .pkgspec .pkgdetail__val--1line { white-space: normal; } }
 /* 1번 구간(501~820px): 규격 도식 축소 + 캡션 안 가려지게 + 캡션 폰트 살짝 축소 */
 @media (min-width: 501px) and (max-width: 900px) {
   .pkgspec__dim--in img { max-width: 150px; }

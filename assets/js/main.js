@@ -299,6 +299,8 @@
     document.querySelectorAll('#ice .prodlineup__panel .iceline__feats').forEach(function (f) {
       makeCarousel(f, '.iceline__feats > li');
     });
+    // 드라이아이스 너겟 48P 포장 — 박스 사진 + 포장 상세정보 가로 스와이프 캐러셀
+    makeCarousel(document.querySelector("#ice-product .pkgspec"), ".pkgspec__photo, .pkgspec__info");
     // 가스제품 품질과 안전 4카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#gas-quality .qualsafe__grid"), ".qscard");
   }
