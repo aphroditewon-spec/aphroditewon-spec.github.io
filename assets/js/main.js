@@ -299,6 +299,8 @@
     document.querySelectorAll('#ice .prodlineup__panel .iceline__feats').forEach(function (f) {
       makeCarousel(f, '.iceline__feats > li');
     });
+    // 드라이아이스 보관 및 취급 안내 6카드 — 가로 스와이프 캐러셀
+    makeCarousel(document.querySelector(".handling"), ".handling > li");
     // 가스제품 품질과 안전 4카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#gas-quality .qualsafe__grid"), ".qscard");
   }

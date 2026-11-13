@@ -21,7 +21,7 @@
 
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/variables.css?v=20260801">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260731-1015">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260731-1017">
 </head>
 <body>
 
@@ -719,7 +719,7 @@
 
   <script src="assets/i18n/translations.js?v=20260920j"></script>
   <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/main.js?v=20260920q"></script>
+  <script src="assets/js/main.js?v=20260920s"></script>
   <script>
     (function () {
       // 각 .prodlineup 컨테이너 단위로 탭을 스코프 처리 (라인업·규격 탭 간 충돌 방지)
@@ -738,14 +738,6 @@
             });
           });
         });
-      });
-    })();
-  </script>
-  <!-- 취급·보관 안전 카드 아코디언 (1번 구간: 아이콘+제목만, 클릭 시 내용 펼침) -->
-  <script>
-    (function () {
-      Array.prototype.slice.call(document.querySelectorAll('.handling > li')).forEach(function (li) {
-        li.addEventListener('click', function () { li.classList.toggle('is-open'); });
       });
     })();
   </script>
