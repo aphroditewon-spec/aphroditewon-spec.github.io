@@ -4008,4 +4008,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* MSDS 기체/액체 2버튼 그룹 */
 .msds-dl-group { display: inline-flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
 .msds-dl--sm { padding: .5rem .9rem; font-size: .84rem; gap: 6px; }
+/* MSDS 버튼 라벨(MSDS + 코드) 줄바꿈: 모바일 전역 br 숨김(≤900) 무시하고 2줄 유지 + 가운데 정렬 */
+.msds-dl br { display: inline; }
+.msds-dl > span:first-child { text-align: center; }
 @media (max-width: 900px) { .msds-dl-group { width: 100%; } .msds-dl-group .msds-dl--sm { flex: 1; } }
