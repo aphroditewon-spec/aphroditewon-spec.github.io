@@ -2375,7 +2375,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .boxspec__note--in { margin: 2px 0 0; text-align: right; }
 /* 블록 탭: 좌측 '블록 성형 규격' 카드를 우측 표(pkgcard)와 상·하단 일직선 정렬 */
 /* 블록 탭: 좌측 이미지는 기존 고정(339px) */
-.prodlineup__panel[data-cat="spec-block"] .icespec-figs__dim--titled { margin-top: 0; aspect-ratio: auto; height: 339px; }
+.prodlineup__panel[data-cat="spec-block"] .icespec-figs__dim--titled { margin-top: 0; aspect-ratio: 1697 / 927; height: auto; }
 /* 우측 카드 컬럼 높이를 좌측 이미지에 맞추고, 박스 이미지를 남는 공간에 맞춰 축소 */
 .blkspec2-col { height: 339px; }
 .blkspec2-col .blkspec2-card { height: 100%; }
@@ -2390,11 +2390,8 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .icespec-figs__dim--titled img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; margin: 0; mix-blend-mode: normal; }
 /* 완성 이미지(제목·치수 포함)는 크롭 없이 전체 표시 */
 .icespec-figs__dim--full { background: #fff; }
-.icespec-figs__dim--full img { object-fit: cover; }
-/* 1번 구간(501~820px): 블록 규격 도식은 치수·문구가 이미지에 포함되어 있어 전체가 보이도록 contain */
-@media (min-width: 501px) and (max-width: 900px) {
-  .prodlineup__panel[data-cat="spec-block"] .icespec-figs__dim--full img { object-fit: contain; }
-}
+/* 블록 규격 도식: 치수·문구가 이미지에 포함돼 있어 전 구간에서 잘리지 않도록 박스를 이미지 비율에 맞추고 contain */
+.icespec-figs__dim--full img { object-fit: contain; }
 .icespec-figs__dim--titled .icespec-figs__dimtitle,
 .icespec-figs__dim--titled .icespec-figs__dimnote { position: relative; z-index: 1; }
 /* 개별 너겟 규격 이미지: 하단 주석(※ 제품 특성상…) 글씨 위치 살짝 아래로 */
