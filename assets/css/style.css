@@ -4007,8 +4007,11 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 /* MSDS 기체/액체 2버튼 그룹 */
 .msds-dl-group { display: inline-flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
-.msds-dl--sm { padding: .5rem .9rem; font-size: .84rem; gap: 6px; }
+/* 버튼 크기 통일: 단일/2버튼 모두 동일 패딩·폰트·최소 크기(가로·세로) */
+.msds-dl, .msds-dl--sm { padding: .5rem .9rem; font-size: .84rem; gap: 8px; min-width: 112px; min-height: 52px; justify-content: center; box-sizing: border-box; }
 /* MSDS 버튼 라벨(MSDS + 코드) 줄바꿈: 모바일 전역 br 숨김(≤900) 무시하고 2줄 유지 + 가운데 정렬 */
 .msds-dl br { display: inline; }
 .msds-dl > span:first-child { text-align: center; }
+/* MSDS 아래 코드 글씨 축소(br로 줄바꿈, small은 인라인으로 폰트만 축소) */
+.msds-dl small { font-size: .72em; font-weight: 700; }
 @media (max-width: 900px) { .msds-dl-group { width: 100%; } .msds-dl-group .msds-dl--sm { flex: 1; } }
