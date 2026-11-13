@@ -307,6 +307,16 @@
     makeCarousel(document.querySelector("#intro .klccgas2__cards"), ".klccard");
     // 시설시공 주요 공급 설비 4사진카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector(".mainfacil"), ".mainfacil__card");
+    // 용기검사 — 전문검사기관 통계 4카드 가로 스와이프 캐러셀
+    makeCarousel(document.querySelector(".inspstats"), ".inspstat");
+    // 용기검사 — 검사 대상 용기 4카드 캐러셀
+    makeCarousel(document.querySelector(".inspcards"), ".inspcard");
+    // 용기검사 — 검사 프로세스 8단계 캐러셀
+    makeCarousel(document.querySelector(".inspflow--8"), ".inspstep");
+    // 용기검사 — 주요 검사 설비 5카드 캐러셀
+    makeCarousel(document.querySelector("#equipment .facilcards"), ".facilcard");
+    // 용기검사 — 신뢰할 수 있는 검사 서비스 4카드 캐러셀
+    makeCarousel(document.querySelector(".svcgrid"), ".svcitem");
     // 가스제품 품질과 안전 4카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#gas-quality .qualsafe__grid"), ".qscard");
   }

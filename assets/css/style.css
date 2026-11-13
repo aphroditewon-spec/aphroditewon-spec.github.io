@@ -2786,6 +2786,37 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 }
 @media (max-width: 520px) { .svcgrid { grid-template-columns: 1fr; } }
 
+/* 용기검사 페이지: 모바일(≤900) 가로 스와이프 캐러셀 (검사 통계·검사 대상·검사 프로세스·검사 서비스) */
+/* 검사 대상 목록 등: 모바일 전역 br 숨김(≤900) 무시하고 줄바꿈 유지 */
+.inspartner__table td br { display: inline; }
+#intro .inspstats + .prodcarousel__nav,
+#targets .inspcards + .prodcarousel__nav,
+#process .inspflow--8 + .prodcarousel__nav,
+#service .svcgrid + .prodcarousel__nav { display: none; }
+@media (max-width: 900px) {
+  #intro .inspstats, #targets .inspcards, #process .inspflow--8, #service .svcgrid {
+    display: flex; flex-wrap: nowrap; grid-template-columns: none; gap: var(--space-3);
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; padding-bottom: 2px;
+  }
+  #intro .inspstats::-webkit-scrollbar, #targets .inspcards::-webkit-scrollbar,
+  #process .inspflow--8::-webkit-scrollbar, #service .svcgrid::-webkit-scrollbar { display: none; }
+  #intro .inspstats > .inspstat,
+  #targets .inspcards > .inspcard,
+  #process .inspflow--8 > .inspstep,
+  #service .svcgrid > .svcitem { flex: 0 0 80%; scroll-snap-align: start; }
+  #intro .inspstats + .prodcarousel__nav,
+  #targets .inspcards + .prodcarousel__nav,
+  #process .inspflow--8 + .prodcarousel__nav,
+  #service .svcgrid + .prodcarousel__nav { display: flex; }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  #intro .inspstats > .inspstat { flex: 0 0 48%; }
+  #targets .inspcards > .inspcard { flex: 0 0 48%; }
+  #process .inspflow--8 > .inspstep { flex: 0 0 40%; }
+  #service .svcgrid > .svcitem { flex: 0 0 45%; }
+}
+
 /* 검사 프로세스: 6단계 아이콘 카드 흐름 */
 .inspflow { display: flex; align-items: stretch; justify-content: center; gap: var(--space-2); margin-top: var(--space-6); }
 .inspstep { flex: 1; min-width: 0; position: relative; text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-6) var(--space-3) var(--space-5); }
@@ -2840,20 +2871,26 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 720px) { .facilcards { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 430px) { .facilcards { grid-template-columns: 1fr; } }
 /* 생산·공급 시설 캐러셀 nav: 기본 숨김, 모바일에서 표시 */
-#gas-facility .prodcarousel__nav { display: none; }
-/* 모바일(≤900px): 생산·공급 시설 가로 스와이프 캐러셀 + nav(화살표·도트) */
+#gas-facility .prodcarousel__nav,
+#equipment .facilcards + .prodcarousel__nav { display: none; }
+/* 모바일(≤900px): 생산·공급 시설 / 주요 검사 설비 가로 스와이프 캐러셀 + nav(화살표·도트) */
 @media (max-width: 900px) {
-  #gas-facility .facilcards {
+  #gas-facility .facilcards,
+  #equipment .facilcards {
     display: flex; flex-wrap: nowrap; grid-template-columns: none; gap: var(--space-3);
     overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
     scrollbar-width: none; padding-bottom: 2px;
   }
-  #gas-facility .facilcards::-webkit-scrollbar { display: none; }
-  #gas-facility .facilcards > .facilcard { flex: 0 0 78%; scroll-snap-align: start; }
-  #gas-facility .prodcarousel__nav { display: flex; }
+  #gas-facility .facilcards::-webkit-scrollbar,
+  #equipment .facilcards::-webkit-scrollbar { display: none; }
+  #gas-facility .facilcards > .facilcard,
+  #equipment .facilcards > .facilcard { flex: 0 0 78%; scroll-snap-align: start; }
+  #gas-facility .prodcarousel__nav,
+  #equipment .facilcards + .prodcarousel__nav { display: flex; }
 }
 @media (min-width: 501px) and (max-width: 900px) {
-  #gas-facility .facilcards > .facilcard { flex: 0 0 35%; }
+  #gas-facility .facilcards > .facilcard,
+  #equipment .facilcards > .facilcard { flex: 0 0 35%; }
 }
 /* 가스별 특성 및 용도: 가로 탭 + 좌 상세/우 사진 (참고이미지) */
 .gasinfo { margin-top: var(--space-4); }
