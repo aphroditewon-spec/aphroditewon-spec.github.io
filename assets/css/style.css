@@ -756,7 +756,8 @@ section[id] { scroll-margin-top: 88px; }
   .gas-banner__rule { display: none; }
   .gas-point__desc { display: none; }
   .gas-banner__desc { display: none; }
-  .gas-banner__points { gap: 12px; }
+  /* --lg(4아이콘)는 드라이아이스 헤더와 동일한 간격(clamp) 유지, 12px 축소는 비-lg에만 적용 */
+  .gas-banner__points:not(.gas-banner__points--lg) { gap: 12px; }
   /* 배너 짤림 방지 + ice/gas 배너 높이 통일: 높이를 콘텐츠에 맞추되 공통 min-height, 이미지는 뒤에서 cover */
   .page-banner--overlay { display: grid; min-height: 11rem; align-items: center; }
   .page-banner--overlay > * { grid-column: 1; grid-row: 1; }
