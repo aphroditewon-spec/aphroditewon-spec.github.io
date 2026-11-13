@@ -757,11 +757,12 @@ section[id] { scroll-margin-top: 88px; }
   .gas-point__desc { display: none; }
   .gas-banner__desc { display: none; }
   .gas-banner__points { gap: 12px; }
-  /* 배너 짤림 방지: 배너 높이를 배경 이미지가 아니라 콘텐츠에 맞추고, 이미지는 뒤에서 cover */
-  .page-banner--overlay { display: grid; }
+  /* 배너 짤림 방지 + ice/gas 배너 높이 통일: 높이를 콘텐츠에 맞추되 공통 min-height, 이미지는 뒤에서 cover */
+  .page-banner--overlay { display: grid; min-height: 11rem; align-items: center; }
   .page-banner--overlay > * { grid-column: 1; grid-row: 1; }
-  .page-banner--overlay .page-banner__bg { width: 100%; height: 100%; object-fit: cover; }
-  .page-banner--overlay .gas-banner { position: static; }
+  .page-banner--overlay .page-banner__bg { width: 100%; height: 100%; object-fit: cover; align-self: stretch; }
+  .page-banner--overlay .gas-banner,
+  .page-banner--overlay .ice-banner { position: static; }
   .gas-banner__wrap { padding-block: var(--space-7); }
 }
 .page-hero h1 { font-size: var(--fs-h1); font-weight: 800; }
