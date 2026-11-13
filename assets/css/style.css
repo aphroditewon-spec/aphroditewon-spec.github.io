@@ -754,6 +754,8 @@ section[id] { scroll-margin-top: 88px; }
 @media (max-width: 720px) {
   .gas-banner__col { max-width: 92%; }
   .gas-banner__rule { display: none; }
+  /* --desc 설명은 우선순위가 높아 모바일에서도 표시되며 nowrap로 4번째 포인트가 잘림 → 모바일에선 라벨만(설명 숨김) */
+  .gas-banner__points--desc .gas-point__desc,
   .gas-point__desc { display: none; }
   .gas-banner__desc { display: none; }
   /* --lg(4아이콘)는 드라이아이스 헤더와 동일한 간격(clamp) 유지, 12px 축소는 비-lg에만 적용 */
