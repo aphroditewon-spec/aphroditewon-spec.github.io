@@ -2473,7 +2473,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .pkgspec__dim--in { padding: var(--space-2) var(--space-4); border-top: 1px solid var(--border); }
 .pkgspec__dim img { max-width: 220px; width: 100%; display: block; margin-inline: auto; }
 .pkgspec__dimcap { margin: -20px 0 0; font-size: .78rem; color: var(--text-muted); text-align: right; }
-@media (max-width: 640px) { .pkgspec { grid-template-columns: 1fr; } .pkgdetail__row { grid-template-columns: 44% 1fr; } }
+@media (max-width: 640px) { .pkgspec { grid-template-columns: 1fr; } .pkgdetail__row { grid-template-columns: 44% 1fr; }
+  /* 2안 포함: 박스 치수 캡션 음수 마진(-20px) 제거해 이미지(310mm)와 겹치지 않도록 */
+  .pkgspec__dimcap { margin: var(--space-1) 0 0; text-align: center; font-size: .68rem; } }
 /* 1번 구간(2열, 641~820px): 왼쪽 사진 높이를 오른쪽 표 높이에 맞춤(그리드 stretch) */
 @media (min-width: 641px) and (max-width: 900px) { .pkgspec__photo { height: auto; align-self: stretch; } }
 /* 1번 구간(501~820px): 규격 도식 축소 + 캡션 안 가려지게 + 캡션 폰트 살짝 축소 */
