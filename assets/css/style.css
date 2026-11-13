@@ -2908,6 +2908,22 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .klccard__desc { margin: 0; font-size: .86rem; line-height: 1.55; color: var(--text-muted); word-break: keep-all; }
 @media (max-width: 900px) { .klccgas2 { grid-template-columns: 1fr; } .klccgas2__photo { min-height: 0; aspect-ratio: 16 / 9; } }
 @media (max-width: 480px) { .klccgas2__cards { grid-template-columns: 1fr; } }
+
+/* #gas-intro 4카드: 모바일에서 메인 주요제품처럼 가로 스와이프 캐러셀(점·화살표) */
+#gas-intro .klccgas2__cards + .prodcarousel__nav { display: none; }
+@media (max-width: 900px) {
+  #gas-intro .klccgas2__cards {
+    display: flex; flex-wrap: nowrap; grid-template-columns: none; gap: var(--space-3);
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; padding-bottom: 2px;
+  }
+  #gas-intro .klccgas2__cards::-webkit-scrollbar { display: none; }
+  #gas-intro .klccgas2__cards > .klccard { flex: 0 0 74%; scroll-snap-align: start; }
+  #gas-intro .klccgas2__cards + .prodcarousel__nav { display: flex; }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  #gas-intro .klccgas2__cards > .klccard { flex: 0 0 40%; }
+}
 /* 모바일: 모든 섹션 제목 공통 20px(각 섹션 개별 오버라이드보다 우선하도록 !important) */
 @media (max-width: 900px) { .section__title { font-size: 20px !important; margin-top: 8px !important; } }
 /* 모바일: 섹션 상단 여백 50% 축소(전 섹션 공통, 개별 padding 오버라이드보다 우선) */

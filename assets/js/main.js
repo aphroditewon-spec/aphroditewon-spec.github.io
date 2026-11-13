@@ -289,6 +289,8 @@
     makeCarousel(document.querySelector("#supply .procflow"), ".procstep");
     // 드라이아이스 주요 적용분야 캐러셀
     makeCarousel(document.querySelector(".applyfields"), ".applyfield");
+    // 가스제품 첫 섹션 4카드 — 메인 주요제품처럼 가로 스와이프 캐러셀
+    makeCarousel(document.querySelector("#gas-intro .klccgas2__cards"), ".klccard");
   }
 
   function makeCarousel(list, itemSel) {
