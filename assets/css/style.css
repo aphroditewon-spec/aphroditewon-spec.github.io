@@ -2627,7 +2627,10 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .co2rec-tags li span { color: var(--rec-green); }
 .co2rec-tags svg { width: 26px; height: 26px; }
 @media (max-width: 900px) {
-  .co2rec-hero { grid-template-columns: 1fr; gap: var(--space-6); }
+  .co2rec-hero { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+  /* 그리드 아이템 min-width/height:auto 때문에 사진이 min-height·고유비율로 트랙을 넓혀(390px) 본문·소제목이 잘리던 문제 → 아이템 수축 허용 + 사진 비율 고정 */
+  .co2rec-hero__media { min-width: 0; min-height: 0; aspect-ratio: 16 / 9; }
+  .co2rec-hero__body { min-width: 0; }
   .co2rec-cards { grid-template-columns: 1fr; }
   .co2rec-flow__steps { flex-wrap: wrap; }
   .recstep { flex: 1 1 45%; }
