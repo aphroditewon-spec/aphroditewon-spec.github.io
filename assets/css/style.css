@@ -3740,7 +3740,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
   #ceo-home .ceohome__phil .phil__title { grid-column: 2; grid-row: 2; align-self: start; margin: 2px 0 0; }
   #ceo-home .ceohome__phil .phil__desc { grid-column: 1 / -1; grid-row: 3; text-align: left; margin-top: var(--space-2); }
 }
-.ceohome__sign { margin-top: var(--space-4); font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 1.4em; }
+.ceohome__sign { margin-top: var(--space-4); font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 3.5em; }
 .ceohome__sign .sign-img { height: 2.3em; width: auto; }
 .ceohome__policy { display: flex; flex-direction: column; gap: var(--space-4); }
 /* CEO 섹션 우측 경영이념 카드(세로 스택, 컴팩트) */
