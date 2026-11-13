@@ -2148,21 +2148,20 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .prodlineup .prodgrid.prodgrid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 900px) { .prodlineup .prodgrid.prodgrid--3 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .prodlineup .prodgrid.prodgrid--3 { grid-template-columns: 1fr; } }
-/* 1번 구간(501~820px): 특수·혼합가스 탭 카드만 가로 스와이프 캐러셀(한 줄) */
-@media (min-width: 501px) and (max-width: 900px) {
-  .prodlineup__panel[data-cat="spec"] .prodgrid.prodgrid--3 {
-    display: flex; flex-wrap: nowrap; grid-template-columns: none; gap: var(--space-3);
+/* 제품 라인업 전 탭: 모바일(≤900)에서 카드 가로 스와이프 캐러셀(점·화살표) */
+.prodlineup--top .prodcarousel__nav { display: none; }
+@media (max-width: 900px) {
+  .prodlineup--top .prodlineup__panel .prodgrid {
+    display: flex !important; flex-wrap: nowrap; grid-template-columns: none !important; gap: var(--space-3);
     overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
     scrollbar-width: none; padding-bottom: 2px; align-items: stretch;
   }
-  .prodlineup__panel[data-cat="spec"] .prodgrid.prodgrid--3::-webkit-scrollbar { display: none; }
-  /* 3장 높이 동일: 최대 콘텐츠(고순도 2줄 텍스트) 기준 고정 min-height (flex stretch가 균일화 못 함) */
-  .prodlineup__panel[data-cat="spec"] .prodgrid.prodgrid--3 > .pgcard { flex: 0 0 38%; scroll-snap-align: start; min-height: 436px; }
+  .prodlineup--top .prodlineup__panel .prodgrid::-webkit-scrollbar { display: none; }
+  .prodlineup--top .prodlineup__panel .prodgrid > .pgcard { flex: 0 0 80%; scroll-snap-align: start; }
+  .prodlineup--top .prodcarousel__nav { display: flex; }
 }
-/* 특수·혼합 탭 캐러셀 nav(도트+화살표): 1번 구간에서만 표시 */
-.prodlineup__panel[data-cat="spec"] .prodcarousel__nav { display: none; }
 @media (min-width: 501px) and (max-width: 900px) {
-  .prodlineup__panel[data-cat="spec"] .prodcarousel__nav { display: flex; }
+  .prodlineup--top .prodlineup__panel .prodgrid > .pgcard { flex: 0 0 45%; min-height: 436px; }
 }
 /* 식음료가스: 단일 실사진 카드 */
 .prodlineup .prodgrid.prodgrid--cyl.prodgrid--food { grid-template-columns: 1fr; }

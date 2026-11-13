@@ -281,8 +281,10 @@
   function initProdCarousel() {
     // 홈 주요제품 캐러셀
     makeCarousel(document.querySelector(".prodcats"), ".prodcats__item");
-    // 가스제품 제품 라인업 — 특수·혼합가스 탭 캐러셀
-    makeCarousel(document.querySelector('.prodlineup__panel[data-cat="spec"] .prodgrid--3'), ".pgcard");
+    // 가스제품 제품 라인업 — 전 탭 카드 가로 스와이프 캐러셀
+    document.querySelectorAll('.prodlineup--top .prodlineup__panel .prodgrid').forEach(function (g) {
+      makeCarousel(g, '.pgcard');
+    });
     // 가스제품 생산·공급 시설 캐러셀
     makeCarousel(document.querySelector("#gas-facility .facilcards"), ".facilcard");
     // 가스제품 가스 공급 프로세스 캐러셀
