@@ -2737,7 +2737,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .qscard__tx { min-width: 0; }
 .qscard__tx b { display: block; font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
 .qscard__tx p { margin: 0; font-size: .82rem; line-height: 1.5; color: var(--text-muted); word-break: keep-all; }
-.qualsafe__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-5); }
+.qualsafe__foot { display: flex; align-items: center; justify-content: center; gap: var(--space-4); margin-top: var(--space-5); }
 .qualsafe__brand { font-size: .76rem; font-weight: 700; letter-spacing: .1em; color: var(--text-muted); opacity: .55; }
 @media (max-width: 900px) {
   .qualsafe { grid-template-columns: 1fr; }
@@ -2745,7 +2745,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 }
 @media (max-width: 560px) {
   .qualsafe__grid { grid-template-columns: 1fr; }
-  .qualsafe__foot { flex-direction: column; align-items: flex-start; }
+  .qualsafe__foot { flex-direction: column; align-items: center; }
 }
 /* 품질과 안전 4카드: 모바일(≤900)에서 가로 스와이프 캐러셀(점·화살표) */
 #gas-quality .qualsafe__grid + .prodcarousel__nav { display: none; }
@@ -2776,7 +2776,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .svcitem__ic img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .svcitem__title { display: block; font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
 .svcitem__desc { margin: 0; font-size: .82rem; line-height: 1.5; color: var(--text-muted); word-break: keep-all; }
-.svcsplit__left .btn { align-self: flex-start; }
+.svcsplit__left .btn { align-self: center; }
 .svcsplit__media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
 .svcsplit__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 1080px) { .svcgrid { grid-template-columns: repeat(2, 1fr); } }
