@@ -319,6 +319,10 @@
     makeCarousel(document.querySelector("#equipment .facilcards"), ".facilcard");
     // 용기검사 — 신뢰할 수 있는 검사 서비스 4카드 캐러셀
     makeCarousel(document.querySelector(".svcgrid"), ".svcitem");
+    // 고객지원 — 무엇을 도와드릴까요 4카드 캐러셀
+    makeCarousel(document.querySelector(".helpcards"), ".helpcard");
+    // 고객지원 — 사업장 안내 4카드 캐러셀
+    makeCarousel(document.querySelector(".officecards"), ".officecard");
     // 가스제품 품질과 안전 4카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#gas-quality .qualsafe__grid"), ".qscard");
   }

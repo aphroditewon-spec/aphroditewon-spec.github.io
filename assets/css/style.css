@@ -3134,6 +3134,26 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 @media (max-width: 1100px) { .officecards { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .officecards { grid-template-columns: 1fr; } }
 
+/* 고객지원: 무엇을 도와드릴까요 4카드 / 사업장 안내 4카드 — 모바일(≤900) 가로 스와이프 캐러셀 */
+.helpcards + .prodcarousel__nav,
+.officecards + .prodcarousel__nav { display: none; }
+@media (max-width: 900px) {
+  .helpcards, .officecards {
+    display: flex; flex-wrap: nowrap; grid-template-columns: none; gap: var(--space-3);
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; padding-bottom: 2px;
+  }
+  .helpcards::-webkit-scrollbar, .officecards::-webkit-scrollbar { display: none; }
+  .helpcards > .helpcard { flex: 0 0 74%; scroll-snap-align: start; }
+  .officecards > .officecard { flex: 0 0 80%; scroll-snap-align: start; }
+  .helpcards + .prodcarousel__nav,
+  .officecards + .prodcarousel__nav { display: flex; }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  .helpcards > .helpcard { flex: 0 0 40%; }
+  .officecards > .officecard { flex: 0 0 48%; }
+}
+
 /* 용기검사 전문검사기관 (좌 사진 + 우 회사정보표 + 하단 4스탯) */
 .inspartner { display: grid; grid-template-columns: 1.55fr 1fr; gap: var(--space-5); align-items: stretch; margin-top: var(--space-4); }
 .inspartner__media { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); min-height: 320px; }
