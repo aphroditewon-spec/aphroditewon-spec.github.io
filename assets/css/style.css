@@ -2628,6 +2628,14 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 .co2rec-tags li span { color: var(--rec-green); }
 .co2rec-tags li .co2rec-tags__tx { font-weight: 700; }
 .co2rec-tags__tx br { display: inline; }  /* 모바일 전역 br 숨김(≤900) 무시하고 라벨 2줄 줄바꿈 유지 */
+/* 데스크톱(≥901px): 이전 상태로 복귀 — 설명 텍스트 좌측 + 4아이콘 우측 가로 배치, 라벨 한 줄 */
+@media (min-width: 901px) {
+  #recovery .co2rec-banner { flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-8); }
+  #recovery .co2rec-banner__lead { order: 1; text-align: left; flex: 1 1 440px; }
+  #recovery .co2rec-tags { order: 2; flex: 0 1 auto; flex-wrap: wrap; gap: var(--space-6); }
+  #recovery .co2rec-tags li { flex: 0 0 auto; }
+  #recovery .co2rec-tags__tx br { display: none; }  /* 데스크톱은 라벨 한 줄 */
+}
 .co2rec-tags svg { width: 26px; height: 26px; }
 @media (max-width: 900px) {
   .co2rec-hero { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
