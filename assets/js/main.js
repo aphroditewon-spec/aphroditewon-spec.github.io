@@ -303,6 +303,10 @@
     makeCarousel(document.querySelector(".handling"), ".handling > li");
     // CO₂ 리커버리 시스템 특징 3카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#recovery .co2rec-cards"), ".co2rec-card");
+    // 시설시공 첫 섹션 4카드 — 가로 스와이프 캐러셀
+    makeCarousel(document.querySelector("#intro .klccgas2__cards"), ".klccard");
+    // 시설시공 주요 공급 설비 4사진카드 — 가로 스와이프 캐러셀
+    makeCarousel(document.querySelector(".mainfacil"), ".mainfacil__card");
     // 가스제품 품질과 안전 4카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#gas-quality .qualsafe__grid"), ".qscard");
   }
