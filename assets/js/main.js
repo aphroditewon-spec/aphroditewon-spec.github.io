@@ -293,6 +293,12 @@
     makeCarousel(document.querySelector(".applyfields"), ".applyfield");
     // 가스제품 첫 섹션 4카드 — 메인 주요제품처럼 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#gas-intro .klccgas2__cards"), ".klccard");
+    // 드라이아이스 첫 섹션(경쟁력) 4카드 — 가로 스와이프 캐러셀
+    makeCarousel(document.querySelector("#ice-why .klccgas2__cards"), ".klccard");
+    // 드라이아이스 제품 라인업 특징(간편한 소분·효율적 냉각·다양한 포장) — 가로 스와이프 캐러셀
+    document.querySelectorAll('#ice .prodlineup__panel .iceline__feats').forEach(function (f) {
+      makeCarousel(f, '.iceline__feats > li');
+    });
     // 가스제품 품질과 안전 4카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#gas-quality .qualsafe__grid"), ".qscard");
   }
