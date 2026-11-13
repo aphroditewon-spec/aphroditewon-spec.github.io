@@ -301,6 +301,8 @@
     });
     // 드라이아이스 보관 및 취급 안내 6카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector(".handling"), ".handling > li");
+    // CO₂ 리커버리 시스템 특징 3카드 — 가로 스와이프 캐러셀
+    makeCarousel(document.querySelector("#recovery .co2rec-cards"), ".co2rec-card");
     // 가스제품 품질과 안전 4카드 — 가로 스와이프 캐러셀
     makeCarousel(document.querySelector("#gas-quality .qualsafe__grid"), ".qscard");
   }
