@@ -3986,7 +3986,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 
 .msds-dl { display: inline-flex; align-items: center; gap: 10px; padding: .6rem 1.2rem; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); font-weight: 700; font-size: .9rem; text-decoration: none; transition: var(--transition); }
 .msds-dl:hover { background: var(--brand); border-color: var(--brand); color: #fff; }
-.msds-dl__ic { font-size: 1rem; line-height: 1; }
+.msds-dl__ic { display: none; }
 .msds-dl--soon { background: transparent; border-color: var(--border); color: var(--text-muted); font-weight: 600; cursor: default; }
 .msds-dl--soon:hover { background: transparent; border-color: var(--border); color: var(--text-muted); }
 
