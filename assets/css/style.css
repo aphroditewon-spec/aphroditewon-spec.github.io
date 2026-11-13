@@ -2622,6 +2622,7 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 하단 배너: 4개 아이콘(한 줄) 상단 + 설명 문구 하단 세로 배치 */
 .co2rec-banner { margin-top: var(--space-8); display: flex; flex-direction: column; align-items: stretch; gap: var(--space-5); background: #eef6f0; border: 1px solid #d6e8dc; border-radius: var(--radius-lg); padding: var(--space-6) var(--space-7); }
 .co2rec-banner__lead { display: block; text-align: center; }
+.co2rec-banner__leaf { display: none; }  /* 모바일: 나뭇잎 아이콘 숨김 */
 .co2rec-banner__lead p { margin: 0; font-size: .92rem; color: var(--rec-green-dark); font-weight: 600; line-height: 1.6; }
 .co2rec-tags { display: flex; flex-wrap: nowrap; justify-content: center; gap: var(--space-5); list-style: none; padding: 0; margin: 0; }
 .co2rec-tags li { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: .8rem; font-weight: 700; color: var(--rec-green-dark); text-align: center; line-height: 1.3; }
@@ -2631,7 +2632,9 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 /* 데스크톱(≥901px): 이전 상태로 복귀 — 설명 텍스트 좌측 + 4아이콘 우측 가로 배치, 라벨 한 줄 */
 @media (min-width: 901px) {
   #recovery .co2rec-banner { flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-8); }
-  #recovery .co2rec-banner__lead { order: 1; text-align: left; flex: 1 1 440px; }
+  #recovery .co2rec-banner__lead { order: 1; text-align: left; flex: 1 1 440px; display: flex; align-items: center; gap: var(--space-4); }
+  #recovery .co2rec-banner__leaf { flex: none; width: 56px; height: 56px; border-radius: 50%; background: #fff; border: 1.5px solid #cfe6d7; color: var(--rec-green); display: inline-flex; align-items: center; justify-content: center; }
+  #recovery .co2rec-banner__leaf svg { width: 30px; height: 30px; }
   #recovery .co2rec-tags { order: 2; flex: 0 1 auto; flex-wrap: wrap; gap: var(--space-6); }
   #recovery .co2rec-tags li { flex: 0 0 auto; }
   #recovery .co2rec-tags__tx br { display: none; }  /* 데스크톱은 라벨 한 줄 */
