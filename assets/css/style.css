@@ -3728,6 +3728,47 @@ html[lang="en"] .greeting__sign .sign-name { display: block; margin-left: 0; mar
 }
 
 /* =============================================================
+   2안(≤500px): 풀폭 메뉴 — 아이콘 + 하위 설명/타임라인 + 연락처 전부 표시
+   ============================================================= */
+@media (max-width: 500px) {
+  .nav__menu.is-open { padding: var(--space-2) var(--space-4) var(--space-5); }
+  /* 상위 링크: 아이콘 + 제목 */
+  .nav__menu .nav__link { display: flex; align-items: center; gap: .75rem; padding: .95rem .2rem; font-weight: 700; }
+  .nav__ic { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 36px; height: 36px; border-radius: 10px; background: var(--accent-tint); color: var(--brand); }
+  .nav__ic svg { width: 20px; height: 20px; }
+  .nav__tt { font-size: 1rem; }
+  .nav__item.has-sub.is-open > .nav__link { background: var(--accent-tint); color: var(--eyebrow); border-radius: 12px; }
+  .nav__item.has-sub.is-open > .nav__link .nav__ic { background: var(--brand); color: #fff; }
+
+  /* 하위: 타임라인(세로선+점) + 제목 + 설명 + 우측 화살표 */
+  .nav__sub { position: relative; left: auto; top: auto; padding: 2px 0 10px; }
+  .nav__sub::before { content: ""; position: absolute; left: 1.3rem; top: .4rem; bottom: 1.2rem; width: 2px; background: var(--border); }
+  .nav__sub a { display: block; position: relative; padding: .6rem 1.8rem .6rem 2.7rem; margin: 0; border-left: none; }
+  .nav__sub a::before { content: ""; position: absolute; left: calc(1.3rem - 4px); top: 1rem; width: 10px; height: 10px; border-radius: 50%; background: var(--brand); border: 2px solid #fff; box-shadow: 0 0 0 1px var(--brand); }
+  .nav__sub a::after { content: ""; position: absolute; right: .5rem; top: 50%; width: 7px; height: 7px; margin-top: -5px; border-right: 2px solid var(--text-muted); border-bottom: 2px solid var(--text-muted); transform: rotate(-45deg); }
+  .nav__stt { display: block; font-weight: 700; color: var(--text); font-size: .95rem; }
+  .nav__sdesc { display: block; font-size: .78rem; color: var(--text-muted); margin-top: 2px; }
+
+  /* 연락처: 전체폭, 전화/견적 2열 + 주소 */
+  .nav__contact { display: grid; grid-template-columns: 1fr 1fr; column-gap: .6rem; margin-top: var(--space-4); padding-top: var(--space-5); border-top: 1px solid var(--border); }
+  .nav__contact .nav__cta { display: flex; align-items: center; gap: .55rem; padding: .7rem .8rem; border-radius: 12px; text-decoration: none; margin: 0; }
+  .nav__cta--tel { background: var(--brand); color: #fff; }
+  .nav__cta--quote { background: #fff; border: 1px solid var(--border); color: var(--text); }
+  .nav__cta-ic { flex: none; width: 20px; height: 20px; display: inline-flex; }
+  .nav__cta-ic svg { width: 100%; height: 100%; }
+  .nav__cta-tx { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+  .nav__cta-tx b { font-weight: 700; font-size: .82rem; }
+  .nav__cta--tel .nav__cta-tx span { font-size: .72rem; opacity: .92; white-space: nowrap; }
+  .nav__cta-arr { margin-left: auto; font-weight: 700; color: var(--brand); }
+  .nav__locs { grid-column: 1 / -1; list-style: none; margin: var(--space-4) 0 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+  .nav__locs li { display: flex; gap: .6rem; align-items: flex-start; }
+  .nav__loc-ic { flex: none; width: 18px; height: 18px; color: var(--brand); margin-top: 2px; display: inline-flex; }
+  .nav__loc-ic svg { width: 100%; height: 100%; }
+  .nav__loc-tx b { display: block; font-size: .85rem; font-weight: 700; color: var(--text); }
+  .nav__loc-tx small { font-size: .76rem; color: var(--text-muted); line-height: 1.4; }
+}
+
+/* =============================================================
    MSDS 물질안전보건자료 섹션 (품질·인증)
    ============================================================= */
 .msds-tabs { display: flex; justify-content: center; gap: var(--space-3); margin-bottom: var(--space-7); flex-wrap: wrap; }
